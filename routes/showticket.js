@@ -26,15 +26,15 @@ router.get("/:id", (req,res,next)=>{
             dataPassed = dataGot;
 
             mg.disconnect();
-            
+        
             res.render("showticket.ejs", {
                 _id: dataPassed._id, 
                 seatId: dataPassed.seatId, 
-                bookedByName: JSON.stringify(dataPassed.bookedByName), 
-                ticketCode: JSON.stringify(dataPassed.ticketCode), 
-                bookedOn: JSON.stringify(dataPassed.bookedOn), 
+                bookedByName: dataPassed.bookedByName, 
+                ticketCode: dataPassed.ticketCode, 
+                bookedOn: dataPassed.bookedOn, 
                 isTicketCodeUsed: ((dataPassed.isTicketCodeUsed) ? "USED" : "NOT_USED"), 
-                ticketCodeUsedOn: JSON.stringify(dataPassed.ticketCodeUsedOn) 
+                ticketCodeUsedOn: dataPassed.ticketCodeUsedOn 
             });
             
             return;

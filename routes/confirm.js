@@ -30,7 +30,7 @@ router.get("/:id", (req,res,next)=>{
             res.render("confirm.ejs", {
                 _id: dataPassed._id, 
                 seatNumber: dataPassed.seatNumber, 
-                status: JSON.stringify(dataPassed.status)
+                status: dataPassed.status
             });
 
             return;

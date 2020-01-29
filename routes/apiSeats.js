@@ -209,7 +209,18 @@ router.post("/update/:id", (req,res,next)=>{
                 }
      
             });
-        } 
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error processing data!",
+                data: null
+            });
+
+            mg.disconnect();
+
+            return;
+        }
     });
 });
 
@@ -254,36 +265,60 @@ router.post("/delete", (req,res,next)=> {
     
     mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: false}, function(existError, exist) {
         if (!existError && exist) {
-            req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-            mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false}, {isDeleted: true}, function(deleteError,deleted){
-                if (deleteError || !deleted){
-                    res.status(200).json({
-                        status: "error",
-                        responseCode: "202",
-                        responseMessage: "seat Deletion encounted an Unknown Error!",
-                        data: null
-                    });
-        
-                    mg.disconnect();
-        
-                    return;
-                } else {
-                    console.log('seat Deleted', deleted);
-                    
-                    res.status(200).json({
-                        status: "success",
-                        responseCode: "201",
-                        responseMessage: "seat Deletion was Successful!",
-                        data: deleted
-                    });
-                    
-                    mg.disconnect();
-
-                    return;
-                }
-     
+            if(exist.length > 0) {
+                req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+                mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false}, {isDeleted: true}, function(deleteError,deleted){
+                    if (deleteError || !deleted){
+                        res.status(200).json({
+                            status: "error",
+                            responseCode: "202",
+                            responseMessage: "seat Deletion encounted an Unknown Error!",
+                            data: null
+                        });
+            
+                        mg.disconnect();
+            
+                        return;
+                    } else {
+                        console.log('seat Deleted', deleted);
+                        
+                        res.status(200).json({
+                            status: "success",
+                            responseCode: "201",
+                            responseMessage: "seat Deletion was Successful!",
+                            data: deleted
+                        });
+                        
+                        mg.disconnect();
+    
+                        return;
+                    }
+         
+                });
+            } else {
+                res.status(200).json({
+                    status: "error",
+                    responseCode: "206",
+                    responseMessage: "The Selected Seat wasnt't found!",
+                    data: null
+                });
+    
+                mg.disconnect();
+    
+                return;
+            }
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error processing data!",
+                data: null
             });
-        } 
+
+            mg.disconnect();
+
+            return;
+        }
     });
 });
 
@@ -294,36 +329,60 @@ router.post("/restore", (req,res,next)=> {
     
     mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: true}, function(existError, exist) {
         if (!existError && exist) {
-            req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-            mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: true}, {isDeleted: false}, function(deleteError,deleted){
-                if (deleteError || !deleted){
-                    res.status(200).json({
-                        status: "error",
-                        responseCode: "202",
-                        responseMessage: "Seat Restoration encounted an Unknown Error!",
-                        data: null
-                    });
-        
-                    mg.disconnect();
-        
-                    return;
-                } else {
-                    console.log('Seat Restored', deleted);
-                    
-                    res.status(200).json({
-                        status: "success",
-                        responseCode: "201",
-                        responseMessage: "seat Restoration was Successful!",
-                        data: deleted
-                    });
-                    
-                    mg.disconnect();
-
-                    return;
-                }
-     
+            if(exist.length > 0) {
+                req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+                mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: true}, {isDeleted: false}, function(deleteError,deleted){
+                    if (deleteError || !deleted){
+                        res.status(200).json({
+                            status: "error",
+                            responseCode: "202",
+                            responseMessage: "Seat Restoration encounted an Unknown Error!",
+                            data: null
+                        });
+            
+                        mg.disconnect();
+            
+                        return;
+                    } else {
+                        console.log('Seat Restored', deleted);
+                        
+                        res.status(200).json({
+                            status: "success",
+                            responseCode: "201",
+                            responseMessage: "seat Restoration was Successful!",
+                            data: deleted
+                        });
+                        
+                        mg.disconnect();
+    
+                        return;
+                    }
+         
+                });
+            } else {
+                res.status(200).json({
+                    status: "error",
+                    responseCode: "202",
+                    responseMessage: "The Selected Seat wasnt't found!",
+                    data: null
+                });
+    
+                mg.disconnect();
+    
+                return;
+            }
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error processing data!",
+                data: null
             });
-        } 
+
+            mg.disconnect();
+
+            return;
+        }
     });
 });
 
@@ -334,36 +393,60 @@ router.post("/activate", (req,res,next)=> {
     
     mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: false}, function(existError, exist) {
         if (!existError && exist) {
-            req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-            mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: false}, {isActivated: true}, function(activateError,activated){
-                if (activateError || !activated){
-                    res.status(200).json({
-                        status: "error",
-                        responseCode: "202",
-                        responseMessage: "Seat Activation encounted an Unknown Error!",
-                        data: null
-                    });
-        
-                    mg.disconnect();
-        
-                    return;
-                } else {
-                    console.log('Seat Activated', activated);
-                    
-                    res.status(200).json({
-                        status: "success",
-                        responseCode: "201",
-                        responseMessage: "Seat Activation was Successful!",
-                        data: activated
-                    });
-                    
-                    mg.disconnect();
-
-                    return;
-                }
-     
+            if(exist.length > 0) {
+                req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+                mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: false}, {isActivated: true}, function(activateError,activated){
+                    if (activateError || !activated){
+                        res.status(200).json({
+                            status: "error",
+                            responseCode: "202",
+                            responseMessage: "Seat Activation encounted an Unknown Error!",
+                            data: null
+                        });
+            
+                        mg.disconnect();
+            
+                        return;
+                    } else {
+                        console.log('Seat Activated', activated);
+                        
+                        res.status(200).json({
+                            status: "success",
+                            responseCode: "201",
+                            responseMessage: "Seat Activation was Successful!",
+                            data: activated
+                        });
+                        
+                        mg.disconnect();
+    
+                        return;
+                    }
+         
+                });    
+            } else {
+                res.status(200).json({
+                    status: "error",
+                    responseCode: "202",
+                    responseMessage: "The Selected Seat wasnt't found!",
+                    data: null
+                });
+    
+                mg.disconnect();
+    
+                return;
+            }
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error processing data!",
+                data: null
             });
-        } 
+
+            mg.disconnect();
+
+            return;
+        }
     });
 });
 
@@ -374,36 +457,59 @@ router.post("/deactivate", (req,res,next)=> {
     
     mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: true}, function(existError, exist) {
         if (!existError && exist) {
-            req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-            mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: true}, {isActivated: false}, function(deactivateError,deactivated){
-                if (deactivateError || !deactivated){
-                    res.status(200).json({
-                        status: "error",
-                        responseCode: "202",
-                        responseMessage: "Seat Deactivation encounted an Unknown Error!",
-                        data: null
-                    });
-        
-                    mg.disconnect();
-        
-                    return;
-                } else {
-                    console.log('Seat Deactivated', deactivated);
-                    
-                    res.status(200).json({
-                        status: "success",
-                        responseCode: "201",
-                        responseMessage: "Seat Deactivation was Successful!",
-                        data: deactivated
-                    });
-                    
-                    mg.disconnect();
-
-                    return;
-                }
-     
+            if(exist.length > 0) {
+                req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+                mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: true}, {isActivated: false}, function(deactivateError,deactivated){
+                    if (deactivateError || !deactivated){
+                        res.status(200).json({
+                            status: "error",
+                            responseCode: "202",
+                            responseMessage: "Seat Deactivation encounted an Unknown Error!",
+                            data: null
+                        });
+            
+                        mg.disconnect();
+            
+                        return;
+                    } else {
+                        console.log('Seat Deactivated', deactivated);
+                        
+                        res.status(200).json({
+                            status: "success",
+                            responseCode: "201",
+                            responseMessage: "Seat Deactivation was Successful!",
+                            data: deactivated
+                        });
+                        
+                        mg.disconnect();
+    
+                        return;
+                    }
+                });
+            } else {
+                res.status(200).json({
+                    status: "error",
+                    responseCode: "202",
+                    responseMessage: "The Selected Seat wasnt't found!",
+                    data: null
+                });
+    
+                mg.disconnect();
+    
+                return;
+            }
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error processing data!",
+                data: null
             });
-        } 
+
+            mg.disconnect();
+
+            return;
+        }
     });
 });
 
