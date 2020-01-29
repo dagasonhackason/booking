@@ -1,0 +1,27 @@
+{
+  "name": "booking",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "devStart": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "crypto-pbkdf2": "^0.1.2",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "moment": "^2.24.0",
+    "xml2js": "^0.4.23",
+    "path": "0.12.7",
+    "body-parser": "1.19.0",
+    "@octokit/rest": "^14.0.5",
+    "jsonwebtoken": "^8.5.1",
+    "validator": "10.11.0",
+    "morgan": "~1.9.1",
+    "mongoose": "^5.8.9",
+    "uuid": "^3.4.0"
+  }
+}

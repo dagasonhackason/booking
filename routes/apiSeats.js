@@ -1,0 +1,410 @@
+const express = require("express");
+const router = express.Router();
+const mg = require("mongoose");
+const Schema = mg.Schema, ObjectId = Schema.ObjectId;
+const moment = require("moment");
+
+const dbStringSanitizer = function dbStringSanitizer(arg) {
+    return arg.replace(/\\/g, "\\\\")
+            .replace(/\$/g, "\\$")
+            .replace(/'/g, "\\'")
+            .replace(/"/g, "\\\"");
+};
+
+router.post("/create", (req, res, next)=>{
+    console.log("New Incoming create seat Request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    var dateTime = new Date();
+
+    if(req.body.seatNumber) {
+        mg.model("seats").findOne({ seatNumber: dbStringSanitizer(req.body.seatNumber), isDeleted: false }, function(err,existingseat){
+            console.log("Seat data on existence check", existingseat);
+            if (!err && !existingseat) {
+                mg.model("seats").create({seatNumber: dbStringSanitizer(req.body.seatNumber), status: "NOT_BOOKED", createdBy: "", createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: "", isActivated: true, isDeleted: false}, function (error,insertResponse) {
+                    if(error) {
+                        res.status(200).json({
+                            status: "error",
+                            responseCode: "202",
+                            responseMessage: "Seat Creation Failed with an Unknown Error!",
+                            data: null
+                        });
+
+                        mg.disconnect();
+            
+                        return;
+                    }
+                    else{
+                        console.log("From mongo insert seat", insertResponse);
+                    
+                        res.status(200).json({
+                            status: "success",
+                            responseCode: "201",
+                            responseMessage: "Seat Creation was Successful!",
+                            data: insertResponse
+                        });
+                        
+                        mg.disconnect();
+    
+                        return;
+                    }
+                });
+            } else {
+                res.status(200).json({
+                    status: "error",
+                    responseCode: "205",
+                    responseMessage: "Seat Already exist... Error!",
+                    data: null
+                });
+
+                mg.disconnect();
+    
+                return;
+            }
+        });
+    } else {
+        res.status(200).json({
+            status: "error",
+            responseCode: "208",
+            responseMessage: "Please Fill all required fields and try again... Try again!",
+            data: null
+        });
+        
+        mg.disconnect();
+
+        return;
+    }
+});
+
+router.get("/read/:id", (req,res,next)=>{
+    var id = req.params.id;
+
+    console.log("New get one seat request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+
+    mg.model("seats").find({_id: dbStringSanitizer(id), isDeleted: false, isActivated: true}, function(getError,dataGot) {
+        if (!getError && dataGot) {
+            console.log("From mongo get one seat", dataGot);
+                        
+            res.status(200).json({
+                status: "success",
+                responseCode: "201",
+                responseMessage: "Single seat Data Acquired Successful!",
+                data: dataGot
+            });
+            
+            mg.disconnect();
+
+            return;
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "206",
+                responseMessage: "Unknown error acquiring data!",
+                data: null
+            });
+
+            mg.disconnect();
+
+            return;
+        }
+    });
+});
+
+router.get("/", (req,res,next)=>{
+    console.log("new get all seats request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+
+    mg.model("seats").find({isDeleted: false, isActivated: true}, (getError,dataGot) => {
+        if (!getError && dataGot) {
+            console.log("From mongo get all seats", dataGot);
+                        
+            res.status(200).json({
+                status: "success",
+                responseCode: "201",
+                responseMessage: "All seat Data Acquired Successful!",
+                data: dataGot
+            });
+            
+            mg.disconnect();
+
+            return;
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error acquiring data!",
+                data: null
+            });
+
+            mg.disconnect();
+
+            return;
+        }
+    });
+});
+
+router.post("/update/:id", (req,res,next)=>{
+    var id = req.params.id;
+
+    console.log("New seat update request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    var dateTime = new Date();
+    
+    if(req.body.id) {
+        delete req.body.id;
+    } 
+    
+    if(req.body._id) {
+        delete req.body._id;
+    }
+    
+    if(req.body.createdOn) {
+        delete req.body.createdOn;
+    }
+    
+    if(req.body.createdBy) {
+        delete req.body.createdBy;
+    }
+    
+    if(req.body.updatedOn) {
+        delete req.body.updatedOn;
+    }
+    
+    if(req.body.updatedBy) {
+        delete req.body.updatedBy;
+    }
+    
+    if(req.body.isDeleted) {
+        delete req.body.isDeleted;
+    }
+
+    mg.model("seats").findById(dbStringSanitizer(id), function(existError, exist) {
+        if (!existError && exist) {
+            req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+            mg.model("seats").updateOne({_id: dbStringSanitizer(id), isDeleted: false}, req.body,function(updateError,updated){
+                if (updateError || !updated){
+                    res.status(200).json({
+                        status: "error",
+                        responseCode: "202",
+                        responseMessage: "Single seat Update with an Unknown Error!",
+                        data: null
+                    });
+        
+                    mg.disconnect();
+        
+                    return;
+                } else {
+                    console.log('Single seat updated: ', updated);
+                    
+                    res.status(200).json({
+                        status: "success",
+                        responseCode: "201",
+                        responseMessage: "Single seat Update was Successful!",
+                        data: updated
+                    });
+                    
+                    mg.disconnect();
+
+                    return;
+                }
+     
+            });
+        } 
+    });
+});
+
+router.post("/findcustomized", (req,res,next)=>{
+    console.log("New seats find customized request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    var dateTime = new Date();
+
+    mg.model("seats").find(req.body, (getError,dataGot) => {
+        if (!getError && dataGot) {
+            console.log("from mongo find customized seats", dataGot);
+                        
+            res.status(200).json({
+                status: "success",
+                responseCode: "201",
+                responseMessage: "All Find Customized seats Data Acquired Successful!",
+                data: dataGot
+            });
+            
+            mg.disconnect();
+
+            return;
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error acquiring find customized data!",
+                data: null
+            });
+
+            mg.disconnect();
+
+            return;
+        }
+    });
+});
+
+router.post("/delete", (req,res,next)=> {
+    console.log("Delete seat request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    var dateTime = new Date();
+    
+    mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: false}, function(existError, exist) {
+        if (!existError && exist) {
+            req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+            mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false}, {isDeleted: true}, function(deleteError,deleted){
+                if (deleteError || !deleted){
+                    res.status(200).json({
+                        status: "error",
+                        responseCode: "202",
+                        responseMessage: "seat Deletion encounted an Unknown Error!",
+                        data: null
+                    });
+        
+                    mg.disconnect();
+        
+                    return;
+                } else {
+                    console.log('seat Deleted', deleted);
+                    
+                    res.status(200).json({
+                        status: "success",
+                        responseCode: "201",
+                        responseMessage: "seat Deletion was Successful!",
+                        data: deleted
+                    });
+                    
+                    mg.disconnect();
+
+                    return;
+                }
+     
+            });
+        } 
+    });
+});
+
+router.post("/restore", (req,res,next)=> {
+    console.log("Restore seat request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    var dateTime = new Date();
+    
+    mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: true}, function(existError, exist) {
+        if (!existError && exist) {
+            req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+            mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: true}, {isDeleted: false}, function(deleteError,deleted){
+                if (deleteError || !deleted){
+                    res.status(200).json({
+                        status: "error",
+                        responseCode: "202",
+                        responseMessage: "Seat Restoration encounted an Unknown Error!",
+                        data: null
+                    });
+        
+                    mg.disconnect();
+        
+                    return;
+                } else {
+                    console.log('Seat Restored', deleted);
+                    
+                    res.status(200).json({
+                        status: "success",
+                        responseCode: "201",
+                        responseMessage: "seat Restoration was Successful!",
+                        data: deleted
+                    });
+                    
+                    mg.disconnect();
+
+                    return;
+                }
+     
+            });
+        } 
+    });
+});
+
+router.post("/activate", (req,res,next)=> {
+    console.log("Activate seat request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    var dateTime = new Date();
+    
+    mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: false}, function(existError, exist) {
+        if (!existError && exist) {
+            req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+            mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: false}, {isActivated: true}, function(activateError,activated){
+                if (activateError || !activated){
+                    res.status(200).json({
+                        status: "error",
+                        responseCode: "202",
+                        responseMessage: "Seat Activation encounted an Unknown Error!",
+                        data: null
+                    });
+        
+                    mg.disconnect();
+        
+                    return;
+                } else {
+                    console.log('Seat Activated', activated);
+                    
+                    res.status(200).json({
+                        status: "success",
+                        responseCode: "201",
+                        responseMessage: "Seat Activation was Successful!",
+                        data: activated
+                    });
+                    
+                    mg.disconnect();
+
+                    return;
+                }
+     
+            });
+        } 
+    });
+});
+
+router.post("/deactivate", (req,res,next)=> {
+    console.log("Deactivate seat request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    var dateTime = new Date();
+    
+    mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: true}, function(existError, exist) {
+        if (!existError && exist) {
+            req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+            mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: true}, {isActivated: false}, function(deactivateError,deactivated){
+                if (deactivateError || !deactivated){
+                    res.status(200).json({
+                        status: "error",
+                        responseCode: "202",
+                        responseMessage: "Seat Deactivation encounted an Unknown Error!",
+                        data: null
+                    });
+        
+                    mg.disconnect();
+        
+                    return;
+                } else {
+                    console.log('Seat Deactivated', deactivated);
+                    
+                    res.status(200).json({
+                        status: "success",
+                        responseCode: "201",
+                        responseMessage: "Seat Deactivation was Successful!",
+                        data: deactivated
+                    });
+                    
+                    mg.disconnect();
+
+                    return;
+                }
+     
+            });
+        } 
+    });
+});
+
+module.exports = router;
