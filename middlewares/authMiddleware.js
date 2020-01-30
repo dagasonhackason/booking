@@ -9,7 +9,7 @@ module.exports = (req, res, next) => {
     let disallowed = [
         "/api/users/login", 
         "/api/users/create",
-        "/api/bookings/",
+        "/api/bookings/create",
         "/api/seats",
     ];
 
