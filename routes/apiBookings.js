@@ -3,28 +3,19 @@ const router = express.Router();
 const mg = require("mongoose");
 const Schema = mg.Schema, ObjectId = Schema.ObjectId;
 const moment = require("moment");
-const uuid = require("uuid");
 
+const APIBookingsRequestValidator = require('../validators/APIBookingsRequestValidator');
+const validate = require('../middlewares/validateMiddleware');
+const auth = require('../middlewares/authMiddleware');
 
-const dbStringSanitizer = function dbStringSanitizer(arg) {
-    return arg.replace(/\\/g, "\\\\")
-            .replace(/\$/g, "\\$")
-            .replace(/'/g, "\\'")
-            .replace(/"/g, "\\\"");
-};
-
-const generateTicket = function generateTicket(uuidPassed) {
-    return ('xyx-9x-x30y-' + uuidPassed + 'yx5x').replace(/[xy]/g, function (c) {
-      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-      return v.toString(16);
-    });
-  }
+const { dbStringSanitizer, generateTicket } = require('../utilities/supportFunctions');
+const { respondWithSuccess, respondWithError } = require('../utilities/responder');
 
 router.post("/create", (req, res, next)=>{
     console.log("New Incoming create booking Request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/bookingbooking");
     var dateTime = new Date();
-    let ticketCode = generateTicket(uuid());
+    let ticketCode = generateTicket();
 
     if(req.body.seatId && req.body.bookedByName ) {
         mg.model("seats").find({_id: dbStringSanitizer(seatId), status: "BOOKED"}, function(getError,dataGot) {

@@ -4,12 +4,12 @@ const mg = require("mongoose");
 const Schema = mg.Schema, ObjectId = Schema.ObjectId;
 const moment = require("moment");
 
-const dbStringSanitizer = function dbStringSanitizer(arg) {
-    return arg.replace(/\\/g, "\\\\")
-            .replace(/\$/g, "\\$")
-            .replace(/'/g, "\\'")
-            .replace(/"/g, "\\\"");
-};
+const APISeatsRequestValidator = require('../validators/APISeatsRequestValidator');
+const validate = require('../middlewares/validateMiddleware');
+const auth = require('../middlewares/authMiddleware');
+
+const { dbStringSanitizer } = require('../utilities/supportFunctions');
+const { respondWithSuccess, respondWithError } = require('../utilities/responder');
 
 router.post("/create", (req, res, next)=>{
     console.log("New Incoming create seat Request", req.body);

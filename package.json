@@ -6,6 +6,8 @@
     "start": "nodemon ./bin/www",
     "devStart": "nodemon ./bin/www"
   },
+  "author": "Gabriel Dagadu (DagasonHackason), Bawah Hamzah (Skywalker427)",
+  "license": "ISC",
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "crypto-pbkdf2": "^0.1.2",
@@ -23,6 +25,8 @@
     "morgan": "~1.9.1",
     "mongoose": "^5.8.9",
     "uuid": "^3.4.0",
-    "dotenv": "^8.2.0"
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express-validator": "^5.3.1"
   }
 }
