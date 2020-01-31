@@ -22,6 +22,8 @@ const {
 
 const { respondWithSuccess, respondWithError } = require('../utilities/responder');
 
+router.use(auth);
+
 router.post("/create", (req, res, next)=>{
     console.log("New Incoming create user Request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");

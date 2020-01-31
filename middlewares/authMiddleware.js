@@ -3,6 +3,7 @@ const Schema = mg.Schema, ObjectId = Schema.ObjectId;
 const moment = require("moment");
 
 const { respondWithError, responderException } = require('../utilities/responder');
+const { dbStringSanitizer } = require('../utilities/supportFunctions');
 
 module.exports = (req, res, next) => {
     let useMiddleWare = false;
@@ -12,28 +13,31 @@ module.exports = (req, res, next) => {
         "/api/bookings/create",
         "/api/seats",
     ];
+    
+    console.log("current authMiddleware route hitting req.originalUrl ", req.originalUrl);
 
-    disallowed.map((errDisallowed, DisallowableItem) => {
-        if(!errDisallowed) {
-            if(req.path === DisallowableItem) {
-                useMiddleWare = true;
-            }
+    for(let i = 0; i < disallowed.length; i++) {
+        if(req.originalUrl === disallowed[i]) {
+            useMiddleWare = true;
         }
-    });
+    };
 
     if(!useMiddleWare) {
         mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
-        const sessionId_extract = req.headers.sessionId || req.body.sessionId || req.query.sessionId;
-        const username_extract = req.headers.username || req.body.username || req.query.username;
+        const sessionId_extract = req.get("sessionId") || req.body.sessionId || req.query.sessionId;
+        const username_extract = req.get("username") || req.query.username;
 
         if(!sessionId_extract && !username_extract) {
             return respondWithError(res, "You must provide a sessionId!", null, "209");
         }
 
-        const userData = {};
+        let userData = {};
         userData.sessionId_extract = sessionId_extract;
         userData.username_extract = username_extract;
+
+        console.log("userData.sessionId_extract", userData.sessionId_extract);
+        console.log("userData.username_extract", userData.username_extract);
 
         try {
             mg.model("users").findOne({ username: dbStringSanitizer(userData.username_extract), isDeleted: false }, function(errUser, existingUser){
@@ -49,7 +53,7 @@ module.exports = (req, res, next) => {
                             if(!moment(new Date()).format("YYYY-MM-DD HH:mm:ss").isAfter(existingSession.expiresOn)) {
                                 userData.loginSessions = existingSession;
                                 req.userData = userData;
-                                return;
+                                next();
                             } else {
                                 throw new responderException("Login sessionId has expired... Error!", null, "209");
                             }
@@ -68,6 +72,6 @@ module.exports = (req, res, next) => {
         }
     } else {
         console.log("No middleware needed for this route", req.path);
-        return;
+        next();
     }
 }

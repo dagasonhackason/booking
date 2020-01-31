@@ -57,8 +57,7 @@ module.exports = {
 
         constructor (responseMessage, data, responseCode, httpStatus=200) {
             super(responseMessage);
-        
-            this.name = this.constructor.name;
+            
             this.responseMessage = responseMessage;
             this.data = data;
             this.responseCode = responseCode;

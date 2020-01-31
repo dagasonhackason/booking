@@ -11,6 +11,8 @@ const auth = require('../middlewares/authMiddleware');
 const { dbStringSanitizer } = require('../utilities/supportFunctions');
 const { respondWithSuccess, respondWithError } = require('../utilities/responder');
 
+router.use(auth);
+
 router.post("/create", (req, res, next)=>{
     console.log("New Incoming create seat Request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
