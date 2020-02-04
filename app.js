@@ -1,10 +1,12 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-let mg = require("mongoose");
-let fs =require("fs");
+
+require('console-stamp')(console, '[HH:MM:ss.l]');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const mg = require("mongoose");
+const fs = require("fs");
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const validator = require('express-validator');
@@ -38,8 +40,23 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-app.use(logger('dev'));
+app.use(logger(':date[clf] ":method :url"'));
+// express.logger.format('mydate', function() {
+//   var df = require('console-stamp/node_modules/dateformat');
+//   return df(new Date(), 'HH:MM:ss.l');
+// });
+// app.use(express.logger('[:mydate] :method :url :status :res[content-length] - :remote-addr - :response-time ms'));
+/*********************** LOGGING CONSOLE TO FILE STREAM ***********************/
+var access = fs.createWriteStream((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-") + 'node.access.log', { flags: 'a' });
+var error = fs.createWriteStream((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-") + 'node.error.log', { flags: 'a' });
+////////////////////////////////////
+process.stdout.write = access.write.bind(access);
+process.stderr.write = error.write.bind(error);
+////////////////////////////////////
+process.on('uncaughtException', function(err) {
+  console.error((err && err.stack) ? err.stack : err);
+});
+/******************************************************************************/
 app.use(cors());
 app.use(bodyParser.urlencoded({
     extended: true,
@@ -65,67 +82,100 @@ app.use("/configure", configureRouter);
 app.use("/bookings", bookingsRouter);
 app.use("/showticket", showTicketRouter);
 
-///////// API ROUTES /////////
+///////// API LOGGING /////////
 //Let's Log app usage full trace
 app.use((req, res, next) => {
   console.log("Calling app logger");
   res.on('finish', () => {
       console.log("Finishing")
-      if(req.user) {
-          //valid and existing api key usage
-          console.log("Valid sessionId, logging");
-          const data = {
-              req_sessionId_extract: req.userData.sessionId_extract,
-              req_username_extract: req.userData.username_extract,
-              req_loginSession: req.userData.loginSessions,
-              req_user: req.userData.users,
-              req_route: req.route.path,
-              req_ip_address: req.ip,
-              req_location: req.location,
-              request_payload: JSON.stringify({
-                  headers: req.headers,
-                  params: req.params,
-                  body: req.body,
-                  query: req.query
-              }),
-              res_status_code: res.statusCode,
-              res_status_message: res.statusMessage,
-              response_payload: JSON.stringify({
-                  headers: res._header,
-                  body: res.__body,
-              }),
-              created_at: new Date(),
-          };
+      if(req.userData) {
+        //valid and existing sessionId usage
+        console.log("Valid sessionId, logging");
+        const data = {
+          req_sessionId_extract: req.userData.sessionId_extract,
+          req_username_extract: req.userData.username_extract,
+          req_loginSession: req.userData.loginSessions,
+          req_user: req.userData.users,
+          req_route: req.originalUrl,
+          req_ip_address: req.ip,
+          request_payload: {
+              headers: req.headers,
+              params: req.params,
+              body: req.body,
+              query: req.query
+          },
+          res_status_code: res.statusCode,
+          res_status_message: res.statusMessage,
+          response_payload: {
+              headers: res._header,
+              body: res.__body,
+          },
+          created_at: new Date()
+        };
 
-          // Let's Keep taps with our file logs
-          fs.exists((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + ".log"), function(exists) {
-            if(exists) {
-              fs.appendFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + ".log"), ":::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
-                    + "\n" + JSON.stringify(data) + "\n"
-                    + "\n___________________________________________________\n", function (err) {
-                if (err) console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
-                console.log("App usage logged! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
-              }).catch(error => {
-                  console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
-              }); 
-            } else {
-              fs.writeFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + ".log"), ":::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
-                    + "\n" + JSON.stringify(data) + "\n"
-                    + "\n___________________________________________________\n", function (err) {
-                if (err) console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
-                console.log("App usage logged! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
-              }).catch(error => {
-                  console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
-              }); 
-            }
-          });
-      }
-      else {
-          console.log("Not a sessionId used");
+        // Let's Keep taps with our file logs
+        fs.exists((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + ".log"), function(exists) {
+          if(exists) {
+            fs.appendFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
+                + "\n" + JSON.stringify(data, null, 4) + "\n"
+                + "\n___________________________________________________\n", function (err) {
+              if (err) console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
+              console.log("App usage logged! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
+            }); 
+          } else {
+            fs.writeFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
+                + "\n" + JSON.stringify(data, null, 4) + "\n"
+                + "\n___________________________________________________\n", function (err) {
+              if (err) console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
+              console.log("App usage logged! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
+            }); 
+          }
+        });
+      } else {
+        console.log("No sessionId used");
+        
+        const data = {
+          req_route: req.originalUrl,
+          req_ip_address: req.ip,
+          request_payload: {
+              headers: req.headers,
+              params: req.params,
+              body: req.body,
+              query: req.query
+          },
+          res_status_code: res.statusCode,
+          res_status_message: res.statusMessage,
+          response_payload: {
+              headers: res._header,
+              body: res.__body,
+          },
+          created_at: new Date()
+        };
+
+        // Let's Keep taps with our file logs
+        fs.exists((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + ".log"), function(exists) {
+          if(exists) {
+            fs.appendFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
+                + "\n" + JSON.stringify(data, null, 4) + "\n"
+                + "\n___________________________________________________\n", function (err) {
+              if (err) console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
+              console.log("App usage logged! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
+            }); 
+          } else {
+            fs.writeFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
+                + "\n" + JSON.stringify(data, null, 4) + "\n"
+                + "\n___________________________________________________\n", function (err) {
+              if (err) console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
+              console.log("App usage logged! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
+            }); 
+          }
+        });
       }
   });
   next();
 });
+
+///////// API ROUTES /////////
 app.use("/api/seats", apiSeatRouter);
 app.use("/api/users", apiUsersRouter);
 app.use("/api/bookings", apiBookingsRouter);

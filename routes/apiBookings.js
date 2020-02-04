@@ -18,73 +18,68 @@ router.post("/create", (req, res, next)=>{
     mg.connect("mongodb://127.0.0.1:27017/bookingbooking");
     var dateTime = new Date();
     let ticketCode = generateTicket();
+    var seatId = req.body.seatId;
 
     if(req.body.seatId && req.body.bookedByName ) {
-        mg.model("seats").find({_id: dbStringSanitizer(seatId), status: "BOOKED"}, function(getError,dataGot) {
-            if (!getError && dataGot) {
-                if(dataGot.length == 0) {
-                    console.log("From mongo isn't seated booked already!", dataGot);
+        mg.model("seats").findOne({_id: mg.Types.ObjectId(dbStringSanitizer(seatId)), status: "NOT_BOOKED"}, function(getError,dataGot) {
+            
+            console.log("From mongo isn't seated booked already!", dataGot);
+            if(!getError && dataGot) {
+                console.log("From mongo isn't seated booked already!", dataGot);
 
-                    mg.model("bookings").create({seatId: dbStringSanitizer(req.body.seatId), bookedByName: dbStringSanitizer(req.body.bookedByName), ticketCode: ticketCode, bookedOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), isTicketCodeUsed: false, ticketCodeUsedOn: ""}, function (error,insertResponse) {
-                        if(error) {
-                            res.status(200).json({
-                                status: "error",
-                                responseCode: "202",
-                                responseMessage: "Booking Creation Failed with an Unknown Error!",
-                                data: null
-                            });
+                mg.model("bookings").create({seatId: mg.Types.ObjectId(dbStringSanitizer(seatId)), bookedByName: dbStringSanitizer(req.body.bookedByName), ticketCode: ticketCode, bookedOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), isTicketCodeUsed: false, ticketCodeUsedOn: ""}, function (error,insertResponse) {
+                    if(error) {
+                        res.status(200).json({
+                            status: "error",
+                            responseCode: "202",
+                            responseMessage: "Booking Creation Failed with an Unknown Error!",
+                            data: null
+                        });
+                        
+                        console.error("Booking Creation Failed with an Unknown Error!", error);
+                        
+                        mg.disconnect();
+            
+                        return;
+                    } else {
+                        dataGot.status = "BOOKED";
+                        dataGot.save(function(updateError,updated) {
+                            if (updated){
+                                console.log("updated seatId " + req.body.seatId + " status to booked BOOKED by " + req.body.bookedByName, updated);
+                                console.log("From mongo insert booking", insertResponse);
                             
-                            console.error("Booking Creation Failed with an Unknown Error!", error);
-                            
-                            mg.disconnect();
-                
-                            return;
-                        } else {
-                            mg.model("seats").update({_id: dbStringSanitizer(req.body.seatId)}, {status: "BOOKED"},function(updateError,updated){
-                                if (updated){
-                                    console.log("updated seatId " + req.body.seatId + " status to booked BOOKED by " + req.body.bookedByName, updated);
-                                    console.log("From mongo insert booking", insertResponse);
+                                res.status(200).json({
+                                    status: "success",
+                                    responseCode: "201",
+                                    responseMessage: "Booking Creation was Successful!",
+                                    data: insertResponse
+                                });
                                 
-                                    res.status(200).json({
-                                        status: "success",
-                                        responseCode: "201",
-                                        responseMessage: "Booking Creation was Successful!",
-                                        data: insertResponse
-                                    });
-                                    
-                                    mg.disconnect();
-                    
-                                    return;
-                                } else {
-                                    res.status(200).json({
-                                        status: "error",
-                                        responseCode: "208",
-                                        responseMessage: "Unknown Error!",
-                                        data: null
-                                    });
-                            
-                                    console.error("Unknown Error!", updateError);
-                                    
-                                    mg.disconnect();
-                            
-                                    return;
-                                }
-                            });
-                        }
-                    });
-                } else {
-                    res.status(200).json({
-                        status: "error",
-                        responseCode: "206",
-                        responseMessage: "The selected seat has already been booked!",
-                        data: null
-                    });
-                }
+                                mg.disconnect();
+                
+                                return;
+                            } else {
+                                res.status(200).json({
+                                    status: "error",
+                                    responseCode: "208",
+                                    responseMessage: "Unknown Error!",
+                                    data: null
+                                });
+                        
+                                console.error("Unknown Error!", updateError);
+                                
+                                mg.disconnect();
+                        
+                                return;
+                            }
+                        });
+                    }
+                });
             } else {
                 res.status(200).json({
                     status: "error",
                     responseCode: "206",
-                    responseMessage: "Unknown error processing  data!",
+                    responseMessage: "Unknown error proccessing data!",
                     data: null
                 });
                     
@@ -117,7 +112,7 @@ router.get("/read/:id", (req,res,next)=>{
     console.log("New get one booking request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/bookingbooking");
 
-    mg.model("bookings").find({_id: dbStringSanitizer(id)}, function(getError,dataGot) {
+    mg.model("bookings").find({_id: mg.Types.ObjectId(dbStringSanitizer(id))}, function(getError,dataGot) {
         if (!getError && dataGot) {
             console.log("From mongo get one booking", dataGot);
                         
@@ -197,13 +192,13 @@ router.post("/useticket/:ticketCode/:id", (req,res,next)=>{
         delete req.body._id;
     }
 
-    mg.model("bookings").findById(dbStringSanitizer(id), function(existError, exist) {
+    mg.model("bookings").findById(mg.Types.ObjectId(dbStringSanitizer(id)), function(existError, exist) {
         if (!existError && exist) {
             isTicketCodeUsed = true;
             ticketCodeUsedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
             
             if(exist.id == id && !exist.isTicketCodeUsed && exist.ticketCode == ticketCode) {
-                mg.model("bookings").updateOne({_id: dbStringSanitizer(id)}, {isTicketCodeUsed: isTicketCodeUsed},function(updateError,updated){
+                mg.model("bookings").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id))}, {isTicketCodeUsed: isTicketCodeUsed},function(updateError,updated){
                     if (updateError || !updated){
                         res.status(200).json({
                             status: "error",

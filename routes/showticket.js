@@ -11,7 +11,7 @@ const dbStringSanitizer = function dbStringSanitizer(arg) {
             .replace(/"/g, "\\\"");
 };
 
-router.get("/:id", (req,res,next)=>{
+router.get("/:id", (req,res,next) => {
     var id = req.params.id;
     let dataPassed = {};
 

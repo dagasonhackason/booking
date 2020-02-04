@@ -38,7 +38,7 @@ router.post("/create", (req, res, next)=>{
                 mg.model("users").findOne({ username: dbStringSanitizer(req.body.username), isDeleted: false }, function(err,existingUser){
                     console.log("user data on existence check", existingUser);
                     if (!err && !existingUser) {
-                        mg.model("users").create({username: dbStringSanitizer(req.body.username), password: hashedPassword, passwordSalt: salt, createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: "", lastLoginOn: "", isDeleted: false}, function (error,insertResponse) {
+                        mg.model("users").create({username: dbStringSanitizer(req.body.username), password: hashedPassword, passwordSalt: salt, createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, lastLoginOn: "", isDeleted: false}, function (error,insertResponse) {
                             if(error) {
                                 res.status(200).json({
                                     status: "error",
@@ -134,7 +134,7 @@ router.get("/read/:id", (req,res,next)=>{
     console.log("new get one user request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
-    mg.model("users").find({_id: dbStringSanitizer(id), isDeleted: false}, function(getError,dataGot) {
+    mg.model("users").find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, function(getError,dataGot) {
         if (!getError && dataGot) {
             console.log("from mongo get one user", dataGot);
                         
@@ -235,11 +235,14 @@ router.post("/update/:id", (req,res,next)=>{
         delete req.body.isDeleted;
     }
 
-    mg.model("users").find({_id: dbStringSanitizer(id), isDeleted: false}, function(existError, exist) {
+    req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+    req.body.updatedBy = req.userData.users._id;
+
+    mg.model("users").find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("users").updateOne({_id: dbStringSanitizer(id), isDeleted: false}, req.body,function(updateError,updated){
+                mg.model("users").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, req.body,function(updateError,updated){
                     if (updateError || !updated){
                         res.status(200).json({
                             status: "error",
@@ -348,12 +351,15 @@ router.post("/delete", (req,res,next)=> {
     console.log("Delete user request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
+
+    req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+    req.body.updatedBy = req.userData.users._id;
     
-    mg.model("users").find({_id: dbStringSanitizer(req.body._id), isDeleted: false}, function(existError, exist) {
+    mg.model("users").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("users").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false}, {isDeleted: true}, function(deleteError,deleted){
+                mg.model("users").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, {isDeleted: true, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(deleteError,deleted){
                     if (deleteError || !deleted){
                         res.status(200).json({
                             status: "error",
@@ -412,12 +418,15 @@ router.post("/restore", (req,res,next)=> {
     console.log("Restore user request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
+
+    req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+    req.body.updatedBy = req.userData.users._id;
     
-    mg.model("users").find({_id: dbStringSanitizer(req.body._id), isDeleted: true}, function(existError, exist) {
+    mg.model("users").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("users").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: true}, {isDeleted: false}, function(deleteError,deleted){
+                mg.model("users").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, {isDeleted: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(deleteError,deleted){
                     if (deleteError || !deleted){
                         res.status(200).json({
                             status: "error",
@@ -509,7 +518,7 @@ router.post("/login", (req,res,next)=>{
                         
                         sessionId = jwtSignTokenizer(payload);
     
-                        mg.model("loginSessions").create({userId: dataGot._id, loggedInOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), loggedOutOn: "", loggedOutBy: "", sessionId: sessionId}, function (error, insertResponse) {
+                        mg.model("loginSessions").create({userId: dataGot._id, loggedInOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), loggedOutOn: "", loggedOutBy: null, sessionId: sessionId, isExpired: false, expiresOn: moment(new Date(Date.now() + 12096e5)).format("YYYY-MM-DD HH:mm:ss")}, function (error, insertResponse) {
                             if(error) {
                                 res.status(200).json({
                                     status: "error",
@@ -598,6 +607,9 @@ router.post("/logout", (req,res,next)=>{
     console.log("New Incoming logout user Request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
+
+    req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+    req.body.updatedBy = req.userData.users._id;
 
     res.status(200).json({
         status: "success",

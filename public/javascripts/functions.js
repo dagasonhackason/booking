@@ -67,17 +67,17 @@ function loginAndSetSessionDetails(arg) {
     }).then(function (response) {
         if(response.data.status == "success"){
             if(isCookie) {
-                setcookie( "userId", response.data.data.userId,  ((new Date().getTime()) + 1209600) );
-                setcookie( "username", response.data.data.username, ((new Date().getTime()) + 1209600) );
-                setcookie( "createdOn", response.data.data.createdOn, ((new Date().getTime()) + 1209600) );
-                setcookie( "updatedOn", response.data.data.updatedOn, ((new Date().getTime()) + 1209600) );
-                setcookie( "updatedBy", response.data.data.updatedBy, ((new Date().getTime()) + 1209600) );
-                setcookie( "lastLoginOn", response.data.data.lastLoginOn, ((new Date().getTime()) + 1209600) );
-                setcookie( "isDeleted", response.data.data.isDeleted, ((new Date().getTime()) + 1209600) );
-                setcookie( "loggedInOn", response.data.data.loggedInOn, ((new Date().getTime()) + 1209600) );
-                setcookie( "loggedOutOn", response.data.data.loggedOutOn, ((new Date().getTime()) + 1209600) );
-                setcookie( "loggedOutBy", response.data.data.loggedOutBy, ((new Date().getTime()) + 1209600) );
-                setcookie( "sessionId", response.data.data.sessionId, ((new Date().getTime()) + 1209600) );
+                setcookie( "userId", response.data.data.userId,  ((new Date(Date.now() + 12096e5))) );
+                setcookie( "username", response.data.data.username, ((new Date(Date.now() + 12096e5))) );
+                setcookie( "createdOn", response.data.data.createdOn, ((new Date(Date.now() + 12096e5))) );
+                setcookie( "updatedOn", response.data.data.updatedOn, ((new Date(Date.now() + 12096e5))) );
+                setcookie( "updatedBy", response.data.data.updatedBy, ((new Date(Date.now() + 12096e5))) );
+                setcookie( "lastLoginOn", response.data.data.lastLoginOn, ((new Date(Date.now() + 12096e5))) );
+                setcookie( "isDeleted", response.data.data.isDeleted, ((new Date(Date.now() + 12096e5))) );
+                setcookie( "loggedInOn", response.data.data.loggedInOn, ((new Date(Date.now() + 12096e5))) );
+                setcookie( "loggedOutOn", response.data.data.loggedOutOn, ((new Date(Date.now() + 12096e5))) );
+                setcookie( "loggedOutBy", response.data.data.loggedOutBy, ((new Date(Date.now() + 12096e5))) );
+                setcookie( "sessionId", response.data.data.sessionId, ((new Date(Date.now() + 12096e5))) );
                 
                 callSuccessPopup("Login Successful!", (function() {
                     window.location.href = "/dash";

@@ -1,0 +1,2885 @@
+[[06:53:20.076]] [LOG]    Calling app logger
+[[06:53:20.078]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[06:53:20.078]] [LOG]    No middleware needed for this route /login
+[[06:53:20.079]] [LOG]    new login user request { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' }
+[[06:53:20.694]] [LOG]    from mongo login user {
+  _id: 5e30cc0b6056ad5e58c414f9,
+  username: 'testusername7',
+  password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+  passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+  createdOn: '2020-01-29 00:04:24',
+  updatedOn: '',
+  updatedBy: '',
+  lastLoginOn: '',
+  isDeleted: false,
+  __v: 0
+}
+[[06:53:20.696]] [LOG]    salt  -  fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a  -  hashedPassword  -  f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707
+[[06:53:23.977]] [LOG]    from mongo insert user {
+  _id: 5e3914e3cece137124eb2e4a,
+  userId: '5e30cc0b6056ad5e58c414f9',
+  loggedInOn: '2020-02-04 06:53:20',
+  loggedOutOn: '',
+  loggedOutBy: '',
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTkyMDMsImV4cCI6MTU4MjAwODgwM30.Ri8HqxUXtPaC9xjZAXkXYKZlJK5wMukPy_l6SnpKwkk',
+  isExpired: false,
+  expiresOn: '2020-02-18 06:53:23',
+  __v: 0
+}
+04/Feb/2020:06:53:23 +0000 "POST /api/users/login"
+[[06:53:23.987]] [LOG]    Finishing
+[[06:53:23.987]] [LOG]    No sessionId used
+[[06:53:23.995]] [LOG]    App usage logged! - 2020-02-04 06:53:23 {
+  req_route: '/login',
+  req_ip_address: '::1',
+  req_location: undefined,
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '3cd5dbdb-e700-47ee-83c4-89ad8fa0dd39',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '65',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 600\r\n' +
+      'ETag: W/"258-p2HaKT9/KgVab53A8X/kn/fyZ1w"\r\n' +
+      'Date: Tue, 04 Feb 2020 06:53:23 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T06:53:23.988Z
+}
+[[08:50:57.277]] [LOG]    Calling app logger
+[[08:50:57.300]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings
+[[08:50:57.333]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk
+[[08:50:57.334]] [LOG]    userData.username_extract testusername1
+[[08:50:57.454]] [LOG]    middleware data on user existence check null
+04/Feb/2020:08:51:13 +0000 "GET /api/bookings"
+[[08:52:37.992]] [LOG]    Calling app logger
+[[08:52:37.994]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings
+[[08:52:37.997]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk
+[[08:52:37.997]] [LOG]    userData.username_extract testusername1
+[[08:52:38.018]] [LOG]    middleware data on user existence check null
+04/Feb/2020:08:54:37 +0000 "GET /api/bookings"
+[[09:15:34.217]] [LOG]    Calling app logger
+[[09:15:34.218]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings
+[[09:15:34.221]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk
+[[09:15:34.221]] [LOG]    userData.username_extract testusername1
+[[09:15:34.296]] [LOG]    middleware data on user existence check null
+04/Feb/2020:09:15:34 +0000 "GET /api/bookings"
+[[09:15:34.303]] [LOG]    Finishing
+[[09:15:34.303]] [LOG]    No sessionId used
+[[09:25:09.775]] [LOG]    Calling app logger
+[[09:25:09.776]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings
+[[09:25:09.779]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk
+[[09:25:09.779]] [LOG]    userData.username_extract testusername1
+[[09:25:09.806]] [LOG]    middleware data on user existence check null
+04/Feb/2020:09:25:09 +0000 "GET /api/bookings"
+[[09:25:09.812]] [LOG]    Finishing
+[[09:25:09.813]] [LOG]    No sessionId used
+[[09:25:51.815]] [LOG]    Calling app logger
+[[09:25:51.815]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings
+[[09:25:51.817]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk
+[[09:25:51.817]] [LOG]    userData.username_extract testusername7
+[[09:25:51.847]] [LOG]    middleware data on user existence check {
+  _id: 5e30cc0b6056ad5e58c414f9,
+  username: 'testusername7',
+  password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+  passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+  createdOn: '2020-01-29 00:04:24',
+  updatedOn: '',
+  updatedBy: '',
+  lastLoginOn: '',
+  isDeleted: false,
+  __v: 0
+}
+[[09:25:51.914]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e38fc72674203408c17c09d,
+  userId: '5e30cc0b6056ad5e58c414f9',
+  loggedInOn: '2020-02-04 05:09:05',
+  loggedOutOn: '',
+  loggedOutBy: '',
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+  isExpired: false,
+  expiredOn: '2020-02-18 05:09:06',
+  __v: 0
+}
+[[09:25:51.917]] [LOG]    new get all bookings request {}
+[[09:25:51.973]] [LOG]    From mongo get all bookings []
+04/Feb/2020:09:25:51 +0000 "GET /api/bookings"
+[[09:25:51.974]] [LOG]    Finishing
+[[09:25:51.974]] [LOG]    Valid sessionId, logging
+[[09:25:52.004]] [LOG]    App usage logged! - 2020-02-04 09:25:52 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+  req_username_extract: 'testusername7',
+  req_loginSession: {
+    _id: 5e38fc72674203408c17c09d,
+    userId: '5e30cc0b6056ad5e58c414f9',
+    loggedInOn: '2020-02-04 05:09:05',
+    loggedOutOn: '',
+    loggedOutBy: '',
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+    isExpired: false,
+    expiredOn: '2020-02-18 05:09:06',
+    __v: 0
+  },
+  req_user: {
+    _id: 5e30cc0b6056ad5e58c414f9,
+    username: 'testusername7',
+    password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+    passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+    createdOn: '2020-01-29 00:04:24',
+    updatedOn: '',
+    updatedBy: '',
+    lastLoginOn: '',
+    isDeleted: false,
+    __v: 0
+  },
+  req_route: undefined,
+  req_ip_address: '::1',
+  req_location: undefined,
+  request_payload: {
+    headers: {
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+      username: 'testusername7',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '07f7332b-dfec-45dc-8c32-995cb42048ff',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 109\r\n' +
+      'ETag: W/"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q"\r\n' +
+      'Date: Tue, 04 Feb 2020 09:25:51 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T09:25:51.974Z
+}
+[[09:27:44.055]] [LOG]    Calling app logger
+[[09:27:44.057]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings
+[[09:27:44.059]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk
+[[09:27:44.059]] [LOG]    userData.username_extract testusername7
+[[09:27:44.107]] [LOG]    middleware data on user existence check {
+  _id: 5e30cc0b6056ad5e58c414f9,
+  username: 'testusername7',
+  password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+  passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+  createdOn: '2020-01-29 00:04:24',
+  updatedOn: '',
+  updatedBy: '',
+  lastLoginOn: '',
+  isDeleted: false,
+  __v: 0
+}
+[[09:27:44.113]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e38fc72674203408c17c09d,
+  userId: '5e30cc0b6056ad5e58c414f9',
+  loggedInOn: '2020-02-04 05:09:05',
+  loggedOutOn: '',
+  loggedOutBy: '',
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+  isExpired: false,
+  expiredOn: '2020-02-18 05:09:06',
+  __v: 0
+}
+[[09:27:44.119]] [LOG]    new get all bookings request {}
+[[09:27:44.134]] [LOG]    From mongo get all bookings []
+04/Feb/2020:09:27:44 +0000 "GET /api/bookings"
+[[09:27:44.140]] [LOG]    Finishing
+[[09:27:44.140]] [LOG]    Valid sessionId, logging
+[[09:27:44.157]] [LOG]    App usage logged! - 2020-02-04 09:27:44 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+  req_username_extract: 'testusername7',
+  req_loginSession: {
+    _id: 5e38fc72674203408c17c09d,
+    userId: '5e30cc0b6056ad5e58c414f9',
+    loggedInOn: '2020-02-04 05:09:05',
+    loggedOutOn: '',
+    loggedOutBy: '',
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+    isExpired: false,
+    expiredOn: '2020-02-18 05:09:06',
+    __v: 0
+  },
+  req_user: {
+    _id: 5e30cc0b6056ad5e58c414f9,
+    username: 'testusername7',
+    password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+    passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+    createdOn: '2020-01-29 00:04:24',
+    updatedOn: '',
+    updatedBy: '',
+    lastLoginOn: '',
+    isDeleted: false,
+    __v: 0
+  },
+  req_route: '/api/bookings',
+  req_ip_address: '::1',
+  req_location: undefined,
+  request_payload: {
+    headers: {
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+      username: 'testusername7',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '4bc29c57-41cc-4537-9086-05014dfdfa4b',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 109\r\n' +
+      'ETag: W/"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q"\r\n' +
+      'Date: Tue, 04 Feb 2020 09:27:44 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T09:27:44.141Z
+}
+[[09:29:14.759]] [LOG]    hitting index view route with {}
+04/Feb/2020:09:29:15 +0000 "GET /"
+[[09:29:22.141]] [LOG]    Calling app logger
+[[09:29:22.142]] [LOG]    { version: '1.0' }
+04/Feb/2020:09:29:22 +0000 "GET /api/"
+[[09:29:22.145]] [LOG]    Finishing
+[[09:29:22.145]] [LOG]    No sessionId used
+[[09:29:22.154]] [LOG]    App usage logged! - 2020-02-04 09:29:22 {
+  req_route: '/api/',
+  req_ip_address: '::1',
+  req_location: undefined,
+  request_payload: {
+    headers: {
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+      username: 'testusername7',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '5341019d-9aa6-4f07-80ad-a69b9e69527a',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 123\r\n' +
+      'ETag: W/"7b-mpDuCGCeG7Nl9V0j63XgoQ0rBdI"\r\n' +
+      'Date: Tue, 04 Feb 2020 09:29:22 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: {
+      status: 'success',
+      responseCode: '200',
+      responseMessage: 'Welcome to Booking System REST API',
+      data: [Array]
+    }
+  },
+  created_at: 2020-02-04T09:29:22.145Z
+}
+[[09:29:59.127]] [LOG]    Calling app logger
+[[09:29:59.128]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings
+[[09:29:59.132]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk
+[[09:29:59.133]] [LOG]    userData.username_extract testusername7
+[[09:29:59.178]] [LOG]    middleware data on user existence check {
+  _id: 5e30cc0b6056ad5e58c414f9,
+  username: 'testusername7',
+  password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+  passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+  createdOn: '2020-01-29 00:04:24',
+  updatedOn: '',
+  updatedBy: '',
+  lastLoginOn: '',
+  isDeleted: false,
+  __v: 0
+}
+[[09:29:59.186]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e38fc72674203408c17c09d,
+  userId: '5e30cc0b6056ad5e58c414f9',
+  loggedInOn: '2020-02-04 05:09:05',
+  loggedOutOn: '',
+  loggedOutBy: '',
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+  isExpired: false,
+  expiredOn: '2020-02-18 05:09:06',
+  __v: 0
+}
+[[09:29:59.188]] [LOG]    new get all bookings request {}
+[[09:29:59.205]] [LOG]    From mongo get all bookings []
+04/Feb/2020:09:29:59 +0000 "GET /api/bookings"
+[[09:29:59.207]] [LOG]    Finishing
+[[09:29:59.207]] [LOG]    Valid sessionId, logging
+[[09:29:59.228]] [LOG]    App usage logged! - 2020-02-04 09:29:59 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+  req_username_extract: 'testusername7',
+  req_loginSession: {
+    _id: 5e38fc72674203408c17c09d,
+    userId: '5e30cc0b6056ad5e58c414f9',
+    loggedInOn: '2020-02-04 05:09:05',
+    loggedOutOn: '',
+    loggedOutBy: '',
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+    isExpired: false,
+    expiredOn: '2020-02-18 05:09:06',
+    __v: 0
+  },
+  req_user: {
+    _id: 5e30cc0b6056ad5e58c414f9,
+    username: 'testusername7',
+    password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+    passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+    createdOn: '2020-01-29 00:04:24',
+    updatedOn: '',
+    updatedBy: '',
+    lastLoginOn: '',
+    isDeleted: false,
+    __v: 0
+  },
+  req_route: '/api/bookings',
+  req_ip_address: '::1',
+  req_location: undefined,
+  request_payload: {
+    headers: {
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk',
+      username: 'testusername7',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '4c3bea58-3d2e-4994-9e14-9cb7aaa528d3',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 109\r\n' +
+      'ETag: W/"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q"\r\n' +
+      'Date: Tue, 04 Feb 2020 09:29:59 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T09:29:59.207Z
+}
+[[09:30:16.131]] [LOG]    Calling app logger
+[[09:30:16.131]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[09:30:16.132]] [LOG]    No middleware needed for this route /login
+[[09:30:16.132]] [LOG]    new login user request { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' }
+[[09:30:16.163]] [LOG]    from mongo login user {
+  _id: 5e30cc0b6056ad5e58c414f9,
+  username: 'testusername7',
+  password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+  passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+  createdOn: '2020-01-29 00:04:24',
+  updatedOn: '',
+  updatedBy: '',
+  lastLoginOn: '',
+  isDeleted: false,
+  __v: 0
+}
+[[09:30:16.165]] [LOG]    salt  -  fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a  -  hashedPassword  -  f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707
+[[09:30:18.822]] [LOG]    from mongo insert user {
+  _id: 5e3939aa7d8f5259944fe68b,
+  userId: '5e30cc0b6056ad5e58c414f9',
+  loggedInOn: '2020-02-04 09:30:16',
+  loggedOutOn: '',
+  loggedOutBy: '',
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA4MDg2MTgsImV4cCI6MTU4MjAxODIxOH0.2WhnPgAaSChFGOc2EvmQuZLZJ7Xhsx-MNuSqrCYSgZw',
+  isExpired: false,
+  expiresOn: '2020-02-18 09:30:18',
+  __v: 0
+}
+04/Feb/2020:09:30:18 +0000 "POST /api/users/login"
+[[09:30:18.834]] [LOG]    Finishing
+[[09:30:18.834]] [LOG]    No sessionId used
+[[09:30:18.846]] [LOG]    App usage logged! - 2020-02-04 09:30:18 {
+  req_route: '/api/users/login',
+  req_ip_address: '::1',
+  req_location: undefined,
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'e8eebbcf-9e99-4407-ad0a-e2b52e57528c',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '65',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 600\r\n' +
+      'ETag: W/"258-vPxbOHaews7NwYB1KKlFLFrI+ok"\r\n' +
+      'Date: Tue, 04 Feb 2020 09:30:18 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T09:30:18.835Z
+}
+[[09:33:08.750]] [LOG]    Calling app logger
+[[09:33:08.751]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[09:33:08.751]] [LOG]    No middleware needed for this route /login
+[[09:33:08.753]] [LOG]    new login user request { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' }
+[[09:33:08.799]] [LOG]    from mongo login user {
+  _id: 5e30cc0b6056ad5e58c414f9,
+  username: 'testusername7',
+  password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+  passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+  createdOn: '2020-01-29 00:04:24',
+  updatedOn: '',
+  updatedBy: '',
+  lastLoginOn: '',
+  isDeleted: false,
+  __v: 0
+}
+[[09:33:08.802]] [LOG]    salt  -  fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a  -  hashedPassword  -  f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707
+[[09:33:10.849]] [LOG]    from mongo insert user {
+  _id: 5e393a56ff1b5b86048a7502,
+  userId: '5e30cc0b6056ad5e58c414f9',
+  loggedInOn: '2020-02-04 09:33:08',
+  loggedOutOn: '',
+  loggedOutBy: '',
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA4MDg3OTAsImV4cCI6MTU4MjAxODM5MH0.W_vf9-k6bb2LGmeJnpC39HaiUa9gxe0n341jBPsZXQU',
+  isExpired: false,
+  expiresOn: '2020-02-18 09:33:10',
+  __v: 0
+}
+04/Feb/2020:09:33:10 +0000 "POST /api/users/login"
+[[09:33:10.862]] [LOG]    Finishing
+[[09:33:10.862]] [LOG]    No sessionId used
+[[09:33:10.923]] [LOG]    App usage logged! - 2020-02-04 09:33:10 {
+  req_route: '/api/users/login',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '9a73277c-309b-4db4-ad3c-6735a45cf899',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '65',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 600\r\n' +
+      'ETag: W/"258-CVI9DjILw/WpEyqeAQdXa1diH8M"\r\n' +
+      'Date: Tue, 04 Feb 2020 09:33:10 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T09:33:10.864Z
+}
+[[09:39:16.803]] [LOG]    Calling app logger
+[[09:39:16.804]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[09:39:16.804]] [LOG]    No middleware needed for this route /login
+[[09:39:16.805]] [LOG]    new login user request { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' }
+[[09:39:16.860]] [LOG]    from mongo login user {
+  _id: 5e30cc0b6056ad5e58c414f9,
+  username: 'testusername7',
+  password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+  passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+  createdOn: '2020-01-29 00:04:24',
+  updatedOn: '',
+  updatedBy: '',
+  lastLoginOn: '',
+  isDeleted: false,
+  __v: 0
+}
+[[09:39:16.861]] [LOG]    salt  -  fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a  -  hashedPassword  -  f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707
+[[09:39:18.767]] [LOG]    from mongo insert user {
+  _id: 5e393bc60e431111883219b1,
+  userId: '5e30cc0b6056ad5e58c414f9',
+  loggedInOn: '2020-02-04 09:39:16',
+  loggedOutOn: '',
+  loggedOutBy: '',
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA4MDkxNTgsImV4cCI6MTU4MjAxODc1OH0.aPGgPkxhKBkbYput5zMdEz1kurVg20MrPsxHA-vAnfs',
+  isExpired: false,
+  expiresOn: '2020-02-18 09:39:18',
+  __v: 0
+}
+04/Feb/2020:09:39:18 +0000 "POST /api/users/login"
+[[09:39:18.782]] [LOG]    Finishing
+[[09:39:18.782]] [LOG]    No sessionId used
+[[09:39:18.806]] [LOG]    App usage logged! - 2020-02-04 09:39:18 {
+  req_route: '/api/users/login',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '3e4e8617-95a9-4220-81ff-69ecab3298b7',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '65',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 600\r\n' +
+      'ETag: W/"258-ZDAFVaTJl8tDYrElz39VaXnm+fA"\r\n' +
+      'Date: Tue, 04 Feb 2020 09:39:18 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T09:39:18.783Z
+}
+[[09:50:54.637]] [LOG]    Calling app logger
+[[09:50:54.638]] [LOG]    { version: '1.0' }
+04/Feb/2020:09:50:54 +0000 "POST /api/"
+[[09:50:54.639]] [LOG]    Finishing
+[[09:50:54.640]] [LOG]    No sessionId used
+[[09:50:54.738]] [LOG]    App usage logged! - 2020-02-04 09:50:54 {
+  req_route: '/api/',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '5197061f-c7c9-49b3-93ba-d0fb400e1843',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '65',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 123\r\n' +
+      'ETag: W/"7b-mpDuCGCeG7Nl9V0j63XgoQ0rBdI"\r\n' +
+      'Date: Tue, 04 Feb 2020 09:50:54 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: {
+      status: 'success',
+      responseCode: '200',
+      responseMessage: 'Welcome to Booking System REST API',
+      data: [Array]
+    }
+  },
+  created_at: 2020-02-04T09:50:54.640Z
+}
+[[09:51:39.567]] [LOG]    Calling app logger
+[[09:51:39.567]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[09:51:39.567]] [LOG]    No middleware needed for this route /login
+[[09:51:39.568]] [LOG]    new login user request { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' }
+[[09:51:39.602]] [LOG]    from mongo login user {
+  _id: 5e30cc0b6056ad5e58c414f9,
+  username: 'testusername7',
+  password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+  passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+  createdOn: '2020-01-29 00:04:24',
+  updatedOn: '',
+  updatedBy: '',
+  lastLoginOn: '',
+  isDeleted: false,
+  __v: 0
+}
+[[09:51:39.603]] [LOG]    salt  -  fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a  -  hashedPassword  -  f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707
+[[09:51:42.025]] [LOG]    from mongo insert user {
+  _id: 5e393ead0e431111883219b2,
+  userId: '5e30cc0b6056ad5e58c414f9',
+  loggedInOn: '2020-02-04 09:51:39',
+  loggedOutOn: '',
+  loggedOutBy: '',
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA4MDk5MDEsImV4cCI6MTU4MjAxOTUwMX0.nkt03rGWBmema0FsZvmalTsvyx92BPT1iZ6Szzm_XvY',
+  isExpired: false,
+  expiresOn: '2020-02-18 09:51:41',
+  __v: 0
+}
+04/Feb/2020:09:51:42 +0000 "POST /api/users/login"
+[[09:51:42.040]] [LOG]    Finishing
+[[09:51:42.041]] [LOG]    No sessionId used
+[[09:51:42.075]] [LOG]    App usage logged! - 2020-02-04 09:51:42 {
+  req_route: '/api/users/login',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '981e8412-f8dc-4e2d-92cc-1b65091f70c3',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '65',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 600\r\n' +
+      'ETag: W/"258-CXhFaILvBIll3H/2bQ3RKQ84xJ8"\r\n' +
+      'Date: Tue, 04 Feb 2020 09:51:42 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T09:51:42.041Z
+}
+[[12:01:01.261]] [LOG]    Calling app logger
+[[12:01:01.265]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[12:01:01.266]] [LOG]    No middleware needed for this route /login
+[[12:01:01.268]] [LOG]    new login user request { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' }
+[[12:01:01.702]] [LOG]    from mongo login user {
+  _id: 5e30cc0b6056ad5e58c414f9,
+  username: 'testusername7',
+  password: 'f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707',
+  passwordSalt: 'fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a',
+  createdOn: '2020-01-29 00:04:24',
+  updatedOn: '',
+  updatedBy: '',
+  lastLoginOn: '',
+  isDeleted: false,
+  __v: 0
+}
+[[12:01:01.703]] [LOG]    salt  -  fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a  -  hashedPassword  -  f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707
+[[12:01:04.324]] [LOG]    from mongo insert user {
+  _id: 5e395d00da9ce220e8f9589e,
+  userId: '5e30cc0b6056ad5e58c414f9',
+  loggedInOn: '2020-02-04 12:01:01',
+  loggedOutOn: '',
+  loggedOutBy: '',
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA4MTc2NjQsImV4cCI6MTU4MjAyNzI2NH0.D95pDXvvt-PmlRO30yaBWsxJ3rPhJP9kjru14gza7Dc',
+  isExpired: false,
+  expiresOn: '2020-02-18 12:01:04',
+  __v: 0
+}
+04/Feb/2020:12:01:04 +0000 "POST /api/users/login"
+[[12:01:04.337]] [LOG]    Finishing
+[[12:01:04.337]] [LOG]    No sessionId used
+[[12:01:04.507]] [LOG]    App usage logged! - 2020-02-04 12:01:04 {
+  req_route: '/api/users/login',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '23a4aab9-3ca7-43f7-a929-f946294b6a17',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '65',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { username: 'testusername7', password: 'cGFzc3dvcmQxMjM0' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 600\r\n' +
+      'ETag: W/"258-ffDyQnVm4SjB4N3uysQX6DjPEzM"\r\n' +
+      'Date: Tue, 04 Feb 2020 12:01:04 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T12:01:04.338Z
+}
+[[21:31:38.333]] [LOG]    hitting showticket view route with { id: '5e31a46d65744782bca477ef' }
+[[21:31:40.032]] [LOG]    From mongo get one booking using showticket view []
+04/Feb/2020:21:31:41 +0000 "GET /showticket/5e31a46d65744782bca477ef"
+[[21:31:41.599]] [LOG]    Calling app logger
+04/Feb/2020:21:31:41 +0000 "GET /stylesheets/all.css"
+[[21:31:41.880]] [LOG]    Finishing
+[[21:31:41.880]] [LOG]    No sessionId used
+04/Feb/2020:21:31:42 +0000 "GET /stylesheets/bootstrap.min.css"
+04/Feb/2020:21:31:42 +0000 "GET /stylesheets/custom.css"
+04/Feb/2020:21:31:42 +0000 "GET /javascripts/axios.js"
+04/Feb/2020:21:31:42 +0000 "GET /javascripts/clientJS.js"
+[[21:31:42.859]] [LOG]    App usage logged! - 2020-02-04 21:31:42 {
+  req_route: '/stylesheets/all.css',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36',
+      accept: 'text/css,*/*;q=0.1',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'no-cors',
+      referer: 'http://localhost:3000/showticket/5e31a46d65744782bca477ef',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 404,
+  res_status_message: 'Not Found',
+  response_payload: {
+    headers: 'HTTP/1.1 404 Not Found\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: text/html; charset=utf-8\r\n' +
+      'Content-Length: 1660\r\n' +
+      'ETag: W/"67c-NR04B48h7pcBJ1pVHuH5jSFRuQc"\r\n' +
+      'Date: Tue, 04 Feb 2020 21:31:41 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T21:31:41.880Z
+}
+04/Feb/2020:21:31:43 +0000 "GET /javascripts/jquery.js"
+04/Feb/2020:21:31:43 +0000 "GET /javascripts/fallr.js"
+04/Feb/2020:21:31:43 +0000 "GET /javascripts/bootstrap.min.js"
+04/Feb/2020:21:31:43 +0000 "GET /javascripts/functions.js"
+04/Feb/2020:21:31:43 +0000 "GET /javascripts/moment.js"
+04/Feb/2020:21:31:46 +0000 "GET /images/tis.png"
+[[21:31:56.714]] [LOG]    Calling app logger
+[[21:31:56.754]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[21:31:56.770]] [LOG]    No middleware needed for this route /
+[[21:31:56.787]] [LOG]    new get all seats request {}
+[[21:31:57.942]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e30fa77d0d4a939e4baa16a,
+    seatNumber: '1',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:31',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa7fd0d4a939e4baa16b,
+    seatNumber: '2',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:39',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa86d0d4a939e4baa16c,
+    seatNumber: '3',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:46',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa8dd0d4a939e4baa16d,
+    seatNumber: '4',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:53',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa92d0d4a939e4baa16e,
+    seatNumber: '5',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:58',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa98d0d4a939e4baa16f,
+    seatNumber: '6',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:04',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa9ed0d4a939e4baa170,
+    seatNumber: '7',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:10',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faa2d0d4a939e4baa171,
+    seatNumber: '8',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:14',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faa8d0d4a939e4baa172,
+    seatNumber: '9',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:20',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faafd0d4a939e4baa173,
+    seatNumber: '10',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:27',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fab6d0d4a939e4baa174,
+    seatNumber: '11',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:34',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fabbd0d4a939e4baa175,
+    seatNumber: '12',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:39',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fabfd0d4a939e4baa176,
+    seatNumber: '13',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:43',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fac4d0d4a939e4baa177,
+    seatNumber: '14',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:48',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30facdd0d4a939e4baa178,
+    seatNumber: '15',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:57',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fad1d0d4a939e4baa179,
+    seatNumber: '16',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:01',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fad8d0d4a939e4baa17a,
+    seatNumber: '17',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:08',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faddd0d4a939e4baa17b,
+    seatNumber: '18',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:13',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fae1d0d4a939e4baa17c,
+    seatNumber: '19',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:17',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fae7d0d4a939e4baa17d,
+    seatNumber: '20',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:23',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  }
+]
+04/Feb/2020:21:31:58 +0000 "GET /api/seats"
+[[21:31:58.020]] [LOG]    Finishing
+[[21:31:58.020]] [LOG]    No sessionId used
+[[21:31:58.024]] [LOG]    App usage logged! - 2020-02-04 21:31:58 {
+  req_route: '/api/seats',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      accept: 'application/json, text/plain, */*',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'cors',
+      referer: 'http://localhost:3000/showticket/5e31a46d65744782bca477ef',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 4076\r\n' +
+      'ETag: W/"fec-HBbA8gAUoqpVrpYzWtTsdDFx6Hw"\r\n' +
+      'Date: Tue, 04 Feb 2020 21:31:58 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T21:31:58.020Z
+}
+[[21:42:00.676]] [LOG]    Calling app logger
+[[21:42:00.678]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[21:42:00.678]] [LOG]    No middleware needed for this route /create
+[[21:42:00.679]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+04/Feb/2020:21:42:01 +0000 "POST /api/bookings/create"
+[[21:42:01.183]] [LOG]    Finishing
+[[21:42:01.183]] [LOG]    No sessionId used
+[[21:42:01.599]] [LOG]    App usage logged! - 2020-02-04 21:42:01 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'ce72fe7a-aba7-4c78-b1f6-3f54dc75ca69',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 500,
+  res_status_message: 'Internal Server Error',
+  response_payload: {
+    headers: 'HTTP/1.1 500 Internal Server Error\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: text/html; charset=utf-8\r\n' +
+      'Content-Length: 1773\r\n' +
+      'ETag: W/"6ed-m38SK5rgOr5BA9zRWMZMLDQRH8k"\r\n' +
+      'Date: Tue, 04 Feb 2020 21:41:59 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T21:42:01.184Z
+}
+[[21:43:26.421]] [LOG]    Calling app logger
+[[21:43:26.422]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[21:43:26.422]] [LOG]    No middleware needed for this route /create
+[[21:43:26.423]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+[[21:43:26.724]] [LOG]    From mongo isn't seated booked already! []
+[[21:43:26.930]] [LOG]    updated seatId 5e30fae7d0d4a939e4baa17d status to booked BOOKED by Andrew Ababio { ok: 1, nModified: 0, n: 0 }
+[[21:43:26.931]] [LOG]    From mongo insert booking {
+  _id: 5e39e57e11622167e0c72714,
+  seatId: '5e30fae7d0d4a939e4baa17d',
+  bookedByName: 'Andrew Ababio',
+  ticketCode: 'e80-94-b30a-04c106d4-6c19-4dde-85f1-3f496316c412a45d',
+  bookedOn: '2020-02-04 21:43:26',
+  isTicketCodeUsed: false,
+  ticketCodeUsedOn: '',
+  __v: 0
+}
+04/Feb/2020:21:43:26 +0000 "POST /api/bookings/create"
+[[21:43:26.936]] [LOG]    Finishing
+[[21:43:26.937]] [LOG]    No sessionId used
+[[21:43:26.944]] [LOG]    App usage logged! - 2020-02-04 21:43:26 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'e8e7dc1b-6e6b-40dc-a470-2d1ac6401f9a',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 359\r\n' +
+      'ETag: W/"167-GKzI0vNnoFCrGmmnyWC1wgwIXYE"\r\n' +
+      'Date: Tue, 04 Feb 2020 21:43:26 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T21:43:26.937Z
+}
+[[21:43:53.634]] [LOG]    Calling app logger
+[[21:43:53.634]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/
+04/Feb/2020:21:43:53 +0000 "GET /api/seats/"
+[[21:43:53.639]] [LOG]    Finishing
+[[21:43:53.639]] [LOG]    No sessionId used
+[[21:43:53.652]] [LOG]    App usage logged! - 2020-02-04 21:43:53 {
+  req_route: '/api/seats/',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'b1c1ca27-e910-40f2-a415-16245fe31bc0',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 101\r\n' +
+      'ETag: W/"65-4BnbHDhpUxUxY1LSizxsbemqM4g"\r\n' +
+      'Date: Tue, 04 Feb 2020 21:43:53 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: {
+      status: 'error',
+      responseCode: '209',
+      responseMessage: 'You must provide a sessionId!',
+      data: null
+    }
+  },
+  created_at: 2020-02-04T21:43:53.639Z
+}
+[[21:45:50.909]] [LOG]    Calling app logger
+[[21:45:50.911]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[21:45:50.911]] [LOG]    No middleware needed for this route /
+[[21:45:50.911]] [LOG]    new get all seats request {}
+[[21:45:51.029]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e30fa77d0d4a939e4baa16a,
+    seatNumber: '1',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:31',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa7fd0d4a939e4baa16b,
+    seatNumber: '2',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:39',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa86d0d4a939e4baa16c,
+    seatNumber: '3',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:46',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa8dd0d4a939e4baa16d,
+    seatNumber: '4',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:53',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa92d0d4a939e4baa16e,
+    seatNumber: '5',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:58',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa98d0d4a939e4baa16f,
+    seatNumber: '6',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:04',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa9ed0d4a939e4baa170,
+    seatNumber: '7',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:10',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faa2d0d4a939e4baa171,
+    seatNumber: '8',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:14',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faa8d0d4a939e4baa172,
+    seatNumber: '9',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:20',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faafd0d4a939e4baa173,
+    seatNumber: '10',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:27',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fab6d0d4a939e4baa174,
+    seatNumber: '11',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:34',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fabbd0d4a939e4baa175,
+    seatNumber: '12',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:39',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fabfd0d4a939e4baa176,
+    seatNumber: '13',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:43',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fac4d0d4a939e4baa177,
+    seatNumber: '14',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:48',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30facdd0d4a939e4baa178,
+    seatNumber: '15',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:57',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fad1d0d4a939e4baa179,
+    seatNumber: '16',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:01',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fad8d0d4a939e4baa17a,
+    seatNumber: '17',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:08',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faddd0d4a939e4baa17b,
+    seatNumber: '18',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:13',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fae1d0d4a939e4baa17c,
+    seatNumber: '19',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:17',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fae7d0d4a939e4baa17d,
+    seatNumber: '20',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:23',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  }
+]
+04/Feb/2020:21:45:51 +0000 "GET /api/seats"
+[[21:45:51.077]] [LOG]    Finishing
+[[21:45:51.077]] [LOG]    No sessionId used
+[[21:45:51.088]] [LOG]    App usage logged! - 2020-02-04 21:45:51 {
+  req_route: '/api/seats',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'b6459384-6e0b-40f9-b9ec-842241b8a91d',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 4076\r\n' +
+      'ETag: W/"fec-HBbA8gAUoqpVrpYzWtTsdDFx6Hw"\r\n' +
+      'Date: Tue, 04 Feb 2020 21:45:51 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T21:45:51.077Z
+}
+[[21:57:46.374]] [LOG]    Calling app logger
+[[21:57:46.375]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[21:57:46.375]] [LOG]    No middleware needed for this route /
+[[21:57:46.376]] [LOG]    new get all seats request {}
+[[21:57:46.560]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e30fa77d0d4a939e4baa16a,
+    seatNumber: '1',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:31',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa7fd0d4a939e4baa16b,
+    seatNumber: '2',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:39',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa86d0d4a939e4baa16c,
+    seatNumber: '3',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:46',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa8dd0d4a939e4baa16d,
+    seatNumber: '4',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:53',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa92d0d4a939e4baa16e,
+    seatNumber: '5',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:58',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa98d0d4a939e4baa16f,
+    seatNumber: '6',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:04',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa9ed0d4a939e4baa170,
+    seatNumber: '7',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:10',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faa2d0d4a939e4baa171,
+    seatNumber: '8',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:14',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faa8d0d4a939e4baa172,
+    seatNumber: '9',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:20',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faafd0d4a939e4baa173,
+    seatNumber: '10',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:27',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fab6d0d4a939e4baa174,
+    seatNumber: '11',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:34',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fabbd0d4a939e4baa175,
+    seatNumber: '12',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:39',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fabfd0d4a939e4baa176,
+    seatNumber: '13',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:43',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fac4d0d4a939e4baa177,
+    seatNumber: '14',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:48',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30facdd0d4a939e4baa178,
+    seatNumber: '15',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:57',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fad1d0d4a939e4baa179,
+    seatNumber: '16',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:01',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fad8d0d4a939e4baa17a,
+    seatNumber: '17',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:08',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faddd0d4a939e4baa17b,
+    seatNumber: '18',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:13',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fae1d0d4a939e4baa17c,
+    seatNumber: '19',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:17',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fae7d0d4a939e4baa17d,
+    seatNumber: '20',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:23',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  }
+]
+04/Feb/2020:21:57:46 +0000 "GET /api/seats"
+[[21:57:46.579]] [LOG]    Finishing
+[[21:57:46.580]] [LOG]    No sessionId used
+[[21:57:46.813]] [LOG]    App usage logged! - 2020-02-04 21:57:46 {
+  req_route: '/api/seats',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'ccb4c1c4-d39f-47d5-9389-42b1dcd174e1',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 4076\r\n' +
+      'ETag: W/"fec-HBbA8gAUoqpVrpYzWtTsdDFx6Hw"\r\n' +
+      'Date: Tue, 04 Feb 2020 21:57:46 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T21:57:46.580Z
+}
+[[21:57:54.080]] [LOG]    Calling app logger
+[[21:57:54.080]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[21:57:54.081]] [LOG]    No middleware needed for this route /create
+[[21:57:54.081]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+[[21:57:54.108]] [LOG]    From mongo isn't seated booked already! []
+04/Feb/2020:21:58:44 +0000 "POST /api/bookings/create"
+[[21:58:46.959]] [LOG]    Calling app logger
+[[21:58:46.959]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[21:58:46.959]] [LOG]    No middleware needed for this route /create
+[[21:58:46.959]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+[[21:58:46.965]] [LOG]    From mongo isn't seated booked already! []
+04/Feb/2020:21:58:49 +0000 "POST /api/bookings/create"
+[[22:00:09.965]] [LOG]    Calling app logger
+[[22:00:09.967]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:00:09.967]] [LOG]    No middleware needed for this route /create
+[[22:00:09.968]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+04/Feb/2020:22:00:10 +0000 "POST /api/bookings/create"
+[[22:00:10.074]] [LOG]    Finishing
+[[22:00:10.074]] [LOG]    No sessionId used
+[[22:00:10.084]] [LOG]    App usage logged! - 2020-02-04 22:00:10 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'fbe739e0-dfde-4c56-b1ed-035bf41d31c8',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:00:10 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:00:10.074Z
+}
+[[22:00:50.832]] [LOG]    Calling app logger
+[[22:00:50.832]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:00:50.832]] [LOG]    No middleware needed for this route /create
+[[22:00:50.832]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+04/Feb/2020:22:00:50 +0000 "POST /api/bookings/create"
+[[22:00:50.845]] [LOG]    Finishing
+[[22:00:50.845]] [LOG]    No sessionId used
+[[22:00:50.859]] [LOG]    App usage logged! - 2020-02-04 22:00:50 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'baaa13c6-bbbc-4079-ad95-0988ee45e4e8',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:00:50 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:00:50.846Z
+}
+[[22:03:05.025]] [LOG]    Calling app logger
+[[22:03:05.026]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:03:05.027]] [LOG]    No middleware needed for this route /create
+[[22:03:05.028]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+[[22:03:05.069]] [LOG]    From mongo isn't seated booked already! {
+  _id: 5e30fae7d0d4a939e4baa17d,
+  seatNumber: '20',
+  status: 'NOT_BOOKED',
+  createdBy: '',
+  createdOn: '2020-01-29 03:24:23',
+  updatedOn: '',
+  updatedBy: '',
+  isActivated: true,
+  isDeleted: false,
+  __v: 0
+}
+04/Feb/2020:22:03:05 +0000 "POST /api/bookings/create"
+[[22:03:05.292]] [LOG]    Finishing
+[[22:03:05.292]] [LOG]    No sessionId used
+[[22:03:05.304]] [LOG]    App usage logged! - 2020-02-04 22:03:05 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '0d09396a-e238-4a6b-957e-3a5d3613f7d6',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 86\r\n' +
+      'ETag: W/"56-uVsCZW447aVMRhGsoMcXyL4N7C8"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:03:05 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:03:05.293Z
+}
+[[22:05:26.633]] [LOG]    Calling app logger
+[[22:05:26.633]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:05:26.633]] [LOG]    No middleware needed for this route /create
+[[22:05:26.634]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+04/Feb/2020:22:05:26 +0000 "POST /api/bookings/create"
+[[22:05:26.648]] [LOG]    Finishing
+[[22:05:26.648]] [LOG]    No sessionId used
+[[22:05:26.673]] [LOG]    App usage logged! - 2020-02-04 22:05:26 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'c7a88d7f-2bea-4228-b280-80c6b76ba5e4',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:05:26 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:05:26.649Z
+}
+[[22:09:18.654]] [LOG]    Calling app logger
+[[22:09:18.655]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[22:09:18.656]] [LOG]    No middleware needed for this route /
+[[22:09:18.657]] [LOG]    new get all seats request {}
+[[22:09:18.749]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e30fa77d0d4a939e4baa16a,
+    seatNumber: '1',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:31',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa7fd0d4a939e4baa16b,
+    seatNumber: '2',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:39',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa86d0d4a939e4baa16c,
+    seatNumber: '3',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:46',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa8dd0d4a939e4baa16d,
+    seatNumber: '4',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:53',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa92d0d4a939e4baa16e,
+    seatNumber: '5',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:22:58',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa98d0d4a939e4baa16f,
+    seatNumber: '6',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:04',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fa9ed0d4a939e4baa170,
+    seatNumber: '7',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:10',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faa2d0d4a939e4baa171,
+    seatNumber: '8',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:14',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faa8d0d4a939e4baa172,
+    seatNumber: '9',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:20',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faafd0d4a939e4baa173,
+    seatNumber: '10',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:27',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fab6d0d4a939e4baa174,
+    seatNumber: '11',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:34',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fabbd0d4a939e4baa175,
+    seatNumber: '12',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:39',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fabfd0d4a939e4baa176,
+    seatNumber: '13',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:43',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fac4d0d4a939e4baa177,
+    seatNumber: '14',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:48',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30facdd0d4a939e4baa178,
+    seatNumber: '15',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:23:57',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fad1d0d4a939e4baa179,
+    seatNumber: '16',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:01',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fad8d0d4a939e4baa17a,
+    seatNumber: '17',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:08',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30faddd0d4a939e4baa17b,
+    seatNumber: '18',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:13',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fae1d0d4a939e4baa17c,
+    seatNumber: '19',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:17',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e30fae7d0d4a939e4baa17d,
+    seatNumber: '20',
+    status: 'NOT_BOOKED',
+    createdBy: '',
+    createdOn: '2020-01-29 03:24:23',
+    updatedOn: '',
+    updatedBy: '',
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  }
+]
+04/Feb/2020:22:09:18 +0000 "GET /api/seats"
+[[22:09:18.762]] [LOG]    Finishing
+[[22:09:18.762]] [LOG]    No sessionId used
+[[22:09:18.768]] [LOG]    App usage logged! - 2020-02-04 22:09:18 {
+  req_route: '/api/seats',
+  req_ip_address: '::ffff:127.0.0.1',
+  request_payload: {
+    headers: {
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '289fbe21-7d09-4782-8872-b72932e6dae5',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 4076\r\n' +
+      'ETag: W/"fec-HBbA8gAUoqpVrpYzWtTsdDFx6Hw"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:09:18 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:09:18.762Z
+}
+[[22:09:39.742]] [LOG]    Calling app logger
+[[22:09:39.743]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:09:39.743]] [LOG]    No middleware needed for this route /create
+[[22:09:39.744]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+04/Feb/2020:22:09:39 +0000 "POST /api/bookings/create"
+[[22:09:39.769]] [LOG]    Finishing
+[[22:09:39.769]] [LOG]    No sessionId used
+[[22:09:39.775]] [LOG]    App usage logged! - 2020-02-04 22:09:39 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '1bac57cf-fe77-4908-a3e6-30178f596f71',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:09:39 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:09:39.770Z
+}
+[[22:11:22.525]] [LOG]    Calling app logger
+[[22:11:22.526]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:11:22.526]] [LOG]    No middleware needed for this route /create
+[[22:11:22.527]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+[[22:11:22.555]] [LOG]    From mongo isn't seated booked already! {
+  _id: 5e30fa77d0d4a939e4baa16a,
+  seatNumber: '1',
+  status: 'NOT_BOOKED',
+  createdBy: '',
+  createdOn: '2020-01-29 03:22:31',
+  updatedOn: '',
+  updatedBy: '',
+  isActivated: true,
+  isDeleted: false,
+  __v: 0
+}
+04/Feb/2020:22:11:22 +0000 "POST /api/bookings/create"
+[[22:11:22.762]] [LOG]    Finishing
+[[22:11:22.762]] [LOG]    No sessionId used
+[[22:11:22.784]] [LOG]    App usage logged! - 2020-02-04 22:11:22 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '51d28b41-9c3d-4c72-be33-e85d9cbbf0c5',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 86\r\n' +
+      'ETag: W/"56-uVsCZW447aVMRhGsoMcXyL4N7C8"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:11:22 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:11:22.762Z
+}
+[[22:14:51.091]] [LOG]    Calling app logger
+[[22:14:51.092]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:14:51.093]] [LOG]    No middleware needed for this route /create
+[[22:14:51.093]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+04/Feb/2020:22:14:51 +0000 "POST /api/bookings/create"
+[[22:14:51.204]] [LOG]    Finishing
+[[22:14:51.204]] [LOG]    No sessionId used
+[[22:14:51.220]] [LOG]    App usage logged! - 2020-02-04 22:14:51 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '08fcefa9-6113-4d8a-bce2-6e3a17adf33c',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:14:51 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:14:51.204Z
+}
+[[22:15:18.934]] [LOG]    Calling app logger
+[[22:15:18.934]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:15:18.934]] [LOG]    No middleware needed for this route /create
+[[22:15:18.934]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+04/Feb/2020:22:15:18 +0000 "POST /api/bookings/create"
+[[22:15:18.938]] [LOG]    Finishing
+[[22:15:18.938]] [LOG]    No sessionId used
+[[22:15:18.971]] [LOG]    App usage logged! - 2020-02-04 22:15:18 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '09644ffd-b692-4c88-a710-caafd7e12cb6',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:15:18 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:15:18.939Z
+}
+[[22:17:34.055]] [LOG]    Calling app logger
+[[22:17:34.056]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:17:34.056]] [LOG]    No middleware needed for this route /create
+[[22:17:34.057]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+04/Feb/2020:22:17:34 +0000 "POST /api/bookings/create"
+[[22:17:34.322]] [LOG]    Finishing
+[[22:17:34.322]] [LOG]    No sessionId used
+[[22:17:34.333]] [LOG]    App usage logged! - 2020-02-04 22:17:34 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'a068bce0-d89f-4bcc-9682-65fe2a0a6241',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:17:34 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:17:34.322Z
+}
+[[22:34:17.386]] [LOG]    Calling app logger
+[[22:34:17.387]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:34:17.388]] [LOG]    No middleware needed for this route /create
+[[22:34:17.389]] [LOG]    New Incoming create booking Request { seatId: '5e30fae7d0d4a939e4baa17d', bookedByName: 'Andrew Ababio' }
+04/Feb/2020:22:34:17 +0000 "POST /api/bookings/create"
+[[22:34:17.475]] [LOG]    Finishing
+[[22:34:17.475]] [LOG]    No sessionId used
+[[22:34:17.860]] [LOG]    App usage logged! - 2020-02-04 22:34:17 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '83990de9-d894-42b2-9fe4-6e4d9f9780c5',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae7d0d4a939e4baa17d',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:34:17 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:34:17.475Z
+}
+[[22:36:47.877]] [LOG]    Calling app logger
+[[22:36:47.878]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:36:47.879]] [LOG]    No middleware needed for this route /create
+[[22:36:47.879]] [LOG]    New Incoming create booking Request { seatId: '5e30fae1d0d4a939e4baa17c', bookedByName: 'Andrew Ababio' }
+04/Feb/2020:22:36:47 +0000 "POST /api/bookings/create"
+[[22:36:47.929]] [LOG]    Finishing
+[[22:36:47.929]] [LOG]    No sessionId used
+[[22:36:47.950]] [LOG]    App usage logged! - 2020-02-04 22:36:47 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'c5564acd-7264-47c8-b6a4-9b05c0b095e4',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae1d0d4a939e4baa17c',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:36:47 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:36:47.929Z
+}
+[[22:40:34.243]] [LOG]    Calling app logger
+[[22:40:34.244]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:40:34.244]] [LOG]    No middleware needed for this route /create
+[[22:40:34.245]] [LOG]    New Incoming create booking Request { seatId: '5e30fae1d0d4a939e4baa17c', bookedByName: 'Andrew Ababio' }
+[[22:40:34.265]] [LOG]    From mongo isn't seated booked already! null
+04/Feb/2020:22:40:34 +0000 "POST /api/bookings/create"
+[[22:40:34.271]] [LOG]    Finishing
+[[22:40:34.271]] [LOG]    No sessionId used
+[[22:40:34.316]] [LOG]    App usage logged! - 2020-02-04 22:40:34 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '38b332bc-f462-463c-98f1-7161b94bf996',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae1d0d4a939e4baa17c',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-W3jNGrcBd3L+WY+vEKeksL/5Hm8"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:40:34 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:40:34.272Z
+}
+04/Feb/2020:22:41:31 +0000 "POST /api/bookings/create"
+04/Feb/2020:22:41:47 +0000 "POST /api/bookings/create"
+04/Feb/2020:22:41:55 +0000 "POST /api/bookings/create"
+[[22:42:05.501]] [LOG]    Calling app logger
+[[22:42:05.502]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:42:05.502]] [LOG]    No middleware needed for this route /create
+[[22:42:05.502]] [LOG]    New Incoming create booking Request { seatId: '5e30fae1d0d4a939e4baa17c', bookedByName: 'Andrew Ababio' }
+[[22:42:05.517]] [LOG]    From mongo isn't seated booked already! null
+04/Feb/2020:22:42:05 +0000 "POST /api/bookings/create"
+[[22:42:05.518]] [LOG]    Finishing
+[[22:42:05.518]] [LOG]    No sessionId used
+[[22:42:05.545]] [LOG]    App usage logged! - 2020-02-04 22:42:05 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'ed2d1d0f-1b8c-453e-bc59-cdcbba7c05a1',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae1d0d4a939e4baa17c',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-W3jNGrcBd3L+WY+vEKeksL/5Hm8"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:42:05 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:42:05.519Z
+}
+[[22:52:15.465]] [LOG]    Calling app logger
+[[22:52:15.466]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[22:52:15.467]] [LOG]    No middleware needed for this route /create
+[[22:52:15.468]] [LOG]    New Incoming create booking Request { seatId: '5e30fae1d0d4a939e4baa17c', bookedByName: 'Andrew Ababio' }
+[[22:52:15.605]] [LOG]    From mongo isn't seated booked already! {
+  _id: 5e30fae1d0d4a939e4baa17c,
+  seatNumber: '19',
+  status: 'NOT_BOOKED',
+  createdBy: '',
+  createdOn: '2020-01-29 03:24:17',
+  updatedOn: '',
+  updatedBy: '',
+  isActivated: true,
+  isDeleted: false,
+  __v: 0
+}
+[[22:52:15.606]] [LOG]    From mongo isn't seated booked already! {
+  _id: 5e30fae1d0d4a939e4baa17c,
+  seatNumber: '19',
+  status: 'NOT_BOOKED',
+  createdBy: '',
+  createdOn: '2020-01-29 03:24:17',
+  updatedOn: '',
+  updatedBy: '',
+  isActivated: true,
+  isDeleted: false,
+  __v: 0
+}
+04/Feb/2020:22:52:15 +0000 "POST /api/bookings/create"
+[[22:52:15.628]] [LOG]    Finishing
+[[22:52:15.628]] [LOG]    No sessionId used
+[[22:52:15.895]] [LOG]    App usage logged! - 2020-02-04 22:52:15 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '713ff561-976c-4638-b817-c30bb0c66bde',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae1d0d4a939e4baa17c',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 118\r\n' +
+      'ETag: W/"76-C35jOsEskRXxsuZ1iIalf+x0+/A"\r\n' +
+      'Date: Tue, 04 Feb 2020 22:52:15 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T22:52:15.629Z
+}
+[[23:52:56.989]] [LOG]    Calling app logger
+[[23:52:56.990]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[23:52:56.991]] [LOG]    No middleware needed for this route /create
+[[23:52:56.992]] [LOG]    New Incoming create booking Request { seatId: '5e30fae1d0d4a939e4baa17c', bookedByName: 'Andrew Ababio' }
+[[23:52:57.113]] [LOG]    From mongo isn't seated booked already! {
+  _id: 5e30fae1d0d4a939e4baa17c,
+  seatNumber: '19',
+  status: 'NOT_BOOKED',
+  createdOn: '2020-01-29 03:24:17',
+  updatedOn: '',
+  isActivated: true,
+  isDeleted: false,
+  __v: 0
+}
+[[23:52:57.114]] [LOG]    From mongo isn't seated booked already! {
+  _id: 5e30fae1d0d4a939e4baa17c,
+  seatNumber: '19',
+  status: 'NOT_BOOKED',
+  createdOn: '2020-01-29 03:24:17',
+  updatedOn: '',
+  isActivated: true,
+  isDeleted: false,
+  __v: 0
+}
+04/Feb/2020:23:52:57 +0000 "POST /api/bookings/create"
+[[23:52:57.135]] [LOG]    Finishing
+[[23:52:57.135]] [LOG]    No sessionId used
+[[23:52:57.365]] [LOG]    App usage logged! - 2020-02-04 23:52:57 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'f0ca15ae-13e0-4072-b0ae-d9c0265c2188',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '75',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e30fae1d0d4a939e4baa17c',
+      bookedByName: 'Andrew Ababio'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 118\r\n' +
+      'ETag: W/"76-C35jOsEskRXxsuZ1iIalf+x0+/A"\r\n' +
+      'Date: Tue, 04 Feb 2020 23:52:57 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-04T23:52:57.135Z
+}

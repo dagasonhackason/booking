@@ -22,7 +22,7 @@ router.post("/create", (req, res, next)=>{
         mg.model("seats").findOne({ seatNumber: dbStringSanitizer(req.body.seatNumber), isDeleted: false }, function(err,existingseat){
             console.log("Seat data on existence check", existingseat);
             if (!err && !existingseat) {
-                mg.model("seats").create({seatNumber: dbStringSanitizer(req.body.seatNumber), status: "NOT_BOOKED", createdBy: "", createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: "", isActivated: true, isDeleted: false}, function (error,insertResponse) {
+                mg.model("seats").create({seatNumber: dbStringSanitizer(req.body.seatNumber), status: "NOT_BOOKED", createdBy: mg.Types.ObjectId(req.userData.users._id), createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, isActivated: true, isDeleted: false}, function (error,insertResponse) {
                     if(error) {
                         res.status(200).json({
                             status: "error",
@@ -83,7 +83,7 @@ router.get("/read/:id", (req,res,next)=>{
     console.log("New get one seat request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
-    mg.model("seats").find({_id: dbStringSanitizer(id), isDeleted: false, isActivated: true}, function(getError,dataGot) {
+    mg.model("seats").find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false, isActivated: true}, function(getError,dataGot) {
         if (!getError && dataGot) {
             console.log("From mongo get one seat", dataGot);
                         
@@ -180,10 +180,13 @@ router.post("/update/:id", (req,res,next)=>{
         delete req.body.isDeleted;
     }
 
-    mg.model("seats").findById(dbStringSanitizer(id), function(existError, exist) {
+    req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+    req.body.updatedBy = req.userData.users._id;
+
+    mg.model("seats").findById(mg.Types.ObjectId(dbStringSanitizer(id)), function(existError, exist) {
         if (!existError && exist) {
             req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-            mg.model("seats").updateOne({_id: dbStringSanitizer(id), isDeleted: false}, req.body,function(updateError,updated){
+            mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, req.body, function(updateError,updated){
                 if (updateError || !updated){
                     res.status(200).json({
                         status: "error",
@@ -265,11 +268,14 @@ router.post("/delete", (req,res,next)=> {
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
     
-    mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: false}, function(existError, exist) {
+    req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+    req.body.updatedBy = req.userData.users._id;
+
+    mg.model("seats").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false}, {isDeleted: true}, function(deleteError,deleted){
+                mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, {isDeleted: true, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(deleteError,deleted){
                     if (deleteError || !deleted){
                         res.status(200).json({
                             status: "error",
@@ -328,12 +334,15 @@ router.post("/restore", (req,res,next)=> {
     console.log("Restore seat request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
-    
-    mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: true}, function(existError, exist) {
+
+    req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+    req.body.updatedBy = req.userData.users._id;
+
+    mg.model("seats").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: true}, {isDeleted: false}, function(deleteError,deleted){
+                mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, {isDeleted: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(deleteError,deleted){
                     if (deleteError || !deleted){
                         res.status(200).json({
                             status: "error",
@@ -393,11 +402,14 @@ router.post("/activate", (req,res,next)=> {
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
     
-    mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: false}, function(existError, exist) {
+    req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+    req.body.updatedBy = req.userData.users._id;
+
+    mg.model("seats").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: false}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: false}, {isActivated: true}, function(activateError,activated){
+                mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: false}, {isActivated: true, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(activateError,activated){
                     if (activateError || !activated){
                         res.status(200).json({
                             status: "error",
@@ -457,11 +469,14 @@ router.post("/deactivate", (req,res,next)=> {
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
     
-    mg.model("seats").find({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: true}, function(existError, exist) {
+    req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+    req.body.updatedBy = req.userData.users._id;
+
+    mg.model("seats").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: true}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("seats").updateOne({_id: dbStringSanitizer(req.body._id), isDeleted: false, isActivated: true}, {isActivated: false}, function(deactivateError,deactivated){
+                mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: true}, {isActivated: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(deactivateError,deactivated){
                     if (deactivateError || !deactivated){
                         res.status(200).json({
                             status: "error",

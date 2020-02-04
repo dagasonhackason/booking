@@ -3,12 +3,13 @@ const router = express.Router();
 const { respondWithSuccess } = require('../utilities/responder');
 
 router.all("/", (req, res) => {
-    return respondWithSuccess(
+    respondWithSuccess(
         res, 
         "Welcome to Booking System REST API", 
         { version: '1.0' },
         "200"
     );
+    next();
 });
 
 module.exports = router;

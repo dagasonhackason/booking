@@ -1,0 +1,1401 @@
+
+:::::2020-02-04 06:53:23 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/login",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "3cd5dbdb-e700-47ee-83c4-89ad8fa0dd39",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "65",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testusername7",
+            "password": "cGFzc3dvcmQxMjM0"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 600\r\nETag: W/\"258-p2HaKT9/KgVab53A8X/kn/fyZ1w\"\r\nDate: Tue, 04 Feb 2020 06:53:23 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T06:53:23.988Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 09:25:51 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "07f7332b-dfec-45dc-8c32-995cb42048ff",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 09:25:51 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T09:25:51.974Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 09:27:44 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/api/bookings",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "4bc29c57-41cc-4537-9086-05014dfdfa4b",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 09:27:44 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T09:27:44.141Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 09:29:22 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "5341019d-9aa6-4f07-80ad-a69b9e69527a",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 123\r\nETag: W/\"7b-mpDuCGCeG7Nl9V0j63XgoQ0rBdI\"\r\nDate: Tue, 04 Feb 2020 09:29:22 GMT\r\nConnection: keep-alive\r\n\r\n",
+        "body": {
+            "status": "success",
+            "responseCode": "200",
+            "responseMessage": "Welcome to Booking System REST API",
+            "data": [
+                {
+                    "version": "1.0"
+                }
+            ]
+        }
+    },
+    "created_at": "2020-02-04T09:29:22.145Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 09:29:59 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/api/bookings",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "4c3bea58-3d2e-4994-9e14-9cb7aaa528d3",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 09:29:59 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T09:29:59.207Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 09:30:18 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/users/login",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "e8eebbcf-9e99-4407-ad0a-e2b52e57528c",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "65",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testusername7",
+            "password": "cGFzc3dvcmQxMjM0"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 600\r\nETag: W/\"258-vPxbOHaews7NwYB1KKlFLFrI+ok\"\r\nDate: Tue, 04 Feb 2020 09:30:18 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T09:30:18.835Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 09:33:10 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/users/login",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "9a73277c-309b-4db4-ad3c-6735a45cf899",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "65",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testusername7",
+            "password": "cGFzc3dvcmQxMjM0"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 600\r\nETag: W/\"258-CVI9DjILw/WpEyqeAQdXa1diH8M\"\r\nDate: Tue, 04 Feb 2020 09:33:10 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T09:33:10.864Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 09:39:18 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/users/login",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "3e4e8617-95a9-4220-81ff-69ecab3298b7",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "65",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testusername7",
+            "password": "cGFzc3dvcmQxMjM0"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 600\r\nETag: W/\"258-ZDAFVaTJl8tDYrElz39VaXnm+fA\"\r\nDate: Tue, 04 Feb 2020 09:39:18 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T09:39:18.783Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 09:50:54 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "5197061f-c7c9-49b3-93ba-d0fb400e1843",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "65",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testusername7",
+            "password": "cGFzc3dvcmQxMjM0"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 123\r\nETag: W/\"7b-mpDuCGCeG7Nl9V0j63XgoQ0rBdI\"\r\nDate: Tue, 04 Feb 2020 09:50:54 GMT\r\nConnection: keep-alive\r\n\r\n",
+        "body": {
+            "status": "success",
+            "responseCode": "200",
+            "responseMessage": "Welcome to Booking System REST API",
+            "data": [
+                {
+                    "version": "1.0"
+                }
+            ]
+        }
+    },
+    "created_at": "2020-02-04T09:50:54.640Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 09:51:42 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/users/login",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "981e8412-f8dc-4e2d-92cc-1b65091f70c3",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "65",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testusername7",
+            "password": "cGFzc3dvcmQxMjM0"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 600\r\nETag: W/\"258-CXhFaILvBIll3H/2bQ3RKQ84xJ8\"\r\nDate: Tue, 04 Feb 2020 09:51:42 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T09:51:42.041Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 12:01:04 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/users/login",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "23a4aab9-3ca7-43f7-a929-f946294b6a17",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "65",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testusername7",
+            "password": "cGFzc3dvcmQxMjM0"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 600\r\nETag: W/\"258-ffDyQnVm4SjB4N3uysQX6DjPEzM\"\r\nDate: Tue, 04 Feb 2020 12:01:04 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T12:01:04.338Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 21:31:42 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/showticket/5e31a46d65744782bca477ef",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-NR04B48h7pcBJ1pVHuH5jSFRuQc\"\r\nDate: Tue, 04 Feb 2020 21:31:41 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T21:31:41.880Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 21:31:58 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "referer": "http://localhost:3000/showticket/5e31a46d65744782bca477ef",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 4076\r\nETag: W/\"fec-HBbA8gAUoqpVrpYzWtTsdDFx6Hw\"\r\nDate: Tue, 04 Feb 2020 21:31:58 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T21:31:58.020Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 21:36:14 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/users/login",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "c3aaedfb-d74c-4cda-a433-58c60773987f",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "65",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testusername7",
+            "password": "cGFzc3dvcmQxMjM0"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 600\r\nETag: W/\"258-U+RrpZQjbDfBLKa+tmQPOdaFvn0\"\r\nDate: Tue, 04 Feb 2020 21:36:14 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T21:36:14.269Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 21:36:39 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/api/bookings",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "ac5ebca0-3829-4159-bf01-3dbf8eb869b4",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 21:36:39 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T21:36:39.738Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 21:37:46 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/api/bookings",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "df712acb-f4e4-454a-a054-416b6bc41169",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 21:37:46 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T21:37:46.101Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 21:42:01 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "ce72fe7a-aba7-4c78-b1f6-3f54dc75ca69",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 500,
+    "res_status_message": "Internal Server Error",
+    "response_payload": {
+        "headers": "HTTP/1.1 500 Internal Server Error\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1773\r\nETag: W/\"6ed-m38SK5rgOr5BA9zRWMZMLDQRH8k\"\r\nDate: Tue, 04 Feb 2020 21:41:59 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T21:42:01.184Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 21:43:26 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "e8e7dc1b-6e6b-40dc-a470-2d1ac6401f9a",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 359\r\nETag: W/\"167-GKzI0vNnoFCrGmmnyWC1wgwIXYE\"\r\nDate: Tue, 04 Feb 2020 21:43:26 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T21:43:26.937Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 21:43:53 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats/",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "b1c1ca27-e910-40f2-a415-16245fe31bc0",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 101\r\nETag: W/\"65-4BnbHDhpUxUxY1LSizxsbemqM4g\"\r\nDate: Tue, 04 Feb 2020 21:43:53 GMT\r\nConnection: keep-alive\r\n\r\n",
+        "body": {
+            "status": "error",
+            "responseCode": "209",
+            "responseMessage": "You must provide a sessionId!",
+            "data": null
+        }
+    },
+    "created_at": "2020-02-04T21:43:53.639Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 21:45:51 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "b6459384-6e0b-40f9-b9ec-842241b8a91d",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 4076\r\nETag: W/\"fec-HBbA8gAUoqpVrpYzWtTsdDFx6Hw\"\r\nDate: Tue, 04 Feb 2020 21:45:51 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T21:45:51.077Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 21:57:46 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "ccb4c1c4-d39f-47d5-9389-42b1dcd174e1",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 4076\r\nETag: W/\"fec-HBbA8gAUoqpVrpYzWtTsdDFx6Hw\"\r\nDate: Tue, 04 Feb 2020 21:57:46 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T21:57:46.580Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:00:10 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "fbe739e0-dfde-4c56-b1ed-035bf41d31c8",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw\"\r\nDate: Tue, 04 Feb 2020 22:00:10 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:00:10.074Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:00:50 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "baaa13c6-bbbc-4079-ad95-0988ee45e4e8",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw\"\r\nDate: Tue, 04 Feb 2020 22:00:50 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:00:50.846Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:03:05 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "0d09396a-e238-4a6b-957e-3a5d3613f7d6",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 86\r\nETag: W/\"56-uVsCZW447aVMRhGsoMcXyL4N7C8\"\r\nDate: Tue, 04 Feb 2020 22:03:05 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:03:05.293Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:05:26 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "c7a88d7f-2bea-4228-b280-80c6b76ba5e4",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw\"\r\nDate: Tue, 04 Feb 2020 22:05:26 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:05:26.649Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:09:18 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::ffff:127.0.0.1",
+    "request_payload": {
+        "headers": {
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "289fbe21-7d09-4782-8872-b72932e6dae5",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 4076\r\nETag: W/\"fec-HBbA8gAUoqpVrpYzWtTsdDFx6Hw\"\r\nDate: Tue, 04 Feb 2020 22:09:18 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:09:18.762Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:09:39 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "1bac57cf-fe77-4908-a3e6-30178f596f71",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw\"\r\nDate: Tue, 04 Feb 2020 22:09:39 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:09:39.770Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:11:22 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "51d28b41-9c3d-4c72-be33-e85d9cbbf0c5",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 86\r\nETag: W/\"56-uVsCZW447aVMRhGsoMcXyL4N7C8\"\r\nDate: Tue, 04 Feb 2020 22:11:22 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:11:22.762Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:14:51 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "08fcefa9-6113-4d8a-bce2-6e3a17adf33c",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw\"\r\nDate: Tue, 04 Feb 2020 22:14:51 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:14:51.204Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:15:18 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "09644ffd-b692-4c88-a710-caafd7e12cb6",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw\"\r\nDate: Tue, 04 Feb 2020 22:15:18 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:15:18.939Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:17:34 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "a068bce0-d89f-4bcc-9682-65fe2a0a6241",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw\"\r\nDate: Tue, 04 Feb 2020 22:17:34 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:17:34.322Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:34:17 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "83990de9-d894-42b2-9fe4-6e4d9f9780c5",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae7d0d4a939e4baa17d",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw\"\r\nDate: Tue, 04 Feb 2020 22:34:17 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:34:17.475Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:36:47 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "c5564acd-7264-47c8-b6a4-9b05c0b095e4",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae1d0d4a939e4baa17c",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-ZjOhn/q2ZdI8R/E5m9lgZbZfHrw\"\r\nDate: Tue, 04 Feb 2020 22:36:47 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:36:47.929Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:40:34 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "38b332bc-f462-463c-98f1-7161b94bf996",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae1d0d4a939e4baa17c",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-W3jNGrcBd3L+WY+vEKeksL/5Hm8\"\r\nDate: Tue, 04 Feb 2020 22:40:34 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:40:34.272Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:42:05 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "ed2d1d0f-1b8c-453e-bc59-cdcbba7c05a1",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae1d0d4a939e4baa17c",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 103\r\nETag: W/\"67-W3jNGrcBd3L+WY+vEKeksL/5Hm8\"\r\nDate: Tue, 04 Feb 2020 22:42:05 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:42:05.519Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 22:52:15 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "713ff561-976c-4638-b817-c30bb0c66bde",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae1d0d4a939e4baa17c",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 118\r\nETag: W/\"76-C35jOsEskRXxsuZ1iIalf+x0+/A\"\r\nDate: Tue, 04 Feb 2020 22:52:15 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T22:52:15.629Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 23:52:57 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "f0ca15ae-13e0-4072-b0ae-d9c0265c2188",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "75",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e30fae1d0d4a939e4baa17c",
+            "bookedByName": "Andrew Ababio"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 118\r\nETag: W/\"76-C35jOsEskRXxsuZ1iIalf+x0+/A\"\r\nDate: Tue, 04 Feb 2020 23:52:57 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T23:52:57.135Z"
+}
+
+___________________________________________________

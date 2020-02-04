@@ -1,5 +1,5 @@
 let mg = require("mongoose");
-let Schema = mg.Schema;
+let Schema = mg.Schema, ObjectId = Schema.ObjectId;
 
-let loginSessionsSchema = new Schema({userId:String, loggedInOn:String, loggedOutOn:String, loggedOutBy:String, expiresOn:String, sessionId:String, isExpired:Boolean});
+let loginSessionsSchema = new Schema({_id: ObjectId, userId:String, loggedInOn:String, loggedOutOn:String, loggedOutBy:ObjectId, expiresOn:String, sessionId:String, isExpired:Boolean, expiresOn:String});
 mg.model("loginSessions", loginSessionsSchema);

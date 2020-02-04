@@ -1,0 +1,557 @@
+:::::2020-02-04 05:18:38 :: NEW APP USAGE 
+___________________________________________________
+
+{"req_sessionId_extract":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk","req_username_extract":"testusername7","req_loginSession":{"_id":"5e38fc72674203408c17c09d","userId":"5e30cc0b6056ad5e58c414f9","loggedInOn":"2020-02-04 05:09:05","loggedOutOn":"","loggedOutBy":"","sessionId":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk","isExpired":false,"expiredOn":"2020-02-18 05:09:06","__v":0},"req_user":{"_id":"5e30cc0b6056ad5e58c414f9","username":"testusername7","password":"f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707","passwordSalt":"fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a","createdOn":"2020-01-29 00:04:24","updatedOn":"","updatedBy":"","lastLoginOn":"","isDeleted":false,"__v":0},"req_route":"/","req_ip_address":"::1","request_payload":"{\"headers\":{\"sessionid\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk\",\"username\":\"testusername7\",\"user-agent\":\"PostmanRuntime/7.22.0\",\"accept\":\"*/*\",\"cache-control\":\"no-cache\",\"postman-token\":\"76f7e6c7-6b15-4a6e-9d76-d0eb80ac36b0\",\"host\":\"localhost:3000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\"},\"params\":{},\"body\":{},\"query\":{}}","res_status_code":200,"res_status_message":"OK","response_payload":"{\"headers\":\"HTTP/1.1 200 OK\\r\\nX-Powered-By: Express\\r\\nAccess-Control-Allow-Origin: *\\r\\nContent-Type: application/json; charset=utf-8\\r\\nContent-Length: 109\\r\\nETag: W/\\\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\\\"\\r\\nDate: Tue, 04 Feb 2020 05:18:38 GMT\\r\\nConnection: keep-alive\\r\\n\\r\\n\"}","created_at":"2020-02-04T05:18:38.691Z"}
+
+___________________________________________________
+:::::2020-02-04 05:21:40 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/",
+    "req_ip_address": "::1",
+    "request_payload": "{\"headers\":{\"sessionid\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk\",\"username\":\"testusername7\",\"user-agent\":\"PostmanRuntime/7.22.0\",\"accept\":\"*/*\",\"cache-control\":\"no-cache\",\"postman-token\":\"11d5d5aa-d7f1-4aa2-85dc-98c164105c91\",\"host\":\"localhost:3000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\"},\"params\":{},\"body\":{},\"query\":{}}",
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": "{\"headers\":\"HTTP/1.1 200 OK\\r\\nX-Powered-By: Express\\r\\nAccess-Control-Allow-Origin: *\\r\\nContent-Type: application/json; charset=utf-8\\r\\nContent-Length: 109\\r\\nETag: W/\\\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\\\"\\r\\nDate: Tue, 04 Feb 2020 05:21:40 GMT\\r\\nConnection: keep-alive\\r\\n\\r\\n\"}",
+    "created_at": "2020-02-04T05:21:40.233Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 05:23:27 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/",
+    "req_ip_address": "::1",
+    "request_payload": "{\"headers\":{\"sessionid\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk\",\"username\":\"testusername7\",\"user-agent\":\"PostmanRuntime/7.22.0\",\"accept\":\"*/*\",\"cache-control\":\"no-cache\",\"postman-token\":\"93e0589a-3525-4d2a-ad79-5215e988d541\",\"host\":\"localhost:3000\",\"accept-encoding\":\"gzip, deflate, br\",\"connection\":\"keep-alive\"},\"params\":{},\"body\":{},\"query\":{}}",
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": "{\"headers\":\"HTTP/1.1 200 OK\\r\\nX-Powered-By: Express\\r\\nAccess-Control-Allow-Origin: *\\r\\nContent-Type: application/json; charset=utf-8\\r\\nContent-Length: 109\\r\\nETag: W/\\\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\\\"\\r\\nDate: Tue, 04 Feb 2020 05:23:27 GMT\\r\\nConnection: keep-alive\\r\\n\\r\\n\"}",
+    "created_at": "2020-02-04T05:23:27.971Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 05:25:24 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/",
+    "req_ip_address": "::1",
+    "request_payload": "{\n    \"headers\": {\n        \"sessionid\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk\",\n        \"username\": \"testusername7\",\n        \"user-agent\": \"PostmanRuntime/7.22.0\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"b394b252-9590-4065-9083-b10f94b5bcd1\",\n        \"host\": \"localhost:3000\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"connection\": \"keep-alive\"\n    },\n    \"params\": {},\n    \"body\": {},\n    \"query\": {}\n}",
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": "{\n    \"headers\": \"HTTP/1.1 200 OK\\r\\nX-Powered-By: Express\\r\\nAccess-Control-Allow-Origin: *\\r\\nContent-Type: application/json; charset=utf-8\\r\\nContent-Length: 109\\r\\nETag: W/\\\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\\\"\\r\\nDate: Tue, 04 Feb 2020 05:25:24 GMT\\r\\nConnection: keep-alive\\r\\n\\r\\n\"\n}",
+    "created_at": "2020-02-04T05:25:24.753Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 05:27:15 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "d7b379f3-8d55-4d88-8750-4f7761180d82",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 05:27:15 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T05:27:15.156Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 05:28:47 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/",
+    "req_ip_address": "::ffff:127.0.0.1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "f0b487a6-f486-4d4b-b0bd-87a5ed74c9b0",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 05:28:47 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T05:28:47.485Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 05:29:34 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "209241e7-7231-4499-a595-b2bcfbe326a6",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {},
+    "created_at": "2020-02-04T05:29:34.311Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 05:32:02 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "7add857d-c545-4b98-b406-0e19f2ed44df",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 05:32:02 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T05:32:02.261Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 05:35:14 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/",
+    "req_ip_address": "::ffff:127.0.0.1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "c6eddc9f-312c-431b-8042-a0ab5fb5686a",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 05:35:14 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T05:35:14.252Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 05:43:53 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "905a85ae-5b5e-451f-91ca-bd92a1784113",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 05:43:53 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T05:43:53.714Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 05:47:00 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+    "req_username_extract": "testusername7",
+    "req_loginSession": {
+        "_id": "5e38fc72674203408c17c09d",
+        "userId": "5e30cc0b6056ad5e58c414f9",
+        "loggedInOn": "2020-02-04 05:09:05",
+        "loggedOutOn": "",
+        "loggedOutBy": "",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+        "isExpired": false,
+        "expiredOn": "2020-02-18 05:09:06",
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e30cc0b6056ad5e58c414f9",
+        "username": "testusername7",
+        "password": "f2875f65f7cf7f542f2744fe6e4f3667bb989d3aa24391108944e04275f376281b524fc12bfa7dbd1f4b8e5979924cbe6541521da7e2db8bbf332f102207bc3c42e4e9f73cfd393350a893cc659ffe5f083c8aa0edcaad9254f63fcf58aa0707",
+        "passwordSalt": "fa0.6385c18ff30066a9fa5e7cd52b88f4450e901bbe080c325a",
+        "createdOn": "2020-01-29 00:04:24",
+        "updatedOn": "",
+        "updatedBy": "",
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA3OTI5NDYsImV4cCI6MTU4MjAwMjU0Nn0.zCmtk9MHyADUJkHIX7x7n7EegY1kDG80a-32OpFyVKk",
+            "username": "testusername7",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "e561fdd8-3dd2-4f76-af6e-3ee61da90ee7",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 109\r\nETag: W/\"6d-ZejPeOXqhhVI8WB1xli9Mdc0/4Q\"\r\nDate: Tue, 04 Feb 2020 05:47:00 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T05:47:00.951Z"
+}
+
+___________________________________________________
+
+:::::2020-02-04 05:59:25 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/login",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "bb732382-249b-4722-9264-fe5997b6bdb4",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "65",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testusername7",
+            "password": "cGFzc3dvcmQxMjM0"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 600\r\nETag: W/\"258-MSV2FsPYK99qm+lad+nDu7J9B9w\"\r\nDate: Tue, 04 Feb 2020 05:59:25 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T05:59:25.443Z"
+}
+
+___________________________________________________
