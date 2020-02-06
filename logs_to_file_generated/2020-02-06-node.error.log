@@ -425,3 +425,6 @@
     at C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\common_functions.js:372:21
     at Server.update (C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\core\topologies\server.js:715:22)
     at Server.update (C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\topologies\topology_base.js:327:25)
+[[07:05:02.426]] [ERROR]  (node:8376) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[07:05:02.426]] [ERROR]  (node:8376) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[07:05:02.482]] [ERROR]  (node:8376) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.

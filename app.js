@@ -118,16 +118,16 @@ app.use((req, res, next) => {
         };
 
         // Let's Keep taps with our file logs
-        fs.exists((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + ".log"), function(exists) {
+        fs.exists((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + ".bslog"), function(exists) {
           if(exists) {
-            fs.appendFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
+            fs.appendFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.bslog"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
                 + "\n" + JSON.stringify(data, null, 4) + "\n"
                 + "\n___________________________________________________\n", function (err) {
               if (err) console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
               console.log("App usage logged! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
             }); 
           } else {
-            fs.writeFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
+            fs.writeFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.bslog"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
                 + "\n" + JSON.stringify(data, null, 4) + "\n"
                 + "\n___________________________________________________\n", function (err) {
               if (err) console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
@@ -157,16 +157,16 @@ app.use((req, res, next) => {
         };
 
         // Let's Keep taps with our file logs
-        fs.exists((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), function(exists) {
+        fs.exists((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.bslog"), function(exists) {
           if(exists) {
-            fs.appendFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
+            fs.appendFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.bslog"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
                 + "\n" + JSON.stringify(data, null, 4) + "\n"
                 + "\n___________________________________________________\n", function (err) {
               if (err) console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
               console.log("App usage logged! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
             }); 
           } else {
-            fs.writeFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
+            fs.writeFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.bslog"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
                 + "\n" + JSON.stringify(data, null, 4) + "\n"
                 + "\n___________________________________________________\n", function (err) {
               if (err) console.error("Could not file log app usage! - " + moment(new Date).format("YYYY-MM-DD HH:mm:ss"), data);
