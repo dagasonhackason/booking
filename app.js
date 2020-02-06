@@ -71,6 +71,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //database connection
 mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+mg.set('debug', true);
+// mg.set('debug', function (coll, method, query, doc [, options]) {
+//   //TODO :
+// });
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -153,7 +157,7 @@ app.use((req, res, next) => {
         };
 
         // Let's Keep taps with our file logs
-        fs.exists((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + ".log"), function(exists) {
+        fs.exists((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), function(exists) {
           if(exists) {
             fs.appendFile((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-app.usage.log"), "\n:::::" + moment(new Date).format("YYYY-MM-DD HH:mm:ss") + " :: NEW APP USAGE \n___________________________________________________\n"
                 + "\n" + JSON.stringify(data, null, 4) + "\n"

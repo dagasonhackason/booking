@@ -1,0 +1,874 @@
+[[14:11:39.145]] [LOG]    Calling app logger
+[[14:11:39.147]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[14:11:39.148]] [LOG]    No middleware needed for this route /create
+[[14:11:39.148]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'password1234',
+  secretCode: 'fdfdf'
+}
+[[14:11:42.695]] [LOG]    user data on existence check null
+05/Feb/2020:14:11:42 +0000 "POST /api/users/create"
+[[14:11:42.750]] [LOG]    Finishing
+[[14:11:42.750]] [LOG]    No sessionId used
+[[14:11:42.802]] [LOG]    App usage logged! - 2020-02-05 14:11:42 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '4ed1613f-cd96-424b-a771-34d397faad23',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '87',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'password1234',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 14:11:42 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T14:11:42.751Z
+}
+[[14:13:28.909]] [LOG]    Calling app logger
+[[14:13:28.910]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+05/Feb/2020:14:13:28 +0000 "POST /api/users/create"
+[[14:13:28.919]] [LOG]    Finishing
+[[14:13:28.919]] [LOG]    No sessionId used
+[[14:13:28.938]] [LOG]    App usage logged! - 2020-02-05 14:13:28 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '043d883d-3e69-4d6e-9cda-047390d1c0ca',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '87',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'password1234',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 101\r\n' +
+      'ETag: W/"65-4BnbHDhpUxUxY1LSizxsbemqM4g"\r\n' +
+      'Date: Wed, 05 Feb 2020 14:13:28 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: {
+      status: 'error',
+      responseCode: '209',
+      responseMessage: 'You must provide a sessionId!',
+      data: null
+    }
+  },
+  created_at: 2020-02-05T14:13:28.919Z
+}
+[[14:14:04.997]] [LOG]    Calling app logger
+[[14:14:05.000]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[14:14:05.001]] [LOG]    No middleware needed for this route /create
+[[14:14:05.002]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'password1234',
+  secretCode: 'fdfdf'
+}
+[[14:14:10.271]] [LOG]    user data on existence check null
+05/Feb/2020:14:14:10 +0000 "POST /api/users/create"
+[[14:14:10.311]] [LOG]    Finishing
+[[14:14:10.312]] [LOG]    No sessionId used
+[[14:14:10.332]] [LOG]    App usage logged! - 2020-02-05 14:14:10 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'ecc95562-0048-462f-921d-5ebbcee20489',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '87',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'password1234',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 14:14:10 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T14:14:10.312Z
+}
+[[14:22:20.649]] [LOG]    Calling app logger
+[[14:22:20.650]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[14:22:20.650]] [LOG]    No middleware needed for this route /create
+[[14:22:20.651]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+05/Feb/2020:14:22:24 +0000 "POST /api/users/create"
+[[14:22:24.444]] [LOG]    Finishing
+[[14:22:24.444]] [LOG]    No sessionId used
+[[14:22:24.495]] [LOG]    App usage logged! - 2020-02-05 14:22:24 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '6ef38119-2e8d-4f38-b1be-764678255935',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 14:22:20 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T14:22:24.445Z
+}
+[[14:24:18.218]] [LOG]    Calling app logger
+[[14:24:18.218]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[14:24:18.218]] [LOG]    No middleware needed for this route /create
+[[14:24:18.218]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+05/Feb/2020:14:24:26 +0000 "POST /api/users/create"
+[[14:24:26.485]] [LOG]    Finishing
+[[14:24:26.486]] [LOG]    No sessionId used
+[[14:24:26.567]] [LOG]    App usage logged! - 2020-02-05 14:24:26 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '71e7d419-c5c3-4dab-9185-a6c1593ae088',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 14:24:18 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T14:24:26.487Z
+}
+[[14:24:51.428]] [LOG]    Calling app logger
+[[14:24:51.428]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[14:24:51.429]] [LOG]    No middleware needed for this route /create
+[[14:24:51.429]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+05/Feb/2020:14:24:55 +0000 "POST /api/users/create"
+[[14:24:55.634]] [LOG]    Finishing
+[[14:24:55.636]] [LOG]    No sessionId used
+[[14:24:55.713]] [LOG]    App usage logged! - 2020-02-05 14:24:55 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '06244748-f6b9-47a4-85b5-cf74a6ae6ce3',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 14:24:51 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T14:24:55.637Z
+}
+[[14:46:12.294]] [LOG]    Calling app logger
+[[14:46:12.295]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[14:46:12.295]] [LOG]    No middleware needed for this route /create
+[[14:46:12.296]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+05/Feb/2020:14:46:15 +0000 "POST /api/users/create"
+[[14:46:15.825]] [LOG]    Finishing
+[[14:46:15.826]] [LOG]    No sessionId used
+[[14:46:15.883]] [LOG]    App usage logged! - 2020-02-05 14:46:15 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '0053b0f3-7ef7-4880-b25e-f3aa8c35df5c',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 14:46:11 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T14:46:15.827Z
+}
+[[15:51:04.551]] [LOG]    Calling app logger
+[[15:51:04.553]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[15:51:04.553]] [LOG]    No middleware needed for this route /create
+[[15:51:04.554]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+05/Feb/2020:15:51:09 +0000 "POST /api/users/create"
+[[15:51:09.633]] [LOG]    Finishing
+[[15:51:09.633]] [LOG]    No sessionId used
+[[15:51:09.837]] [LOG]    App usage logged! - 2020-02-05 15:51:09 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '490a2f9e-1008-47f8-83a1-77771e02c2cd',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 15:51:04 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T15:51:09.634Z
+}
+[[15:53:07.931]] [LOG]    Calling app logger
+[[15:53:07.932]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[15:53:07.932]] [LOG]    No middleware needed for this route /create
+[[15:53:07.932]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+05/Feb/2020:15:53:12 +0000 "POST /api/users/create"
+[[15:53:12.693]] [LOG]    Finishing
+[[15:53:12.694]] [LOG]    No sessionId used
+[[15:53:12.790]] [LOG]    App usage logged! - 2020-02-05 15:53:12 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'd885feeb-b06d-4d9a-8972-ad8bb3db42d9',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 15:53:07 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T15:53:12.695Z
+}
+[[15:53:53.342]] [LOG]    Calling app logger
+[[15:53:53.344]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[15:53:53.344]] [LOG]    No middleware needed for this route /create
+[[15:53:53.346]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+05/Feb/2020:15:53:59 +0000 "POST /api/users/create"
+[[15:53:59.921]] [LOG]    Finishing
+[[15:53:59.921]] [LOG]    No sessionId used
+[[15:53:59.982]] [LOG]    App usage logged! - 2020-02-05 15:53:59 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '75a0e49d-a501-4f53-997c-f29f7b765b9a',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 15:53:53 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T15:53:59.923Z
+}
+[[15:56:25.392]] [LOG]    Calling app logger
+[[15:56:25.393]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[15:56:25.394]] [LOG]    No middleware needed for this route /create
+[[15:56:25.394]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+[[15:56:29.720]] [LOG]    user data on existence check null
+05/Feb/2020:15:56:29 +0000 "POST /api/users/create"
+[[15:56:29.759]] [LOG]    Finishing
+[[15:56:29.759]] [LOG]    No sessionId used
+[[15:56:29.773]] [LOG]    App usage logged! - 2020-02-05 15:56:29 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '2f00a4d4-1e07-4879-adb7-ee228b2e7924',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 117\r\n' +
+      'ETag: W/"75-T0r5Tz0WHz1jhAgIreLjxWKXd90"\r\n' +
+      'Date: Wed, 05 Feb 2020 15:56:29 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T15:56:29.759Z
+}
+[[16:00:11.091]] [LOG]    Calling app logger
+[[16:00:11.093]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[16:00:11.093]] [LOG]    No middleware needed for this route /create
+[[16:00:11.094]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+[[16:00:14.643]] [LOG]    user data on existence check null
+05/Feb/2020:16:00:14 +0000 "POST /api/users/create"
+[[16:00:14.694]] [LOG]    Finishing
+[[16:00:14.700]] [LOG]    No sessionId used
+[[16:00:14.718]] [LOG]    App usage logged! - 2020-02-05 16:00:14 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '8f7bfed5-9985-40eb-bde4-1f8bca0bb316',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 16:00:14 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T16:00:14.701Z
+}
+[[16:01:52.207]] [LOG]    Calling app logger
+[[16:01:52.208]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[16:01:52.208]] [LOG]    No middleware needed for this route /create
+[[16:01:52.208]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+[[16:01:56.286]] [LOG]    user data on existence check null
+05/Feb/2020:16:01:56 +0000 "POST /api/users/create"
+[[16:01:56.337]] [LOG]    Finishing
+[[16:01:56.337]] [LOG]    No sessionId used
+[[16:01:56.355]] [LOG]    App usage logged! - 2020-02-05 16:01:56 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'ed457c2a-ff2e-492c-9924-245d30f9d52a',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 16:01:56 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T16:01:56.338Z
+}
+[[16:03:36.607]] [LOG]    Calling app logger
+[[16:03:36.608]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[16:03:36.608]] [LOG]    No middleware needed for this route /api/users/create
+[[16:03:36.609]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+[[16:03:40.194]] [LOG]    user data on existence check null
+05/Feb/2020:16:03:40 +0000 "POST /api/users/create"
+[[16:03:40.237]] [LOG]    Finishing
+[[16:03:40.238]] [LOG]    No sessionId used
+[[16:03:40.517]] [LOG]    App usage logged! - 2020-02-05 16:03:40 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '9cfd12d1-6134-423a-aca9-0f4a3802e909',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 16:03:40 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T16:03:40.239Z
+}
+[[16:04:41.670]] [LOG]    Calling app logger
+[[16:04:41.671]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[16:04:41.671]] [LOG]    No middleware needed for this route /api/users/create
+[[16:04:41.671]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+[[16:04:45.786]] [LOG]    user data on existence check null
+05/Feb/2020:16:04:45 +0000 "POST /api/users/create"
+[[16:04:45.804]] [LOG]    Finishing
+[[16:04:45.805]] [LOG]    No sessionId used
+[[16:04:45.822]] [LOG]    App usage logged! - 2020-02-05 16:04:45 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '0d37722d-914d-41aa-98ac-6edf786a2276',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 16:04:45 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T16:04:45.806Z
+}
+[[16:06:00.392]] [LOG]    Calling app logger
+[[16:06:00.395]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[16:06:00.395]] [LOG]    No middleware needed for this route /api/users/create
+[[16:06:00.396]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: 'fdfdf'
+}
+[[16:06:07.447]] [LOG]    user data on existence check null
+[[16:06:07.481]] [LOG]    from mongo insert user undefined
+05/Feb/2020:16:06:07 +0000 "POST /api/users/create"
+[[16:06:07.488]] [LOG]    Finishing
+[[16:06:07.488]] [LOG]    No sessionId used
+[[16:06:07.505]] [LOG]    App usage logged! - 2020-02-05 16:06:07 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'b7a8854b-4462-4095-8f19-49fbcdedd56f',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '91',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: 'fdfdf'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 115\r\n' +
+      'ETag: W/"73-8SgY5otTpiR7EcpEpgjv8MZyAcM"\r\n' +
+      'Date: Wed, 05 Feb 2020 16:06:07 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-05T16:06:07.491Z
+}
+[[17:01:09.042]] [LOG]    Calling app logger
+[[17:01:09.080]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[17:01:09.373]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA0MzA0NjIsImV4cCI6MTU4MTY0MDA2Mn0.xzRzYsT0rzJD61glHChDxbabRffJaYkCFw-tvZO_sBk
+[[17:01:09.373]] [LOG]    userData.username_extract testusername7
+[[17:01:09.382]] [LOG]    SessionId Middleware Proccessing Failed! Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (C:\xampp\htdocs\bookingsystem-master\node_modules\bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (C:\xampp\htdocs\bookingsystem-master\node_modules\bson\lib\bson\objectid.js:40:43)
+    at module.exports (C:\xampp\htdocs\bookingsystem-master\middlewares\authMiddleware.js:47:60)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:317:13)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:317:13)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:275:10)
+    at C:\xampp\htdocs\bookingsystem-master\app.js:175:3
+05/Feb/2020:17:01:09 +0000 "POST /api/seats/create"
+[[17:01:09.427]] [LOG]    Finishing
+[[17:01:09.428]] [LOG]    No sessionId used
+[[17:01:09.732]] [LOG]    App usage logged! - 2020-02-05 17:01:09 {
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VybmFtZTciLCJpYXQiOjE1ODA0MzA0NjIsImV4cCI6MTU4MTY0MDA2Mn0.xzRzYsT0rzJD61glHChDxbabRffJaYkCFw-tvZO_sBk',
+      username: 'testusername7',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'd38dfc54-3546-4ef5-9b81-24c4d8e7a999',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '20' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 165\r\n' +
+      'ETag: W/"a5-uEtRVxCGb/PkOIDOLyMb6CuPfc8"\r\n' +
+      'Date: Wed, 05 Feb 2020 17:01:07 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: {
+      status: 'error',
+      responseCode: 'undefined',
+      responseMessage: 'Argument passed in must be a single String of 12 bytes or a string of 24 hex characters',
+      data: null
+    }
+  },
+  created_at: 2020-02-05T17:01:09.428Z
+}

@@ -19,16 +19,16 @@ router.post("/create", (req, res, next)=>{
     var dateTime = new Date();
 
     if(req.body.seatNumber) {
-        mg.model("seats").findOne({ seatNumber: dbStringSanitizer(req.body.seatNumber), isDeleted: false }, function(err,existingseat){
-            console.log("Seat data on existence check", existingseat);
+        mg.model("seats").findOne({ seatNumber: dbStringSanitizer(req.body.seatNumber), isDeleted: false }, function(err,existingseat) {
             if (!err && !existingseat) {
+                console.log("Seat data on existence check", existingseat);
                 mg.model("seats").create({seatNumber: dbStringSanitizer(req.body.seatNumber), status: "NOT_BOOKED", createdBy: mg.Types.ObjectId(req.userData.users._id), createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, isActivated: true, isDeleted: false}, function (error,insertResponse) {
                     if(error) {
                         res.status(200).json({
                             status: "error",
                             responseCode: "202",
                             responseMessage: "Seat Creation Failed with an Unknown Error!",
-                            data: null
+                            data: error
                         });
 
                         mg.disconnect();
@@ -55,7 +55,7 @@ router.post("/create", (req, res, next)=>{
                     status: "error",
                     responseCode: "205",
                     responseMessage: "Seat Already exist... Error!",
-                    data: null
+                    data: err
                 });
 
                 mg.disconnect();
@@ -102,7 +102,7 @@ router.get("/read/:id", (req,res,next)=>{
                 status: "error",
                 responseCode: "206",
                 responseMessage: "Unknown error acquiring data!",
-                data: null
+                data: getError
             });
 
             mg.disconnect();
@@ -135,7 +135,7 @@ router.get("/", (req,res,next)=>{
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error acquiring data!",
-                data: null
+                data: getError
             });
 
             mg.disconnect();
@@ -191,8 +191,8 @@ router.post("/update/:id", (req,res,next)=>{
                     res.status(200).json({
                         status: "error",
                         responseCode: "202",
-                        responseMessage: "Single seat Update with an Unknown Error!",
-                        data: null
+                        responseMessage: "Single seat Update failed with an Unknown Error!",
+                        data: updateError
                     });
         
                     mg.disconnect();
@@ -219,7 +219,7 @@ router.post("/update/:id", (req,res,next)=>{
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error processing data!",
-                data: null
+                data: existError
             });
 
             mg.disconnect();
@@ -253,7 +253,7 @@ router.post("/findcustomized", (req,res,next)=>{
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error acquiring find customized data!",
-                data: null
+                data: getError
             });
 
             mg.disconnect();
@@ -280,8 +280,8 @@ router.post("/delete", (req,res,next)=> {
                         res.status(200).json({
                             status: "error",
                             responseCode: "202",
-                            responseMessage: "seat Deletion encounted an Unknown Error!",
-                            data: null
+                            responseMessage: "Seat Deletion encounted an Unknown Error!",
+                            data: deleteError
                         });
             
                         mg.disconnect();
@@ -320,7 +320,7 @@ router.post("/delete", (req,res,next)=> {
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error processing data!",
-                data: null
+                data: existError
             });
 
             mg.disconnect();
@@ -342,26 +342,26 @@ router.post("/restore", (req,res,next)=> {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, {isDeleted: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(deleteError,deleted){
-                    if (deleteError || !deleted){
+                mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, {isDeleted: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(restoreError,restored){
+                    if (restoreError || !restored){
                         res.status(200).json({
                             status: "error",
                             responseCode: "202",
                             responseMessage: "Seat Restoration encounted an Unknown Error!",
-                            data: null
+                            data: restoreError
                         });
             
                         mg.disconnect();
             
                         return;
                     } else {
-                        console.log('Seat Restored', deleted);
+                        console.log('Seat Restored', restored);
                         
                         res.status(200).json({
                             status: "success",
                             responseCode: "201",
                             responseMessage: "seat Restoration was Successful!",
-                            data: deleted
+                            data: restored
                         });
                         
                         mg.disconnect();
@@ -387,7 +387,7 @@ router.post("/restore", (req,res,next)=> {
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error processing data!",
-                data: null
+                data: existError
             });
 
             mg.disconnect();
@@ -415,7 +415,7 @@ router.post("/activate", (req,res,next)=> {
                             status: "error",
                             responseCode: "202",
                             responseMessage: "Seat Activation encounted an Unknown Error!",
-                            data: null
+                            data: activateError
                         });
             
                         mg.disconnect();
@@ -454,7 +454,7 @@ router.post("/activate", (req,res,next)=> {
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error processing data!",
-                data: null
+                data: existError
             });
 
             mg.disconnect();
@@ -482,7 +482,7 @@ router.post("/deactivate", (req,res,next)=> {
                             status: "error",
                             responseCode: "202",
                             responseMessage: "Seat Deactivation encounted an Unknown Error!",
-                            data: null
+                            data: deactivateError
                         });
             
                         mg.disconnect();
@@ -520,7 +520,7 @@ router.post("/deactivate", (req,res,next)=> {
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error processing data!",
-                data: null
+                data: existError
             });
 
             mg.disconnect();

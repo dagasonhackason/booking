@@ -6,7 +6,7 @@ const { respondWithError, responderException } = require('../utilities/responder
 const { dbStringSanitizer } = require('../utilities/supportFunctions');
 
 module.exports = (req, res, next) => {
-    let useMiddleWare = false;
+    let dontUseMiddleWare = true;
     let disallowed = [
         "/api/users/login", 
         "/api/users/create",
@@ -22,11 +22,11 @@ module.exports = (req, res, next) => {
 
     for(let i = 0; i < disallowed.length; i++) {
         if(req.originalUrl === disallowed[i]) {
-            useMiddleWare = true;
+            dontUseMiddleWare = false;
         }
     };
 
-    if(!useMiddleWare) {
+    if(dontUseMiddleWare) {
         mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
         const sessionId_extract = req.get("sessionId") || req.body.sessionId || req.query.sessionId;
@@ -44,7 +44,7 @@ module.exports = (req, res, next) => {
         console.log("userData.username_extract", userData.username_extract);
 
         try {
-            mg.model("users").findOne({ username: mg.Types.ObjectId(dbStringSanitizer(userData.username_extract)), isDeleted: false }, function(errUser, existingUser){
+            mg.model("users").findOne({ username: dbStringSanitizer(userData.username_extract), isDeleted: false }, function(errUser, existingUser) {
                 console.log("middleware data on user existence check", existingUser);
 
                 if (!errUser && existingUser) {
@@ -68,7 +68,7 @@ module.exports = (req, res, next) => {
                                         mg.disconnect();
 
                                         // throw new responderException("Login sessionId has expired... Error!", null, "209");
-                                        respondWithError(res, "Encounted an Unknown Error... Problem with SessionId!", null, "202");
+                                        respondWithError(res, "Encounted an Unknown Error... Problem with SessionId!", expiredError, "202");
                                     } else {
                                         console.log('User Session @ ' + existingSession._id + ' was expired succesfully', expired);
                                         mg.disconnect();
@@ -86,14 +86,14 @@ module.exports = (req, res, next) => {
                             mg.disconnect();
 
                             // throw new responderException("No such sessionId... Error!", null, "202");
-                            respondWithError(res, "No such SessionId... Error!", null, "202");
+                            respondWithError(res, "No such SessionId... Error!", err, "202");
                         }
                     });
                 } else {
                     mg.disconnect();
 
                     // throw new responderException("The Problem with ur sessionId Auth Details... Please try again!", null, "205");
-                    respondWithError(res, "The Problem with ur SessionId Auth Details... Please try again!", null, "205");
+                    respondWithError(res, "The Problem with ur SessionId Auth Details... Please try again!", errUser, "205");
                 }
             });
         } catch(error) {
@@ -102,7 +102,7 @@ module.exports = (req, res, next) => {
             respondWithError(res, error.message, error.data, error.responseCode);
         }
     } else {
-        console.log("No middleware needed for this route", req.path);
+        console.log("No middleware needed for this route", req.originalUrl);
         next();
     }
 }

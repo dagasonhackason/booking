@@ -22,8 +22,6 @@ router.post("/create", (req, res, next)=>{
 
     if(req.body.seatId && req.body.bookedByName ) {
         mg.model("seats").findOne({_id: mg.Types.ObjectId(dbStringSanitizer(seatId)), status: "NOT_BOOKED"}, function(getError,dataGot) {
-            
-            console.log("From mongo isn't seated booked already!", dataGot);
             if(!getError && dataGot) {
                 console.log("From mongo isn't seated booked already!", dataGot);
 
@@ -33,7 +31,7 @@ router.post("/create", (req, res, next)=>{
                             status: "error",
                             responseCode: "202",
                             responseMessage: "Booking Creation Failed with an Unknown Error!",
-                            data: null
+                            data: error
                         });
                         
                         console.error("Booking Creation Failed with an Unknown Error!", error);
@@ -63,7 +61,7 @@ router.post("/create", (req, res, next)=>{
                                     status: "error",
                                     responseCode: "208",
                                     responseMessage: "Unknown Error!",
-                                    data: null
+                                    data: updateError
                                 });
                         
                                 console.error("Unknown Error!", updateError);
@@ -80,7 +78,7 @@ router.post("/create", (req, res, next)=>{
                     status: "error",
                     responseCode: "206",
                     responseMessage: "Unknown error proccessing data!",
-                    data: null
+                    data: getError
                 });
                     
                 console.error("Unknown error proccessing data!", getError);
@@ -131,7 +129,7 @@ router.get("/read/:id", (req,res,next)=>{
                 status: "error",
                 responseCode: "206",
                 responseMessage: "Unknown error acquiring data!",
-                data: null
+                data: getError
             });
                 
             console.error("Unknown error acquiring data!", getError);
@@ -166,7 +164,7 @@ router.get("/", (req,res,next)=>{
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error acquiring data!",
-                data: null
+                data: getError
             });
 
             mg.disconnect();
@@ -204,7 +202,7 @@ router.post("/useticket/:ticketCode/:id", (req,res,next)=>{
                             status: "error",
                             responseCode: "202",
                             responseMessage: "Setting booking ticket code encounted Unknown Error!",
-                            data: null
+                            data: updateError
                         });
             
                         mg.disconnect();
@@ -242,7 +240,7 @@ router.post("/useticket/:ticketCode/:id", (req,res,next)=>{
                 status: "error",
                 responseCode: "202",
                 responseMessage: "Invalid Ticket Code!",
-                data: null
+                data: existError
             });
 
             mg.disconnect();

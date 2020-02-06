@@ -29,22 +29,25 @@ router.post("/create", (req, res, next)=>{
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
 
-    var salt = generateSalt();
-    var hashedPassword = hashPassword( dbStringSanitizer(req.body.password), salt );
-
     if(req.body.username && req.body.password && req.body.secretCode) {
-        if(meetsPasswordPolicyMax(req.body.password) && meetsPasswordPolicyMin(req.body.password)) {
-            if(checkPassword( req.body.password, salt, hashedPassword )){
+        let buff = new Buffer(req.body.password, 'base64');
+        let password = buff.toString('ascii');
+
+        var salt = generateSalt();
+        var hashedPassword = hashPassword( dbStringSanitizer(password), salt );
+
+        if(meetsPasswordPolicyMax(password) && meetsPasswordPolicyMin(password)) {
+            if(checkPassword( password, salt, hashedPassword )) {
                 mg.model("users").findOne({ username: dbStringSanitizer(req.body.username), isDeleted: false }, function(err,existingUser){
-                    console.log("user data on existence check", existingUser);
                     if (!err && !existingUser) {
+                        console.log("user data on existence before creation check", existingUser);
                         mg.model("users").create({username: dbStringSanitizer(req.body.username), password: hashedPassword, passwordSalt: salt, createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, lastLoginOn: "", isDeleted: false}, function (error,insertResponse) {
                             if(error) {
                                 res.status(200).json({
                                     status: "error",
                                     responseCode: "202",
                                     responseMessage: "User Creation Failed with an Unknown Error!",
-                                    data: null
+                                    data: error
                                 });
 
                                 mg.disconnect();
@@ -80,7 +83,7 @@ router.post("/create", (req, res, next)=>{
                             status: "error",
                             responseCode: "205",
                             responseMessage: "User Already exist... Error!",
-                            data: null
+                            data: err
                         });
 
                         mg.disconnect();
@@ -88,8 +91,7 @@ router.post("/create", (req, res, next)=>{
                         return;
                     }
                 });
-            }
-            else {
+            } else {
                 res.status(200).json({
                     status: "error",
                     responseCode: "202",
@@ -101,8 +103,7 @@ router.post("/create", (req, res, next)=>{
 
                 return;
             }
-        }
-        else {
+        } else {
             res.status(200).json({
                 status: "error",
                 responseCode: "202",
@@ -153,7 +154,7 @@ router.get("/read/:id", (req,res,next)=>{
                 status: "error",
                 responseCode: "206",
                 responseMessage: "Unknown error acquiring data!",
-                data: null
+                data: getError
             });
 
             mg.disconnect();
@@ -186,7 +187,7 @@ router.get("/", (req,res,next)=>{
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error acquiring data!",
-                data: null
+                data: getError
             });
 
             mg.disconnect();
@@ -247,8 +248,8 @@ router.post("/update/:id", (req,res,next)=>{
                         res.status(200).json({
                             status: "error",
                             responseCode: "202",
-                            responseMessage: "Single User Update with an Unknown Error!",
-                            data: null
+                            responseMessage: "Single User Update failed with an Unknown Error!",
+                            data: updateError
                         });
             
                         mg.disconnect();
@@ -287,7 +288,7 @@ router.post("/update/:id", (req,res,next)=>{
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error processing data!",
-                data: null
+                data: existError
             });
 
             mg.disconnect();
@@ -337,7 +338,7 @@ router.post("/findcustomized", (req,res,next)=>{
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error acquiring find customized data!",
-                data: null
+                data: getError
             });
 
             mg.disconnect();
@@ -365,7 +366,7 @@ router.post("/delete", (req,res,next)=> {
                             status: "error",
                             responseCode: "202",
                             responseMessage: "User Deletion encounted an Unknown Error!",
-                            data: null
+                            data: deleteError
                         });
             
                         mg.disconnect();
@@ -404,7 +405,7 @@ router.post("/delete", (req,res,next)=> {
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error processing data!",
-                data: null
+                data: existError
             });
 
             mg.disconnect();
@@ -426,26 +427,26 @@ router.post("/restore", (req,res,next)=> {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("users").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, {isDeleted: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(deleteError,deleted){
-                    if (deleteError || !deleted){
+                mg.model("users").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, {isDeleted: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(restoreError,restored){
+                    if (restoreError || !restored) {
                         res.status(200).json({
                             status: "error",
                             responseCode: "202",
                             responseMessage: "User Restoration encounted an Unknown Error!",
-                            data: null
+                            data: restoreError
                         });
             
                         mg.disconnect();
             
                         return;
                     } else {
-                        console.log('User Restore', deleted);
+                        console.log('User Restore', restored);
                         
                         res.status(200).json({
                             status: "success",
                             responseCode: "201",
                             responseMessage: "User Restoration was Successful!",
-                            data: deleted
+                            data: restored
                         });
                         
                         mg.disconnect();
@@ -471,7 +472,7 @@ router.post("/restore", (req,res,next)=> {
                 status: "error",
                 responseCode: "207",
                 responseMessage: "Unknown error processing data!",
-                data: null
+                data: existError
             });
 
             mg.disconnect();
@@ -524,14 +525,14 @@ router.post("/login", (req,res,next)=>{
                                     status: "error",
                                     responseCode: "202",
                                     responseMessage: "User Login Failed with an Unknown Error!",
-                                    data: null
+                                    data: error
                                 });
     
                                 mg.disconnect();
                     
                                 return;
                             }
-                            else{
+                            else {
                                 console.log("from mongo insert user", insertResponse);
                                 insertResponse = JSON.parse(JSON.stringify(insertResponse));
                                 
@@ -581,7 +582,7 @@ router.post("/login", (req,res,next)=>{
                     status: "error",
                     responseCode: "206",
                     responseMessage: "Unknown error occured!",
-                    data: null
+                    data: getError
                 });
     
                 mg.disconnect();

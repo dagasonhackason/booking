@@ -1399,3 +1399,33 @@ ___________________________________________________
 }
 
 ___________________________________________________
+
+:::::2020-02-04 23:54:41 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "4b3f8919-cdb3-4e4b-b8d3-1cf172dc12a5",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 3476\r\nETag: W/\"d94-0kBxSCFA+NrurUTSUQ7GRf8uvXk\"\r\nDate: Tue, 04 Feb 2020 23:54:41 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-04T23:54:41.535Z"
+}
+
+___________________________________________________

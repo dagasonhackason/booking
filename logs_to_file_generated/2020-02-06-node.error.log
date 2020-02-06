@@ -1,0 +1,427 @@
+[[04:55:47.681]] [ERROR]  (node:27752) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[04:55:47.683]] [ERROR]  (node:27752) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[04:57:25.679]] [ERROR]  (node:27752) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[04:59:31.106]] [ERROR]  (node:35020) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[04:59:31.108]] [ERROR]  (node:35020) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[04:59:45.636]] [ERROR]  (node:35020) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[05:01:25.743]] [ERROR]  (node:3160) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:01:25.745]] [ERROR]  (node:3160) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:01:45.681]] [ERROR]  (node:9376) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:01:45.694]] [ERROR]  (node:9376) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:02:06.096]] [ERROR]  (node:15272) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:02:06.099]] [ERROR]  (node:15272) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:05:36.263]] [ERROR]  (node:6552) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:05:36.265]] [ERROR]  (node:6552) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:06:36.314]] [ERROR]  (node:29000) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:06:36.315]] [ERROR]  (node:29000) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:06:58.513]] [ERROR]  (node:29000) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[05:06:58.755]] [WARN]   mongoose: To create a new ObjectId please try `Mongoose.Types.ObjectId` instead of using `Mongoose.Schema.ObjectId`. Set the `suppressWarning` option if you're trying to create a hex char path in your schema.
+[[05:06:58.758]] [ERROR]  Trace
+    at new ObjectId (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schema\objectid.js:35:13)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiUsers.js:44:56
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4791:16
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:4389:12
+    at model.Query.Query._completeOne (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:2073:12)
+    at Immediate.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:2135:10)
+    at Immediate._onImmediate (C:\xampp\htdocs\bookingsystem-master\node_modules\mquery\lib\utils.js:116:16)
+    at processImmediate (internal/timers.js:439:21)
+[[05:08:51.613]] [ERROR]  (node:36704) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:08:51.615]] [ERROR]  (node:36704) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:11:18.134]] [ERROR]  (node:36824) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:11:18.135]] [ERROR]  (node:36824) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:11:24.086]] [ERROR]  (node:36364) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:11:24.086]] [ERROR]  (node:36364) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:11:32.438]] [ERROR]  (node:37536) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:11:32.439]] [ERROR]  (node:37536) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:12:05.323]] [ERROR]  (node:9680) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:12:05.323]] [ERROR]  (node:9680) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:12:34.595]] [ERROR]  (node:16756) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:12:34.597]] [ERROR]  (node:16756) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:12:43.756]] [ERROR]  (node:16756) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[05:12:43.796]] [WARN]   mongoose: To create a new ObjectId please try `Mongoose.Types.ObjectId` instead of using `Mongoose.Schema.ObjectId`. Set the `suppressWarning` option if you're trying to create a hex char path in your schema.
+[[05:12:43.798]] [ERROR]  Trace
+    at new ObjectId (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schema\objectid.js:35:13)
+    at ObjectId.SchemaType.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1434:22)
+    at Object.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:237:16)
+    at ObjectId.SchemaType.getDefault (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:919:19)
+    at $__applyDefaults (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:376:22)
+    at model.Document (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:124:5)
+    at model.Model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:102:12)
+    at new model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4611:15)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3077:22
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3113:7
+    at Array.forEach (<anonymous>)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3112:15
+    at Object.promiseOrCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:261:12)
+    at Function.create (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3047:16)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiUsers.js:44:43
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4791:16
+[[05:18:30.408]] [ERROR]  (node:27384) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:18:30.409]] [ERROR]  (node:27384) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:19:37.202]] [ERROR]  (node:21044) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:19:37.203]] [ERROR]  (node:21044) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:21:44.064]] [ERROR]  (node:11852) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:21:44.064]] [ERROR]  (node:11852) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:21:51.808]] [ERROR]  (node:11852) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[05:21:51.857]] [WARN]   mongoose: To create a new ObjectId please try `Mongoose.Types.ObjectId` instead of using `Mongoose.Schema.ObjectId`. Set the `suppressWarning` option if you're trying to create a hex char path in your schema.
+[[05:21:51.858]] [ERROR]  Trace
+    at new ObjectId (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schema\objectid.js:35:13)
+    at ObjectId.SchemaType.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1434:22)
+    at Object.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:237:16)
+    at ObjectId.SchemaType.getDefault (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:919:19)
+    at $__applyDefaults (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:376:22)
+    at model.Document (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:124:5)
+    at model.Model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:102:12)
+    at new model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4611:15)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3077:22
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3113:7
+    at Array.forEach (<anonymous>)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3112:15
+    at Object.promiseOrCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:261:12)
+    at Function.create (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3047:16)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiUsers.js:44:43
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4791:16
+[[05:24:21.262]] [ERROR]  (node:2312) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:24:21.262]] [ERROR]  (node:2312) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:24:30.356]] [ERROR]  (node:2312) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[05:24:30.380]] [WARN]   mongoose: To create a new ObjectId please try `Mongoose.Types.ObjectId` instead of using `Mongoose.Schema.ObjectId`. Set the `suppressWarning` option if you're trying to create a hex char path in your schema.
+[[05:24:30.381]] [ERROR]  Trace
+    at new ObjectId (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schema\objectid.js:35:13)
+    at ObjectId.SchemaType.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1434:22)
+    at Object.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:237:16)
+    at ObjectId.SchemaType.getDefault (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:919:19)
+    at $__applyDefaults (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:376:22)
+    at model.Document (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:124:5)
+    at model.Model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:102:12)
+    at new model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4611:15)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3077:22
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3113:7
+    at Array.forEach (<anonymous>)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3112:15
+    at Object.promiseOrCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:261:12)
+    at Function.create (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3047:16)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiUsers.js:44:43
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4791:16
+[[05:30:51.440]] [ERROR]  (node:19812) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:30:51.441]] [ERROR]  (node:19812) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:30:51.467]] [ERROR]  (node:19812) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:31:38.500]] [ERROR]  (node:24956) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:31:38.500]] [ERROR]  (node:24956) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:31:38.538]] [ERROR]  (node:24956) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:31:44.636]] [ERROR]  (node:24956) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[05:31:44.759]] [WARN]   mongoose: To create a new ObjectId please try `Mongoose.Types.ObjectId` instead of using `Mongoose.Schema.ObjectId`. Set the `suppressWarning` option if you're trying to create a hex char path in your schema.
+[[05:31:44.760]] [ERROR]  Trace
+    at new ObjectId (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schema\objectid.js:35:13)
+    at ObjectId.SchemaType.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1434:22)
+    at Object.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:237:16)
+    at ObjectId.SchemaType.getDefault (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:919:19)
+    at $__applyDefaults (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:376:22)
+    at model.Document (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:124:5)
+    at model.Model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:102:12)
+    at new model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4611:15)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3077:22
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3113:7
+    at Array.forEach (<anonymous>)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3112:15
+    at Object.promiseOrCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:261:12)
+    at Function.create (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3047:16)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiUsers.js:44:43
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4791:16
+[[05:32:43.117]] [ERROR]  (node:23632) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:32:43.118]] [ERROR]  (node:23632) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:32:43.141]] [ERROR]  (node:23632) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:32:55.199]] [WARN]   mongoose: To create a new ObjectId please try `Mongoose.Types.ObjectId` instead of using `Mongoose.Schema.ObjectId`. Set the `suppressWarning` option if you're trying to create a hex char path in your schema.
+[[05:32:55.203]] [ERROR]  Trace
+    at new ObjectId (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schema\objectid.js:35:13)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiUsers.js:32:23
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\layer.js:95:5)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:275:10)
+    at module.exports (C:\xampp\htdocs\bookingsystem-master\middlewares\authMiddleware.js:106:9)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:317:13)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\router\index.js:174:3)
+[[05:32:59.637]] [ERROR]  (node:23632) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[05:32:59.687]] [WARN]   mongoose: To create a new ObjectId please try `Mongoose.Types.ObjectId` instead of using `Mongoose.Schema.ObjectId`. Set the `suppressWarning` option if you're trying to create a hex char path in your schema.
+[[05:32:59.688]] [ERROR]  Trace
+    at new ObjectId (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schema\objectid.js:35:13)
+    at ObjectId.SchemaType.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1434:22)
+    at Object.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:237:16)
+    at ObjectId.SchemaType.getDefault (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:919:19)
+    at $__applyDefaults (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:376:22)
+    at model.Document (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:124:5)
+    at model.Model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:102:12)
+    at new model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4611:15)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3077:22
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3113:7
+    at Array.forEach (<anonymous>)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3112:15
+    at Object.promiseOrCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:261:12)
+    at Function.create (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3047:16)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiUsers.js:48:43
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4791:16
+[[05:34:29.031]] [ERROR]  (node:32952) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:34:29.032]] [ERROR]  (node:32952) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:34:29.074]] [ERROR]  (node:32952) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:35:08.433]] [ERROR]  (node:9740) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:35:08.433]] [ERROR]  (node:9740) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:35:08.466]] [ERROR]  (node:9740) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:35:14.615]] [ERROR]  (node:9740) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[05:35:14.671]] [WARN]   mongoose: To create a new ObjectId please try `Mongoose.Types.ObjectId` instead of using `Mongoose.Schema.ObjectId`. Set the `suppressWarning` option if you're trying to create a hex char path in your schema.
+[[05:35:14.673]] [ERROR]  Trace
+    at new ObjectId (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schema\objectid.js:35:13)
+    at ObjectId.SchemaType.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1434:22)
+    at Object.clone (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:237:16)
+    at ObjectId.SchemaType.getDefault (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:919:19)
+    at $__applyDefaults (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:376:22)
+    at model.Document (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:124:5)
+    at model.Model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:102:12)
+    at new model (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4611:15)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3077:22
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3113:7
+    at Array.forEach (<anonymous>)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3112:15
+    at Object.promiseOrCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\utils.js:261:12)
+    at Function.create (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3047:16)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiUsers.js:48:43
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4791:16
+[[05:35:53.219]] [ERROR]  (node:1616) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:35:53.220]] [ERROR]  (node:1616) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:35:53.243]] [ERROR]  (node:1616) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:36:31.829]] [ERROR]  (node:33524) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:36:31.829]] [ERROR]  (node:33524) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:36:31.865]] [ERROR]  (node:33524) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:37:10.419]] [ERROR]  (node:27464) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:37:10.420]] [ERROR]  (node:27464) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:37:10.464]] [ERROR]  (node:27464) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:37:39.956]] [ERROR]  (node:38872) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:37:39.957]] [ERROR]  (node:38872) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:37:40.055]] [ERROR]  (node:38872) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:39:32.031]] [ERROR]  (node:24888) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:39:32.031]] [ERROR]  (node:24888) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:39:32.077]] [ERROR]  (node:24888) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:40:13.335]] [ERROR]  (node:22768) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:40:13.336]] [ERROR]  (node:22768) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:40:13.393]] [ERROR]  (node:22768) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:40:29.534]] [ERROR]  (node:22768) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[05:43:05.482]] [ERROR]  (node:32196) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:43:05.482]] [ERROR]  (node:32196) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:43:05.532]] [ERROR]  (node:32196) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:43:22.477]] [ERROR]  (node:33392) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:43:22.478]] [ERROR]  (node:33392) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:43:22.578]] [ERROR]  (node:33392) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:43:52.460]] [ERROR]  (node:24644) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:43:52.460]] [ERROR]  (node:24644) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:43:52.510]] [ERROR]  (node:24644) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:44:15.427]] [ERROR]  (node:38204) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:44:15.427]] [ERROR]  (node:38204) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:44:15.468]] [ERROR]  (node:38204) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:44:30.218]] [ERROR]  (node:19812) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:44:30.218]] [ERROR]  (node:19812) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:44:30.284]] [ERROR]  (node:19812) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:45:18.719]] [ERROR]  (node:18228) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:45:18.719]] [ERROR]  (node:18228) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:45:18.760]] [ERROR]  (node:18228) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:46:31.813]] [ERROR]  (node:35012) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:46:31.814]] [ERROR]  (node:35012) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:46:31.871]] [ERROR]  (node:35012) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:47:14.164]] [ERROR]  (node:27640) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[05:47:14.165]] [ERROR]  (node:27640) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[05:47:14.250]] [ERROR]  (node:27640) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[05:56:50.824]] [ERROR]  (node:27640) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[06:00:46.428]] [ERROR]  (node:28108) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:00:46.428]] [ERROR]  (node:28108) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:00:46.512]] [ERROR]  (node:28108) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:01:19.741]] [ERROR]  (node:13828) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:01:19.742]] [ERROR]  (node:13828) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:01:19.848]] [ERROR]  (node:13828) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:02:10.903]] [ERROR]  (node:22984) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:02:10.903]] [ERROR]  (node:22984) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:02:10.949]] [ERROR]  (node:22984) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:02:18.174]] [ERROR]  (node:31956) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:02:18.174]] [ERROR]  (node:31956) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:02:18.225]] [ERROR]  (node:31956) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:02:40.086]] [ERROR]  (node:31956) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[06:04:53.624]] [ERROR]  (node:2504) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:04:53.624]] [ERROR]  (node:2504) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:04:53.686]] [ERROR]  (node:2504) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:05:20.027]] [ERROR]  (node:11616) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:05:20.028]] [ERROR]  (node:11616) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:05:20.081]] [ERROR]  (node:11616) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:05:30.868]] [ERROR]  (node:19796) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:05:30.868]] [ERROR]  (node:19796) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:05:30.911]] [ERROR]  (node:19796) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:05:46.897]] [ERROR]  (node:26064) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:05:46.897]] [ERROR]  (node:26064) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:05:46.970]] [ERROR]  (node:26064) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:06:20.979]] [ERROR]  (node:19328) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:06:20.980]] [ERROR]  (node:19328) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:06:21.041]] [ERROR]  (node:19328) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:06:38.940]] [ERROR]  (node:3672) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:06:38.940]] [ERROR]  (node:3672) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:06:38.999]] [ERROR]  (node:3672) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:06:50.521]] [ERROR]  (node:15264) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:06:50.521]] [ERROR]  (node:15264) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:06:50.599]] [ERROR]  (node:15264) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:06:57.697]] [ERROR]  (node:33320) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:06:57.698]] [ERROR]  (node:33320) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:06:57.765]] [ERROR]  (node:33320) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:07:30.262]] [ERROR]  (node:19652) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:07:30.262]] [ERROR]  (node:19652) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:07:30.314]] [ERROR]  (node:19652) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:07:48.732]] [ERROR]  (node:21252) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:07:48.732]] [ERROR]  (node:21252) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:07:48.781]] [ERROR]  (node:21252) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:08:01.362]] [ERROR]  (node:24464) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:08:01.362]] [ERROR]  (node:24464) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:08:01.432]] [ERROR]  (node:24464) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:12:48.694]] [ERROR]  (node:36592) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:12:48.695]] [ERROR]  (node:36592) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:12:48.761]] [ERROR]  (node:36592) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:13:08.342]] [ERROR]  (node:14332) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:13:08.342]] [ERROR]  (node:14332) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:13:08.426]] [ERROR]  (node:14332) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:13:25.734]] [ERROR]  (node:15416) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:13:25.734]] [ERROR]  (node:15416) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:13:25.783]] [ERROR]  (node:15416) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:13:52.228]] [ERROR]  (node:16048) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:13:52.229]] [ERROR]  (node:16048) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:13:52.305]] [ERROR]  (node:16048) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:14:20.873]] [ERROR]  (node:14228) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:14:20.873]] [ERROR]  (node:14228) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:14:20.919]] [ERROR]  (node:14228) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:14:32.452]] [ERROR]  (node:28460) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:14:32.460]] [ERROR]  (node:28460) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:14:32.571]] [ERROR]  (node:28460) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:15:08.100]] [ERROR]  (node:28128) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:15:08.100]] [ERROR]  (node:28128) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:15:08.148]] [ERROR]  (node:28128) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:15:13.478]] [ERROR]  (node:4072) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:15:13.479]] [ERROR]  (node:4072) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:15:13.555]] [ERROR]  (node:4072) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:15:30.281]] [ERROR]  (node:25068) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:15:30.282]] [ERROR]  (node:25068) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:15:30.353]] [ERROR]  (node:25068) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:15:48.054]] [ERROR]  (node:5620) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:15:48.055]] [ERROR]  (node:5620) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:15:48.132]] [ERROR]  (node:5620) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:16:11.731]] [ERROR]  (node:25976) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:16:11.731]] [ERROR]  (node:25976) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:16:11.788]] [ERROR]  (node:25976) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:16:41.186]] [ERROR]  (node:28024) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:16:41.187]] [ERROR]  (node:28024) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:16:41.235]] [ERROR]  (node:28024) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:16:59.736]] [ERROR]  (node:35048) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:16:59.736]] [ERROR]  (node:35048) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:16:59.838]] [ERROR]  (node:35048) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:17:09.934]] [ERROR]  (node:35180) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:17:09.935]] [ERROR]  (node:35180) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:17:10.025]] [ERROR]  (node:35180) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:17:16.451]] [ERROR]  (node:20068) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:17:16.451]] [ERROR]  (node:20068) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:17:16.536]] [ERROR]  (node:20068) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:17:24.036]] [ERROR]  (node:18100) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:17:24.036]] [ERROR]  (node:18100) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:17:24.129]] [ERROR]  (node:18100) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:17:40.822]] [ERROR]  (node:16316) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:17:40.822]] [ERROR]  (node:16316) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:17:40.893]] [ERROR]  (node:16316) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:17:56.043]] [ERROR]  (node:16580) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:17:56.044]] [ERROR]  (node:16580) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:17:56.118]] [ERROR]  (node:16580) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:18:06.806]] [ERROR]  (node:36280) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:18:06.807]] [ERROR]  (node:36280) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:18:06.929]] [ERROR]  (node:36280) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:18:22.285]] [ERROR]  (node:34608) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:18:22.285]] [ERROR]  (node:34608) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:18:22.372]] [ERROR]  (node:34608) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:40:58.861]] [ERROR]  (node:12132) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:40:58.861]] [ERROR]  (node:12132) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:40:58.914]] [ERROR]  (node:12132) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:41:16.565]] [ERROR]  (node:8996) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:41:16.566]] [ERROR]  (node:8996) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:41:16.807]] [ERROR]  (node:8996) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:41:28.356]] [ERROR]  (node:8996) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[06:42:42.970]] [ERROR]  (node:34216) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:42:42.971]] [ERROR]  (node:34216) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:42:43.035]] [ERROR]  (node:34216) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:43:14.216]] [ERROR]  (node:35180) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:43:14.217]] [ERROR]  (node:35180) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:43:14.267]] [ERROR]  (node:35180) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:43:26.048]] [ERROR]  (node:22436) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:43:26.049]] [ERROR]  (node:22436) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:43:26.173]] [ERROR]  (node:22436) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:43:40.318]] [ERROR]  (node:22436) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[06:44:11.791]] [ERROR]  (node:24528) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:44:11.791]] [ERROR]  (node:24528) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:44:11.838]] [ERROR]  (node:24528) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:45:05.105]] [ERROR]  (node:21460) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:45:05.105]] [ERROR]  (node:21460) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:45:05.154]] [ERROR]  (node:21460) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:45:37.500]] [ERROR]  (node:20852) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:45:37.501]] [ERROR]  (node:20852) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:45:37.560]] [ERROR]  (node:20852) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:45:49.041]] [ERROR]  (node:36916) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:45:49.041]] [ERROR]  (node:36916) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:45:49.137]] [ERROR]  (node:36916) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:47:16.349]] [ERROR]  (node:3868) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:47:16.349]] [ERROR]  (node:3868) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:47:16.420]] [ERROR]  (node:3868) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:47:51.484]] [ERROR]  (node:29876) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:47:51.484]] [ERROR]  (node:29876) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:47:51.538]] [ERROR]  (node:29876) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:49:14.205]] [ERROR]  (node:34296) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:49:14.205]] [ERROR]  (node:34296) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:49:14.253]] [ERROR]  (node:34296) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:49:52.400]] [ERROR]  (node:14856) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:49:52.400]] [ERROR]  (node:14856) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:49:52.444]] [ERROR]  (node:14856) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:50:01.428]] [ERROR]  (node:35048) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:50:01.428]] [ERROR]  (node:35048) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:50:01.517]] [ERROR]  (node:35048) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:50:08.271]] [ERROR]  (node:20948) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:50:08.272]] [ERROR]  (node:20948) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:50:08.329]] [ERROR]  (node:20948) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:50:23.845]] [ERROR]  (node:20948) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[06:55:34.757]] [ERROR]  (node:19708) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:55:34.758]] [ERROR]  (node:19708) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:55:34.807]] [ERROR]  (node:19708) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:55:47.104]] [ERROR]  (node:21496) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:55:47.104]] [ERROR]  (node:21496) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:55:47.150]] [ERROR]  (node:21496) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:55:56.840]] [ERROR]  (node:15876) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:55:56.840]] [ERROR]  (node:15876) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:55:56.906]] [ERROR]  (node:15876) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:57:22.164]] [ERROR]  (node:28692) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:57:22.165]] [ERROR]  (node:28692) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:57:22.222]] [ERROR]  (node:28692) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:58:14.653]] [ERROR]  (node:23544) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:58:14.653]] [ERROR]  (node:23544) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:58:14.747]] [ERROR]  (node:23544) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:59:15.636]] [ERROR]  (node:28444) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[06:59:15.636]] [ERROR]  (node:28444) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[06:59:15.688]] [ERROR]  (node:28444) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[06:59:34.576]] [ERROR]  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:485:11)
+    at ServerResponse.header (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\response.js:170:12)
+    at ServerResponse.json (C:\xampp\htdocs\bookingsystem-master\node_modules\express\lib\response.js:267:15)
+    at respondWithError (C:\xampp\htdocs\bookingsystem-master\utilities\responder.js:23:32)
+    at C:\xampp\htdocs\bookingsystem-master\middlewares\authMiddleware.js:71:41
+    at callback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:4154:9)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:4378:14
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\execute_operation.js:76:14
+    at executeCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\execute_operation.js:67:25)
+    at updateCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\update_one.js:30:19)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\update_one.js:24:64
+    at handleCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\utils.js:129:55)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\common_functions.js:372:21
+    at Server.update (C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\core\topologies\server.js:715:22)
+    at Server.update (C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\topologies\topology_base.js:327:25)
