@@ -47,8 +47,8 @@ app.use(logger(':date[clf] ":method :url"'));
 // });
 // app.use(express.logger('[:mydate] :method :url :status :res[content-length] - :remote-addr - :response-time ms'));
 /*********************** LOGGING CONSOLE TO FILE STREAM ***********************/
-var access = fs.createWriteStream((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-") + 'node.access.log', { flags: 'a' });
-var error = fs.createWriteStream((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-") + 'node.error.log', { flags: 'a' });
+var access = fs.createWriteStream((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-") + 'node.access.bslog', { flags: 'a' });
+var error = fs.createWriteStream((path.join(__dirname, 'logs_to_file_generated') + "/" + moment(new Date).format("YYYY-MM-DD") + "-") + 'node.error.bslog', { flags: 'a' });
 ////////////////////////////////////
 process.stdout.write = access.write.bind(access);
 process.stderr.write = error.write.bind(error);

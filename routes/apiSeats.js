@@ -22,7 +22,7 @@ router.post("/create", (req, res, next)=>{
         mg.model("seats").findOne({ seatNumber: dbStringSanitizer(req.body.seatNumber), isDeleted: false }, function(err,existingseat) {
             if (!err && !existingseat) {
                 console.log("Seat data on existence check", existingseat);
-                mg.model("seats").create({seatNumber: dbStringSanitizer(req.body.seatNumber), status: "NOT_BOOKED", createdBy: mg.Types.ObjectId(req.userData.users._id), createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, isActivated: true, isDeleted: false}, function (error,insertResponse) {
+                mg.model("seats").create({_id: mg.Types.ObjectId(), seatNumber: dbStringSanitizer(req.body.seatNumber), status: "NOT_BOOKED", createdBy: mg.Types.ObjectId(req.userData.users._id), createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, isActivated: true, isDeleted: false}, function (error,insertResponse) {
                     if(error) {
                         res.status(200).json({
                             status: "error",

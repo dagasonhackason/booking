@@ -7,7 +7,7 @@ console.log("users generated ObjectId " + newObjectId + " isValid", mg.Types.Obj
 let seatsSchema = new Schema({
     _id: {  
         type: ObjectId,
-        default: newObjectId,
+        default: mg.Types.ObjectId(),
         index: true,
         required: false
     }, 
@@ -52,6 +52,7 @@ let seatsSchema = new Schema({
         required: true
     }
 });
+seatsSchema.set('versionKey', false);
 mg.model("seats", seatsSchema);
 
 module.exports = {

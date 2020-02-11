@@ -1,0 +1,87 @@
+[[14:19:10.708]] [ERROR]  (node:1992) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[14:19:10.708]] [ERROR]  (node:1992) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[14:19:10.927]] [ERROR]  (node:1992) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[15:18:58.830]] [ERROR]  Unknown Error! MongooseError [DocumentNotFoundError]: No document found for query "{ _id: 5e3c2aaf8033aa3aa02f232d }" on model "seats"
+    at new DocumentNotFoundError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\notFound.js:34:11)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:386:17
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:312:9
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\execute_operation.js:75:17
+    at executeCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\execute_operation.js:68:9)
+    at updateCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\update_one.js:41:3)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\update_one.js:24:64
+    at handleCallback (C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\utils.js:129:55)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\operations\common_functions.js:378:5
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+  message: 'No document found for query "{ _id: 5e3c2aaf8033aa3aa02f232d }" on model "seats"',
+  name: 'DocumentNotFoundError',
+  result: CommandResult {
+    result: { ok: 1, nModified: 0, n: 0 },
+    connection: Connection {
+      _events: [Object: null prototype],
+      _eventsCount: 5,
+      _maxListeners: undefined,
+      id: 5,
+      options: [Object],
+      logger: [Logger],
+      bson: BSON {},
+      tag: undefined,
+      maxBsonMessageSize: 67108864,
+      port: 27017,
+      host: '127.0.0.1',
+      socketTimeout: 360000,
+      keepAlive: true,
+      keepAliveInitialDelay: 300000,
+      connectionTimeout: 30000,
+      responseOptions: [Object],
+      flushing: false,
+      queue: [],
+      writeStream: null,
+      destroyed: false,
+      timedOut: false,
+      hashedName: '1af0a80ead1d9e3c1a02ad090ffe77ff1334aae9',
+      workItems: [],
+      socket: [Socket],
+      buffer: null,
+      sizeOfMessage: 0,
+      bytesRead: 0,
+      stubBuffer: null,
+      ismaster: [Object],
+      lastIsMasterMS: 4
+    },
+    message: Response {
+      parsed: true,
+      raw: <Buffer 47 00 00 00 00 03 00 00 01 03 00 00 01 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 23 00 00 00 10 6f 6b 00 01 00 00 00 10 6e ... 21 more bytes>,
+      data: <Buffer 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 23 00 00 00 10 6f 6b 00 01 00 00 00 10 6e 4d 6f 64 69 66 69 65 64 00 00 00 00 00 10 6e 00 ... 5 more bytes>,
+      bson: BSON {},
+      opts: [Object],
+      length: 71,
+      requestId: 768,
+      responseTo: 769,
+      opCode: 1,
+      fromCompressed: undefined,
+      responseFlags: 8,
+      cursorId: [Long],
+      startingFrom: 0,
+      numberReturned: 1,
+      documents: [Array],
+      cursorNotFound: false,
+      queryFailure: false,
+      shardConfigStale: false,
+      awaitCapable: true,
+      promoteLongs: true,
+      promoteValues: true,
+      promoteBuffers: false,
+      index: 55,
+      hashedName: '1af0a80ead1d9e3c1a02ad090ffe77ff1334aae9'
+    },
+    modifiedCount: 0,
+    upsertedId: null,
+    upsertedCount: 0,
+    matchedCount: 0,
+    '$where': { _id: 5e3c2aaf8033aa3aa02f232d }
+  },
+  numAffected: 0,
+  filter: { _id: 5e3c2aaf8033aa3aa02f232d },
+  query: { _id: 5e3c2aaf8033aa3aa02f232d }
+}

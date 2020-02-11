@@ -49,6 +49,7 @@ let usersSchema = new Schema({
         required: true
     }
 });
+usersSchema.set('versionKey', false);
 mg.model("users",usersSchema); 
 
 module.exports = {

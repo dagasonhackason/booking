@@ -25,7 +25,7 @@ router.post("/create", (req, res, next)=>{
             if(!getError && dataGot) {
                 console.log("From mongo isn't seated booked already!", dataGot);
 
-                mg.model("bookings").create({seatId: mg.Types.ObjectId(dbStringSanitizer(seatId)), bookedByName: dbStringSanitizer(req.body.bookedByName), ticketCode: ticketCode, bookedOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), isTicketCodeUsed: false, ticketCodeUsedOn: ""}, function (error,insertResponse) {
+                mg.model("bookings").create({_id: mg.Types.ObjectId(), seatId: mg.Types.ObjectId(dbStringSanitizer(seatId)), bookedByName: dbStringSanitizer(req.body.bookedByName), ticketCode: ticketCode, bookedOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), isTicketCodeUsed: false, ticketCodeUsedOn: ""}, function (error,insertResponse) {
                     if(error) {
                         res.status(200).json({
                             status: "error",
@@ -42,7 +42,7 @@ router.post("/create", (req, res, next)=>{
                     } else {
                         dataGot.status = "BOOKED";
                         dataGot.save(function(updateError,updated) {
-                            if (updated){
+                            if (updated) {
                                 console.log("updated seatId " + req.body.seatId + " status to booked BOOKED by " + req.body.bookedByName, updated);
                                 console.log("From mongo insert booking", insertResponse);
                             

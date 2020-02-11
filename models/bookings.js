@@ -38,9 +38,10 @@ let bookingsSchema = new Schema({
     ticketCodeUsedOn: {
         type: String,
         index: true,
-        required: true
+        required: false
     }
 });
+bookingsSchema.set('versionKey', false);
 mg.model("bookings", bookingsSchema);
 
 module.exports = {

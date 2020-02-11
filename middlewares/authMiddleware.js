@@ -56,13 +56,14 @@ module.exports = (req, res, next) => {
                         if (!err && existingSession) {
                             const date = moment(existingSession.expiresOn, 'YYYY-MM-DD HH:mm:ss');
                             const now = moment();
+
                             if(!date.isAfter(now)) {
                                 userData.loginSessions = existingSession;
                                 req.userData = userData;
                                 next();
                             } else {
                                 // Update session expired update it
-                                mg.model("loginSessions").updateOne({userId: mg.Types.ObjectId(userData.users._id), sessionId: dbStringSanitizer(userData.sessionId_extract), isExpired: false}, function(expiredError, expired){
+                                mg.model("loginSessions").updateOne({userId: mg.Types.ObjectId(userData.users._id)}, {isExpired: false, expiresOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss")}, function(expiredError, expired){
                                     if (expiredError || !expired){
                                         console.log('User Session @ ' + existingSession._id + ' expiration failed', expired);
                                         mg.disconnect();

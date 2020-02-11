@@ -41,7 +41,7 @@ router.post("/create", (req, res, next)=>{
                 mg.model("users").findOne({ username: dbStringSanitizer(req.body.username), isDeleted: false }, function(err,existingUser){
                     if (!err && !existingUser) {
                         console.log("user data on existence before creation check", existingUser);
-                        mg.model("users").create({username: dbStringSanitizer(req.body.username), password: hashedPassword, passwordSalt: salt, createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, lastLoginOn: "", isDeleted: false}, function (error,insertResponse) {
+                        mg.model("users").create({_id: mg.Types.ObjectId(), username: dbStringSanitizer(req.body.username), password: hashedPassword, passwordSalt: salt, createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, lastLoginOn: "", isDeleted: false}, function (error,insertResponse) {
                             if(error) {
                                 res.status(200).json({
                                     status: "error",
@@ -77,7 +77,7 @@ router.post("/create", (req, res, next)=>{
             
                                 return;
                             }
-                        });
+                        }).select('-password');
                     } else {
                         res.status(200).json({
                             status: "error",
@@ -90,7 +90,7 @@ router.post("/create", (req, res, next)=>{
             
                         return;
                     }
-                });
+                }).select('-password');
             } else {
                 res.status(200).json({
                     status: "error",
@@ -519,7 +519,7 @@ router.post("/login", (req,res,next)=>{
                         
                         sessionId = jwtSignTokenizer(payload);
     
-                        mg.model("loginSessions").create({userId: dataGot._id, loggedInOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), loggedOutOn: "", loggedOutBy: null, sessionId: sessionId, isExpired: false, expiresOn: moment(new Date(Date.now() + 12096e5)).format("YYYY-MM-DD HH:mm:ss")}, function (error, insertResponse) {
+                        mg.model("loginSessions").create({_id: mg.Types.ObjectId(), userId: dataGot._id, loggedInOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), loggedOutOn: "", loggedOutBy: null, sessionId: sessionId, isExpired: false, expiresOn: moment(new Date(Date.now() + 12096e5)).format("YYYY-MM-DD HH:mm:ss")}, function (error, insertResponse) {
                             if(error) {
                                 res.status(200).json({
                                     status: "error",

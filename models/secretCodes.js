@@ -42,6 +42,7 @@ let secretCodesSchema = new Schema({
         required: true
     }
 });
+secretCodesSchema.set('versionKey', false);
 mg.model("secretCodes",secretCodesSchema);
 
 module.exports = {

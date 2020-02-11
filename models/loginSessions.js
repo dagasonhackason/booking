@@ -31,11 +31,6 @@ let loginSessionsSchema = new Schema({
         index: true,
         required: false
     }, 
-    expiresOn: {
-        type: String,
-        index: true,
-        required: true
-    }, 
     sessionId: {
         type: String,
         index: true,
@@ -46,8 +41,13 @@ let loginSessionsSchema = new Schema({
         index: true,
         required: true
     }, 
-    expiresOn:String
+    expiresOn: {
+        type: Boolean,
+        index: true,
+        required: true
+    }
 });
+loginSessionsSchema.set('versionKey', false);
 mg.model("loginSessions", loginSessionsSchema);
 
 module.exports = {
