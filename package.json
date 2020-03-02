@@ -23,12 +23,14 @@
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
-    "mongoose": "^5.8.9",
+    "mongoose": "5.9.1",
+    "monogram": "^0.2.5",
     "morgan": "~1.9.1",
     "path": "0.12.7",
     "proc": "^0.2.2",
     "uuid": "^3.4.0",
     "validator": "10.11.0",
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.4.23",
+    "mongodb": "^3.5.4"
   }
 }

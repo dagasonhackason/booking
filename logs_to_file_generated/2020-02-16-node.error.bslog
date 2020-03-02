@@ -1,0 +1,4 @@
+[[13:40:52.255]] [ERROR]  (node:14708) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[13:40:52.255]] [ERROR]  (node:14708) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[13:40:52.499]] [ERROR]  (node:14708) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[00:14:11.880]] [ERROR]  Unknown error proccessing data! null

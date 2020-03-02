@@ -1,9 +1,9 @@
-const mg = require('mongoose');
-const Schema = mg.Schema, ObjectId = Schema.ObjectId;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema, ObjectId = Schema.ObjectId;
 
 const seatsSchema = new Schema({
     seatNumber: String, 
-    status: Boolean, 
+    status: String, 
     createdBy: ObjectId, 
     createdOn: String, 
     updatedBy: ObjectId, 
@@ -11,6 +11,5 @@ const seatsSchema = new Schema({
     isActivated: Boolean, 
     isDeleted: Boolean
 });
-
 seatsSchema.set('versionKey', false);
-module.exports = mg.model('Seats', seatsSchema);
+module.exports = mongoose.model('Seats', seatsSchema);

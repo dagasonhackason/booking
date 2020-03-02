@@ -9,6 +9,9 @@ const APIUsersRequestValidator = require('../validators/APIUsersRequestValidator
 const validate = require('../middlewares/validateMiddleware');
 const auth = require('../middlewares/authMiddleware');
 
+const Users = require('../models/users');
+const LoginSessions = require('../models/loginSessions');
+
 const { 
     meetsPasswordPolicyMax, 
     meetsPasswordPolicyMin,
@@ -38,10 +41,10 @@ router.post("/create", (req, res, next)=>{
 
         if(meetsPasswordPolicyMax(password) && meetsPasswordPolicyMin(password)) {
             if(checkPassword( password, salt, hashedPassword )) {
-                mg.model("users").findOne({ username: dbStringSanitizer(req.body.username), isDeleted: false }, function(err,existingUser){
+                Users.findOne({ username: dbStringSanitizer(req.body.username), isDeleted: false }, function(err,existingUser){
                     if (!err && !existingUser) {
                         console.log("user data on existence before creation check", existingUser);
-                        mg.model("users").create({_id: mg.Types.ObjectId(), username: dbStringSanitizer(req.body.username), password: hashedPassword, passwordSalt: salt, createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, lastLoginOn: "", isDeleted: false}, function (error,insertResponse) {
+                        Users.create({_id: mg.Types.ObjectId(), username: dbStringSanitizer(req.body.username), password: hashedPassword, passwordSalt: salt, createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, lastLoginOn: "", isDeleted: false}, function (error,insertResponse) {
                             if(error) {
                                 res.status(200).json({
                                     status: "error",
@@ -135,7 +138,7 @@ router.get("/read/:id", (req,res,next)=>{
     console.log("new get one user request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
-    mg.model("users").find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, function(getError,dataGot) {
+    Users.find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, function(getError,dataGot) {
         if (!getError && dataGot) {
             console.log("from mongo get one user", dataGot);
                         
@@ -168,7 +171,7 @@ router.get("/", (req,res,next)=>{
     console.log("new get all users request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
-    mg.model("users").find({isDeleted: false}, (getError,dataGot) => {
+    Users.find({isDeleted: false}, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("from mongo get all users", dataGot);
                         
@@ -239,11 +242,11 @@ router.post("/update/:id", (req,res,next)=>{
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
     req.body.updatedBy = req.userData.users._id;
 
-    mg.model("users").find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, function(existError, exist) {
+    Users.find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("users").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, req.body,function(updateError,updated){
+                Users.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, {$set: req.body}, {upsert: true}, function(updateError,updated) {
                     if (updateError || !updated){
                         res.status(200).json({
                             status: "error",
@@ -319,7 +322,7 @@ router.post("/findcustomized", (req,res,next)=>{
         delete req.body.passwordSalt;
     }
 
-    mg.model("users").find(req.body, (getError,dataGot) => {
+    Users.find(req.body, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("from mongo find customized  users", dataGot);
                         
@@ -356,11 +359,11 @@ router.post("/delete", (req,res,next)=> {
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
     req.body.updatedBy = req.userData.users._id;
     
-    mg.model("users").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, function(existError, exist) {
+    Users.find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("users").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, {isDeleted: true, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(deleteError,deleted){
+                Users.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, {$set: {isDeleted: true, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}}, {upsert: true}, function(deleteError,deleted){
                     if (deleteError || !deleted){
                         res.status(200).json({
                             status: "error",
@@ -423,11 +426,11 @@ router.post("/restore", (req,res,next)=> {
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
     req.body.updatedBy = req.userData.users._id;
     
-    mg.model("users").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, function(existError, exist) {
+    Users.find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("users").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, {isDeleted: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(restoreError,restored){
+                Users.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, {$set: {isDeleted: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}}, {upsert: true}, function(restoreError,restored){
                     if (restoreError || !restored) {
                         res.status(200).json({
                             status: "error",
@@ -493,7 +496,7 @@ router.post("/login", (req,res,next)=>{
 
         // console.log("decoded base64 encoded pass", password);
 
-        mg.model("users").find({username: dbStringSanitizer(req.body.username), isDeleted: false}, function(getError,dataGot) {
+        Users.find({username: dbStringSanitizer(req.body.username), isDeleted: false}, function(getError,dataGot) {
             if (!getError && dataGot) {
                 if(dataGot.length > 0) {
                     console.log("from mongo login user", dataGot[0]);
@@ -519,8 +522,10 @@ router.post("/login", (req,res,next)=>{
                         
                         sessionId = jwtSignTokenizer(payload);
     
-                        mg.model("loginSessions").create({_id: mg.Types.ObjectId(), userId: dataGot._id, loggedInOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), loggedOutOn: "", loggedOutBy: null, sessionId: sessionId, isExpired: false, expiresOn: moment(new Date(Date.now() + 12096e5)).format("YYYY-MM-DD HH:mm:ss")}, function (error, insertResponse) {
+                        LoginSessions.create({_id: mg.Types.ObjectId(), userId: dataGot._id, loggedInOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), loggedOutOn: "", loggedOutBy: null, sessionId: sessionId, isExpired: false, expiresOn: moment(new Date(Date.now() + 12096e5)).format("YYYY-MM-DD HH:mm:ss")}, function (error, insertResponse) {
                             if(error) {
+                                console.log("user login failed at session creation", error);
+
                                 res.status(200).json({
                                     status: "error",
                                     responseCode: "202",
@@ -533,24 +538,45 @@ router.post("/login", (req,res,next)=>{
                                 return;
                             }
                             else {
-                                console.log("from mongo insert user", insertResponse);
-                                insertResponse = JSON.parse(JSON.stringify(insertResponse));
+                                let lastLoginOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
                                 
-                                let responseData = {
-                                    ...dataGot,
-                                    ...insertResponse
-                                };
-    
-                                res.status(200).json({
-                                    status: "success",
-                                    responseCode: "201",
-                                    responseMessage: "User login was successful!",
-                                    data: responseData
+                                Users.updateOne({_id: mg.Types.ObjectId(dataGot._id), isDeleted: false}, {$set: {lastLoginOn: lastLoginOn}}, {upsert: true}, function(updateError,updated) {
+                                    if (updateError || !updated){
+                                        console.log("user login failed at update user with last login", updateError);
+
+                                        res.status(200).json({
+                                            status: "error",
+                                            responseCode: "202",
+                                            responseMessage: "User Login Failed with an Unknown Error!",
+                                            data: error
+                                        });
+            
+                                        mg.disconnect();
+                            
+                                        return;
+                                    } else {
+                                        console.log("from mongo login user", insertResponse);
+                                        insertResponse = JSON.parse(JSON.stringify(insertResponse));
+                                        insertResponse.lastLoginOn = lastLoginOn;
+                                        
+                                        let responseData = {
+                                            ...dataGot,
+                                            ...insertResponse
+                                        };
+            
+                                        res.status(200).json({
+                                            status: "success",
+                                            responseCode: "201",
+                                            responseMessage: "User login was successful!",
+                                            data: responseData
+                                        });
+                                            
+                                        mg.disconnect();
+                            
+                                        return;
+                                    }
+                         
                                 });
-                                    
-                                mg.disconnect();
-                    
-                                return;
                             }
                         });
                     } else {

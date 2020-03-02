@@ -1,0 +1,20 @@
+[[09:04:49.946]] [ERROR]  (node:11492) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[09:04:49.946]] [ERROR]  (node:11492) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[09:04:52.761]] [ERROR]  (node:11492) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[16:13:26.580]] [ERROR]  TypeError: seatsSchema.findOneAndUpdate is not a function
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiBookings.js:116:37
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\helpers\promiseOrCallback.js:24:16
+    at Function.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4850:21)
+    at _done (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3120:12)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3129:18
+    at callbackWrapper (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:3085:11)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4827:16
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\helpers\promiseOrCallback.js:24:16
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4850:21
+    at model.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:490:7)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\kareem\index.js:315:21
+    at next (C:\xampp\htdocs\bookingsystem-master\node_modules\kareem\index.js:209:27)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\kareem\index.js:182:9
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\kareem\index.js:507:38
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+[[17:19:36.300]] [ERROR]  Unknown error proccessing data! null

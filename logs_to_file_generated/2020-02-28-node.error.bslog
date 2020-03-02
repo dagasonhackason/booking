@@ -1,0 +1,126 @@
+[[00:07:18.426]] [ERROR]  (node:4776) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[00:07:18.426]] [ERROR]  (node:4776) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[00:07:19.223]] [ERROR]  (node:4776) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[00:09:03.155]] [ERROR]  Unknown Error! Error [ValidationError]: seats validation failed: isDeleted: Path `isDeleted` is required., isActivated: Path `isActivated` is required., createdOn: Path `createdOn` is required., createdBy: Path `createdBy` is required., status: Path `status` is required., seatNumber: Path `seatNumber` is required.
+    at ValidationError.inspect (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.Console.<computed> (internal/console/constructor.js:277:10)
+    at Object.warn (internal/console/constructor.js:287:61)
+    at Object.con.<computed> [as error] (C:\xampp\htdocs\bookingsystem-master\node_modules\console-stamp\main.js:156:24)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiBookings.js:151:41
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4827:16
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:3359:14
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\helpers\promiseOrCallback.js:16:11
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2087:7
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2315:9
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\kareem\index.js:135:16
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+  errors: {
+    isDeleted: MongooseError [ValidatorError]: Path `isDeleted` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaBoolean.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `isDeleted` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'isDeleted',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    isActivated: MongooseError [ValidatorError]: Path `isActivated` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaBoolean.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `isActivated` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'isActivated',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    createdOn: MongooseError [ValidatorError]: Path `createdOn` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `createdOn` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'createdOn',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    createdBy: MongooseError [ValidatorError]: Path `createdBy` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at ObjectId.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `createdBy` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'createdBy',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    status: MongooseError [ValidatorError]: Path `status` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `status` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'status',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    seatNumber: MongooseError [ValidatorError]: Path `seatNumber` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `seatNumber` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'seatNumber',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'seats validation failed',
+  name: 'ValidationError'
+}

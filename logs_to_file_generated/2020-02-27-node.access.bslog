@@ -1,0 +1,835 @@
+[[01:30:53.573]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.579]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.580]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.581]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.582]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.724]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ secretCode: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.725]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ userId: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.728]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ createdBy: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.729]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ seatNumber: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.731]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ loggedInOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.733]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.734]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ seatId: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.736]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ status: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.737]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ createdOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.739]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ loggedOutOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.741]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ createdOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.742]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ bookedByName: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.744]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ createdBy: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.745]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ updatedBy: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.747]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ loggedOutBy: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.749]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ updatedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.751]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ bookedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.753]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ createdOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.754]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ updatedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.756]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ sessionId: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.757]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ updatedBy: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.759]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCode: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.760]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ updatedBy: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.762]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ isDeleted: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.763]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ isExpired: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.765]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ lastLoginOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.767]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ isTicketCodeUsed: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.769]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ updatedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.772]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ expiresOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.773]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ isDeleted: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.775]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCodeUsedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.776]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ isActivated: [33m1[39m }, { background: [33mtrue[39m })
+[[01:30:53.779]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ isDeleted: [33m1[39m }, { background: [33mtrue[39m })
+[[01:34:37.612]] [LOG]    Calling app logger
+[[01:34:37.612]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[01:34:37.613]] [LOG]    No middleware needed for this route /api/bookings/create
+[[01:34:37.613]] [LOG]    New Incoming create booking Request {
+  seatId: '5e3bf3485b20243fec263cec',
+  bookedByName: 'Dagason Hackason'
+}
+[[01:34:37.617]] [LOG]    selecting seatID from seats 5e3bf3485b20243fec263cec
+[[01:34:37.623]] [INFO]   [0;36mMongoose:[0m seats.find({ _id: ObjectId("5e3bf3485b20243fec263cec"), isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m, status: [32m'false'[39m}, { projection: { __v: [33m0[39m } })
+[[01:34:37.944]] [LOG]    From mongo isn't seated booked already! [
+  {
+    _id: 5e3bf3485b20243fec263cec,
+    seatNumber: '1',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 12:05:39',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  }
+]
+[[01:34:37.958]] [INFO]   [0;36mMongoose:[0m bookings.insertOne({ _id: ObjectId("5e571cad77522e2ee8a416ae"), seatId: ObjectId("5e3bf3485b20243fec263cec"), bookedByName: [32m'Dagason Hackason'[39m, ticketCode: [32m'29fa783b'[39m, bookedOn: [32m'2020-02-27 01:34:37'[39m, isTicketCodeUsed: [33mfalse[39m, ticketCodeUsedOn: [32m''[39m}, { session: [1mnull[22m })
+[[01:34:38.223]] [LOG]    update failed for seatId 5e3bf3485b20243fec263cec status to booked BOOKED by Dagason Hackason Error [ValidationError]: seats validation failed: isDeleted: Path `isDeleted` is required., isActivated: Path `isActivated` is required., createdOn: Path `createdOn` is required., createdBy: Path `createdBy` is required., status: Path `status` is required., seatNumber: Path `seatNumber` is required.
+    at ValidationError.inspect (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.Console.<computed> (internal/console/constructor.js:272:10)
+    at Object.log (internal/console/constructor.js:282:61)
+    at Object.con.<computed> [as log] (C:\xampp\htdocs\bookingsystem-master\node_modules\console-stamp\main.js:156:24)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiBookings.js:139:41
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4827:16
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:3359:14
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\helpers\promiseOrCallback.js:16:11
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2087:7
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2315:9
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\kareem\index.js:135:16
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+  errors: {
+    isDeleted: MongooseError [ValidatorError]: Path `isDeleted` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaBoolean.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `isDeleted` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'isDeleted',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    isActivated: MongooseError [ValidatorError]: Path `isActivated` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaBoolean.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `isActivated` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'isActivated',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    createdOn: MongooseError [ValidatorError]: Path `createdOn` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `createdOn` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'createdOn',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    createdBy: MongooseError [ValidatorError]: Path `createdBy` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at ObjectId.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `createdBy` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'createdBy',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    status: MongooseError [ValidatorError]: Path `status` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `status` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'status',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    seatNumber: MongooseError [ValidatorError]: Path `seatNumber` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `seatNumber` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'seatNumber',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'seats validation failed',
+  name: 'ValidationError'
+}
+[[01:34:38.229]] [LOG]    update failed for insert booking {
+  _id: 5e571cad77522e2ee8a416ae,
+  seatId: 5e3bf3485b20243fec263cec,
+  bookedByName: 'Dagason Hackason',
+  ticketCode: '29fa783b',
+  bookedOn: '2020-02-27 01:34:37',
+  isTicketCodeUsed: false,
+  ticketCodeUsedOn: ''
+}
+27/Feb/2020:01:34:38 +0000 "POST /api/bookings/create"
+[[01:34:38.238]] [LOG]    Finishing
+[[01:34:38.238]] [LOG]    No sessionId used
+[[01:34:38.249]] [LOG]    App usage logged! - 2020-02-27 01:34:38 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '30148cf8-5040-4715-8127-ad8a49d09725',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '78',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e3bf3485b20243fec263cec',
+      bookedByName: 'Dagason Hackason'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 1710\r\n' +
+      'ETag: W/"6ae-ELL2q6wdGJRlWqHYehT9o3j8yHY"\r\n' +
+      'Date: Thu, 27 Feb 2020 01:34:38 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-27T01:34:38.238Z
+}
+[[09:02:59.952]] [LOG]    Calling app logger
+27/Feb/2020:09:03:02 +0000 "GET /dashboard"
+[[09:03:02.970]] [LOG]    Finishing
+[[09:03:02.970]] [LOG]    No sessionId used
+[[09:03:03.943]] [LOG]    App usage logged! - 2020-02-27 09:03:03 {
+  req_route: '/dashboard',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      referer: 'http://localhost:3000/chat',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9',
+      'if-none-match': 'W/"1082-bpJ7/X4NoniEgFkGZYtqUe/kOK8"'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 404,
+  res_status_message: 'Not Found',
+  response_payload: {
+    headers: 'HTTP/1.1 404 Not Found\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: text/html; charset=utf-8\r\n' +
+      'Content-Length: 1660\r\n' +
+      'ETag: W/"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0"\r\n' +
+      'Date: Thu, 27 Feb 2020 09:02:59 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-27T09:03:02.970Z
+}
+27/Feb/2020:09:03:10 +0000 "GET /favicon.ico"
+[[09:03:24.737]] [LOG]    Calling app logger
+27/Feb/2020:09:03:24 +0000 "GET /dashboard"
+[[09:03:24.741]] [LOG]    Finishing
+[[09:03:24.741]] [LOG]    No sessionId used
+[[09:03:24.764]] [LOG]    App usage logged! - 2020-02-27 09:03:24 {
+  req_route: '/dashboard',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      referer: 'http://localhost:3000/chat',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 404,
+  res_status_message: 'Not Found',
+  response_payload: {
+    headers: 'HTTP/1.1 404 Not Found\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: text/html; charset=utf-8\r\n' +
+      'Content-Length: 1660\r\n' +
+      'ETag: W/"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0"\r\n' +
+      'Date: Thu, 27 Feb 2020 09:03:24 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-27T09:03:24.742Z
+}
+27/Feb/2020:09:03:24 +0000 "GET /favicon.ico"
+[[09:03:29.892]] [LOG]    Calling app logger
+27/Feb/2020:09:03:29 +0000 "GET /dashboard"
+[[09:03:29.896]] [LOG]    Finishing
+[[09:03:29.896]] [LOG]    No sessionId used
+[[09:03:29.954]] [LOG]    App usage logged! - 2020-02-27 09:03:29 {
+  req_route: '/dashboard',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      referer: 'http://localhost:3000/chat',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 404,
+  res_status_message: 'Not Found',
+  response_payload: {
+    headers: 'HTTP/1.1 404 Not Found\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: text/html; charset=utf-8\r\n' +
+      'Content-Length: 1660\r\n' +
+      'ETag: W/"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0"\r\n' +
+      'Date: Thu, 27 Feb 2020 09:03:29 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-27T09:03:29.896Z
+}
+27/Feb/2020:09:03:29 +0000 "GET /favicon.ico"
+[[09:03:30.952]] [LOG]    Calling app logger
+27/Feb/2020:09:03:30 +0000 "GET /dashboard"
+[[09:03:30.957]] [LOG]    Finishing
+[[09:03:30.958]] [LOG]    No sessionId used
+[[09:03:30.965]] [LOG]    App usage logged! - 2020-02-27 09:03:30 {
+  req_route: '/dashboard',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+      'sec-fetch-dest': 'document',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      referer: 'http://localhost:3000/chat',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 404,
+  res_status_message: 'Not Found',
+  response_payload: {
+    headers: 'HTTP/1.1 404 Not Found\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: text/html; charset=utf-8\r\n' +
+      'Content-Length: 1660\r\n' +
+      'ETag: W/"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0"\r\n' +
+      'Date: Thu, 27 Feb 2020 09:03:30 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-27T09:03:30.959Z
+}
+27/Feb/2020:09:03:31 +0000 "GET /favicon.ico"
+[[09:03:40.283]] [LOG]    hitting index view route with {}
+27/Feb/2020:09:03:40 +0000 "GET /"
+[[09:03:43.907]] [LOG]    Calling app logger
+27/Feb/2020:09:03:43 +0000 "GET /stylesheets/all.css"
+[[09:03:43.909]] [LOG]    Finishing
+[[09:03:43.909]] [LOG]    No sessionId used
+[[09:03:43.914]] [LOG]    Calling app logger
+27/Feb/2020:09:03:43 +0000 "GET /stylesheets/all.css"
+[[09:03:43.917]] [LOG]    Finishing
+[[09:03:43.917]] [LOG]    No sessionId used
+[[09:03:43.920]] [LOG]    App usage logged! - 2020-02-27 09:03:43 {
+  req_route: '/stylesheets/all.css',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+      'sec-fetch-dest': 'style',
+      accept: 'text/css,*/*;q=0.1',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'no-cors',
+      referer: 'http://localhost:3000/',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 404,
+  res_status_message: 'Not Found',
+  response_payload: {
+    headers: 'HTTP/1.1 404 Not Found\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: text/html; charset=utf-8\r\n' +
+      'Content-Length: 1660\r\n' +
+      'ETag: W/"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0"\r\n' +
+      'Date: Thu, 27 Feb 2020 09:03:43 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-27T09:03:43.910Z
+}
+[[09:03:43.929]] [LOG]    App usage logged! - 2020-02-27 09:03:43 {
+  req_route: '/stylesheets/all.css',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+      'sec-fetch-dest': 'style',
+      accept: 'text/css,*/*;q=0.1',
+      purpose: 'prefetch',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'no-cors',
+      referer: 'http://localhost:3000/',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 404,
+  res_status_message: 'Not Found',
+  response_payload: {
+    headers: 'HTTP/1.1 404 Not Found\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: text/html; charset=utf-8\r\n' +
+      'Content-Length: 1660\r\n' +
+      'ETag: W/"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0"\r\n' +
+      'Date: Thu, 27 Feb 2020 09:03:43 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-27T09:03:43.917Z
+}
+27/Feb/2020:09:03:44 +0000 "GET /javascripts/bootstrap.min.js"
+27/Feb/2020:09:03:45 +0000 "GET /stylesheets/custom.css"
+27/Feb/2020:09:03:45 +0000 "GET /stylesheets/bootstrap.min.css"
+27/Feb/2020:09:03:45 +0000 "GET /javascripts/axios.js"
+27/Feb/2020:09:03:45 +0000 "GET /javascripts/jquery.js"
+27/Feb/2020:09:03:45 +0000 "GET /javascripts/fallr.js"
+27/Feb/2020:09:03:45 +0000 "GET /javascripts/clientJS.js"
+27/Feb/2020:09:03:45 +0000 "GET /images/tis.png"
+27/Feb/2020:09:03:45 +0000 "GET /javascripts/moment.js"
+27/Feb/2020:09:03:45 +0000 "GET /javascripts/functions.js"
+[[09:03:47.391]] [LOG]    Calling app logger
+[[09:03:47.391]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[09:03:47.391]] [LOG]    No middleware needed for this route /api/seats
+[[09:03:47.392]] [LOG]    new get all seats request {}
+[[09:03:47.678]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m }, { projection: {} })
+[[09:03:48.822]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e3c2aaf8033aa3aa02f232d,
+    seatNumber: '20',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 15:03:11',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c2aa88033aa3aa02f232c,
+    seatNumber: '19',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 15:03:04',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c2aa18033aa3aa02f232b,
+    seatNumber: '18',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 15:02:57',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c2a968033aa3aa02f232a,
+    seatNumber: '17',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 15:02:46',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c2a8f8033aa3aa02f2329,
+    seatNumber: '16',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 15:02:39',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c2a8a8033aa3aa02f2328,
+    seatNumber: '15',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 15:02:34',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c2a828033aa3aa02f2327,
+    seatNumber: '14',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 15:02:26',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c2a7a8033aa3aa02f2326,
+    seatNumber: '13',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 15:02:18',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c273b845d9f31c4de0f41,
+    seatNumber: '12',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:48:27',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c2733845d9f31c4de0f40,
+    seatNumber: '11',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:48:19',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c272d845d9f31c4de0f3f,
+    seatNumber: '10',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:48:13',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c2711845d9f31c4de0f3e,
+    seatNumber: '910',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:47:45',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c26eb845d9f31c4de0f3d,
+    seatNumber: '9',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:47:07',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c26d1845d9f31c4de0f3c,
+    seatNumber: '8',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:46:41',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c26cb845d9f31c4de0f3b,
+    seatNumber: '7',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:46:35',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c26c3845d9f31c4de0f3a,
+    seatNumber: '6',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:46:27',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c26bd845d9f31c4de0f39,
+    seatNumber: '5',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:46:21',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c24500ec77a1f4ccf3dc5,
+    seatNumber: '4',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:36:06',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3c22c83297fb6f7c0111e7,
+    seatNumber: '3',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 14:31:31',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e3bf3485b20243fec263cec,
+    seatNumber: '1',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 12:05:39',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false,
+    __v: 0
+  },
+  {
+    _id: 5e49e74ec76d415b3cab5a00,
+    seatNumber: '21',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-17 01:07:26',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  },
+  {
+    _id: 5e49f86bf89bc92a8c44e8e0,
+    seatNumber: '22',
+    status: 'BOOKED',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-17 02:20:27',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  },
+  {
+    _id: 5e4a98a82b4c854580480b30,
+    seatNumber: '23',
+    status: 'BOOKED',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-17 02:20:27',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  },
+  {
+    _id: 5e4b2eb5ccd453685419d9d6,
+    seatNumber: '24',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-18 00:24:21',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  }
+]
+27/Feb/2020:09:03:48 +0000 "GET /api/seats"
+[[09:03:48.850]] [LOG]    Finishing
+[[09:03:48.850]] [LOG]    No sessionId used
+[[09:03:48.852]] [LOG]    App usage logged! - 2020-02-27 09:03:48 {
+  req_route: '/api/seats',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      accept: 'application/json, text/plain, */*',
+      'sec-fetch-dest': 'empty',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'cors',
+      referer: 'http://localhost:3000/',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 5458\r\n' +
+      'ETag: W/"1552-MDXU2Rig99AXrXdq8s30M/mx4N4"\r\n' +
+      'Date: Thu, 27 Feb 2020 09:03:48 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-27T09:03:48.850Z
+}
+27/Feb/2020:09:03:49 +0000 "GET /images/ch.png"

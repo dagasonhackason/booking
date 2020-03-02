@@ -81,11 +81,11 @@
   seatId: '5e3c2aaf8033aa3aa02f232d',
   bookedByName: 'Dagason Hackason'
 }
-[[15:29:03.987]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e3c2aaf8033aa3aa02f232d"), status: [32m'NOT_BOOKED'[39m }, { projection: {} })
+[[15:29:03.987]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e3c2aaf8033aa3aa02f232d"), status: [32m'false'[39m }, { projection: {} })
 [[15:29:04.019]] [LOG]    From mongo isn't seated booked already! {
   _id: 5e3c2aaf8033aa3aa02f232d,
   seatNumber: '20',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:03:11',
   updatedOn: '',
@@ -216,7 +216,7 @@
   {
     _id: 5e3c2aaf8033aa3aa02f232d,
     seatNumber: '20',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:03:11',
     updatedOn: '',
@@ -474,7 +474,7 @@
   {
     _id: 5e3c2aaf8033aa3aa02f232d,
     seatNumber: '20',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:03:11',
     updatedOn: '',
@@ -580,7 +580,7 @@
   {
     _id: 5e3c2aaf8033aa3aa02f232d,
     seatNumber: '20',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:03:11',
     updatedOn: '',
@@ -906,7 +906,7 @@
   {
     _id: 5e3c2aaf8033aa3aa02f232d,
     seatNumber: '20',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:03:11',
     updatedOn: '',
@@ -918,7 +918,7 @@
   {
     _id: 5e3c2aa88033aa3aa02f232c,
     seatNumber: '19',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:03:04',
     updatedOn: '',
@@ -930,7 +930,7 @@
   {
     _id: 5e3c2aa18033aa3aa02f232b,
     seatNumber: '18',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:02:57',
     updatedOn: '',
@@ -942,7 +942,7 @@
   {
     _id: 5e3c2a968033aa3aa02f232a,
     seatNumber: '17',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:02:46',
     updatedOn: '',
@@ -954,7 +954,7 @@
   {
     _id: 5e3c2a8f8033aa3aa02f2329,
     seatNumber: '16',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:02:39',
     updatedOn: '',
@@ -966,7 +966,7 @@
   {
     _id: 5e3c2a8a8033aa3aa02f2328,
     seatNumber: '15',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:02:34',
     updatedOn: '',
@@ -978,7 +978,7 @@
   {
     _id: 5e3c2a828033aa3aa02f2327,
     seatNumber: '14',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:02:26',
     updatedOn: '',
@@ -990,7 +990,7 @@
   {
     _id: 5e3c2a7a8033aa3aa02f2326,
     seatNumber: '13',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 15:02:18',
     updatedOn: '',
@@ -1002,7 +1002,7 @@
   {
     _id: 5e3c273b845d9f31c4de0f41,
     seatNumber: '12',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:48:27',
     updatedOn: '',
@@ -1014,7 +1014,7 @@
   {
     _id: 5e3c2733845d9f31c4de0f40,
     seatNumber: '11',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:48:19',
     updatedOn: '',
@@ -1026,7 +1026,7 @@
   {
     _id: 5e3c272d845d9f31c4de0f3f,
     seatNumber: '10',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:48:13',
     updatedOn: '',
@@ -1038,7 +1038,7 @@
   {
     _id: 5e3c2711845d9f31c4de0f3e,
     seatNumber: '910',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:47:45',
     updatedOn: '',
@@ -1050,7 +1050,7 @@
   {
     _id: 5e3c26eb845d9f31c4de0f3d,
     seatNumber: '9',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:47:07',
     updatedOn: '',
@@ -1062,7 +1062,7 @@
   {
     _id: 5e3c26d1845d9f31c4de0f3c,
     seatNumber: '8',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:46:41',
     updatedOn: '',
@@ -1074,7 +1074,7 @@
   {
     _id: 5e3c26cb845d9f31c4de0f3b,
     seatNumber: '7',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:46:35',
     updatedOn: '',
@@ -1086,7 +1086,7 @@
   {
     _id: 5e3c26c3845d9f31c4de0f3a,
     seatNumber: '6',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:46:27',
     updatedOn: '',
@@ -1098,7 +1098,7 @@
   {
     _id: 5e3c26bd845d9f31c4de0f39,
     seatNumber: '5',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:46:21',
     updatedOn: '',
@@ -1110,7 +1110,7 @@
   {
     _id: 5e3c24500ec77a1f4ccf3dc5,
     seatNumber: '4',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:36:06',
     updatedOn: '',
@@ -1122,7 +1122,7 @@
   {
     _id: 5e3c22c83297fb6f7c0111e7,
     seatNumber: '3',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 14:31:31',
     updatedOn: '',
@@ -1134,7 +1134,7 @@
   {
     _id: 5e3bf3485b20243fec263cec,
     seatNumber: '1',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: 5e3ba6bdcb8c5a58f0055c28,
     createdOn: '2020-02-06 12:05:39',
     updatedOn: '',

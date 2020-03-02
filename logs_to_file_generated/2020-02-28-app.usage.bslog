@@ -1,0 +1,35 @@
+
+:::::2020-02-28 00:09:03 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "8fa31177-ffc5-4a16-870b-5edc6105739d",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "78",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e3bf3485b20243fec263cec",
+            "bookedByName": "Dagason Hackason"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 1710\r\nETag: W/\"6ae-ELL2q6wdGJRlWqHYehT9o3j8yHY\"\r\nDate: Fri, 28 Feb 2020 00:09:03 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-28T00:09:03.160Z"
+}
+
+___________________________________________________

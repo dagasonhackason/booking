@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mg = require("mongoose");
+
 const Schema = mg.Schema, ObjectId = Schema.ObjectId;
 const moment = require("moment");
 
@@ -8,24 +9,68 @@ const APIBookingsRequestValidator = require('../validators/APIBookingsRequestVal
 const validate = require('../middlewares/validateMiddleware');
 const auth = require('../middlewares/authMiddleware');
 
-const { dbStringSanitizer, generateTicket } = require('../utilities/supportFunctions');
+const { dbStringSanitizer, generateTicket, updateSeatsCollection } = require('../utilities/supportFunctions');
 const { respondWithSuccess, respondWithError } = require('../utilities/responder');
+
+const Seats = require('../models/seats');
+const Bookings = require('../models/bookings');
 
 router.use(auth);
 
 router.post("/create", (req, res, next)=>{
     console.log("New Incoming create booking Request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/bookingbooking");
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+
     var dateTime = new Date();
     let ticketCode = generateTicket();
     var seatId = req.body.seatId;
 
-    if(req.body.seatId && req.body.bookedByName ) {
-        mg.model("seats").findOne({_id: mg.Types.ObjectId(dbStringSanitizer(seatId)), status: "NOT_BOOKED"}, function(getError,dataGot) {
-            if(!getError && dataGot) {
-                console.log("From mongo isn't seated booked already!", dataGot);
+    console.log("selecting seatID from seats", req.body.seatId);
 
-                mg.model("bookings").create({_id: mg.Types.ObjectId(), seatId: mg.Types.ObjectId(dbStringSanitizer(seatId)), bookedByName: dbStringSanitizer(req.body.bookedByName), ticketCode: ticketCode, bookedOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), isTicketCodeUsed: false, ticketCodeUsedOn: ""}, function (error,insertResponse) {
+    if(req.body.seatId && req.body.bookedByName ) {
+        Seats.findOne({_id: dbStringSanitizer(req.body.seatId), status: false, isDeleted: false, isActivated: true}, function(getError, dataGot) {
+            if(dataGot) {
+                console.log("From mongo isn't seated booked already!", dataGot);
+                let bookingsObject = new Bookings({_id: mg.Types.ObjectId(), seatId: mg.Types.ObjectId(dbStringSanitizer(seatId)), bookedByName: dbStringSanitizer(req.body.bookedByName), ticketCode: ticketCode, bookedOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), isTicketCodeUsed: false, ticketCodeUsedOn: ""});
+                
+                let updateData = {};
+
+                updateData.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+                updateData.status = true;
+
+                Seats.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body.seatId)), isDeleted: false}, {$set: updateData}, {upsert: true}, function(updateError,updated) {
+                    if (updateError || !updated){
+                        console.log("update failed for seatId " + seatId + " status to booked BOOKED by " + req.body.bookedByName, updateError);
+                        
+                        res.status(200).json({
+                            status: "error",
+                            responseCode: "208",
+                            responseMessage: "Unknown Error!",
+                            data: updateError
+                        });
+                
+                        console.error("Unknown Error!", updateError);
+                        
+                        mg.disconnect();
+    
+                        return;
+                    } else {
+                        console.log("updated seatId " + dataGot._id + " status to booked BOOKED by " + req.body.bookedByName, updated);
+                        // res.status(200).json({
+                        //     status: "success",
+                        //     responseCode: "201",
+                        //     responseMessage: "Booking Updated Successful!",
+                        //     data: updated
+                        // });
+            
+                        // mg.disconnect();
+            
+                        // return;
+                    }
+         
+                });
+
+                bookingsObject.save( (error, insertResponse) => {
                     if(error) {
                         res.status(200).json({
                             status: "error",
@@ -40,54 +85,35 @@ router.post("/create", (req, res, next)=>{
             
                         return;
                     } else {
-                        dataGot.status = "BOOKED";
-                        dataGot.save(function(updateError,updated) {
-                            if (updated) {
-                                console.log("updated seatId " + req.body.seatId + " status to booked BOOKED by " + req.body.bookedByName, updated);
-                                console.log("From mongo insert booking", insertResponse);
-                            
-                                res.status(200).json({
-                                    status: "success",
-                                    responseCode: "201",
-                                    responseMessage: "Booking Creation was Successful!",
-                                    data: insertResponse
-                                });
-                                
-                                mg.disconnect();
-                
-                                return;
-                            } else {
-                                res.status(200).json({
-                                    status: "error",
-                                    responseCode: "208",
-                                    responseMessage: "Unknown Error!",
-                                    data: updateError
-                                });
-                        
-                                console.error("Unknown Error!", updateError);
-                                
-                                mg.disconnect();
-                        
-                                return;
-                            }
+                        console.log("for create insert booking", insertResponse);
+                        delete req.body.seatId;
+                        res.status(200).json({
+                            status: "success",
+                            responseCode: "201",
+                            responseMessage: "Booking Creation was Successful!",
+                            data: insertResponse
                         });
+            
+                        mg.disconnect();
+            
+                        return;
                     }
                 });
             } else {
                 res.status(200).json({
                     status: "error",
                     responseCode: "206",
-                    responseMessage: "Unknown error proccessing data!",
+                    responseMessage: "The Selected Seat has Already been booked!",
                     data: getError
                 });
                     
-                console.error("Unknown error proccessing data!", getError);
+                console.error("The Selected Seat has Already been booked!", getError);
     
                 mg.disconnect();
     
                 return;
             }
-        });
+        }).select('-__v');;
     } else {
         res.status(200).json({
             status: "error",
@@ -108,9 +134,9 @@ router.get("/read/:id", (req,res,next)=>{
     var id = req.params.id;
 
     console.log("New get one booking request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/bookingbooking");
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
-    mg.model("bookings").find({_id: mg.Types.ObjectId(dbStringSanitizer(id))}, function(getError,dataGot) {
+    Bookings.find({_id: mg.Types.ObjectId(dbStringSanitizer(id))}, function(getError,dataGot) {
         if (!getError && dataGot) {
             console.log("From mongo get one booking", dataGot);
                         
@@ -143,9 +169,9 @@ router.get("/read/:id", (req,res,next)=>{
 
 router.get("/", (req,res,next)=>{
     console.log("new get all bookings request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/bookingbooking");
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
-    mg.model("bookings").find((getError,dataGot) => {
+    Bookings.find((getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("From mongo get all bookings", dataGot);
                         
@@ -179,7 +205,7 @@ router.post("/useticket/:ticketCode/:id", (req,res,next)=>{
     var id = req.params.id;
 
     console.log("New booking update request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/bookingbooking");
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
     
     if(req.body.id) {
@@ -190,13 +216,13 @@ router.post("/useticket/:ticketCode/:id", (req,res,next)=>{
         delete req.body._id;
     }
 
-    mg.model("bookings").findById(mg.Types.ObjectId(dbStringSanitizer(id)), function(existError, exist) {
+    Bookings.findById(mg.Types.ObjectId(dbStringSanitizer(id)), function(existError, exist) {
         if (!existError && exist) {
             isTicketCodeUsed = true;
             ticketCodeUsedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
             
             if(exist.id == id && !exist.isTicketCodeUsed && exist.ticketCode == ticketCode) {
-                mg.model("bookings").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id))}, {isTicketCodeUsed: isTicketCodeUsed},function(updateError,updated){
+                Bookings.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id))}, {isTicketCodeUsed: isTicketCodeUsed},function(updateError,updated){
                     if (updateError || !updated){
                         res.status(200).json({
                             status: "error",
@@ -255,7 +281,7 @@ router.post("/findcustomized", (req,res,next)=>{
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
 
-    mg.model("bookings").find(req.body, (getError,dataGot) => {
+    Bookings.find(req.body, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("from mongo find customized bookings", dataGot);
                         

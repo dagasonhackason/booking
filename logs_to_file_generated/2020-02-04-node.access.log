@@ -856,7 +856,7 @@
   {
     _id: 5e30fa77d0d4a939e4baa16a,
     seatNumber: '1',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:31',
     updatedOn: '',
@@ -868,7 +868,7 @@
   {
     _id: 5e30fa7fd0d4a939e4baa16b,
     seatNumber: '2',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:39',
     updatedOn: '',
@@ -880,7 +880,7 @@
   {
     _id: 5e30fa86d0d4a939e4baa16c,
     seatNumber: '3',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:46',
     updatedOn: '',
@@ -892,7 +892,7 @@
   {
     _id: 5e30fa8dd0d4a939e4baa16d,
     seatNumber: '4',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:53',
     updatedOn: '',
@@ -904,7 +904,7 @@
   {
     _id: 5e30fa92d0d4a939e4baa16e,
     seatNumber: '5',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:58',
     updatedOn: '',
@@ -916,7 +916,7 @@
   {
     _id: 5e30fa98d0d4a939e4baa16f,
     seatNumber: '6',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:04',
     updatedOn: '',
@@ -928,7 +928,7 @@
   {
     _id: 5e30fa9ed0d4a939e4baa170,
     seatNumber: '7',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:10',
     updatedOn: '',
@@ -940,7 +940,7 @@
   {
     _id: 5e30faa2d0d4a939e4baa171,
     seatNumber: '8',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:14',
     updatedOn: '',
@@ -952,7 +952,7 @@
   {
     _id: 5e30faa8d0d4a939e4baa172,
     seatNumber: '9',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:20',
     updatedOn: '',
@@ -964,7 +964,7 @@
   {
     _id: 5e30faafd0d4a939e4baa173,
     seatNumber: '10',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:27',
     updatedOn: '',
@@ -976,7 +976,7 @@
   {
     _id: 5e30fab6d0d4a939e4baa174,
     seatNumber: '11',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:34',
     updatedOn: '',
@@ -988,7 +988,7 @@
   {
     _id: 5e30fabbd0d4a939e4baa175,
     seatNumber: '12',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:39',
     updatedOn: '',
@@ -1000,7 +1000,7 @@
   {
     _id: 5e30fabfd0d4a939e4baa176,
     seatNumber: '13',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:43',
     updatedOn: '',
@@ -1012,7 +1012,7 @@
   {
     _id: 5e30fac4d0d4a939e4baa177,
     seatNumber: '14',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:48',
     updatedOn: '',
@@ -1024,7 +1024,7 @@
   {
     _id: 5e30facdd0d4a939e4baa178,
     seatNumber: '15',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:57',
     updatedOn: '',
@@ -1036,7 +1036,7 @@
   {
     _id: 5e30fad1d0d4a939e4baa179,
     seatNumber: '16',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:01',
     updatedOn: '',
@@ -1048,7 +1048,7 @@
   {
     _id: 5e30fad8d0d4a939e4baa17a,
     seatNumber: '17',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:08',
     updatedOn: '',
@@ -1060,7 +1060,7 @@
   {
     _id: 5e30faddd0d4a939e4baa17b,
     seatNumber: '18',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:13',
     updatedOn: '',
@@ -1072,7 +1072,7 @@
   {
     _id: 5e30fae1d0d4a939e4baa17c,
     seatNumber: '19',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:17',
     updatedOn: '',
@@ -1084,7 +1084,7 @@
   {
     _id: 5e30fae7d0d4a939e4baa17d,
     seatNumber: '20',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:23',
     updatedOn: '',
@@ -1285,7 +1285,7 @@
   {
     _id: 5e30fa77d0d4a939e4baa16a,
     seatNumber: '1',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:31',
     updatedOn: '',
@@ -1297,7 +1297,7 @@
   {
     _id: 5e30fa7fd0d4a939e4baa16b,
     seatNumber: '2',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:39',
     updatedOn: '',
@@ -1309,7 +1309,7 @@
   {
     _id: 5e30fa86d0d4a939e4baa16c,
     seatNumber: '3',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:46',
     updatedOn: '',
@@ -1321,7 +1321,7 @@
   {
     _id: 5e30fa8dd0d4a939e4baa16d,
     seatNumber: '4',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:53',
     updatedOn: '',
@@ -1333,7 +1333,7 @@
   {
     _id: 5e30fa92d0d4a939e4baa16e,
     seatNumber: '5',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:58',
     updatedOn: '',
@@ -1345,7 +1345,7 @@
   {
     _id: 5e30fa98d0d4a939e4baa16f,
     seatNumber: '6',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:04',
     updatedOn: '',
@@ -1357,7 +1357,7 @@
   {
     _id: 5e30fa9ed0d4a939e4baa170,
     seatNumber: '7',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:10',
     updatedOn: '',
@@ -1369,7 +1369,7 @@
   {
     _id: 5e30faa2d0d4a939e4baa171,
     seatNumber: '8',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:14',
     updatedOn: '',
@@ -1381,7 +1381,7 @@
   {
     _id: 5e30faa8d0d4a939e4baa172,
     seatNumber: '9',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:20',
     updatedOn: '',
@@ -1393,7 +1393,7 @@
   {
     _id: 5e30faafd0d4a939e4baa173,
     seatNumber: '10',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:27',
     updatedOn: '',
@@ -1405,7 +1405,7 @@
   {
     _id: 5e30fab6d0d4a939e4baa174,
     seatNumber: '11',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:34',
     updatedOn: '',
@@ -1417,7 +1417,7 @@
   {
     _id: 5e30fabbd0d4a939e4baa175,
     seatNumber: '12',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:39',
     updatedOn: '',
@@ -1429,7 +1429,7 @@
   {
     _id: 5e30fabfd0d4a939e4baa176,
     seatNumber: '13',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:43',
     updatedOn: '',
@@ -1441,7 +1441,7 @@
   {
     _id: 5e30fac4d0d4a939e4baa177,
     seatNumber: '14',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:48',
     updatedOn: '',
@@ -1453,7 +1453,7 @@
   {
     _id: 5e30facdd0d4a939e4baa178,
     seatNumber: '15',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:57',
     updatedOn: '',
@@ -1465,7 +1465,7 @@
   {
     _id: 5e30fad1d0d4a939e4baa179,
     seatNumber: '16',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:01',
     updatedOn: '',
@@ -1477,7 +1477,7 @@
   {
     _id: 5e30fad8d0d4a939e4baa17a,
     seatNumber: '17',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:08',
     updatedOn: '',
@@ -1489,7 +1489,7 @@
   {
     _id: 5e30faddd0d4a939e4baa17b,
     seatNumber: '18',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:13',
     updatedOn: '',
@@ -1501,7 +1501,7 @@
   {
     _id: 5e30fae1d0d4a939e4baa17c,
     seatNumber: '19',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:17',
     updatedOn: '',
@@ -1513,7 +1513,7 @@
   {
     _id: 5e30fae7d0d4a939e4baa17d,
     seatNumber: '20',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:23',
     updatedOn: '',
@@ -1567,7 +1567,7 @@
   {
     _id: 5e30fa77d0d4a939e4baa16a,
     seatNumber: '1',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:31',
     updatedOn: '',
@@ -1579,7 +1579,7 @@
   {
     _id: 5e30fa7fd0d4a939e4baa16b,
     seatNumber: '2',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:39',
     updatedOn: '',
@@ -1591,7 +1591,7 @@
   {
     _id: 5e30fa86d0d4a939e4baa16c,
     seatNumber: '3',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:46',
     updatedOn: '',
@@ -1603,7 +1603,7 @@
   {
     _id: 5e30fa8dd0d4a939e4baa16d,
     seatNumber: '4',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:53',
     updatedOn: '',
@@ -1615,7 +1615,7 @@
   {
     _id: 5e30fa92d0d4a939e4baa16e,
     seatNumber: '5',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:58',
     updatedOn: '',
@@ -1627,7 +1627,7 @@
   {
     _id: 5e30fa98d0d4a939e4baa16f,
     seatNumber: '6',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:04',
     updatedOn: '',
@@ -1639,7 +1639,7 @@
   {
     _id: 5e30fa9ed0d4a939e4baa170,
     seatNumber: '7',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:10',
     updatedOn: '',
@@ -1651,7 +1651,7 @@
   {
     _id: 5e30faa2d0d4a939e4baa171,
     seatNumber: '8',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:14',
     updatedOn: '',
@@ -1663,7 +1663,7 @@
   {
     _id: 5e30faa8d0d4a939e4baa172,
     seatNumber: '9',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:20',
     updatedOn: '',
@@ -1675,7 +1675,7 @@
   {
     _id: 5e30faafd0d4a939e4baa173,
     seatNumber: '10',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:27',
     updatedOn: '',
@@ -1687,7 +1687,7 @@
   {
     _id: 5e30fab6d0d4a939e4baa174,
     seatNumber: '11',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:34',
     updatedOn: '',
@@ -1699,7 +1699,7 @@
   {
     _id: 5e30fabbd0d4a939e4baa175,
     seatNumber: '12',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:39',
     updatedOn: '',
@@ -1711,7 +1711,7 @@
   {
     _id: 5e30fabfd0d4a939e4baa176,
     seatNumber: '13',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:43',
     updatedOn: '',
@@ -1723,7 +1723,7 @@
   {
     _id: 5e30fac4d0d4a939e4baa177,
     seatNumber: '14',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:48',
     updatedOn: '',
@@ -1735,7 +1735,7 @@
   {
     _id: 5e30facdd0d4a939e4baa178,
     seatNumber: '15',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:57',
     updatedOn: '',
@@ -1747,7 +1747,7 @@
   {
     _id: 5e30fad1d0d4a939e4baa179,
     seatNumber: '16',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:01',
     updatedOn: '',
@@ -1759,7 +1759,7 @@
   {
     _id: 5e30fad8d0d4a939e4baa17a,
     seatNumber: '17',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:08',
     updatedOn: '',
@@ -1771,7 +1771,7 @@
   {
     _id: 5e30faddd0d4a939e4baa17b,
     seatNumber: '18',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:13',
     updatedOn: '',
@@ -1783,7 +1783,7 @@
   {
     _id: 5e30fae1d0d4a939e4baa17c,
     seatNumber: '19',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:17',
     updatedOn: '',
@@ -1795,7 +1795,7 @@
   {
     _id: 5e30fae7d0d4a939e4baa17d,
     seatNumber: '20',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:23',
     updatedOn: '',
@@ -1950,7 +1950,7 @@
 [[22:03:05.069]] [LOG]    From mongo isn't seated booked already! {
   _id: 5e30fae7d0d4a939e4baa17d,
   seatNumber: '20',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: '',
   createdOn: '2020-01-29 03:24:23',
   updatedOn: '',
@@ -2053,7 +2053,7 @@
   {
     _id: 5e30fa77d0d4a939e4baa16a,
     seatNumber: '1',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:31',
     updatedOn: '',
@@ -2065,7 +2065,7 @@
   {
     _id: 5e30fa7fd0d4a939e4baa16b,
     seatNumber: '2',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:39',
     updatedOn: '',
@@ -2077,7 +2077,7 @@
   {
     _id: 5e30fa86d0d4a939e4baa16c,
     seatNumber: '3',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:46',
     updatedOn: '',
@@ -2089,7 +2089,7 @@
   {
     _id: 5e30fa8dd0d4a939e4baa16d,
     seatNumber: '4',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:53',
     updatedOn: '',
@@ -2101,7 +2101,7 @@
   {
     _id: 5e30fa92d0d4a939e4baa16e,
     seatNumber: '5',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:22:58',
     updatedOn: '',
@@ -2113,7 +2113,7 @@
   {
     _id: 5e30fa98d0d4a939e4baa16f,
     seatNumber: '6',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:04',
     updatedOn: '',
@@ -2125,7 +2125,7 @@
   {
     _id: 5e30fa9ed0d4a939e4baa170,
     seatNumber: '7',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:10',
     updatedOn: '',
@@ -2137,7 +2137,7 @@
   {
     _id: 5e30faa2d0d4a939e4baa171,
     seatNumber: '8',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:14',
     updatedOn: '',
@@ -2149,7 +2149,7 @@
   {
     _id: 5e30faa8d0d4a939e4baa172,
     seatNumber: '9',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:20',
     updatedOn: '',
@@ -2161,7 +2161,7 @@
   {
     _id: 5e30faafd0d4a939e4baa173,
     seatNumber: '10',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:27',
     updatedOn: '',
@@ -2173,7 +2173,7 @@
   {
     _id: 5e30fab6d0d4a939e4baa174,
     seatNumber: '11',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:34',
     updatedOn: '',
@@ -2185,7 +2185,7 @@
   {
     _id: 5e30fabbd0d4a939e4baa175,
     seatNumber: '12',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:39',
     updatedOn: '',
@@ -2197,7 +2197,7 @@
   {
     _id: 5e30fabfd0d4a939e4baa176,
     seatNumber: '13',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:43',
     updatedOn: '',
@@ -2209,7 +2209,7 @@
   {
     _id: 5e30fac4d0d4a939e4baa177,
     seatNumber: '14',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:48',
     updatedOn: '',
@@ -2221,7 +2221,7 @@
   {
     _id: 5e30facdd0d4a939e4baa178,
     seatNumber: '15',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:23:57',
     updatedOn: '',
@@ -2233,7 +2233,7 @@
   {
     _id: 5e30fad1d0d4a939e4baa179,
     seatNumber: '16',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:01',
     updatedOn: '',
@@ -2245,7 +2245,7 @@
   {
     _id: 5e30fad8d0d4a939e4baa17a,
     seatNumber: '17',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:08',
     updatedOn: '',
@@ -2257,7 +2257,7 @@
   {
     _id: 5e30faddd0d4a939e4baa17b,
     seatNumber: '18',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:13',
     updatedOn: '',
@@ -2269,7 +2269,7 @@
   {
     _id: 5e30fae1d0d4a939e4baa17c,
     seatNumber: '19',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:17',
     updatedOn: '',
@@ -2281,7 +2281,7 @@
   {
     _id: 5e30fae7d0d4a939e4baa17d,
     seatNumber: '20',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdBy: '',
     createdOn: '2020-01-29 03:24:23',
     updatedOn: '',
@@ -2379,7 +2379,7 @@
 [[22:11:22.555]] [LOG]    From mongo isn't seated booked already! {
   _id: 5e30fa77d0d4a939e4baa16a,
   seatNumber: '1',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: '',
   createdOn: '2020-01-29 03:22:31',
   updatedOn: '',
@@ -2756,7 +2756,7 @@
 [[22:52:15.605]] [LOG]    From mongo isn't seated booked already! {
   _id: 5e30fae1d0d4a939e4baa17c,
   seatNumber: '19',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: '',
   createdOn: '2020-01-29 03:24:17',
   updatedOn: '',
@@ -2768,7 +2768,7 @@
 [[22:52:15.606]] [LOG]    From mongo isn't seated booked already! {
   _id: 5e30fae1d0d4a939e4baa17c,
   seatNumber: '19',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: '',
   createdOn: '2020-01-29 03:24:17',
   updatedOn: '',
@@ -2825,7 +2825,7 @@
 [[23:52:57.113]] [LOG]    From mongo isn't seated booked already! {
   _id: 5e30fae1d0d4a939e4baa17c,
   seatNumber: '19',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdOn: '2020-01-29 03:24:17',
   updatedOn: '',
   isActivated: true,
@@ -2835,7 +2835,7 @@
 [[23:52:57.114]] [LOG]    From mongo isn't seated booked already! {
   _id: 5e30fae1d0d4a939e4baa17c,
   seatNumber: '19',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdOn: '2020-01-29 03:24:17',
   updatedOn: '',
   isActivated: true,
@@ -2891,7 +2891,7 @@
   {
     _id: 5e30fa77d0d4a939e4baa16a,
     seatNumber: '1',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:22:31',
     updatedOn: '',
     isActivated: true,
@@ -2901,7 +2901,7 @@
   {
     _id: 5e30fa7fd0d4a939e4baa16b,
     seatNumber: '2',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:22:39',
     updatedOn: '',
     isActivated: true,
@@ -2911,7 +2911,7 @@
   {
     _id: 5e30fa86d0d4a939e4baa16c,
     seatNumber: '3',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:22:46',
     updatedOn: '',
     isActivated: true,
@@ -2921,7 +2921,7 @@
   {
     _id: 5e30fa8dd0d4a939e4baa16d,
     seatNumber: '4',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:22:53',
     updatedOn: '',
     isActivated: true,
@@ -2931,7 +2931,7 @@
   {
     _id: 5e30fa92d0d4a939e4baa16e,
     seatNumber: '5',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:22:58',
     updatedOn: '',
     isActivated: true,
@@ -2941,7 +2941,7 @@
   {
     _id: 5e30fa98d0d4a939e4baa16f,
     seatNumber: '6',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:23:04',
     updatedOn: '',
     isActivated: true,
@@ -2951,7 +2951,7 @@
   {
     _id: 5e30fa9ed0d4a939e4baa170,
     seatNumber: '7',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:23:10',
     updatedOn: '',
     isActivated: true,
@@ -2961,7 +2961,7 @@
   {
     _id: 5e30faa2d0d4a939e4baa171,
     seatNumber: '8',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:23:14',
     updatedOn: '',
     isActivated: true,
@@ -2971,7 +2971,7 @@
   {
     _id: 5e30faa8d0d4a939e4baa172,
     seatNumber: '9',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:23:20',
     updatedOn: '',
     isActivated: true,
@@ -2981,7 +2981,7 @@
   {
     _id: 5e30faafd0d4a939e4baa173,
     seatNumber: '10',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:23:27',
     updatedOn: '',
     isActivated: true,
@@ -2991,7 +2991,7 @@
   {
     _id: 5e30fab6d0d4a939e4baa174,
     seatNumber: '11',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:23:34',
     updatedOn: '',
     isActivated: true,
@@ -3001,7 +3001,7 @@
   {
     _id: 5e30fabbd0d4a939e4baa175,
     seatNumber: '12',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:23:39',
     updatedOn: '',
     isActivated: true,
@@ -3011,7 +3011,7 @@
   {
     _id: 5e30fabfd0d4a939e4baa176,
     seatNumber: '13',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:23:43',
     updatedOn: '',
     isActivated: true,
@@ -3021,7 +3021,7 @@
   {
     _id: 5e30fac4d0d4a939e4baa177,
     seatNumber: '14',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:23:48',
     updatedOn: '',
     isActivated: true,
@@ -3031,7 +3031,7 @@
   {
     _id: 5e30facdd0d4a939e4baa178,
     seatNumber: '15',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:23:57',
     updatedOn: '',
     isActivated: true,
@@ -3041,7 +3041,7 @@
   {
     _id: 5e30fad1d0d4a939e4baa179,
     seatNumber: '16',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:24:01',
     updatedOn: '',
     isActivated: true,
@@ -3051,7 +3051,7 @@
   {
     _id: 5e30fad8d0d4a939e4baa17a,
     seatNumber: '17',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:24:08',
     updatedOn: '',
     isActivated: true,
@@ -3061,7 +3061,7 @@
   {
     _id: 5e30faddd0d4a939e4baa17b,
     seatNumber: '18',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:24:13',
     updatedOn: '',
     isActivated: true,
@@ -3071,7 +3071,7 @@
   {
     _id: 5e30fae1d0d4a939e4baa17c,
     seatNumber: '19',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:24:17',
     updatedOn: '',
     isActivated: true,
@@ -3081,7 +3081,7 @@
   {
     _id: 5e30fae7d0d4a939e4baa17d,
     seatNumber: '20',
-    status: 'NOT_BOOKED',
+    status: 'false',
     createdOn: '2020-01-29 03:24:23',
     updatedOn: '',
     isActivated: true,

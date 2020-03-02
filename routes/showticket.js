@@ -17,7 +17,7 @@ router.get("/:id", (req,res,next) => {
 
     console.log("hitting showticket view route with", req.params);
 
-    mg.connect("mongodb://127.0.0.1:27017/bookingbooking");
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
     mg.model("bookings").find({_id: dbStringSanitizer(id)}, function(getError,dataGot) {
         if (!getError && dataGot) {

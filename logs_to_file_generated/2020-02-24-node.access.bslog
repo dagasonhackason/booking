@@ -1,0 +1,110 @@
+[[09:04:52.750]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:52.757]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:52.758]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:52.759]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:52.761]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.551]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ userId: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.552]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ secretCode: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.553]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ seatNumber: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.556]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.557]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ seatId: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.559]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ loggedInOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.560]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ createdBy: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.561]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ status: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.562]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ createdOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.564]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ bookedByName: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.565]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ loggedOutOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.567]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ createdOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.568]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ createdBy: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.569]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ updatedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.571]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ bookedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.572]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ loggedOutBy: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.573]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ updatedBy: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.574]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ createdOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.576]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ updatedBy: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.577]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCode: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.579]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ sessionId: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.580]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ updatedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.582]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ updatedBy: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.584]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ lastLoginOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.587]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ isTicketCodeUsed: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.589]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ isExpired: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.591]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ isDeleted: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.592]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ updatedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.594]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ isDeleted: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.595]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCodeUsedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.597]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ expiresOn: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.599]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ isActivated: [33m1[39m }, { background: [33mtrue[39m })
+[[09:04:53.601]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ isDeleted: [33m1[39m }, { background: [33mtrue[39m })
+[[16:13:24.915]] [LOG]    Calling app logger
+[[16:13:24.934]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[16:13:24.934]] [LOG]    No middleware needed for this route /api/bookings/create
+[[16:13:24.979]] [LOG]    New Incoming create booking Request {
+  seatId: '5e4b2eb5ccd453685419d9d6',
+  bookedByName: 'Dagason Hackason'
+}
+[[16:13:25.281]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e4b2eb5ccd453685419d9d6"), status: [32m'false'[39m }, { projection: { __v: [33m0[39m } })
+[[16:13:26.100]] [LOG]    From mongo isn't seated booked already! {
+  _id: 5e4b2eb5ccd453685419d9d6,
+  seatNumber: '24',
+  status: 'false',
+  createdBy: 5e3ba6bdcb8c5a58f0055c28,
+  createdOn: '2020-02-18 00:24:21',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+[[16:13:26.141]] [INFO]   [0;36mMongoose:[0m bookings.insertOne({ _id: ObjectId("5e53f6260fcff52ce47a14a6"), seatId: ObjectId("5e4b2eb5ccd453685419d9d6"), bookedByName: [32m'Dagason Hackason'[39m, ticketCode: [32m'287-92-4309-e3ff6d06-26d5-47ac-ad05-3b24a44861339c59'[39m, bookedOn: [32m'2020-02-24 16:13:25'[39m, isTicketCodeUsed: [33mfalse[39m, ticketCodeUsedOn: [32m''[39m}, { session: [1mnull[22m })
+24/Feb/2020:16:15:24 +0000 "POST /api/bookings/create"
+[[17:19:35.934]] [LOG]    Calling app logger
+[[17:19:35.935]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[17:19:35.936]] [LOG]    No middleware needed for this route /api/bookings/create
+[[17:19:35.936]] [LOG]    New Incoming create booking Request {
+  seatId: '5e4b2eb5ccd453685419d9d6',
+  bookedByName: 'Dagason Hackason'
+}
+[[17:19:36.060]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e4b2eb5ccd453685419d9d6"), status: [32m'false'[39m }, { projection: { __v: [33m0[39m } })
+24/Feb/2020:17:19:36 +0000 "POST /api/bookings/create"
+[[17:19:36.302]] [LOG]    Finishing
+[[17:19:36.303]] [LOG]    No sessionId used
+[[17:19:37.161]] [LOG]    App usage logged! - 2020-02-24 17:19:37 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MDk3MTkxNCwiZXhwIjoxNTgyMTgxNTE0fQ.fD9fSOH_Q21GShcBasqZAd-gsgbZARnbW9x_U5_E_Xw',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '33bbed38-c507-44a8-bf8a-45793ed9346c',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '78',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e4b2eb5ccd453685419d9d6',
+      bookedByName: 'Dagason Hackason'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 103\r\n' +
+      'ETag: W/"67-W3jNGrcBd3L+WY+vEKeksL/5Hm8"\r\n' +
+      'Date: Mon, 24 Feb 2020 17:19:36 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-24T17:19:36.303Z
+}

@@ -11,7 +11,29 @@ const auth = require('../middlewares/authMiddleware');
 const { dbStringSanitizer } = require('../utilities/supportFunctions');
 const { respondWithSuccess, respondWithError } = require('../utilities/responder');
 
+const Seats = require('../models/seats');
+
 router.use(auth);
+
+// update model name of existing seat
+// router.put('/seatupdater/:id', (req, res) => {
+//     console.log("New seat update request", req.body);
+//     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+
+//     Seats.findOneAndUpdate({
+//         _id: req.params.id
+//     }, 
+//     {$set: req.body}, {upsert: true},
+//           (err, seat) => {
+//              if (err) {
+//                 console.log('error occured while trying to update seat', err);
+//                 res.status(200).send('false');
+//              } else {
+//                  console.log('updated seat', seat);
+//                  res.status(200).send('true');
+//              }
+//     });
+// });
 
 router.post("/create", (req, res, next)=>{
     console.log("New Incoming create seat Request", req.body);
@@ -19,10 +41,10 @@ router.post("/create", (req, res, next)=>{
     var dateTime = new Date();
 
     if(req.body.seatNumber) {
-        mg.model("seats").findOne({ seatNumber: dbStringSanitizer(req.body.seatNumber), isDeleted: false }, function(err,existingseat) {
+        Seats.findOne({ seatNumber: dbStringSanitizer(req.body.seatNumber), isDeleted: false }, function(err,existingseat) {
             if (!err && !existingseat) {
                 console.log("Seat data on existence check", existingseat);
-                mg.model("seats").create({_id: mg.Types.ObjectId(), seatNumber: dbStringSanitizer(req.body.seatNumber), status: "NOT_BOOKED", createdBy: mg.Types.ObjectId(req.userData.users._id), createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, isActivated: true, isDeleted: false}, function (error,insertResponse) {
+                Seats.create({_id: mg.Types.ObjectId(), seatNumber: dbStringSanitizer(req.body.seatNumber), status: false, createdBy: mg.Types.ObjectId(req.userData.users._id), createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, isActivated: true, isDeleted: false}, function (error,insertResponse) {
                     if(error) {
                         res.status(200).json({
                             status: "error",
@@ -83,7 +105,7 @@ router.get("/read/:id", (req,res,next)=>{
     console.log("New get one seat request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
-    mg.model("seats").find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false, isActivated: true}, function(getError,dataGot) {
+    Seats.find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false, isActivated: true}, function(getError,dataGot) {
         if (!getError && dataGot) {
             console.log("From mongo get one seat", dataGot);
                         
@@ -116,10 +138,12 @@ router.get("/", (req,res,next)=>{
     console.log("new get all seats request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
-    mg.model("seats").find({isDeleted: false, isActivated: true}, (getError,dataGot) => {
+    Seats.find({isDeleted: false, isActivated: true}, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("From mongo get all seats", dataGot);
-                        
+            
+            dataGot.sort((a, b) => (parseInt(a.seatNumber) > parseInt(b.seatNumber)) ? 1 : -1);
+
             res.status(200).json({
                 status: "success",
                 responseCode: "201",
@@ -183,10 +207,10 @@ router.post("/update/:id", (req,res,next)=>{
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
     req.body.updatedBy = req.userData.users._id;
 
-    mg.model("seats").findById(mg.Types.ObjectId(dbStringSanitizer(id)), function(existError, exist) {
+    Seats.findById(dbStringSanitizer(id), function(existError, exist) {
         if (!existError && exist) {
             req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-            mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, req.body, function(updateError,updated){
+            Seats.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, {$set: req.body}, {upsert: true}, function(updateError,updated) {
                 if (updateError || !updated){
                     res.status(200).json({
                         status: "error",
@@ -234,10 +258,11 @@ router.post("/findcustomized", (req,res,next)=>{
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
     var dateTime = new Date();
 
-    mg.model("seats").find(req.body, (getError,dataGot) => {
+    Seats.find(req.body, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("from mongo find customized seats", dataGot);
-                        
+            dataGot.sort((a, b) => (parseInt(a.seatNumber) > parseInt(b.seatNumber)) ? 1 : -1);
+            
             res.status(200).json({
                 status: "success",
                 responseCode: "201",
@@ -271,11 +296,11 @@ router.post("/delete", (req,res,next)=> {
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
     req.body.updatedBy = req.userData.users._id;
 
-    mg.model("seats").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, function(existError, exist) {
+    Seats.find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, {isDeleted: true, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(deleteError,deleted){
+                Seats.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false}, {$set:  {isDeleted: true, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}}, {upsert: true}, function(deleteError,deleted){
                     if (deleteError || !deleted){
                         res.status(200).json({
                             status: "error",
@@ -338,11 +363,11 @@ router.post("/restore", (req,res,next)=> {
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
     req.body.updatedBy = req.userData.users._id;
 
-    mg.model("seats").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, function(existError, exist) {
+    Seats.find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, {isDeleted: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(restoreError,restored){
+                Seats.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: true}, {$set: {isDeleted: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}}, {upsert: true}, function(restoreError,restored){
                     if (restoreError || !restored){
                         res.status(200).json({
                             status: "error",
@@ -405,11 +430,11 @@ router.post("/activate", (req,res,next)=> {
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
     req.body.updatedBy = req.userData.users._id;
 
-    mg.model("seats").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: false}, function(existError, exist) {
+    Seats.find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: false}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: false}, {isActivated: true, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(activateError,activated){
+                Seats.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: false}, {$set: {isActivated: true, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}}, {upsert: true}, function(activateError,activated){
                     if (activateError || !activated){
                         res.status(200).json({
                             status: "error",
@@ -472,11 +497,11 @@ router.post("/deactivate", (req,res,next)=> {
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
     req.body.updatedBy = req.userData.users._id;
 
-    mg.model("seats").find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: true}, function(existError, exist) {
+    Seats.find({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: true}, function(existError, exist) {
         if (!existError && exist) {
             if(exist.length > 0) {
                 req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-                mg.model("seats").updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: true}, {isActivated: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}, function(deactivateError,deactivated){
+                Seats.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(req.body._id)), isDeleted: false, isActivated: true}, {$set: {isActivated: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: req.body.updatedOn}}, {upsert: true}, function(deactivateError,deactivated){
                     if (deactivateError || !deactivated){
                         res.status(200).json({
                             status: "error",

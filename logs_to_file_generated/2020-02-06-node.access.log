@@ -3105,11 +3105,11 @@
 [[12:05:39.343]] [LOG]    New Incoming create seat Request { seatNumber: '1' }
 [[12:05:39.345]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[12:05:39.533]] [LOG]    Seat data on existence check null
-[[12:05:39.537]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3bf3485b20243fec263cec"), seatNumber: [32m'1'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 12:05:39'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[12:05:39.537]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3bf3485b20243fec263cec"), seatNumber: [32m'1'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 12:05:39'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[12:05:40.434]] [LOG]    From mongo insert seat {
   _id: 5e3bf3485b20243fec263cec,
   seatNumber: '1',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 12:05:39',
   updatedOn: '',
@@ -3307,7 +3307,7 @@
 [[12:06:00.490]] [LOG]    New Incoming create seat Request { seatNumber: '2' }
 [[12:06:00.493]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[12:06:00.559]] [LOG]    Seat data on existence check null
-[[12:06:00.562]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3bf3485b20243fec263cec"), seatNumber: [32m'2'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 12:06:00'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[12:06:00.562]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3bf3485b20243fec263cec"), seatNumber: [32m'2'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 12:06:00'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 06/Feb/2020:12:06:00 +0000 "POST /api/seats/create"
 [[12:06:00.698]] [LOG]    Finishing
 [[12:06:00.698]] [LOG]    Valid sessionId, logging
@@ -3403,7 +3403,7 @@
 [[14:26:24.772]] [LOG]    New Incoming create seat Request { seatNumber: '2' }
 [[14:26:24.801]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:26:24.835]] [LOG]    Seat data on existence check null
-[[14:26:24.916]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3bf3485b20243fec263cec"), seatNumber: [32m'2'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:26:24'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:26:24.916]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3bf3485b20243fec263cec"), seatNumber: [32m'2'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:26:24'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 06/Feb/2020:14:26:26 +0000 "POST /api/seats/create"
 [[14:26:26.384]] [LOG]    Finishing
 [[14:26:26.422]] [LOG]    Valid sessionId, logging
@@ -3537,11 +3537,11 @@
 [[14:31:31.570]] [LOG]    New Incoming create seat Request { seatNumber: '3' }
 [[14:31:31.574]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:31:31.577]] [LOG]    Seat data on existence check null
-[[14:31:31.594]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c22c83297fb6f7c0111e7"), seatNumber: [32m'3'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:31:31'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:31:31.594]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c22c83297fb6f7c0111e7"), seatNumber: [32m'3'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:31:31'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:31:31.651]] [LOG]    From mongo insert seat {
   _id: 5e3c22c83297fb6f7c0111e7,
   seatNumber: '3',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:31:31',
   updatedOn: '',
@@ -3739,7 +3739,7 @@
 [[14:31:46.652]] [LOG]    New Incoming create seat Request { seatNumber: '4' }
 [[14:31:46.654]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:31:46.656]] [LOG]    Seat data on existence check null
-[[14:31:46.659]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c22c83297fb6f7c0111e7"), seatNumber: [32m'4'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:31:46'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:31:46.659]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c22c83297fb6f7c0111e7"), seatNumber: [32m'4'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:31:46'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 06/Feb/2020:14:31:46 +0000 "POST /api/seats/create"
 [[14:31:46.713]] [LOG]    Finishing
 [[14:31:46.713]] [LOG]    Valid sessionId, logging
@@ -3911,11 +3911,11 @@
 [[14:36:06.631]] [LOG]    New Incoming create seat Request { seatNumber: '4' }
 [[14:36:06.634]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:36:06.637]] [LOG]    Seat data on existence check null
-[[14:36:06.655]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c24500ec77a1f4ccf3dc5"), seatNumber: [32m'4'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:36:06'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:36:06.655]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c24500ec77a1f4ccf3dc5"), seatNumber: [32m'4'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:36:06'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:36:06.784]] [LOG]    From mongo insert seat {
   _id: 5e3c24500ec77a1f4ccf3dc5,
   seatNumber: '4',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:36:06',
   updatedOn: '',
@@ -4113,7 +4113,7 @@
 [[14:36:20.965]] [LOG]    New Incoming create seat Request { seatNumber: '5' }
 [[14:36:20.968]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:36:20.970]] [LOG]    Seat data on existence check null
-[[14:36:20.974]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c24500ec77a1f4ccf3dc5"), seatNumber: [32m'5'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:36:20'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:36:20.974]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c24500ec77a1f4ccf3dc5"), seatNumber: [32m'5'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:36:20'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 06/Feb/2020:14:36:20 +0000 "POST /api/seats/create"
 [[14:36:20.979]] [LOG]    Finishing
 [[14:36:20.979]] [LOG]    Valid sessionId, logging
@@ -4209,7 +4209,7 @@
 [[14:36:25.119]] [LOG]    New Incoming create seat Request { seatNumber: '5' }
 [[14:36:25.122]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:36:25.124]] [LOG]    Seat data on existence check null
-[[14:36:25.126]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c24500ec77a1f4ccf3dc5"), seatNumber: [32m'5'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:36:25'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:36:25.126]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c24500ec77a1f4ccf3dc5"), seatNumber: [32m'5'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:36:25'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 06/Feb/2020:14:36:25 +0000 "POST /api/seats/create"
 [[14:36:25.131]] [LOG]    Finishing
 [[14:36:25.131]] [LOG]    Valid sessionId, logging
@@ -4381,11 +4381,11 @@
 [[14:46:21.470]] [LOG]    New Incoming create seat Request { seatNumber: '5' }
 [[14:46:21.473]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:46:21.516]] [LOG]    Seat data on existence check null
-[[14:46:21.529]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c26bd845d9f31c4de0f39"), seatNumber: [32m'5'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:46:21'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:46:21.529]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c26bd845d9f31c4de0f39"), seatNumber: [32m'5'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:46:21'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:46:21.564]] [LOG]    From mongo insert seat {
   _id: 5e3c26bd845d9f31c4de0f39,
   seatNumber: '5',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:46:21',
   updatedOn: '',
@@ -4489,11 +4489,11 @@
 [[14:46:27.968]] [LOG]    New Incoming create seat Request { seatNumber: '6' }
 [[14:46:27.971]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:46:27.974]] [LOG]    Seat data on existence check null
-[[14:46:27.978]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c26c3845d9f31c4de0f3a"), seatNumber: [32m'6'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:46:27'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:46:27.978]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c26c3845d9f31c4de0f3a"), seatNumber: [32m'6'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:46:27'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:46:27.981]] [LOG]    From mongo insert seat {
   _id: 5e3c26c3845d9f31c4de0f3a,
   seatNumber: '6',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:46:27',
   updatedOn: '',
@@ -4597,11 +4597,11 @@
 [[14:46:35.160]] [LOG]    New Incoming create seat Request { seatNumber: '7' }
 [[14:46:35.162]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:46:35.164]] [LOG]    Seat data on existence check null
-[[14:46:35.167]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c26cb845d9f31c4de0f3b"), seatNumber: [32m'7'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:46:35'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:46:35.167]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c26cb845d9f31c4de0f3b"), seatNumber: [32m'7'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:46:35'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:46:35.170]] [LOG]    From mongo insert seat {
   _id: 5e3c26cb845d9f31c4de0f3b,
   seatNumber: '7',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:46:35',
   updatedOn: '',
@@ -4705,11 +4705,11 @@
 [[14:46:41.663]] [LOG]    New Incoming create seat Request { seatNumber: '8' }
 [[14:46:41.665]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:46:41.667]] [LOG]    Seat data on existence check null
-[[14:46:41.670]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c26d1845d9f31c4de0f3c"), seatNumber: [32m'8'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:46:41'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:46:41.670]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c26d1845d9f31c4de0f3c"), seatNumber: [32m'8'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:46:41'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:46:41.673]] [LOG]    From mongo insert seat {
   _id: 5e3c26d1845d9f31c4de0f3c,
   seatNumber: '8',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:46:41',
   updatedOn: '',
@@ -4813,11 +4813,11 @@
 [[14:47:07.877]] [LOG]    New Incoming create seat Request { seatNumber: '9' }
 [[14:47:07.879]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:47:07.882]] [LOG]    Seat data on existence check null
-[[14:47:07.885]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c26eb845d9f31c4de0f3d"), seatNumber: [32m'9'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:47:07'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:47:07.885]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c26eb845d9f31c4de0f3d"), seatNumber: [32m'9'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:47:07'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:47:07.888]] [LOG]    From mongo insert seat {
   _id: 5e3c26eb845d9f31c4de0f3d,
   seatNumber: '9',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:47:07',
   updatedOn: '',
@@ -5015,11 +5015,11 @@
 [[14:47:45.848]] [LOG]    New Incoming create seat Request { seatNumber: '910' }
 [[14:47:45.854]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'910'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:47:45.856]] [LOG]    Seat data on existence check null
-[[14:47:45.860]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2711845d9f31c4de0f3e"), seatNumber: [32m'910'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:47:45'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:47:45.860]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2711845d9f31c4de0f3e"), seatNumber: [32m'910'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:47:45'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:47:45.864]] [LOG]    From mongo insert seat {
   _id: 5e3c2711845d9f31c4de0f3e,
   seatNumber: '910',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:47:45',
   updatedOn: '',
@@ -5217,11 +5217,11 @@
 [[14:48:13.087]] [LOG]    New Incoming create seat Request { seatNumber: '10' }
 [[14:48:13.089]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:48:13.091]] [LOG]    Seat data on existence check null
-[[14:48:13.095]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c272d845d9f31c4de0f3f"), seatNumber: [32m'10'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:48:13'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:48:13.095]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c272d845d9f31c4de0f3f"), seatNumber: [32m'10'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:48:13'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:48:13.098]] [LOG]    From mongo insert seat {
   _id: 5e3c272d845d9f31c4de0f3f,
   seatNumber: '10',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:48:13',
   updatedOn: '',
@@ -5325,11 +5325,11 @@
 [[14:48:19.267]] [LOG]    New Incoming create seat Request { seatNumber: '11' }
 [[14:48:19.270]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:48:19.272]] [LOG]    Seat data on existence check null
-[[14:48:19.274]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2733845d9f31c4de0f40"), seatNumber: [32m'11'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:48:19'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:48:19.274]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2733845d9f31c4de0f40"), seatNumber: [32m'11'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:48:19'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:48:19.279]] [LOG]    From mongo insert seat {
   _id: 5e3c2733845d9f31c4de0f40,
   seatNumber: '11',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:48:19',
   updatedOn: '',
@@ -5433,11 +5433,11 @@
 [[14:48:27.731]] [LOG]    New Incoming create seat Request { seatNumber: '12' }
 [[14:48:27.733]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[14:48:27.736]] [LOG]    Seat data on existence check null
-[[14:48:27.740]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c273b845d9f31c4de0f41"), seatNumber: [32m'12'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:48:27'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[14:48:27.740]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c273b845d9f31c4de0f41"), seatNumber: [32m'12'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 14:48:27'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[14:48:27.742]] [LOG]    From mongo insert seat {
   _id: 5e3c273b845d9f31c4de0f41,
   seatNumber: '12',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 14:48:27',
   updatedOn: '',
@@ -5579,11 +5579,11 @@
 [[15:02:18.522]] [LOG]    New Incoming create seat Request { seatNumber: '13' }
 [[15:02:18.527]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[15:02:18.544]] [LOG]    Seat data on existence check null
-[[15:02:18.559]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2a7a8033aa3aa02f2326"), seatNumber: [32m'13'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:18'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[15:02:18.559]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2a7a8033aa3aa02f2326"), seatNumber: [32m'13'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:18'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[15:02:18.709]] [LOG]    From mongo insert seat {
   _id: 5e3c2a7a8033aa3aa02f2326,
   seatNumber: '13',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:02:18',
   updatedOn: '',
@@ -5687,11 +5687,11 @@
 [[15:02:26.141]] [LOG]    New Incoming create seat Request { seatNumber: '14' }
 [[15:02:26.143]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[15:02:26.145]] [LOG]    Seat data on existence check null
-[[15:02:26.147]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2a828033aa3aa02f2327"), seatNumber: [32m'14'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:26'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[15:02:26.147]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2a828033aa3aa02f2327"), seatNumber: [32m'14'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:26'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[15:02:26.150]] [LOG]    From mongo insert seat {
   _id: 5e3c2a828033aa3aa02f2327,
   seatNumber: '14',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:02:26',
   updatedOn: '',
@@ -5795,11 +5795,11 @@
 [[15:02:34.387]] [LOG]    New Incoming create seat Request { seatNumber: '15' }
 [[15:02:34.391]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[15:02:34.393]] [LOG]    Seat data on existence check null
-[[15:02:34.396]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2a8a8033aa3aa02f2328"), seatNumber: [32m'15'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:34'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[15:02:34.396]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2a8a8033aa3aa02f2328"), seatNumber: [32m'15'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:34'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[15:02:34.400]] [LOG]    From mongo insert seat {
   _id: 5e3c2a8a8033aa3aa02f2328,
   seatNumber: '15',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:02:34',
   updatedOn: '',
@@ -5903,11 +5903,11 @@
 [[15:02:39.940]] [LOG]    New Incoming create seat Request { seatNumber: '16' }
 [[15:02:39.942]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[15:02:39.944]] [LOG]    Seat data on existence check null
-[[15:02:39.946]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2a8f8033aa3aa02f2329"), seatNumber: [32m'16'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:39'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[15:02:39.946]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2a8f8033aa3aa02f2329"), seatNumber: [32m'16'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:39'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[15:02:39.949]] [LOG]    From mongo insert seat {
   _id: 5e3c2a8f8033aa3aa02f2329,
   seatNumber: '16',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:02:39',
   updatedOn: '',
@@ -6011,11 +6011,11 @@
 [[15:02:46.461]] [LOG]    New Incoming create seat Request { seatNumber: '17' }
 [[15:02:46.463]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[15:02:46.466]] [LOG]    Seat data on existence check null
-[[15:02:46.468]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2a968033aa3aa02f232a"), seatNumber: [32m'17'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:46'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[15:02:46.468]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2a968033aa3aa02f232a"), seatNumber: [32m'17'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:46'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[15:02:46.471]] [LOG]    From mongo insert seat {
   _id: 5e3c2a968033aa3aa02f232a,
   seatNumber: '17',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:02:46',
   updatedOn: '',
@@ -6119,11 +6119,11 @@
 [[15:02:57.248]] [LOG]    New Incoming create seat Request { seatNumber: '18' }
 [[15:02:57.251]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[15:02:57.253]] [LOG]    Seat data on existence check null
-[[15:02:57.256]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2aa18033aa3aa02f232b"), seatNumber: [32m'18'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:57'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[15:02:57.256]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2aa18033aa3aa02f232b"), seatNumber: [32m'18'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:02:57'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[15:02:57.258]] [LOG]    From mongo insert seat {
   _id: 5e3c2aa18033aa3aa02f232b,
   seatNumber: '18',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:02:57',
   updatedOn: '',
@@ -6227,11 +6227,11 @@
 [[15:03:04.913]] [LOG]    New Incoming create seat Request { seatNumber: '19' }
 [[15:03:04.915]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[15:03:04.918]] [LOG]    Seat data on existence check null
-[[15:03:04.921]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2aa88033aa3aa02f232c"), seatNumber: [32m'19'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:03:04'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[15:03:04.921]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2aa88033aa3aa02f232c"), seatNumber: [32m'19'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:03:04'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[15:03:04.924]] [LOG]    From mongo insert seat {
   _id: 5e3c2aa88033aa3aa02f232c,
   seatNumber: '19',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:03:04',
   updatedOn: '',
@@ -6335,11 +6335,11 @@
 [[15:03:11.827]] [LOG]    New Incoming create seat Request { seatNumber: '20' }
 [[15:03:11.829]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
 [[15:03:11.832]] [LOG]    Seat data on existence check null
-[[15:03:11.834]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2aaf8033aa3aa02f232d"), seatNumber: [32m'20'[39m, status: [32m'NOT_BOOKED'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:03:11'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
+[[15:03:11.834]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e3c2aaf8033aa3aa02f232d"), seatNumber: [32m'20'[39m, status: [32m'false'[39m, createdBy: ObjectId("5e3ba6bdcb8c5a58f0055c28"), createdOn: [32m'2020-02-06 15:03:11'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m, __v: [33m0[39m}, { session: [1mnull[22m })
 [[15:03:11.836]] [LOG]    From mongo insert seat {
   _id: 5e3c2aaf8033aa3aa02f232d,
   seatNumber: '20',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:03:11',
   updatedOn: '',
@@ -6419,7 +6419,7 @@
   seatId: '5e3c2aaf8033aa3aa02f232d',
   bookedByName: 'Dagason Hackason'
 }
-[[15:04:23.557]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e3c2aaf8033aa3aa02f232d"), status: [32m'NOT_BOOKED'[39m }, { projection: {} })
+[[15:04:23.557]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e3c2aaf8033aa3aa02f232d"), status: [32m'false'[39m }, { projection: {} })
 06/Feb/2020:15:04:23 +0000 "POST /api/bookings/create"
 [[15:04:23.561]] [LOG]    Finishing
 [[15:04:23.561]] [LOG]    No sessionId used
@@ -6508,11 +6508,11 @@
   seatId: '5e3c2aaf8033aa3aa02f232d',
   bookedByName: 'Dagason Hackason'
 }
-[[15:08:14.297]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e3c2aaf8033aa3aa02f232d"), status: [32m'NOT_BOOKED'[39m }, { projection: {} })
+[[15:08:14.297]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e3c2aaf8033aa3aa02f232d"), status: [32m'false'[39m }, { projection: {} })
 [[15:08:14.339]] [LOG]    From mongo isn't seated booked already! {
   _id: 5e3c2aaf8033aa3aa02f232d,
   seatNumber: '20',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:03:11',
   updatedOn: '',
@@ -6609,11 +6609,11 @@
   seatId: '5e3c2aaf8033aa3aa02f232d',
   bookedByName: 'Dagason Hackason'
 }
-[[15:09:05.617]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e3c2aaf8033aa3aa02f232d"), status: [32m'NOT_BOOKED'[39m }, { projection: {} })
+[[15:09:05.617]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e3c2aaf8033aa3aa02f232d"), status: [32m'false'[39m }, { projection: {} })
 [[15:09:05.650]] [LOG]    From mongo isn't seated booked already! {
   _id: 5e3c2aaf8033aa3aa02f232d,
   seatNumber: '20',
-  status: 'NOT_BOOKED',
+  status: 'false',
   createdBy: 5e3ba6bdcb8c5a58f0055c28,
   createdOn: '2020-02-06 15:03:11',
   updatedOn: '',

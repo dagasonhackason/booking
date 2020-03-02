@@ -1,0 +1,57 @@
+
+:::::2020-03-02 05:13:59 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzExMDYwMSwiZXhwIjoxNTg0MzIwMjAxfQ.BlpUNh6e8CXdvjHBxY0WoygOKyBA7916HmS5CqTL67s",
+    "req_username_extract": "dagasonhackason",
+    "req_loginSession": {
+        "_id": "5e5c59c9a6682b70907192e5",
+        "userId": "5e5c54b642e2704a5410ac41",
+        "loggedInOn": "2020-03-02 00:56:38",
+        "loggedOutOn": "",
+        "loggedOutBy": null,
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzExMDYwMSwiZXhwIjoxNTg0MzIwMjAxfQ.BlpUNh6e8CXdvjHBxY0WoygOKyBA7916HmS5CqTL67s",
+        "isExpired": false,
+        "expiresOn": "2020-03-16 00:56:41"
+    },
+    "req_user": {
+        "_id": "5e5c54b642e2704a5410ac41",
+        "username": "dagasonhackason",
+        "password": "c7bef5e2dfd41825e26d37c04d74ea22734b83fde6863a651039f4319fb079335126cafad56e2bbdd41b6558918fb9b33fa1bf6b446749b8a4ccfc66f56b7b73a043d05a4a417f59df5eac58431b2bbc1b54993f9825c735836f58466e0d9212",
+        "passwordSalt": "fa0.3024bcc443eaa8c645f7a46ccd4ae59626f11f5c2cea1b8e",
+        "createdOn": "2020-03-02 00:34:57",
+        "updatedOn": "",
+        "updatedBy": null,
+        "lastLoginOn": "2020-03-02 00:56:38",
+        "isDeleted": false
+    },
+    "req_route": "/api/seats/read/5e5c95fef37098552816af78",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzExMDYwMSwiZXhwIjoxNTg0MzIwMjAxfQ.BlpUNh6e8CXdvjHBxY0WoygOKyBA7916HmS5CqTL67s",
+            "username": "dagasonhackason",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "fa72ea11-f608-4528-a1c5-733224ac08ab",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {
+            "id": "5e5c95fef37098552816af78"
+        },
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 335\r\nETag: W/\"14f-8ssWxNtmli06DXrjcPdg+Lp36pY\"\r\nDate: Mon, 02 Mar 2020 05:13:59 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-03-02T05:13:59.595Z"
+}
+
+___________________________________________________

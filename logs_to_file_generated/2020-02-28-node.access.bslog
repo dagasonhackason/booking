@@ -1,0 +1,245 @@
+[[00:07:19.215]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.220]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.221]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.221]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.222]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.966]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ seatId: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.968]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ seatNumber: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.970]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.971]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ secretCode: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.973]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ userId: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.975]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ bookedByName: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.976]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ status: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.978]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ createdOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.980]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ createdBy: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.982]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ loggedInOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.984]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ bookedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.985]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ createdBy: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.986]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ updatedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.988]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ createdOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.989]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ loggedOutOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.991]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCode: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.992]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ createdOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.994]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ updatedBy: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.995]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ updatedBy: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.997]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ loggedOutBy: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:19.999]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ isTicketCodeUsed: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.000]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ updatedBy: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.002]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ lastLoginOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.004]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ updatedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.005]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ sessionId: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.007]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCodeUsedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.009]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ updatedOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.010]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ isDeleted: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.012]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ isDeleted: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.013]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ isExpired: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.015]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ isActivated: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.016]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ expiresOn: [33m1[39m }, { background: [33mtrue[39m })
+[[00:07:20.018]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ isDeleted: [33m1[39m }, { background: [33mtrue[39m })
+[[00:09:02.413]] [LOG]    Calling app logger
+[[00:09:02.414]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[00:09:02.414]] [LOG]    No middleware needed for this route /api/bookings/create
+[[00:09:02.415]] [LOG]    New Incoming create booking Request {
+  seatId: '5e3bf3485b20243fec263cec',
+  bookedByName: 'Dagason Hackason'
+}
+[[00:09:02.420]] [LOG]    selecting seatID from seats 5e3bf3485b20243fec263cec
+[[00:09:02.431]] [INFO]   [0;36mMongoose:[0m seats.find({ _id: ObjectId("5e3bf3485b20243fec263cec"), isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m, status: [32m'false'[39m}, { projection: { __v: [33m0[39m } })
+[[00:09:02.827]] [LOG]    From mongo isn't seated booked already! [
+  {
+    _id: 5e3bf3485b20243fec263cec,
+    seatNumber: '1',
+    status: 'false',
+    createdBy: 5e3ba6bdcb8c5a58f0055c28,
+    createdOn: '2020-02-06 12:05:39',
+    updatedOn: '',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  }
+]
+[[00:09:02.846]] [INFO]   [0;36mMongoose:[0m bookings.insertOne({ _id: ObjectId("5e585a1ec0ffa612a82d7c72"), seatId: ObjectId("5e3bf3485b20243fec263cec"), bookedByName: [32m'Dagason Hackason'[39m, ticketCode: [32m'59ca9978'[39m, bookedOn: [32m'2020-02-28 00:09:02'[39m, isTicketCodeUsed: [33mfalse[39m, ticketCodeUsedOn: [32m''[39m}, { session: [1mnull[22m })
+[[00:09:03.137]] [LOG]    new data for dataGotParsed {
+  _id: '5e3bf3485b20243fec263cec',
+  seatNumber: '1',
+  status: 'BOOKED',
+  createdBy: '5e3ba6bdcb8c5a58f0055c28',
+  createdOn: '2020-02-06 12:05:39',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+[[00:09:03.142]] [LOG]    update failed for seatId 5e3bf3485b20243fec263cec status to booked BOOKED by Dagason Hackason Error [ValidationError]: seats validation failed: isDeleted: Path `isDeleted` is required., isActivated: Path `isActivated` is required., createdOn: Path `createdOn` is required., createdBy: Path `createdBy` is required., status: Path `status` is required., seatNumber: Path `seatNumber` is required.
+    at ValidationError.inspect (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validation.js:61:24)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.Console.<computed> (internal/console/constructor.js:272:10)
+    at Object.log (internal/console/constructor.js:282:61)
+    at Object.con.<computed> [as log] (C:\xampp\htdocs\bookingsystem-master\node_modules\console-stamp\main.js:156:24)
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiBookings.js:141:41
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4827:16
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:3359:14
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\helpers\promiseOrCallback.js:16:11
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2087:7
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2315:9
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\kareem\index.js:135:16
+    at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+  errors: {
+    isDeleted: MongooseError [ValidatorError]: Path `isDeleted` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaBoolean.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `isDeleted` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'isDeleted',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    isActivated: MongooseError [ValidatorError]: Path `isActivated` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaBoolean.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `isActivated` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'isActivated',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    createdOn: MongooseError [ValidatorError]: Path `createdOn` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `createdOn` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'createdOn',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    createdBy: MongooseError [ValidatorError]: Path `createdBy` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at ObjectId.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `createdBy` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'createdBy',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    status: MongooseError [ValidatorError]: Path `status` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `status` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'status',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    seatNumber: MongooseError [ValidatorError]: Path `seatNumber` is required.
+        at new ValidatorError (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\error\validator.js:29:11)
+        at validate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1096:13)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1150:11
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\schematype.js:1105:14)
+        at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\document.js:2359:9
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      message: 'Path `seatNumber` is required.',
+      name: 'ValidatorError',
+      properties: [Object],
+      kind: 'required',
+      path: 'seatNumber',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'seats validation failed',
+  name: 'ValidationError'
+}
+[[00:09:03.148]] [LOG]    update failed for insert booking {
+  _id: 5e585a1ec0ffa612a82d7c72,
+  seatId: 5e3bf3485b20243fec263cec,
+  bookedByName: 'Dagason Hackason',
+  ticketCode: '59ca9978',
+  bookedOn: '2020-02-28 00:09:02',
+  isTicketCodeUsed: false,
+  ticketCodeUsedOn: ''
+}
+28/Feb/2020:00:09:03 +0000 "POST /api/bookings/create"
+[[00:09:03.159]] [LOG]    Finishing
+[[00:09:03.159]] [LOG]    No sessionId used
+[[00:09:03.177]] [LOG]    App usage logged! - 2020-02-28 00:09:03 {
+  req_route: '/api/bookings/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '8fa31177-ffc5-4a16-870b-5edc6105739d',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '78',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      seatId: '5e3bf3485b20243fec263cec',
+      bookedByName: 'Dagason Hackason'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 1710\r\n' +
+      'ETag: W/"6ae-ELL2q6wdGJRlWqHYehT9o3j8yHY"\r\n' +
+      'Date: Fri, 28 Feb 2020 00:09:03 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-02-28T00:09:03.160Z
+}

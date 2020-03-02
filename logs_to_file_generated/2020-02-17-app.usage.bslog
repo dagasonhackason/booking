@@ -1,0 +1,1238 @@
+
+:::::2020-02-17 02:25:34 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MDk3MTkxNCwiZXhwIjoxNTgyMTgxNTE0fQ.fD9fSOH_Q21GShcBasqZAd-gsgbZARnbW9x_U5_E_Xw",
+    "req_username_extract": "dagasonhackason",
+    "req_loginSession": {
+        "_id": "5e3bb71f8faaba51d452ce45",
+        "userId": "5e3ba6bdcb8c5a58f0055c28",
+        "loggedInOn": "2020-02-06 06:51:50",
+        "loggedOutOn": "",
+        "loggedOutBy": null,
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MDk3MTkxNCwiZXhwIjoxNTgyMTgxNTE0fQ.fD9fSOH_Q21GShcBasqZAd-gsgbZARnbW9x_U5_E_Xw",
+        "isExpired": false,
+        "__v": 0
+    },
+    "req_user": {
+        "_id": "5e3ba6bdcb8c5a58f0055c28",
+        "username": "dagasonhackason",
+        "password": "4c0dea1f8360dc129e29406568f786cf17e996d009198750006ff5e61852c181063de797fdd3b0506ba679f8cea676c19983127013265ffd95e1f7084e9d6a8ae3327046998778ff61023030d97d0b437f94ba99f5032e8f736e304cafecf0ea",
+        "passwordSalt": "fa0.67aecd52b6e431a8e931b270354554d5efc958675c47110d",
+        "createdOn": "2020-02-06 05:40:25",
+        "updatedOn": "",
+        "updatedBy": null,
+        "lastLoginOn": "",
+        "isDeleted": false,
+        "__v": 0
+    },
+    "req_route": "/api/seats/read/5e49e74ec76d415b3cab5a00",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MDk3MTkxNCwiZXhwIjoxNTgyMTgxNTE0fQ.fD9fSOH_Q21GShcBasqZAd-gsgbZARnbW9x_U5_E_Xw",
+            "username": "dagasonhackason",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "f22db49c-3bb4-4a9d-b7f6-7a8affaf9c77",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "connection": "keep-alive"
+        },
+        "params": {
+            "id": "5e49e74ec76d415b3cab5a00"
+        },
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 325\r\nETag: W/\"145-+pq72yPXJb21uCE3S/+smoaZn5U\"\r\nDate: Mon, 17 Feb 2020 02:25:34 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T02:25:34.613Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 10:00:23 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MDk3MTkxNCwiZXhwIjoxNTgyMTgxNTE0fQ.fD9fSOH_Q21GShcBasqZAd-gsgbZARnbW9x_U5_E_Xw",
+            "username": "dagasonhackason",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "d118ad30-95b3-43b2-8f5c-2d5bf5c9de7a",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "78",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e49e74ec76d415b3cab5a00",
+            "bookedByName": "Dagason Hackason"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 559\r\nETag: W/\"22f-6GSCNzkfA3lgTPpK96KlhbmjKFo\"\r\nDate: Mon, 17 Feb 2020 10:00:23 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T10:00:23.194Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 10:03:20 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MDk3MTkxNCwiZXhwIjoxNTgyMTgxNTE0fQ.fD9fSOH_Q21GShcBasqZAd-gsgbZARnbW9x_U5_E_Xw",
+            "username": "dagasonhackason",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "24105950-44d3-4e58-8479-64d15240ae9a",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "78",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e49e74ec76d415b3cab5a00",
+            "bookedByName": "Dagason Hackason"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 559\r\nETag: W/\"22f-6GSCNzkfA3lgTPpK96KlhbmjKFo\"\r\nDate: Mon, 17 Feb 2020 10:03:20 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T10:03:20.896Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:31:07 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MDk3MTkxNCwiZXhwIjoxNTgyMTgxNTE0fQ.fD9fSOH_Q21GShcBasqZAd-gsgbZARnbW9x_U5_E_Xw",
+            "username": "dagasonhackason",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "ed18112d-803b-4d13-978f-dfaeb3b5df6c",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "78",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e49e74ec76d415b3cab5a00",
+            "bookedByName": "Dagason Hackason"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 559\r\nETag: W/\"22f-6GSCNzkfA3lgTPpK96KlhbmjKFo\"\r\nDate: Mon, 17 Feb 2020 13:31:07 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:31:07.595Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:31:18 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/showticket/5e31a46d65744782bca477ef",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:31:18 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:31:18.749Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:31:20 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "accept": "application/json, text/plain, */*",
+            "sec-fetch-dest": "empty",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "referer": "http://localhost:3000/showticket/5e3101423b20c36e78923ec0",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 5032\r\nETag: W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\"\r\nDate: Mon, 17 Feb 2020 13:31:20 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:31:20.847Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:31:25 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/showticket/5e31a46d65744782bca477ef",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:31:25 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:31:25.067Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:31:25 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "accept": "application/json, text/plain, */*",
+            "sec-fetch-dest": "empty",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "referer": "http://localhost:3000/showticket/5e31a46d65744782bca477ef",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9",
+            "if-none-match": "W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\""
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 304,
+    "res_status_message": "Not Modified",
+    "response_payload": {
+        "headers": "HTTP/1.1 304 Not Modified\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\"\r\nDate: Mon, 17 Feb 2020 13:31:25 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:31:25.464Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:31:28 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:31:28 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:31:28.399Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:31:28 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "accept": "application/json, text/plain, */*",
+            "sec-fetch-dest": "empty",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9",
+            "if-none-match": "W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\""
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 304,
+    "res_status_message": "Not Modified",
+    "response_payload": {
+        "headers": "HTTP/1.1 304 Not Modified\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\"\r\nDate: Mon, 17 Feb 2020 13:31:28 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:31:28.762Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:31:33 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/confirm/5e49e74ec76d415b3cab5a00",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:31:33 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:31:33.755Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:35:30 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/bookings/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MDk3MTkxNCwiZXhwIjoxNTgyMTgxNTE0fQ.fD9fSOH_Q21GShcBasqZAd-gsgbZARnbW9x_U5_E_Xw",
+            "username": "dagasonhackason",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "57c2af7e-24a5-47e6-808a-849bd5f85cc1",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "78",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "seatId": "5e49e74ec76d415b3cab5a00",
+            "bookedByName": "Dagason Hackason"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 354\r\nETag: W/\"162-b2p1vRNDNbDv4EGTLLkghZaOPPM\"\r\nDate: Mon, 17 Feb 2020 13:35:30 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:35:30.579Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:36:43 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:36:43 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:36:43.715Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:36:43 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "accept": "application/json, text/plain, */*",
+            "sec-fetch-dest": "empty",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9",
+            "if-none-match": "W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\""
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 304,
+    "res_status_message": "Not Modified",
+    "response_payload": {
+        "headers": "HTTP/1.1 304 Not Modified\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\"\r\nDate: Mon, 17 Feb 2020 13:36:43 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:36:43.921Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:36:45 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/confirm/5e3c2a8f8033aa3aa02f2329",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:36:45 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:36:45.822Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:05 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/confirm/5e3c2a8f8033aa3aa02f2329?",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:05 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:05.615Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:07 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/confirm/5e3c2a8f8033aa3aa02f2329?",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:07 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:07.613Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:08 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/confirm/5e3c2a8f8033aa3aa02f2329?",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:08 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:08.332Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:08 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/confirm/5e3c2a8f8033aa3aa02f2329?",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:08 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:08.763Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:08 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/confirm/5e3c2a8f8033aa3aa02f2329?",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:08 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:08.983Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:09 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/confirm/5e3c2a8f8033aa3aa02f2329?",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:09 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:09.757Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:10 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/confirm/5e3c2a8f8033aa3aa02f2329?",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:10 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:10.566Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:13 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/confirm/5e3c2a8f8033aa3aa02f2329?",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:13 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:13.318Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:17 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:17 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:17.599Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:17 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "accept": "application/json, text/plain, */*",
+            "sec-fetch-dest": "empty",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9",
+            "if-none-match": "W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\""
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 304,
+    "res_status_message": "Not Modified",
+    "response_payload": {
+        "headers": "HTTP/1.1 304 Not Modified\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\"\r\nDate: Mon, 17 Feb 2020 13:37:17 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:17.771Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:31 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/register",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:31 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:31.331Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:37:42 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/register?",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:37:42 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:37:42.021Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:38:06 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/login",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:38:06 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:38:06.986Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:38:10 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:38:10 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:38:10.829Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:38:11 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "accept": "application/json, text/plain, */*",
+            "sec-fetch-dest": "empty",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9",
+            "if-none-match": "W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\""
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 304,
+    "res_status_message": "Not Modified",
+    "response_payload": {
+        "headers": "HTTP/1.1 304 Not Modified\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\"\r\nDate: Mon, 17 Feb 2020 13:38:10 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:38:11.012Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:41:52 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:41:52 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:41:52.598Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:41:52 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "accept": "application/json, text/plain, */*",
+            "sec-fetch-dest": "empty",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9",
+            "if-none-match": "W/\"13a8-ZGIvKbShbdkmnZeSzm7flR91VPg\""
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 5028\r\nETag: W/\"13a4-AF25C5RkIF4DeZdFPEEOhhXFu7s\"\r\nDate: Mon, 17 Feb 2020 13:41:52 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:41:52.814Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:42:09 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:42:09 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:42:09.662Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:42:09 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "accept": "application/json, text/plain, */*",
+            "sec-fetch-dest": "empty",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9",
+            "if-none-match": "W/\"13a4-AF25C5RkIF4DeZdFPEEOhhXFu7s\""
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 304,
+    "res_status_message": "Not Modified",
+    "response_payload": {
+        "headers": "HTTP/1.1 304 Not Modified\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"13a4-AF25C5RkIF4DeZdFPEEOhhXFu7s\"\r\nDate: Mon, 17 Feb 2020 13:42:09 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:42:09.922Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:44:58 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/stylesheets/all.css",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-dest": "style",
+            "accept": "text/css,*/*;q=0.1",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "no-cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 404,
+    "res_status_message": "Not Found",
+    "response_payload": {
+        "headers": "HTTP/1.1 404 Not Found\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 1660\r\nETag: W/\"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0\"\r\nDate: Mon, 17 Feb 2020 13:44:58 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:44:58.513Z"
+}
+
+___________________________________________________
+
+:::::2020-02-17 13:44:58 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "connection": "keep-alive",
+            "accept": "application/json, text/plain, */*",
+            "sec-fetch-dest": "empty",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-mode": "cors",
+            "referer": "http://localhost:3000/",
+            "accept-encoding": "gzip, deflate, br",
+            "accept-language": "en-US,en;q=0.9",
+            "if-none-match": "W/\"13a4-AF25C5RkIF4DeZdFPEEOhhXFu7s\""
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 5241\r\nETag: W/\"1479-AfvXsgyOFqKJajNfqQizM73UXeY\"\r\nDate: Mon, 17 Feb 2020 13:44:58 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-02-17T13:44:58.722Z"
+}
+
+___________________________________________________

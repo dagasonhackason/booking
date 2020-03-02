@@ -2,22 +2,65 @@ require('dotenv').config();
 const CryptoJS = require("crypto-PBKDF2"); 
 const jwt = require("jsonwebtoken");
 const uuid = require("uuid");
+const { connect } = require('monogram');
+const assert = require('assert');
 const DEFAULT_HASH_ITERATIONS = 4000;
 const SALT_SIZE = 192/8;
 const KEY_SIZE = 768/32;
 const SECRET_KEY = process.env.JWT_SECRET;
 
-const generateTicket = function generateTicket() {
-    let uuidPassed = uuid();
+const updateSeatsCollection = async (filterQuery, updatePayload) => {
     
-    return ('xyx-9x-x30y-' + uuidPassed + 'yx5x').replace(/[xy]/g, function (c) {
+    let dbMonogram = await connect('mongodb://localhost:27017/seatbooking');
+    let seatsCollection = dbMonogram.collection('seats');
+
+    // console.log("new db connection monogram", dbMonogram);
+    // console.log("new seat collection monogram", seatsCollection);
+
+    let threw = false;
+
+    try {
+
+        let updatedSeats = await seatsCollection.updateOne(filterQuery, { updatePayload});
+            // .then((response)=>{
+            //     console.log("response seatsCollection updated", response)
+            // });
+        console.log("Seats Updated Monogram", updatedSeats);
+        return (null, updatedSeats);
+    } catch (error) {
+        threw = true;
+        console.error("Monogram Update Function", error);
+        assert.equal(error.message, 'Not allowed to overwrite document ' +
+            'using `updateOne()`, use `replaceOne() instead`');
+        return (null, null);
+    }
+
+    // assert.ok(threw);
+};
+
+const generateTicket = function generateTicket() {
+    let uuidPassed = "xyxyxyxy";
+    
+    return (uuidPassed).replace(/[xy]/g, function (c) {
       var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
       return v.toString(16);
     });
-}
+};
 
 const jwtSignTokenizer = function jwtSignTokenizer(payload, expiresIn='336h') {
     return jwt.sign(payload, SECRET_KEY, { expiresIn: expiresIn });
+};
+
+const jwtVerifyToken = function jwtVerifyToken(token) {
+    let retVal = null;
+    jwt.verify(token, SECRET_KEY, function(err, decoded) {
+        if(err) {
+            console.log("jwtVerifyToken() couldn't decode token " + token + " with error ::: ", err);
+        } else if(decoded) {
+            retVal = decoded;
+        }
+    });
+    return retVal;
 };
 
 const meetsPasswordPolicyMax = function meetsPasswordPolicyMax(arg) {
@@ -45,7 +88,7 @@ const getRandomInt = function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return parseInt(Math.floor(Math.random() * (max - min + 1)) + min);
-}
+};
 
 const hashPassword = function hashPassword(value, salt){
     var i = salt.indexOf(".");
@@ -81,6 +124,7 @@ const generateSalt = function generateSalt(explicitIterations){
 
 exports.generateTicket = generateTicket;
 exports.jwtSignTokenizer = jwtSignTokenizer;
+exports.jwtVerifyToken = jwtVerifyToken;
 exports.meetsPasswordPolicyMax = meetsPasswordPolicyMax;
 exports.meetsPasswordPolicyMin = meetsPasswordPolicyMin;
 exports.dbStringSanitizer = dbStringSanitizer;
@@ -88,3 +132,4 @@ exports.getRandomInt = getRandomInt;
 exports.hashPassword = hashPassword;
 exports.checkPassword = checkPassword;
 exports.generateSalt = generateSalt;
+exports.updateSeatsCollection = updateSeatsCollection;
