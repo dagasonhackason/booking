@@ -10,6 +10,7 @@ const validate = require('../middlewares/validateMiddleware');
 const auth = require('../middlewares/authMiddleware');
 
 const Users = require('../models/users');
+const SecretCodes = require('../models/secretCodes');
 const LoginSessions = require('../models/loginSessions');
 
 const { 
@@ -39,12 +40,29 @@ router.post("/create", (req, res, next)=>{
         var salt = generateSalt();
         var hashedPassword = hashPassword( dbStringSanitizer(password), salt );
 
+        SecretCodes.findOne({ secretCode: dbStringSanitizer(req.body.secretCode), isDeleted: false }, function(err, existingSecretCode) {
+            if (!err && existingSecretCode) {
+                console.log("secretcode used data on existence before creation check", existingSecretCode);
+            } else {
+                res.status(200).json({
+                    status: "error",
+                    responseCode: "205",
+                    responseMessage: "Secret Code Invalid... Error!",
+                    data: err
+                });
+
+                mg.disconnect();
+    
+                return;
+            }
+        });
+
         if(meetsPasswordPolicyMax(password) && meetsPasswordPolicyMin(password)) {
             if(checkPassword( password, salt, hashedPassword )) {
-                Users.findOne({ username: dbStringSanitizer(req.body.username), isDeleted: false }, function(err,existingUser){
+                Users.findOne({ username: dbStringSanitizer(("" + req.body.username).toLocaleLowerCase()), isDeleted: false }, function(err,existingUser){
                     if (!err && !existingUser) {
                         console.log("user data on existence before creation check", existingUser);
-                        Users.create({_id: mg.Types.ObjectId(), username: dbStringSanitizer(req.body.username), password: hashedPassword, passwordSalt: salt, createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, lastLoginOn: "", isDeleted: false}, function (error,insertResponse) {
+                        Users.create({_id: mg.Types.ObjectId(), username: dbStringSanitizer(("" + req.body.username).toLocaleLowerCase()), password: hashedPassword, passwordSalt: salt, createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, lastLoginOn: "", isDeleted: false}, function (error,insertResponse) {
                             if(error) {
                                 res.status(200).json({
                                     status: "error",
@@ -80,7 +98,7 @@ router.post("/create", (req, res, next)=>{
             
                                 return;
                             }
-                        }).select('-password');
+                        }).select('-password').select('-passwordSalt');
                     } else {
                         res.status(200).json({
                             status: "error",
@@ -93,7 +111,7 @@ router.post("/create", (req, res, next)=>{
             
                         return;
                     }
-                }).select('-password');
+                });
             } else {
                 res.status(200).json({
                     status: "error",
@@ -496,7 +514,7 @@ router.post("/login", (req,res,next)=>{
 
         // console.log("decoded base64 encoded pass", password);
 
-        Users.find({username: dbStringSanitizer(req.body.username), isDeleted: false}, function(getError,dataGot) {
+        Users.find({username: dbStringSanitizer(("" + req.body.username).toLocaleLowerCase()), isDeleted: false}, function(getError,dataGot) {
             if (!getError && dataGot) {
                 if(dataGot.length > 0) {
                     console.log("from mongo login user", dataGot[0]);
@@ -517,7 +535,7 @@ router.post("/login", (req,res,next)=>{
                         }
     
                         let payload = {
-                            username: dataGot.username
+                            username: ("" + dataGot.username).toLocaleLowerCase()
                         };
                         
                         sessionId = jwtSignTokenizer(payload);

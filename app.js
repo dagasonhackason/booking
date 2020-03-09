@@ -23,7 +23,8 @@ let bookingsRouter = require("./routes/bookings");
 let showTicketRouter = require("./routes/showticket");
 
 ///////// API ROUTES /////////
-let apiSeatRouter = require("./routes/apiSeats");
+let apiSeatsRouter = require("./routes/apiSeats");
+let apiSecretCodesRouter = require("./routes/apiSecretCodes");
 let apiUsersRouter = require("./routes/apiUsers")
 let apiBookingsRouter = require("./routes/apiBookings");
 let apiVersionRouter = require("./routes/apiVersion");
@@ -180,7 +181,8 @@ app.use((req, res, next) => {
 });
 
 ///////// API ROUTES /////////
-app.use("/api/seats", apiSeatRouter);
+app.use("/api/seats", apiSeatsRouter);
+app.use("/api/secretcodes", apiSecretCodesRouter);
 app.use("/api/users", apiUsersRouter);
 app.use("/api/bookings", apiBookingsRouter);
 app.use("/api", apiVersionRouter);

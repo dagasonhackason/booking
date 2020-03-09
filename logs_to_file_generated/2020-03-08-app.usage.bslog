@@ -1,0 +1,131 @@
+
+:::::2020-03-08 23:50:54 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc",
+    "req_username_extract": "dagasonhackason",
+    "req_loginSession": {
+        "_id": "5e65840c61643546c4b8ad5f",
+        "userId": "5e657d7500c28d427c171899",
+        "loggedInOn": "2020-03-08 23:47:20",
+        "loggedOutOn": "",
+        "loggedOutBy": null,
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc",
+        "isExpired": false,
+        "expiresOn": "2020-03-22 23:47:24"
+    },
+    "req_user": {
+        "_id": "5e657d7500c28d427c171899",
+        "username": "dagasonhackason",
+        "password": "76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5",
+        "passwordSalt": "fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7",
+        "createdOn": "2020-03-08 23:19:10",
+        "updatedOn": "",
+        "updatedBy": null,
+        "lastLoginOn": "2020-03-08 23:47:20",
+        "isDeleted": false
+    },
+    "req_route": "/api/secretcodes/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc",
+            "username": "dagasonhackason",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "2e398e81-ea1f-4377-8847-4d309f2006ef",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "29",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "secretCode": "12345def"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 286\r\nETag: W/\"11e-Zh6a60FgSFTHxHphFeVGoPGG/bo\"\r\nDate: Sun, 08 Mar 2020 23:50:54 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-03-08T23:50:54.543Z"
+}
+
+___________________________________________________
+
+:::::2020-03-08 23:57:58 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/users/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "ec30160e-68cb-4415-b9d1-c8da56d5bb60",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "87",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testuser3",
+            "password": "cGFzc3dvcmQxMjM0",
+            "secretCode": "1234567"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 101\r\nETag: W/\"65-fXIjKlxDwJQ+Z+Pl2Lfqas0AkrM\"\r\nDate: Sun, 08 Mar 2020 23:57:58 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-03-08T23:57:58.899Z"
+}
+
+___________________________________________________
+
+:::::2020-03-08 23:58:25 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/users/create",
+    "req_ip_address": "::1",
+    "request_payload": {
+        "headers": {
+            "content-type": "application/json",
+            "user-agent": "PostmanRuntime/7.22.0",
+            "accept": "*/*",
+            "cache-control": "no-cache",
+            "postman-token": "435cf7ce-5a08-4110-99b0-ec42e6903dd0",
+            "host": "localhost:3000",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "88",
+            "connection": "keep-alive"
+        },
+        "params": {},
+        "body": {
+            "username": "testuser3",
+            "password": "cGFzc3dvcmQxMjM0",
+            "secretCode": "12345def"
+        },
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 100\r\nETag: W/\"64-LIEa95gC4UAFXZczlWVYahMsXLY\"\r\nDate: Sun, 08 Mar 2020 23:58:25 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-03-08T23:58:25.812Z"
+}
+
+___________________________________________________

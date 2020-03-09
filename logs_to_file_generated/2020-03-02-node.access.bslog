@@ -17512,3 +17512,160 @@ Use mongoose.model(name, schema)
   },
   created_at: 2020-03-02T05:13:59.595Z
 }
+[[10:23:35.888]] [LOG]    hitting index view route with {}
+03/Mar/2020:10:23:37 +0000 "GET /"
+[[10:23:38.004]] [LOG]    Calling app logger
+03/Mar/2020:10:23:38 +0000 "GET /stylesheets/all.css"
+[[10:23:38.062]] [LOG]    Finishing
+[[10:23:38.062]] [LOG]    No sessionId used
+03/Mar/2020:10:23:38 +0000 "GET /javascripts/bootstrap.min.js"
+03/Mar/2020:10:23:38 +0000 "GET /stylesheets/custom.css"
+03/Mar/2020:10:23:38 +0000 "GET /stylesheets/bootstrap.min.css"
+03/Mar/2020:10:23:38 +0000 "GET /javascripts/axios.js"
+03/Mar/2020:10:23:38 +0000 "GET /javascripts/jquery.js"
+03/Mar/2020:10:23:38 +0000 "GET /images/tis.png"
+03/Mar/2020:10:23:38 +0000 "GET /javascripts/fallr.js"
+03/Mar/2020:10:23:38 +0000 "GET /javascripts/functions.js"
+[[10:23:38.795]] [LOG]    App usage logged! - 2020-03-03 10:23:38 {
+  req_route: '/stylesheets/all.css',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+      'sec-fetch-dest': 'style',
+      accept: 'text/css,*/*;q=0.1',
+      purpose: 'prefetch',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'no-cors',
+      referer: 'http://localhost:3000/',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9',
+      cookie: 'JSESSIONID=705829FE9B89CDCBCC418E497E153029'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 404,
+  res_status_message: 'Not Found',
+  response_payload: {
+    headers: 'HTTP/1.1 404 Not Found\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: text/html; charset=utf-8\r\n' +
+      'Content-Length: 1660\r\n' +
+      'ETag: W/"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0"\r\n' +
+      'Date: Tue, 03 Mar 2020 10:23:38 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-03T10:23:38.063Z
+}
+03/Mar/2020:10:23:38 +0000 "GET /javascripts/moment.js"
+03/Mar/2020:10:23:38 +0000 "GET /javascripts/clientJS.js"
+[[10:23:41.411]] [LOG]    Calling app logger
+[[10:23:41.499]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[10:23:41.499]] [LOG]    No middleware needed for this route /api/seats
+[[10:23:41.499]] [LOG]    new get all seats request {}
+[[10:23:42.721]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m }, { projection: {} })
+[[10:23:43.569]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e5c923af378a43458c60042,
+    seatNumber: '1',
+    status: true,
+    createdBy: 5e5c54b642e2704a5410ac41,
+    createdOn: '2020-03-02 04:57:30',
+    updatedOn: '2020-03-02 04:59:20',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  },
+  {
+    _id: 5e5c92f62c732c3e288d7b25,
+    seatNumber: '2',
+    status: true,
+    createdBy: 5e5c54b642e2704a5410ac41,
+    createdOn: '2020-03-02 05:00:38',
+    updatedOn: '2020-03-02 05:02:41',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  },
+  {
+    _id: 5e5c938f5701a62430fe56c3,
+    seatNumber: '3',
+    status: true,
+    createdBy: 5e5c54b642e2704a5410ac41,
+    createdOn: '2020-03-02 05:03:11',
+    updatedOn: '2020-03-02 05:05:34',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  },
+  {
+    _id: 5e5c9436ae13405b949b17e6,
+    seatNumber: '4',
+    status: true,
+    createdBy: 5e5c54b642e2704a5410ac41,
+    createdOn: '2020-03-02 05:05:58',
+    updatedOn: '2020-03-02 05:12:02',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  },
+  {
+    _id: 5e5c95fef37098552816af78,
+    seatNumber: '5',
+    status: true,
+    createdBy: 5e5c54b642e2704a5410ac41,
+    createdOn: '2020-03-02 05:13:34',
+    updatedOn: '2020-03-02 05:13:54',
+    updatedBy: null,
+    isActivated: true,
+    isDeleted: false
+  }
+]
+03/Mar/2020:10:23:43 +0000 "GET /api/seats"
+[[10:23:43.604]] [LOG]    Finishing
+[[10:23:43.604]] [LOG]    No sessionId used
+[[10:23:43.610]] [LOG]    App usage logged! - 2020-03-03 10:23:43 {
+  req_route: '/api/seats',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      connection: 'keep-alive',
+      accept: 'application/json, text/plain, */*',
+      'sec-fetch-dest': 'empty',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-mode': 'cors',
+      referer: 'http://localhost:3000/',
+      'accept-encoding': 'gzip, deflate, br',
+      'accept-language': 'en-US,en;q=0.9',
+      cookie: 'JSESSIONID=705829FE9B89CDCBCC418E497E153029'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 1240\r\n' +
+      'ETag: W/"4d8-1PA/igq0Twm2ZqT1hZ6j6y29Pf8"\r\n' +
+      'Date: Tue, 03 Mar 2020 10:23:43 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-03T10:23:43.604Z
+}
+03/Mar/2020:10:23:43 +0000 "GET /images/csd.png"

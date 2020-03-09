@@ -12,12 +12,16 @@
     <title>Online Seat Booking</title>
 
     <!--Font Awesome-->
-    <link href="/stylesheets/all.css" rel="stylesheet">
+    <link href="/stylesheets/all.css" rel="stylesheet" />
     <!-- Bootstrap Core CSS -->
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+
+	<link href="/stylesheets/jquery-ui.css" rel="stylesheet" />
+
+	<link rel="stylesheet" type="text/css" media="screen,projection" href="/stylesheets/fallr.css" />
 
     <!-- Custom CSS -->
-    <link href="/stylesheets/custom.css" rel="stylesheet">
+    <link href="/stylesheets/custom.css" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -97,6 +101,10 @@
     <!-- jQuery -->
     <script src="/javascripts/jquery.js"></script>
 
+    <script src="/javascripts/jquery-ui.js" crossorigin="anonymous"></script>
+
+    <script src="/javascripts/jquery-easing.js" crossorigin="anonymous"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="/javascripts/bootstrap.min.js"></script>
 
@@ -109,8 +117,10 @@
 	<script src="/javascripts/moment.js"></script>
     
     <script type="text/javascript">
-        window.isIndexPage = function isIndexPage(){
-            return true;
+        if (typeof isIndexPage == "undefined") {
+            var isIndexPage = function (){
+                return true;
+            };
         }
     </script>
 

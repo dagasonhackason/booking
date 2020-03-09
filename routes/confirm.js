@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const mg = require("mongoose");
 const Schema = mg.Schema, ObjectId = Schema.ObjectId;
+const Seats = require('../models/seats');
 
 
 const dbStringSanitizer = function dbStringSanitizer(arg) {
@@ -19,19 +20,17 @@ router.get("/:id", (req,res,next)=>{
 
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
 
-    mg.model("seats").find({_id: dbStringSanitizer(id)}, function(getError,dataGot) {
+    Seats.findOne({_id: dbStringSanitizer(id), isDeleted: false, isActivated: true}, function(getError,dataGot) {
         if (!getError && dataGot) {
             console.log("From mongo get one booking using confirm view", dataGot);
-                        
-            dataPassed = dataGot;
-
-            mg.disconnect();
             
             res.render("confirm.ejs", {
-                _id: dataPassed._id, 
-                seatNumber: dataPassed.seatNumber, 
-                status: dataPassed.status
+                _id: dataGot._id, 
+                seatNumber: dataGot.seatNumber, 
+                status: dataGot.status
             });
+            
+            mg.disconnect();
 
             return;
         } else {   
@@ -44,6 +43,8 @@ router.get("/:id", (req,res,next)=>{
                 message: "Unknown error show acquiring confirm view data!",
                 status: error.status
             });
+
+            mg.disconnect();
 
             return;
         }

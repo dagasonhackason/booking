@@ -35,7 +35,7 @@
         easingOut       : 'swing',          // [string] easing type when disappear
         height          : 'auto',           // [string] css value for exact height
         width           : '360px',          // [string] css value for exact width
-        zIndex          : 9999,              // [int] set z-index
+        zIndex          : 99999,              // [int] set z-index
         bound           : window,           // [string/object] jQuery selector for costum boundary
         afterHide       : function () {},   // [function] after hide callback, can be overrided by parameter
         afterShow       : function () {}    // [function] after show callback, can be overrided by parameter
@@ -259,7 +259,7 @@
                                 'left'      : xpos,
                                 'position'  : pos,
                                 'top'       : yminpos,
-                                'z-index'   : 9999999999 //opts.zIndex + 1
+                                'z-index'   : opts.zIndex + 1
                             })
                             .animate({
                                     'top'       : ymaxpos

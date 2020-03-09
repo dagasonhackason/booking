@@ -15,26 +15,6 @@ const Seats = require('../models/seats');
 
 router.use(auth);
 
-// update model name of existing seat
-// router.put('/seatupdater/:id', (req, res) => {
-//     console.log("New seat update request", req.body);
-//     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
-
-//     Seats.findOneAndUpdate({
-//         _id: req.params.id
-//     }, 
-//     {$set: req.body}, {upsert: true},
-//           (err, seat) => {
-//              if (err) {
-//                 console.log('error occured while trying to update seat', err);
-//                 res.status(200).send('false');
-//              } else {
-//                  console.log('updated seat', seat);
-//                  res.status(200).send('true');
-//              }
-//     });
-// });
-
 router.post("/create", (req, res, next)=>{
     console.log("New Incoming create seat Request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/seatbooking");
@@ -85,6 +65,142 @@ router.post("/create", (req, res, next)=>{
                 return;
             }
         });
+    } else {
+        res.status(200).json({
+            status: "error",
+            responseCode: "208",
+            responseMessage: "Please Fill all required fields and try again... Try again!",
+            data: null
+        });
+        
+        mg.disconnect();
+
+        return;
+    }
+});
+
+router.post("/bulkcreate", (req, res, next)=>{
+    console.log("New Incoming create bulk seat Request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    var dateTime = new Date();
+
+    if(req.body.totalSeatNumbers) {
+        if(Number.isInteger(parseInt(req.body.totalSeatNumbers))) {
+            let totalSeatNumbers = parseInt(req.body.totalSeatNumbers);
+            let totalSeatsCreatedArray = new Array(); 
+
+            (async () => {
+                try {
+                    await (async () => {
+                        for (var i = 1; i <= (totalSeatNumbers); i++) {
+                            let seatNumber = "" + i;
+                            console.log("current seat number in bulk create seat", seatNumber);
+                            try {
+                                await Seats.findOne({ seatNumber: dbStringSanitizer(seatNumber), isDeleted: false }, async (err,existingseat) => {
+                                    if (!err && !existingseat) {
+                                        console.log("Seat data on bulk existence check", existingseat);
+                                        
+                                        try {
+                                            await Seats.create({_id: mg.Types.ObjectId(), seatNumber: dbStringSanitizer(seatNumber), status: false, createdBy: mg.Types.ObjectId(req.userData.users._id), createdOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss"), updatedOn: "", updatedBy: null, isActivated: true, isDeleted: false}, async (error,insertResponse) => {
+                                                if(error) {
+                                                    console.log("Seat " + seatNumber + " Bulk Creation Failed!", error);
+                                                    
+                                                    totalSeatsCreatedArray.push({
+                                                        message: "Seat " + seatNumber + " Creation Failed!",
+                                                        data: error
+                                                    });
+                                                }
+                                                else{
+                                                    console.log("Seat " + seatNumber + " Bulk Creation was Successful!", insertResponse);
+                                                
+                                                    totalSeatsCreatedArray.push({
+                                                        message: "Seat " + seatNumber + " Creation was Successful!",
+                                                        data: insertResponse
+                                                    });
+                                                }
+                                            });
+                                        } catch(ex) {
+                                            console.log("Seat " + seatNumber + " Bulk Creation Failed on Exception!", ex);
+
+                                            totalSeatsCreatedArray.push({
+                                                message: "Seat " + seatNumber + " Creation Failed on Exception!",
+                                                data: ex
+                                            });
+                                        }
+                                    } else {
+                                        console.log("Seat " + seatNumber + " Bulk Already exist... Error!", err);
+
+                                        totalSeatsCreatedArray.push({
+                                            message: "Seat " + seatNumber + " Already exist... Error!",
+                                            data: err
+                                        });
+                                    }
+                                }); 
+                            } catch(excptn) {
+                                console.log("Seat " + seatNumber + " Bulk Search Failed on Exception!", excptn);
+
+                                totalSeatsCreatedArray.push({
+                                    message: "Seat " + seatNumber + " Search Failed on Exception!",
+                                    data: excptn
+                                });
+                            }
+                        }
+                    })();
+                    
+                    if(totalSeatsCreatedArray.length >= 1) {
+                        console.log("mongo bulk insert seat completed", totalSeatsCreatedArray);
+                                
+                        res.status(200).json({
+                            status: "success",
+                            responseCode: "201",
+                            responseMessage: "Bulk Seat Creation completed with the following results!",
+                            data: totalSeatsCreatedArray
+                        });
+                            
+                        mg.disconnect();
+                        
+                        return;
+                    } else {
+                        console.log("Nothing happened on bulk seat creation for " + totalSeatNumbers + " seat numbers... Error!", exceptn);
+
+                        res.status(200).json({
+                            status: "error",
+                            responseCode: "208",
+                            responseMessage: "Nothing happened on bulk seat creation for " + totalSeatNumbers + " seat numbers... Error!",
+                            data: totalSeatsCreatedArray
+                        });
+                        
+                        mg.disconnect();
+                
+                        return;
+                    }
+                } catch(exceptn) {
+                    console.log("Seat " + seatNumber + " Bulk Insert Completion Failed on Exception!", exceptn);
+
+                    res.status(200).json({
+                        status: "error",
+                        responseCode: "208",
+                        responseMessage: "Seat " + seatNumber + " Insert Completion Failed on Exception!",
+                        data: exceptn
+                    });
+                    
+                    mg.disconnect();
+            
+                    return;
+                }
+            })();    
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "208",
+                responseMessage: "Please enter a valid total seat number... Try again!",
+                data: null
+            });
+            
+            mg.disconnect();
+    
+            return;
+        }
     } else {
         res.status(200).json({
             status: "error",

@@ -1,0 +1,3113 @@
+[[23:09:57.285]] [LOG]    hitting index view route with {}
+08/Mar/2020:23:09:58 +0000 "GET /"
+[[23:09:58.241]] [LOG]    Calling app logger
+08/Mar/2020:23:09:58 +0000 "GET /stylesheets/all.css"
+[[23:09:58.250]] [LOG]    Finishing
+[[23:09:58.250]] [LOG]    No sessionId used
+08/Mar/2020:23:09:58 +0000 "GET /javascripts/bootstrap.min.js"
+08/Mar/2020:23:09:58 +0000 "GET /javascripts/fallr.js"
+08/Mar/2020:23:09:58 +0000 "GET /javascripts/axios.js"
+08/Mar/2020:23:09:58 +0000 "GET /stylesheets/bootstrap.min.css"
+[[23:09:58.543]] [LOG]    App usage logged! - 2020-03-08 23:09:58 {
+  req_route: '/stylesheets/all.css',
+  req_ip_address: '::ffff:127.0.0.1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0',
+      accept: 'text/css,*/*;q=0.1',
+      'accept-language': 'en-US,en;q=0.5',
+      'accept-encoding': 'gzip, deflate',
+      connection: 'keep-alive',
+      referer: 'http://localhost:3000/'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 404,
+  res_status_message: 'Not Found',
+  response_payload: {
+    headers: 'HTTP/1.1 404 Not Found\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: text/html; charset=utf-8\r\n' +
+      'Content-Length: 1660\r\n' +
+      'ETag: W/"67c-UPk/EGKHtXTmN2gkGpJQ/XnB+L0"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:09:58 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:09:58.251Z
+}
+08/Mar/2020:23:09:58 +0000 "GET /stylesheets/custom.css"
+08/Mar/2020:23:09:58 +0000 "GET /javascripts/jquery.js"
+08/Mar/2020:23:09:58 +0000 "GET /javascripts/functions.js"
+08/Mar/2020:23:09:58 +0000 "GET /javascripts/clientJS.js"
+08/Mar/2020:23:09:58 +0000 "GET /javascripts/moment.js"
+08/Mar/2020:23:09:58 +0000 "GET /images/tis.png"
+[[23:09:58.973]] [LOG]    Calling app logger
+[[23:09:58.974]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[23:09:58.974]] [LOG]    No middleware needed for this route /api/seats
+[[23:09:58.975]] [LOG]    new get all seats request {}
+[[23:09:59.010]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m }, { projection: {} })
+[[23:09:59.031]] [LOG]    From mongo get all seats []
+08/Mar/2020:23:09:59 +0000 "GET /api/seats"
+[[23:09:59.045]] [LOG]    Finishing
+[[23:09:59.045]] [LOG]    No sessionId used
+[[23:09:59.125]] [LOG]    App usage logged! - 2020-03-08 23:09:59 {
+  req_route: '/api/seats',
+  req_ip_address: '::ffff:127.0.0.1',
+  request_payload: {
+    headers: {
+      host: 'localhost:3000',
+      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0',
+      accept: 'application/json, text/plain, */*',
+      'accept-language': 'en-US,en;q=0.5',
+      'accept-encoding': 'gzip, deflate',
+      connection: 'keep-alive',
+      referer: 'http://localhost:3000/'
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 106\r\n' +
+      'ETag: W/"6a-Co8rZNloIyGgGNIH4E+90YXKN2w"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:09:59 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:09:59.046Z
+}
+[[23:19:10.474]] [LOG]    Calling app logger
+[[23:19:10.476]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[23:19:10.477]] [LOG]    No middleware needed for this route /api/users/create
+[[23:19:10.478]] [LOG]    New Incoming create user Request {
+  username: 'dagasonhackason',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: '1234567'
+}
+[[23:19:17.015]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: { password: [33m0[39m } })
+[[23:19:17.127]] [LOG]    user data on existence before creation check null
+[[23:19:17.217]] [INFO]   [0;36mMongoose:[0m users.insertOne({ _id: ObjectId("5e657d7500c28d427c171899"), username: [32m'dagasonhackason'[39m, password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m, passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m, createdOn: [32m'2020-03-08 23:19:10'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, lastLoginOn: [32m''[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[23:19:17.430]] [LOG]    from mongo insert user {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '',
+  isDeleted: false
+}
+08/Mar/2020:23:19:17 +0000 "POST /api/users/create"
+[[23:19:17.444]] [LOG]    Finishing
+[[23:19:17.445]] [LOG]    No sessionId used
+[[23:19:17.566]] [LOG]    App usage logged! - 2020-03-08 23:19:17 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '38da857f-109e-4673-8f79-6e0880cf2dc4',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '93',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'dagasonhackason',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: '1234567'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 263\r\n' +
+      'ETag: W/"107-e9uJWPxnVKm9riNTtVg41c42XbI"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:19:17 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:19:17.445Z
+}
+[[23:24:23.534]] [LOG]    Calling app logger
+[[23:24:23.537]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[23:24:23.539]] [LOG]    No middleware needed for this route /api/users/create
+[[23:24:23.540]] [LOG]    New Incoming create user Request {
+  username: 'testuser1',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: '1234567'
+}
+[[23:24:30.999]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'testuser1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:24:31.053]] [LOG]    user data on existence before creation check null
+[[23:24:31.122]] [INFO]   [0;36mMongoose:[0m users.insertOne({ _id: ObjectId("5e657eaf9f45df405c9839f7"), username: [32m'testuser1'[39m, password: [32m'2ce82dbd7ea0c075e856faab29b0b2b17e080331f3917ca4d8afd3c09654841764a7237aeffca1fa4dc752ce91fa2dc9b3c99062a09d16d7c580a09e5c2a526d8a25673e4037f2ae363867aeaf8a2b584c1c313b753cb276f97ef34c858126e6'[39m, passwordSalt: [32m'fa0.4d4a9494c703602477025dfa50421bc0b771e720f6662a22'[39m, createdOn: [32m'2020-03-08 23:24:23'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, lastLoginOn: [32m''[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[23:24:31.135]] [LOG]    from mongo insert user {
+  _id: 5e657eaf9f45df405c9839f7,
+  username: 'testuser1',
+  password: '2ce82dbd7ea0c075e856faab29b0b2b17e080331f3917ca4d8afd3c09654841764a7237aeffca1fa4dc752ce91fa2dc9b3c99062a09d16d7c580a09e5c2a526d8a25673e4037f2ae363867aeaf8a2b584c1c313b753cb276f97ef34c858126e6',
+  passwordSalt: 'fa0.4d4a9494c703602477025dfa50421bc0b771e720f6662a22',
+  createdOn: '2020-03-08 23:24:23',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '',
+  isDeleted: false
+}
+08/Mar/2020:23:24:31 +0000 "POST /api/users/create"
+[[23:24:31.146]] [LOG]    Finishing
+[[23:24:31.146]] [LOG]    No sessionId used
+[[23:24:31.168]] [LOG]    App usage logged! - 2020-03-08 23:24:31 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '3c129e25-32ce-4807-aa51-535ecb416a3c',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '87',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'testuser1',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: '1234567'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 257\r\n' +
+      'ETag: W/"101-gZkyddChLJ2a/A4viVWkdB/wWAE"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:24:31 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:24:31.147Z
+}
+[[23:26:15.428]] [LOG]    Calling app logger
+[[23:26:15.432]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[23:26:15.433]] [LOG]    No middleware needed for this route /api/users/create
+[[23:26:15.434]] [LOG]    New Incoming create user Request {
+  username: 'testuser2',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: '1234567'
+}
+[[23:26:22.520]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'testuser2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:26:22.540]] [LOG]    user data on existence before creation check null
+[[23:26:22.610]] [INFO]   [0;36mMongoose:[0m users.insertOne({ _id: ObjectId("5e657f1e7960c615ec6716ef"), username: [32m'testuser2'[39m, password: [32m'f13e51157b9aa27bbf9db5552436809c88eb7b77cacc7084b2b240a7ac96ad2d6a2667ab5585d4b657d47ab7edacec1f5eeeb22d34460dadb230bf6a54d992c836dcedc7d776192d0fbfa26b1819838398b422ce928bc171f3c95b1492b45dab'[39m, passwordSalt: [32m'fa0.d5e62997d0c4ecc4135b1a2ce9ddd25422ce97b0c70e8c18'[39m, createdOn: [32m'2020-03-08 23:26:15'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, lastLoginOn: [32m''[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[23:26:22.619]] [LOG]    from mongo insert user {
+  _id: 5e657f1e7960c615ec6716ef,
+  username: 'testuser2',
+  password: 'f13e51157b9aa27bbf9db5552436809c88eb7b77cacc7084b2b240a7ac96ad2d6a2667ab5585d4b657d47ab7edacec1f5eeeb22d34460dadb230bf6a54d992c836dcedc7d776192d0fbfa26b1819838398b422ce928bc171f3c95b1492b45dab',
+  passwordSalt: 'fa0.d5e62997d0c4ecc4135b1a2ce9ddd25422ce97b0c70e8c18',
+  createdOn: '2020-03-08 23:26:15',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '',
+  isDeleted: false
+}
+08/Mar/2020:23:26:22 +0000 "POST /api/users/create"
+[[23:26:22.630]] [LOG]    Finishing
+[[23:26:22.631]] [LOG]    No sessionId used
+[[23:26:22.646]] [LOG]    App usage logged! - 2020-03-08 23:26:22 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '9132d617-8c96-45ed-a89d-281afa2039a6',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '87',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'testuser2',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: '1234567'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 257\r\n' +
+      'ETag: W/"101-EyZTC9/8AtidUbBLCzrkQK5M6RQ"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:26:22 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:26:22.631Z
+}
+[[23:27:09.737]] [LOG]    Calling app logger
+[[23:27:09.739]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[23:27:09.740]] [LOG]    No middleware needed for this route /api/users/create
+[[23:27:09.741]] [LOG]    New Incoming create user Request {
+  username: 'testuser3',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: '1234567'
+}
+[[23:27:17.330]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'testuser3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:27:17.362]] [LOG]    user data on existence before creation check null
+[[23:27:17.445]] [INFO]   [0;36mMongoose:[0m users.insertOne({ _id: ObjectId("5e657f55334c18462c9066d6"), username: [32m'testuser3'[39m, password: [32m'b0f2db3dca241731a7901ae11523e08aa0b2f71ee5150c849c9bb3fdc6a921822f97592de48fc1b61f0e192a4f2502c80411ad568dcc02b37121428e173b0eebed452b4bd1ab5e7cb1ca866b8088bfa1a016c8b65404e915ec3cd4bd24657845'[39m, passwordSalt: [32m'fa0.a9ed0415007cb8737ce1b9aacb654d6fb9fca81c2ebcf8b8'[39m, createdOn: [32m'2020-03-08 23:27:09'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, lastLoginOn: [32m''[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[23:27:17.468]] [LOG]    from mongo insert user {
+  _id: 5e657f55334c18462c9066d6,
+  username: 'testuser3',
+  password: 'b0f2db3dca241731a7901ae11523e08aa0b2f71ee5150c849c9bb3fdc6a921822f97592de48fc1b61f0e192a4f2502c80411ad568dcc02b37121428e173b0eebed452b4bd1ab5e7cb1ca866b8088bfa1a016c8b65404e915ec3cd4bd24657845',
+  passwordSalt: 'fa0.a9ed0415007cb8737ce1b9aacb654d6fb9fca81c2ebcf8b8',
+  createdOn: '2020-03-08 23:27:09',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '',
+  isDeleted: false
+}
+08/Mar/2020:23:27:17 +0000 "POST /api/users/create"
+[[23:27:17.481]] [LOG]    Finishing
+[[23:27:17.482]] [LOG]    No sessionId used
+[[23:27:17.504]] [LOG]    App usage logged! - 2020-03-08 23:27:17 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '2a2bb3c9-e6c7-4e68-a7ff-fa1699f07345',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '87',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'testuser3',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: '1234567'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 257\r\n' +
+      'ETag: W/"101-nGZOy1IvasNVyuRMYufsbXfK0is"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:27:17 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:27:17.482Z
+}
+[[23:47:20.602]] [LOG]    Calling app logger
+[[23:47:20.604]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[23:47:20.604]] [LOG]    No middleware needed for this route /api/users/login
+[[23:47:20.606]] [LOG]    new login user request { username: 'dagasonhackason', password: 'cGFzc3dvcmQxMjM0' }
+[[23:47:20.675]] [INFO]   [0;36mMongoose:[0m users.find({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:47:20.740]] [LOG]    from mongo login user {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '',
+  isDeleted: false
+}
+[[23:47:20.742]] [LOG]    salt  -  fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7  -  hashedPassword  -  76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5
+[[23:47:24.494]] [INFO]   [0;36mMongoose:[0m loginsessions.insertOne({ _id: ObjectId("5e65840c61643546c4b8ad5f"), userId: ObjectId("5e657d7500c28d427c171899"), loggedInOn: [32m'2020-03-08 23:47:20'[39m, loggedOutOn: [32m''[39m, loggedOutBy: [1mnull[22m, sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m, expiresOn: [32m'2020-03-22 23:47:24'[39m}, { session: [1mnull[22m })
+[[23:47:24.759]] [INFO]   [0;36mMongoose:[0m users.updateOne({ _id: ObjectId("5e657d7500c28d427c171899"), isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { lastLoginOn: [32m'2020-03-08 23:47:20'[39m } }, { upsert: [33mtrue[39m })
+[[23:47:24.956]] [LOG]    from mongo login user {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+08/Mar/2020:23:47:24 +0000 "POST /api/users/login"
+[[23:47:24.970]] [LOG]    Finishing
+[[23:47:24.970]] [LOG]    No sessionId used
+[[23:47:24.992]] [LOG]    App usage logged! - 2020-03-08 23:47:24 {
+  req_route: '/api/users/login',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '59eac246-f742-4ec6-8106-61b6731457a5',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '67',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { username: 'dagasonhackason', password: 'cGFzc3dvcmQxMjM0' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 620\r\n' +
+      'ETag: W/"26c-1LQy6HakfZYWZzP3JpweQy9v/uo"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:47:24 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:47:24.971Z
+}
+[[23:49:54.005]] [LOG]    Calling app logger
+[[23:49:54.005]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/secretcodes/create
+[[23:49:54.028]] [LOG]    current username extracted dagasonhackason
+[[23:49:54.028]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[23:49:54.030]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[23:49:54.031]] [LOG]    userData.username_extract dagasonhackason
+[[23:49:54.031]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[23:49:54.036]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[23:49:54.048]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:49:54.061]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[23:49:54.063]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[23:49:54.067]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[23:49:54.069]] [LOG]    New Incoming create secretCode Request { secretCode: '67890abc' }
+[[23:49:54.073]] [INFO]   [0;36mMongoose:[0m secretcodes.findOne({ secretCode: [32m'67890abc'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:49:54.077]] [LOG]    SecretCode data on existence check null
+[[23:49:54.081]] [INFO]   [0;36mMongoose:[0m secretcodes.insertOne({ _id: ObjectId("5e6584a261643546c4b8ad61"), secretCode: [32m'67890abc'[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-08 23:49:54'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[23:49:54.608]] [LOG]    From mongo insert secretCode {
+  _id: 5e6584a261643546c4b8ad61,
+  secretCode: '67890abc',
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-08 23:49:54',
+  updatedOn: '',
+  updatedBy: null,
+  isDeleted: false
+}
+08/Mar/2020:23:49:54 +0000 "POST /api/secretcodes/create"
+[[23:49:54.610]] [LOG]    Finishing
+[[23:49:54.610]] [LOG]    Valid sessionId, logging
+[[23:49:54.640]] [LOG]    App usage logged! - 2020-03-08 23:49:54 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/secretcodes/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '9bd22c3e-54cd-4c81-9386-cc4e1d85e093',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '29',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { secretCode: '67890abc' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 286\r\n' +
+      'ETag: W/"11e-edzUsB4b8WWGpmuLYXBvNVIxy5M"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:49:54 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:49:54.611Z
+}
+[[23:50:28.592]] [LOG]    Calling app logger
+[[23:50:28.592]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/secretcodes/create
+[[23:50:28.594]] [LOG]    current username extracted dagasonhackason
+[[23:50:28.595]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[23:50:28.595]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[23:50:28.595]] [LOG]    userData.username_extract dagasonhackason
+[[23:50:28.595]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[23:50:28.596]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[23:50:28.605]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:50:28.609]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[23:50:28.610]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[23:50:28.648]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[23:50:28.649]] [LOG]    New Incoming create secretCode Request { secretCode: '67890abc' }
+[[23:50:28.652]] [INFO]   [0;36mMongoose:[0m secretcodes.findOne({ secretCode: [32m'67890abc'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+08/Mar/2020:23:50:28 +0000 "POST /api/secretcodes/create"
+[[23:50:28.656]] [LOG]    Finishing
+[[23:50:28.656]] [LOG]    Valid sessionId, logging
+[[23:50:28.667]] [LOG]    App usage logged! - 2020-03-08 23:50:28 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/secretcodes/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '78cd8b26-b125-4c42-9035-56f162c4d53d',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '29',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { secretCode: '67890abc' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 106\r\n' +
+      'ETag: W/"6a-ImlU+8QU5dDQLXJxtOurYAbKRS8"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:50:28 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:50:28.656Z
+}
+[[23:50:54.505]] [LOG]    Calling app logger
+[[23:50:54.506]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/secretcodes/create
+[[23:50:54.508]] [LOG]    current username extracted dagasonhackason
+[[23:50:54.508]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[23:50:54.508]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[23:50:54.509]] [LOG]    userData.username_extract dagasonhackason
+[[23:50:54.509]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[23:50:54.509]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[23:50:54.518]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:50:54.521]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[23:50:54.523]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[23:50:54.527]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[23:50:54.528]] [LOG]    New Incoming create secretCode Request { secretCode: '12345def' }
+[[23:50:54.531]] [INFO]   [0;36mMongoose:[0m secretcodes.findOne({ secretCode: [32m'12345def'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:50:54.535]] [LOG]    SecretCode data on existence check null
+[[23:50:54.538]] [INFO]   [0;36mMongoose:[0m secretcodes.insertOne({ _id: ObjectId("5e6584de61643546c4b8ad63"), secretCode: [32m'12345def'[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-08 23:50:54'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[23:50:54.541]] [LOG]    From mongo insert secretCode {
+  _id: 5e6584de61643546c4b8ad63,
+  secretCode: '12345def',
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-08 23:50:54',
+  updatedOn: '',
+  updatedBy: null,
+  isDeleted: false
+}
+08/Mar/2020:23:50:54 +0000 "POST /api/secretcodes/create"
+[[23:50:54.543]] [LOG]    Finishing
+[[23:50:54.543]] [LOG]    Valid sessionId, logging
+[[23:50:54.548]] [LOG]    App usage logged! - 2020-03-08 23:50:54 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/secretcodes/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '2e398e81-ea1f-4377-8847-4d309f2006ef',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '29',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { secretCode: '12345def' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 286\r\n' +
+      'ETag: W/"11e-Zh6a60FgSFTHxHphFeVGoPGG/bo"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:50:54 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:50:54.543Z
+}
+[[23:57:51.522]] [LOG]    Calling app logger
+[[23:57:51.524]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[23:57:51.524]] [LOG]    No middleware needed for this route /api/users/create
+[[23:57:51.525]] [LOG]    New Incoming create user Request {
+  username: 'testuser3',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: '1234567'
+}
+[[23:57:58.842]] [INFO]   [0;36mMongoose:[0m secretcodes.findOne({ secretCode: [32m'1234567'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:57:58.856]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'testuser3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+08/Mar/2020:23:57:58 +0000 "POST /api/users/create"
+[[23:57:58.898]] [LOG]    Finishing
+[[23:57:58.899]] [LOG]    No sessionId used
+[[23:57:58.965]] [LOG]    App usage logged! - 2020-03-08 23:57:58 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'ec30160e-68cb-4415-b9d1-c8da56d5bb60',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '87',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'testuser3',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: '1234567'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 101\r\n' +
+      'ETag: W/"65-fXIjKlxDwJQ+Z+Pl2Lfqas0AkrM"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:57:58 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:57:58.899Z
+}
+[[23:58:18.593]] [LOG]    Calling app logger
+[[23:58:18.593]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/create
+[[23:58:18.593]] [LOG]    No middleware needed for this route /api/users/create
+[[23:58:18.594]] [LOG]    New Incoming create user Request {
+  username: 'testuser3',
+  password: 'cGFzc3dvcmQxMjM0',
+  secretCode: '12345def'
+}
+[[23:58:25.800]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'testuser3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[23:58:25.802]] [INFO]   [0;36mMongoose:[0m secretcodes.findOne({ secretCode: [32m'12345def'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+08/Mar/2020:23:58:25 +0000 "POST /api/users/create"
+[[23:58:25.811]] [LOG]    Finishing
+[[23:58:25.812]] [LOG]    No sessionId used
+[[23:58:25.818]] [LOG]    secretcode used data on existence before creation check {
+  _id: 5e6584de61643546c4b8ad63,
+  secretCode: '12345def',
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-08 23:50:54',
+  updatedOn: '',
+  updatedBy: null,
+  isDeleted: false
+}
+[[23:58:25.840]] [LOG]    App usage logged! - 2020-03-08 23:58:25 {
+  req_route: '/api/users/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '435cf7ce-5a08-4110-99b0-ec42e6903dd0',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '88',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: {
+      username: 'testuser3',
+      password: 'cGFzc3dvcmQxMjM0',
+      secretCode: '12345def'
+    },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 100\r\n' +
+      'ETag: W/"64-LIEa95gC4UAFXZczlWVYahMsXLY"\r\n' +
+      'Date: Sun, 08 Mar 2020 23:58:25 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-08T23:58:25.812Z
+}
+[[00:00:41.882]] [LOG]    Calling app logger
+[[00:00:41.884]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:00:41.888]] [LOG]    current username extracted dagasonhackason
+[[00:00:41.889]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:00:41.900]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:00:41.901]] [LOG]    userData.username_extract dagasonhackason
+[[00:00:41.901]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:00:41.935]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:00:42.032]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:00:42.099]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:00:42.111]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:00:42.120]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:00:42.122]] [LOG]    New Incoming create seat Request { seatNumber: '1' }
+[[00:00:42.133]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:00:42.165]] [LOG]    Seat data on existence check null
+[[00:00:42.235]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e65872a5ff18c381c9f11c0"), seatNumber: [32m'1'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:00:42'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:00:42.573]] [LOG]    From mongo insert seat {
+  _id: 5e65872a5ff18c381c9f11c0,
+  seatNumber: '1',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:00:42',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:00:42 +0000 "POST /api/seats/create"
+[[00:00:42.584]] [LOG]    Finishing
+[[00:00:42.584]] [LOG]    Valid sessionId, logging
+[[00:00:42.623]] [LOG]    App usage logged! - 2020-03-09 00:00:42 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '25c9955e-0a35-4af8-88d8-64087ffef2ca',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '22',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '1' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 307\r\n' +
+      'ETag: W/"133-vPUTEhxraOIZvUPKC43rYm0XWL4"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:00:42 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:00:42.584Z
+}
+[[00:00:57.190]] [LOG]    Calling app logger
+[[00:00:57.190]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:00:57.192]] [LOG]    current username extracted dagasonhackason
+[[00:00:57.192]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:00:57.192]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:00:57.192]] [LOG]    userData.username_extract dagasonhackason
+[[00:00:57.192]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:00:57.193]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:00:57.202]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:00:57.206]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:00:57.207]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:00:57.211]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:00:57.212]] [LOG]    New Incoming create seat Request { seatNumber: '2' }
+[[00:00:57.215]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:00:57.219]] [LOG]    Seat data on existence check null
+[[00:00:57.222]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587395ff18c381c9f11c2"), seatNumber: [32m'2'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:00:57'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:00:57.225]] [LOG]    From mongo insert seat {
+  _id: 5e6587395ff18c381c9f11c2,
+  seatNumber: '2',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:00:57',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:00:57 +0000 "POST /api/seats/create"
+[[00:00:57.226]] [LOG]    Finishing
+[[00:00:57.226]] [LOG]    Valid sessionId, logging
+[[00:00:57.232]] [LOG]    App usage logged! - 2020-03-09 00:00:57 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'b691c839-e491-4304-ab97-3e4b8f202cb9',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '22',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '2' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 307\r\n' +
+      'ETag: W/"133-iHCuYQW+ShwrVVNgWx5+HTG0h5M"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:00:57 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:00:57.228Z
+}
+[[00:01:00.509]] [LOG]    Calling app logger
+[[00:01:00.509]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:00.511]] [LOG]    current username extracted dagasonhackason
+[[00:01:00.511]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:00.512]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:00.512]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:00.512]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:00.513]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:00.522]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:00.526]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:00.527]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:00.531]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:00.532]] [LOG]    New Incoming create seat Request { seatNumber: '2' }
+[[00:01:00.535]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+09/Mar/2020:00:01:00 +0000 "POST /api/seats/create"
+[[00:01:00.541]] [LOG]    Finishing
+[[00:01:00.541]] [LOG]    Valid sessionId, logging
+[[00:01:00.548]] [LOG]    App usage logged! - 2020-03-09 00:01:00 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'a6ae2eb5-4b85-4c4a-bbc2-b5b10b8ce632',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '22',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '2' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 100\r\n' +
+      'ETag: W/"64-CKzJnUR0Wgx3MSQvqnB01DpdFJI"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:00 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:00.541Z
+}
+[[00:01:09.031]] [LOG]    Calling app logger
+[[00:01:09.033]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:09.034]] [LOG]    current username extracted dagasonhackason
+[[00:01:09.034]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:09.035]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:09.035]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:09.035]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:09.036]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:09.045]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:09.048]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:09.049]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:09.051]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:09.052]] [LOG]    New Incoming create seat Request { seatNumber: '3' }
+[[00:01:09.057]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:09.060]] [LOG]    Seat data on existence check null
+[[00:01:09.063]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587455ff18c381c9f11c4"), seatNumber: [32m'3'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:01:09'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:01:09.066]] [LOG]    From mongo insert seat {
+  _id: 5e6587455ff18c381c9f11c4,
+  seatNumber: '3',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:01:09',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:01:09 +0000 "POST /api/seats/create"
+[[00:01:09.067]] [LOG]    Finishing
+[[00:01:09.068]] [LOG]    Valid sessionId, logging
+[[00:01:09.072]] [LOG]    App usage logged! - 2020-03-09 00:01:09 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'cba4819d-c4f0-4040-960a-9cc85584076e',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '22',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '3' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 307\r\n' +
+      'ETag: W/"133-AGEOHB5CXeb6gDhK6GCDGEidigQ"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:09 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:09.068Z
+}
+[[00:01:13.540]] [LOG]    Calling app logger
+[[00:01:13.540]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:13.543]] [LOG]    current username extracted dagasonhackason
+[[00:01:13.543]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:13.544]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:13.544]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:13.544]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:13.545]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:13.553]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:13.556]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:13.558]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:13.561]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:13.562]] [LOG]    New Incoming create seat Request { seatNumber: '4' }
+[[00:01:13.565]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:13.568]] [LOG]    Seat data on existence check null
+[[00:01:13.571]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587495ff18c381c9f11c6"), seatNumber: [32m'4'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:01:13'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:01:13.573]] [LOG]    From mongo insert seat {
+  _id: 5e6587495ff18c381c9f11c6,
+  seatNumber: '4',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:01:13',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:01:13 +0000 "POST /api/seats/create"
+[[00:01:13.576]] [LOG]    Finishing
+[[00:01:13.576]] [LOG]    Valid sessionId, logging
+[[00:01:13.589]] [LOG]    App usage logged! - 2020-03-09 00:01:13 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'a5669605-14a4-402f-b925-652cc215717b',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '22',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '4' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 307\r\n' +
+      'ETag: W/"133-wOsRVUoLzXH0BEmSCqezzVEcjk4"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:13 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:13.576Z
+}
+[[00:01:18.143]] [LOG]    Calling app logger
+[[00:01:18.143]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:18.151]] [LOG]    current username extracted dagasonhackason
+[[00:01:18.151]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:18.151]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:18.151]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:18.151]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:18.152]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:18.160]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:18.163]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:18.165]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:18.168]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:18.169]] [LOG]    New Incoming create seat Request { seatNumber: '5' }
+[[00:01:18.172]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:18.176]] [LOG]    Seat data on existence check null
+[[00:01:18.179]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e65874e5ff18c381c9f11c8"), seatNumber: [32m'5'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:01:18'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:01:18.183]] [LOG]    From mongo insert seat {
+  _id: 5e65874e5ff18c381c9f11c8,
+  seatNumber: '5',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:01:18',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:01:18 +0000 "POST /api/seats/create"
+[[00:01:18.185]] [LOG]    Finishing
+[[00:01:18.185]] [LOG]    Valid sessionId, logging
+[[00:01:18.198]] [LOG]    App usage logged! - 2020-03-09 00:01:18 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'ab34eb23-316c-4470-a8e7-3ca32975821a',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '22',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '5' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 307\r\n' +
+      'ETag: W/"133-1JYalyFUAwiJy8fqc6ct3Xh7fvA"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:18 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:18.185Z
+}
+[[00:01:25.827]] [LOG]    Calling app logger
+[[00:01:25.827]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:25.828]] [LOG]    current username extracted dagasonhackason
+[[00:01:25.828]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:25.829]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:25.829]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:25.829]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:25.829]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:25.837]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:25.840]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:25.842]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:25.845]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:25.846]] [LOG]    New Incoming create seat Request { seatNumber: '6' }
+[[00:01:25.848]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:25.851]] [LOG]    Seat data on existence check null
+[[00:01:25.853]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587555ff18c381c9f11ca"), seatNumber: [32m'6'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:01:25'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:01:25.857]] [LOG]    From mongo insert seat {
+  _id: 5e6587555ff18c381c9f11ca,
+  seatNumber: '6',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:01:25',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:01:25 +0000 "POST /api/seats/create"
+[[00:01:25.858]] [LOG]    Finishing
+[[00:01:25.858]] [LOG]    Valid sessionId, logging
+[[00:01:25.863]] [LOG]    App usage logged! - 2020-03-09 00:01:25 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '930b027e-1847-4df5-88fa-4e73d1a3da8c',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '22',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '6' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 307\r\n' +
+      'ETag: W/"133-W9z11zxb7AJfK9ukq9Pe9OEgU7c"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:25 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:25.858Z
+}
+[[00:01:29.961]] [LOG]    Calling app logger
+[[00:01:29.962]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:29.965]] [LOG]    current username extracted dagasonhackason
+[[00:01:29.965]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:29.965]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:29.965]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:29.965]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:29.967]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:29.976]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:29.979]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:29.981]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:29.984]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:29.985]] [LOG]    New Incoming create seat Request { seatNumber: '7' }
+[[00:01:29.988]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:29.991]] [LOG]    Seat data on existence check null
+[[00:01:29.994]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587595ff18c381c9f11cc"), seatNumber: [32m'7'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:01:29'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:01:30.026]] [LOG]    From mongo insert seat {
+  _id: 5e6587595ff18c381c9f11cc,
+  seatNumber: '7',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:01:29',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:01:30 +0000 "POST /api/seats/create"
+[[00:01:30.028]] [LOG]    Finishing
+[[00:01:30.028]] [LOG]    Valid sessionId, logging
+[[00:01:30.036]] [LOG]    App usage logged! - 2020-03-09 00:01:30 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'a02048e3-0f50-4ff7-8c65-8ab96ddef633',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '22',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '7' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 307\r\n' +
+      'ETag: W/"133-Q4GmY24lB8RU5C7HmkSRkIFXHIM"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:30 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:30.028Z
+}
+[[00:01:35.507]] [LOG]    Calling app logger
+[[00:01:35.508]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:35.515]] [LOG]    current username extracted dagasonhackason
+[[00:01:35.515]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:35.516]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:35.516]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:35.516]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:35.517]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:35.527]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:35.531]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:35.532]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:35.537]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:35.538]] [LOG]    New Incoming create seat Request { seatNumber: '8' }
+[[00:01:35.541]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:35.545]] [LOG]    Seat data on existence check null
+[[00:01:35.548]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e65875f5ff18c381c9f11ce"), seatNumber: [32m'8'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:01:35'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:01:35.552]] [LOG]    From mongo insert seat {
+  _id: 5e65875f5ff18c381c9f11ce,
+  seatNumber: '8',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:01:35',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:01:35 +0000 "POST /api/seats/create"
+[[00:01:35.553]] [LOG]    Finishing
+[[00:01:35.554]] [LOG]    Valid sessionId, logging
+[[00:01:35.569]] [LOG]    App usage logged! - 2020-03-09 00:01:35 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'a7ff1985-7b24-427b-b4cc-618bef368c96',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '22',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '8' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 307\r\n' +
+      'ETag: W/"133-PJ8PWF+VuWaSq1Rdh8o6R/FcGco"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:35 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:35.554Z
+}
+[[00:01:40.843]] [LOG]    Calling app logger
+[[00:01:40.844]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:40.845]] [LOG]    current username extracted dagasonhackason
+[[00:01:40.845]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:40.845]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:40.845]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:40.845]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:40.846]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:40.855]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:40.858]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:40.859]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:40.862]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:40.863]] [LOG]    New Incoming create seat Request { seatNumber: '9' }
+[[00:01:40.866]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:40.869]] [LOG]    Seat data on existence check null
+[[00:01:40.872]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587645ff18c381c9f11d0"), seatNumber: [32m'9'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:01:40'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:01:40.875]] [LOG]    From mongo insert seat {
+  _id: 5e6587645ff18c381c9f11d0,
+  seatNumber: '9',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:01:40',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:01:40 +0000 "POST /api/seats/create"
+[[00:01:40.876]] [LOG]    Finishing
+[[00:01:40.876]] [LOG]    Valid sessionId, logging
+[[00:01:40.881]] [LOG]    App usage logged! - 2020-03-09 00:01:40 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'afe27344-d6a3-4592-8f2b-b37ef3558141',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '22',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '9' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 307\r\n' +
+      'ETag: W/"133-k4JGs5a6AP9j2XfJvgR03Qdo6F8"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:40 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:40.877Z
+}
+[[00:01:46.498]] [LOG]    Calling app logger
+[[00:01:46.498]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:46.500]] [LOG]    current username extracted dagasonhackason
+[[00:01:46.500]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:46.500]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:46.500]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:46.500]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:46.501]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:46.509]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:46.511]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:46.513]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:46.515]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:46.516]] [LOG]    New Incoming create seat Request { seatNumber: '10' }
+[[00:01:46.520]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:46.524]] [LOG]    Seat data on existence check null
+[[00:01:46.526]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e65876a5ff18c381c9f11d2"), seatNumber: [32m'10'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:01:46'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:01:46.528]] [LOG]    From mongo insert seat {
+  _id: 5e65876a5ff18c381c9f11d2,
+  seatNumber: '10',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:01:46',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:01:46 +0000 "POST /api/seats/create"
+[[00:01:46.529]] [LOG]    Finishing
+[[00:01:46.529]] [LOG]    Valid sessionId, logging
+[[00:01:46.539]] [LOG]    App usage logged! - 2020-03-09 00:01:46 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '3fa16269-82cf-4940-b19e-5d33c7032ad8',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '10' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-CYhXhIKdVuKzO2wZcPLZsTPWWws"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:46 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:46.530Z
+}
+[[00:01:51.406]] [LOG]    Calling app logger
+[[00:01:51.406]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:51.407]] [LOG]    current username extracted dagasonhackason
+[[00:01:51.407]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:51.407]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:51.408]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:51.408]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:51.408]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:51.426]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:51.430]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:51.431]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:51.434]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:51.435]] [LOG]    New Incoming create seat Request { seatNumber: '11' }
+[[00:01:51.439]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:51.442]] [LOG]    Seat data on existence check null
+[[00:01:51.445]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e65876f5ff18c381c9f11d4"), seatNumber: [32m'11'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:01:51'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:01:51.469]] [LOG]    From mongo insert seat {
+  _id: 5e65876f5ff18c381c9f11d4,
+  seatNumber: '11',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:01:51',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:01:51 +0000 "POST /api/seats/create"
+[[00:01:51.471]] [LOG]    Finishing
+[[00:01:51.471]] [LOG]    Valid sessionId, logging
+[[00:01:51.514]] [LOG]    App usage logged! - 2020-03-09 00:01:51 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '00fa3aca-0ede-4c9a-8962-d83532376e74',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '11' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-aLgApXk0wsvbPtl8wr+nnAAlKDk"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:51 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:51.471Z
+}
+[[00:01:56.689]] [LOG]    Calling app logger
+[[00:01:56.689]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:01:56.690]] [LOG]    current username extracted dagasonhackason
+[[00:01:56.691]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:56.691]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:01:56.691]] [LOG]    userData.username_extract dagasonhackason
+[[00:01:56.691]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:01:56.692]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:01:56.699]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:56.704]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:01:56.705]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:01:56.707]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:01:56.708]] [LOG]    New Incoming create seat Request { seatNumber: '12' }
+[[00:01:56.711]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:01:56.714]] [LOG]    Seat data on existence check null
+[[00:01:56.716]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587745ff18c381c9f11d6"), seatNumber: [32m'12'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:01:56'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:01:56.783]] [LOG]    From mongo insert seat {
+  _id: 5e6587745ff18c381c9f11d6,
+  seatNumber: '12',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:01:56',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:01:56 +0000 "POST /api/seats/create"
+[[00:01:56.785]] [LOG]    Finishing
+[[00:01:56.785]] [LOG]    Valid sessionId, logging
+[[00:01:56.790]] [LOG]    App usage logged! - 2020-03-09 00:01:56 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'bb13be89-c5aa-4e06-a4b2-388b33598f6b',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '12' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-5uatOpd0+S+3M/fOii35LgZ6vTk"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:01:56 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:01:56.786Z
+}
+[[00:02:02.606]] [LOG]    Calling app logger
+[[00:02:02.606]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:02:02.607]] [LOG]    current username extracted dagasonhackason
+[[00:02:02.607]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:02.608]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:02.608]] [LOG]    userData.username_extract dagasonhackason
+[[00:02:02.608]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:02:02.609]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:02:02.632]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:02.637]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:02:02.638]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:02:02.643]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:02:02.644]] [LOG]    New Incoming create seat Request { seatNumber: '13' }
+[[00:02:02.647]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:02.652]] [LOG]    Seat data on existence check null
+[[00:02:02.654]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e65877a5ff18c381c9f11d8"), seatNumber: [32m'13'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:02:02'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:02:02.657]] [LOG]    From mongo insert seat {
+  _id: 5e65877a5ff18c381c9f11d8,
+  seatNumber: '13',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:02:02',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:02:02 +0000 "POST /api/seats/create"
+[[00:02:02.662]] [LOG]    Finishing
+[[00:02:02.662]] [LOG]    Valid sessionId, logging
+[[00:02:02.681]] [LOG]    App usage logged! - 2020-03-09 00:02:02 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '03337899-a57f-412f-aaed-75f4e8be1472',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '13' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-4fFwyLcldDgBcMjHVGjkKsgihp0"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:02:02 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:02:02.662Z
+}
+[[00:02:14.576]] [LOG]    Calling app logger
+[[00:02:14.576]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:02:14.577]] [LOG]    current username extracted dagasonhackason
+[[00:02:14.577]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:14.577]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:14.577]] [LOG]    userData.username_extract dagasonhackason
+[[00:02:14.577]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:02:14.578]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:02:14.586]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:14.589]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:02:14.589]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:02:14.592]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:02:14.593]] [LOG]    New Incoming create seat Request { seatNumber: '14' }
+[[00:02:14.596]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:14.600]] [LOG]    Seat data on existence check null
+[[00:02:14.602]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587865ff18c381c9f11da"), seatNumber: [32m'14'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:02:14'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:02:14.604]] [LOG]    From mongo insert seat {
+  _id: 5e6587865ff18c381c9f11da,
+  seatNumber: '14',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:02:14',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:02:14 +0000 "POST /api/seats/create"
+[[00:02:14.605]] [LOG]    Finishing
+[[00:02:14.605]] [LOG]    Valid sessionId, logging
+[[00:02:14.609]] [LOG]    App usage logged! - 2020-03-09 00:02:14 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'b12ecb06-de70-4677-95cc-b09eac960813',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '14' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-YmdUBAfNwzjdYk0zEPVcC/a4dBk"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:02:14 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:02:14.605Z
+}
+[[00:02:20.280]] [LOG]    Calling app logger
+[[00:02:20.280]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:02:20.281]] [LOG]    current username extracted dagasonhackason
+[[00:02:20.281]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:20.282]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:20.282]] [LOG]    userData.username_extract dagasonhackason
+[[00:02:20.282]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:02:20.282]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:02:20.298]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:20.303]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:02:20.304]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:02:20.308]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:02:20.309]] [LOG]    New Incoming create seat Request { seatNumber: '15' }
+[[00:02:20.312]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:20.315]] [LOG]    Seat data on existence check null
+[[00:02:20.316]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e65878c5ff18c381c9f11dc"), seatNumber: [32m'15'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:02:20'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:02:20.318]] [LOG]    From mongo insert seat {
+  _id: 5e65878c5ff18c381c9f11dc,
+  seatNumber: '15',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:02:20',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:02:20 +0000 "POST /api/seats/create"
+[[00:02:20.319]] [LOG]    Finishing
+[[00:02:20.319]] [LOG]    Valid sessionId, logging
+[[00:02:20.332]] [LOG]    App usage logged! - 2020-03-09 00:02:20 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'b0c57364-4cdf-4eac-838c-bf127bced5fd',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '15' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-ggEZO/+E63bxHuqzx583tGCulbU"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:02:20 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:02:20.319Z
+}
+[[00:02:25.716]] [LOG]    Calling app logger
+[[00:02:25.716]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:02:25.717]] [LOG]    current username extracted dagasonhackason
+[[00:02:25.717]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:25.718]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:25.718]] [LOG]    userData.username_extract dagasonhackason
+[[00:02:25.718]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:02:25.719]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:02:25.728]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:25.730]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:02:25.731]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:02:25.734]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:02:25.735]] [LOG]    New Incoming create seat Request { seatNumber: '16' }
+[[00:02:25.738]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:25.742]] [LOG]    Seat data on existence check null
+[[00:02:25.745]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587915ff18c381c9f11de"), seatNumber: [32m'16'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:02:25'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:02:25.748]] [LOG]    From mongo insert seat {
+  _id: 5e6587915ff18c381c9f11de,
+  seatNumber: '16',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:02:25',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:02:25 +0000 "POST /api/seats/create"
+[[00:02:25.750]] [LOG]    Finishing
+[[00:02:25.750]] [LOG]    Valid sessionId, logging
+[[00:02:25.764]] [LOG]    App usage logged! - 2020-03-09 00:02:25 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '86313490-f1f8-43a5-bef5-ee77cd196f5e',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '16' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-qmFQa+VGSbEPefvJ8v2FZsYPoTk"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:02:25 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:02:25.750Z
+}
+[[00:02:33.168]] [LOG]    Calling app logger
+[[00:02:33.168]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:02:33.171]] [LOG]    current username extracted dagasonhackason
+[[00:02:33.171]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:33.172]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:33.172]] [LOG]    userData.username_extract dagasonhackason
+[[00:02:33.172]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:02:33.173]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:02:33.201]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:33.206]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:02:33.207]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:02:33.216]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:02:33.218]] [LOG]    New Incoming create seat Request { seatNumber: '17' }
+[[00:02:33.221]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:33.224]] [LOG]    Seat data on existence check null
+[[00:02:33.235]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587995ff18c381c9f11e0"), seatNumber: [32m'17'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:02:33'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:02:33.248]] [LOG]    From mongo insert seat {
+  _id: 5e6587995ff18c381c9f11e0,
+  seatNumber: '17',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:02:33',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:02:33 +0000 "POST /api/seats/create"
+[[00:02:33.261]] [LOG]    Finishing
+[[00:02:33.263]] [LOG]    Valid sessionId, logging
+[[00:02:33.273]] [LOG]    App usage logged! - 2020-03-09 00:02:33 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'c2448afc-a4b2-429a-b4a6-4c6ee7be6fb0',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '17' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-XrvavdH9LkZFaxqDwpnWPpeYdu0"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:02:33 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:02:33.263Z
+}
+[[00:02:40.887]] [LOG]    Calling app logger
+[[00:02:40.887]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:02:40.888]] [LOG]    current username extracted dagasonhackason
+[[00:02:40.888]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:40.889]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:40.889]] [LOG]    userData.username_extract dagasonhackason
+[[00:02:40.889]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:02:40.890]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:02:40.927]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:40.945]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:02:40.946]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:02:40.959]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:02:40.971]] [LOG]    New Incoming create seat Request { seatNumber: '18' }
+[[00:02:40.981]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:41.016]] [LOG]    Seat data on existence check null
+[[00:02:41.019]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587a15ff18c381c9f11e2"), seatNumber: [32m'18'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:02:40'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:02:41.026]] [LOG]    From mongo insert seat {
+  _id: 5e6587a15ff18c381c9f11e2,
+  seatNumber: '18',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:02:40',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:02:41 +0000 "POST /api/seats/create"
+[[00:02:41.032]] [LOG]    Finishing
+[[00:02:41.032]] [LOG]    Valid sessionId, logging
+[[00:02:41.041]] [LOG]    App usage logged! - 2020-03-09 00:02:41 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '08890adb-e431-4fa1-9b30-e79aec62e80f',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '18' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-l8FgnHmopznueBqzaRO1xO4xKQI"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:02:41 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:02:41.033Z
+}
+[[00:02:47.521]] [LOG]    Calling app logger
+[[00:02:47.521]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:02:47.522]] [LOG]    current username extracted dagasonhackason
+[[00:02:47.523]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:47.523]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:47.523]] [LOG]    userData.username_extract dagasonhackason
+[[00:02:47.523]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:02:47.524]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:02:47.533]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:47.536]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:02:47.538]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:02:47.540]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:02:47.542]] [LOG]    New Incoming create seat Request { seatNumber: '19' }
+[[00:02:47.545]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:47.547]] [LOG]    Seat data on existence check null
+[[00:02:47.550]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587a75ff18c381c9f11e4"), seatNumber: [32m'19'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:02:47'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:02:47.555]] [LOG]    From mongo insert seat {
+  _id: 5e6587a75ff18c381c9f11e4,
+  seatNumber: '19',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:02:47',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:02:47 +0000 "POST /api/seats/create"
+[[00:02:47.557]] [LOG]    Finishing
+[[00:02:47.557]] [LOG]    Valid sessionId, logging
+[[00:02:47.563]] [LOG]    App usage logged! - 2020-03-09 00:02:47 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': '15d1597b-1336-448c-8a26-8dcc0a98ebf9',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '19' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-ieyx5l+Y+pFe5UmULruJRYrNyko"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:02:47 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:02:47.557Z
+}
+[[00:02:53.333]] [LOG]    Calling app logger
+[[00:02:53.333]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/create
+[[00:02:53.334]] [LOG]    current username extracted dagasonhackason
+[[00:02:53.334]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:53.335]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[00:02:53.335]] [LOG]    userData.username_extract dagasonhackason
+[[00:02:53.335]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: 'dagasonhackason', iat: 1583711244, exp: 1584920844 }
+[[00:02:53.335]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[00:02:53.343]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:53.345]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: 'dagasonhackason',
+  password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+  passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+  createdOn: '2020-03-08 23:19:10',
+  updatedOn: '',
+  updatedBy: null,
+  lastLoginOn: '2020-03-08 23:47:20',
+  isDeleted: false
+}
+[[00:02:53.346]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[00:02:53.348]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: '2020-03-08 23:47:20',
+  loggedOutOn: '',
+  loggedOutBy: null,
+  sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  isExpired: false,
+  expiresOn: '2020-03-22 23:47:24'
+}
+[[00:02:53.349]] [LOG]    New Incoming create seat Request { seatNumber: '20' }
+[[00:02:53.351]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:02:53.354]] [LOG]    Seat data on existence check null
+[[00:02:53.358]] [INFO]   [0;36mMongoose:[0m seats.insertOne({ _id: ObjectId("5e6587ad5ff18c381c9f11e6"), seatNumber: [32m'20'[39m, status: [33mfalse[39m, createdBy: ObjectId("5e657d7500c28d427c171899"), createdOn: [32m'2020-03-09 00:02:53'[39m, updatedOn: [32m''[39m, updatedBy: [1mnull[22m, isActivated: [33mtrue[39m, isDeleted: [33mfalse[39m}, { session: [1mnull[22m })
+[[00:02:53.361]] [LOG]    From mongo insert seat {
+  _id: 5e6587ad5ff18c381c9f11e6,
+  seatNumber: '20',
+  status: false,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: '2020-03-09 00:02:53',
+  updatedOn: '',
+  updatedBy: null,
+  isActivated: true,
+  isDeleted: false
+}
+09/Mar/2020:00:02:53 +0000 "POST /api/seats/create"
+[[00:02:53.362]] [LOG]    Finishing
+[[00:02:53.363]] [LOG]    Valid sessionId, logging
+[[00:02:53.390]] [LOG]    App usage logged! - 2020-03-09 00:02:53 {
+  req_sessionId_extract: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+  req_username_extract: 'dagasonhackason',
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: '2020-03-08 23:47:20',
+    loggedOutOn: '',
+    loggedOutBy: null,
+    sessionId: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+    isExpired: false,
+    expiresOn: '2020-03-22 23:47:24'
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: 'dagasonhackason',
+    password: '76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5',
+    passwordSalt: 'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7',
+    createdOn: '2020-03-08 23:19:10',
+    updatedOn: '',
+    updatedBy: null,
+    lastLoginOn: '2020-03-08 23:47:20',
+    isDeleted: false
+  },
+  req_route: '/api/seats/create',
+  req_ip_address: '::1',
+  request_payload: {
+    headers: {
+      'content-type': 'application/json',
+      sessionid: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc',
+      username: 'dagasonhackason',
+      'user-agent': 'PostmanRuntime/7.22.0',
+      accept: '*/*',
+      'cache-control': 'no-cache',
+      'postman-token': 'b5f5d3d5-a6dd-48c6-ac91-a99b58d7debf',
+      host: 'localhost:3000',
+      'accept-encoding': 'gzip, deflate, br',
+      'content-length': '23',
+      connection: 'keep-alive'
+    },
+    params: {},
+    body: { seatNumber: '20' },
+    query: {}
+  },
+  res_status_code: 200,
+  res_status_message: 'OK',
+  response_payload: {
+    headers: 'HTTP/1.1 200 OK\r\n' +
+      'X-Powered-By: Express\r\n' +
+      'Access-Control-Allow-Origin: *\r\n' +
+      'Content-Type: application/json; charset=utf-8\r\n' +
+      'Content-Length: 308\r\n' +
+      'ETag: W/"134-zhie8aS9VuVWDo2bVi8i59gLU9M"\r\n' +
+      'Date: Mon, 09 Mar 2020 00:02:53 GMT\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    body: undefined
+  },
+  created_at: 2020-03-09T00:02:53.363Z
+}

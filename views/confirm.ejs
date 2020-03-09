@@ -12,12 +12,16 @@
     <title>Online Seat Booking</title>
 
     <!--Font Awesome-->
-    <link href="/stylesheets/all.css" rel="stylesheet">
+    <link href="/stylesheets/all.css" rel="stylesheet" />
     <!-- Bootstrap Core CSS -->
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+
+	<link href="/stylesheets/jquery-ui.css" rel="stylesheet" /> 
+
+	<link rel="stylesheet" type="text/css" media="screen,projection" href="/stylesheets/fallr.css" />
 
     <!-- Custom CSS -->
-    <link href="/stylesheets/custom.css" rel="stylesheet">
+    <link href="/stylesheets/custom.css" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,8 +33,7 @@
 </head>
 
 <body>
-
-    
+    <!-- <a href="#fallr-id" style="display: none;" ></a> -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top navbar" role="navigation">
@@ -70,12 +73,12 @@
         <div class="text-center" style="display:block; margin-left:auto;margin-right:auto; margin-top:3%; width:40%;">
             <form>
                 <div class="form-group">
-                    <label for="exampleInputText1">Name</label>
-                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="TextHelp" placeholder="Please Enter Your Full name">
+                    <label for="bookedByNameField">Name</label>
+                    <input type="text" class="form-control" id="bookedByNameField" aria-describedby="TextHelp" placeholder="Please Enter Your Full name">
                     <small id="TextHelp" class="form-text text-muted">Bookers name.</small>
                 </div>
                 
-                <button type="submit" class="btn btn-primary" style="margin-top:3%;">Confirm</button>
+                <a id="bookingConfirmBtn" href="#" class="btn btn-primary" onClick="let bookedByNameFieldValue = $('#bookedByNameField').val(); let argData = {seatId: '<%= _id %>', bookedByName: bookedByNameFieldValue}; createNewBooking(argData);" style="margin-top:3%;">Confirm</a>
             </form>
         </div>
     </div>
@@ -96,6 +99,10 @@
     <!-- jQuery -->
     <script src="/javascripts/jquery.js"></script>
 
+    <script src="/javascripts/jquery-ui.js" crossorigin="anonymous"></script>
+
+    <script src="/javascripts/jquery-easing.js" crossorigin="anonymous"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="/javascripts/bootstrap.min.js"></script>
 
@@ -108,8 +115,23 @@
 	<script src="/javascripts/moment.js"></script>
 
     <script type="text/javascript">
-        window.isConfirmPage = function isConfirmPage(){
-            return true;
+        if (typeof isConfirmPage == "undefined") {
+            var isConfirmPage = function (){
+                return true;
+            };
+        }
+
+        if (typeof disableConfirmButton == "undefined") {
+            var disableConfirmButton = function () {
+                let shouldConfirmButtonDisable = '<%= status %>';
+
+                if((/true/i).test(shouldConfirmButtonDisable.toLocaleLowerCase())) {
+                    $(document).ready(function() {
+                        $('#bookingConfirmBtn').attr("disabled", true);
+                    });
+                }   
+            };
+            disableConfirmButton();
         }
     </script>
 

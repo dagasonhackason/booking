@@ -12,12 +12,16 @@
     <title>Login</title>
 
     <!--Font Awesome-->
-    <link href="/stylesheets/all.css" rel="stylesheet">
+    <link href="/stylesheets/all.css" rel="stylesheet" />
     <!-- Bootstrap Core CSS -->
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+
+	<link href="/stylesheets/jquery-ui.css" rel="stylesheet" />
+
+	<link rel="stylesheet" type="text/css" media="screen,projection" href="/stylesheets/fallr.css" />
 
     <!-- Custom CSS -->
-    <link href="/stylesheets/custom.css" rel="stylesheet">
+    <link href="/stylesheets/custom.css" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,9 +33,6 @@
 </head>
 
 <body>
-
-    
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top navbar" role="navigation">
         <div class="container">
@@ -63,20 +64,19 @@
     <p class="h4 mb-4">Administrator Registration</p>
 
     <!-- Email -->
-    <input style="margin-bottom: 2%;" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Username">
+    <input style="margin-bottom: 2%;" type="email" id="defaultLoginFormUsername" class="form-control mb-4" placeholder="Username">
 
     <!-- Password -->
     <input style="margin-bottom: 2%;" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
 
-    <input style="margin-bottom: 2%;" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Secret Code">
+    <input style="margin-bottom: 2%;" type="password" id="defaultLoginFormSecretCode" class="form-control mb-4" placeholder="Secret Code">
 
     <div class="d-flex justify-content-around">
         
     </div>
 
     <!-- Sign in button -->
-    <button class="btn btn-info btn-block my-4" type="submit">Register</button>
-
+    <a id="registerBtn" href="#" class="btn btn-info btn-block my-4" onClick="let defaultLoginFormUsernameValue = $('#defaultLoginFormUsername').val(); let defaultLoginFormPasswordValue = $('#defaultLoginFormPassword').val(); let defaultLoginFormSecretCodeValue = $('#defaultLoginFormSecretCode').val(); let argData = {username: defaultLoginFormUsernameValue, password: btoa(defaultLoginFormPasswordValue), secretCode: defaultLoginFormSecretCodeValue}; createNewUser(argData);" style="margin-top:3%;">Register</a>
     <!-- Register -->
     <p>
         <a href="/login">Login</a>
@@ -91,6 +91,10 @@
         <!-- jQuery -->
         <script src="/javascripts/jquery.js"></script>
 
+        <script src="/javascripts/jquery-ui.js" crossorigin="anonymous"></script>
+    
+        <script src="/javascripts/jquery-easing.js" crossorigin="anonymous"></script>
+
         <!-- Bootstrap Core JavaScript -->
         <script src="/javascripts/bootstrap.min.js"></script>
 
@@ -103,8 +107,10 @@
         <script src="/javascripts/moment.js"></script>
     
         <script type="text/javascript">
-            window.isShowTicketPage = function isShowTicketPage(){
-                return true;
+            if (typeof isRegisterPage == "undefined") {
+                var isRegisterPage = function (){
+                    return true;
+                };
             }
         </script>
     
