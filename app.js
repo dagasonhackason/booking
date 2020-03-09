@@ -1,3 +1,9 @@
+/*This file is the main server file for the application. It call's all the models utilized by the app. 
+Express is the framework.
+Fs is used for working with the filesystem
+Mongoose is the object relational mapper, helping nodejs to connect to the mongodb database
+
+*/
 
 require('console-stamp')(console, '[HH:MM:ss.l]');
 const createError = require('http-errors');
@@ -12,6 +18,14 @@ const bodyParser = require('body-parser');
 const validator = require('express-validator');
 const moment = require("moment");
 
+
+/*
+These define the routes that appear in the URLs
+For example, index router handles /,
+users router handles /users,
+confirm router handles /confirm
+etc
+*/
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 let loginRouter = require("./routes/login");
@@ -23,6 +37,7 @@ let bookingsRouter = require("./routes/bookings");
 let showTicketRouter = require("./routes/showticket");
 
 ///////// API ROUTES /////////
+/*More routes. */
 let apiSeatsRouter = require("./routes/apiSeats");
 let apiSecretCodesRouter = require("./routes/apiSecretCodes");
 let apiUsersRouter = require("./routes/apiUsers")
@@ -30,6 +45,7 @@ let apiBookingsRouter = require("./routes/apiBookings");
 let apiVersionRouter = require("./routes/apiVersion");
 
 //load all mongoose models
+//This code uses the fs model to load all models for the database
 fs.readdirSync(__dirname + "/models").forEach((filename)=>{
   if(~filename.indexOf(".js")){
     require(__dirname+"/models/"+filename)
