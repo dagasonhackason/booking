@@ -240,3 +240,6 @@
 [[02:51:24.959]] [ERROR]  (node:16340) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
 [[02:51:24.961]] [ERROR]  (node:16340) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
 [[02:51:25.019]] [ERROR]  (node:16340) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[[03:00:02.619]] [ERROR]  (node:17144) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[03:00:02.622]] [ERROR]  (node:17144) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[03:00:02.692]] [ERROR]  (node:17144) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.

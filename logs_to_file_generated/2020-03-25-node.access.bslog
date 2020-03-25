@@ -23212,3 +23212,8 @@
   },
   created_at: [35m2020-03-25T02:52:30.623Z[39m
 }
+[[03:00:02.669]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[03:00:02.685]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ seatNumber: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[03:00:02.686]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCode: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[03:00:02.687]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ sessionId: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[03:00:02.689]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ secretCode: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })

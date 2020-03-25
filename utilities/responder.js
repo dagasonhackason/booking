@@ -46,12 +46,12 @@ module.exports = {
     },
 
     responderException: class responderException extends Error {  
-        responseMessage = "";
-        data = null; 
-        responseCode = "211"; 
-        httpStatus = 200;
+        // responseMessage = "";
+        // data = null; 
+        // responseCode = "211"; 
+        // httpStatus = 200;
 
-        constructor (responseMessage, data, responseCode, httpStatus=200) {
+        constructor (responseMessage = "", data = null, responseCode = "211", httpStatus=200) {
             super(responseMessage);
 
             this.responseMessage = responseMessage;
