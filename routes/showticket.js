@@ -25,7 +25,7 @@ router.get("/:id", (req,res,next) => {
         if (!getError && dataGot) {
             console.log("From mongo get one booking using showticket view", dataGot);
 
-            mg.disconnect();
+            mg.disconnect(); 
         
             res.render("showticket.ejs", {
                 _id: dataGot._id, 
@@ -46,10 +46,7 @@ router.get("/:id", (req,res,next) => {
             var error = {};
             error.status = 500
 
-            res.render("error.ejs", {
-                message: "Unknown error show acquiring showticket view data!",
-                status: error.status
-            });
+            res.render("error.ejs");
 
             return;
         }

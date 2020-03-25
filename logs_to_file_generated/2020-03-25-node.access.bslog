@@ -23217,3 +23217,1515 @@
 [[03:00:02.686]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCode: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
 [[03:00:02.687]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ sessionId: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
 [[03:00:02.689]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ secretCode: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[03:38:27.076]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[03:38:27.219]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ seatNumber: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[03:38:27.221]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCode: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[03:38:27.223]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ sessionId: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[03:38:27.225]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ secretCode: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[03:52:01.535]] [LOG]    Calling app logger
+[[03:52:01.536]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[03:52:01.536]] [LOG]    No middleware needed for this route /api/seats
+[[03:52:01.537]] [LOG]    new get all seats request {}
+[[03:52:01.546]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m }, { projection: {} })
+[[03:52:01.590]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e7a923d2952d91f786f1a7e,
+    seatNumber: [32m'1'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a80,
+    seatNumber: [32m'2'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a82,
+    seatNumber: [32m'3'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a84,
+    seatNumber: [32m'4'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a86,
+    seatNumber: [32m'5'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a88,
+    seatNumber: [32m'6'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a8a,
+    seatNumber: [32m'7'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a8c,
+    seatNumber: [32m'8'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a8e,
+    seatNumber: [32m'9'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a90,
+    seatNumber: [32m'10'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a92,
+    seatNumber: [32m'11'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a94,
+    seatNumber: [32m'12'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a96,
+    seatNumber: [32m'13'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a98,
+    seatNumber: [32m'14'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a9a,
+    seatNumber: [32m'15'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a9c,
+    seatNumber: [32m'16'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a9e,
+    seatNumber: [32m'17'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa0,
+    seatNumber: [32m'18'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa2,
+    seatNumber: [32m'19'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa4,
+    seatNumber: [32m'20'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa6,
+    seatNumber: [32m'21'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa8,
+    seatNumber: [32m'22'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aaa,
+    seatNumber: [32m'23'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aac,
+    seatNumber: [32m'24'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aae,
+    seatNumber: [32m'25'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1ab0,
+    seatNumber: [32m'26'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1ab2,
+    seatNumber: [32m'27'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6449521e343fca44df0,
+    seatNumber: [32m'28'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:47:31'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6449521e343fca44df2,
+    seatNumber: [32m'29'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:47:31'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6449521e343fca44df4,
+    seatNumber: [32m'30'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:47:31'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6fc6bb04a25fc90adc2,
+    seatNumber: [32m'31'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:50:36'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6fc6bb04a25fc90adc4,
+    seatNumber: [32m'32'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:50:36'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6fc6bb04a25fc90adc6,
+    seatNumber: [32m'33'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:50:36'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac7348b1fd23fd4eccdb1,
+    seatNumber: [32m'34'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac7348b1fd23fd4eccdb3,
+    seatNumber: [32m'35'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  }
+]
+25/Mar/2020:03:52:01 +0000 "GET /api/seats"
+[[03:52:01.608]] [LOG]    Finishing
+[[03:52:01.608]] [LOG]    No sessionId used
+[[03:52:01.635]] [LOG]    App usage logged! - 2020-03-25 03:52:01 {
+  req_route: [32m'/api/seats'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'sec-fetch-dest'[39m: [32m'empty'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'[39m,
+      origin: [32m'http://159.69.36.51:3000'[39m,
+      [32m'sec-fetch-site'[39m: [32m'cross-site'[39m,
+      [32m'sec-fetch-mode'[39m: [32m'cors'[39m,
+      referer: [32m'http://159.69.36.51:3000/'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate, br'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.9'[39m,
+      [32m'if-none-match'[39m: [32m'W/"1ad8-LYFtdnaEf++9PsshL27NxlLOqD4"'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 8799\r\n'[39m +
+      [32m'ETag: W/"225f-x8LlZjxILiHxjSrYVUwalYo/89Y"\r\n'[39m +
+      [32m'Date: Wed, 25 Mar 2020 03:52:01 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-25T03:52:01.608Z[39m
+}
+[[04:24:51.830]] [LOG]    Calling app logger
+[[04:24:51.831]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[04:24:51.831]] [LOG]    No middleware needed for this route /api/seats
+[[04:24:51.831]] [LOG]    new get all seats request {}
+[[04:24:51.879]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m }, { projection: {} })
+[[04:24:51.890]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e7a923d2952d91f786f1a7e,
+    seatNumber: [32m'1'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a80,
+    seatNumber: [32m'2'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a82,
+    seatNumber: [32m'3'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a84,
+    seatNumber: [32m'4'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a86,
+    seatNumber: [32m'5'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a88,
+    seatNumber: [32m'6'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a8a,
+    seatNumber: [32m'7'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a8c,
+    seatNumber: [32m'8'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a8e,
+    seatNumber: [32m'9'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a90,
+    seatNumber: [32m'10'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a92,
+    seatNumber: [32m'11'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a94,
+    seatNumber: [32m'12'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a96,
+    seatNumber: [32m'13'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a98,
+    seatNumber: [32m'14'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a9a,
+    seatNumber: [32m'15'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a9c,
+    seatNumber: [32m'16'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a9e,
+    seatNumber: [32m'17'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa0,
+    seatNumber: [32m'18'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa2,
+    seatNumber: [32m'19'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa4,
+    seatNumber: [32m'20'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa6,
+    seatNumber: [32m'21'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa8,
+    seatNumber: [32m'22'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aaa,
+    seatNumber: [32m'23'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aac,
+    seatNumber: [32m'24'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aae,
+    seatNumber: [32m'25'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1ab0,
+    seatNumber: [32m'26'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1ab2,
+    seatNumber: [32m'27'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6449521e343fca44df0,
+    seatNumber: [32m'28'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:47:31'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6449521e343fca44df2,
+    seatNumber: [32m'29'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:47:31'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6449521e343fca44df4,
+    seatNumber: [32m'30'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:47:31'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6fc6bb04a25fc90adc2,
+    seatNumber: [32m'31'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:50:36'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6fc6bb04a25fc90adc4,
+    seatNumber: [32m'32'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:50:36'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6fc6bb04a25fc90adc6,
+    seatNumber: [32m'33'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:50:36'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac7348b1fd23fd4eccdb1,
+    seatNumber: [32m'34'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac7348b1fd23fd4eccdb3,
+    seatNumber: [32m'35'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  }
+]
+25/Mar/2020:04:24:51 +0000 "GET /api/seats"
+[[04:24:51.916]] [LOG]    Finishing
+[[04:24:51.916]] [LOG]    No sessionId used
+[[04:24:51.971]] [LOG]    App usage logged! - 2020-03-25 04:24:51 {
+  req_route: [32m'/api/seats'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      pragma: [32m'no-cache'[39m,
+      [32m'cache-control'[39m: [32m'no-cache'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'sec-fetch-dest'[39m: [32m'empty'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'[39m,
+      origin: [32m'http://159.69.36.51:3000'[39m,
+      [32m'sec-fetch-site'[39m: [32m'cross-site'[39m,
+      [32m'sec-fetch-mode'[39m: [32m'cors'[39m,
+      referer: [32m'http://159.69.36.51:3000/'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate, br'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.9'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 8799\r\n'[39m +
+      [32m'ETag: W/"225f-x8LlZjxILiHxjSrYVUwalYo/89Y"\r\n'[39m +
+      [32m'Date: Wed, 25 Mar 2020 04:24:51 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-25T04:24:51.916Z[39m
+}
+25/Mar/2020:04:25:12 +0000 "OPTIONS /api/bookings/create"
+[[04:25:12.817]] [LOG]    Calling app logger
+[[04:25:12.822]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[04:25:12.822]] [LOG]    No middleware needed for this route /api/bookings/create
+[[04:25:12.823]] [LOG]    New Incoming create booking Request {
+  seatId: [32m'5e7a923d2952d91f786f1a8e'[39m,
+  bookedByName: [32m'Dagason Hackason'[39m
+}
+[[04:25:12.824]] [LOG]    selecting seatID from seats 5e7a923d2952d91f786f1a8e
+[[04:25:12.834]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e7a923d2952d91f786f1a8e"), status: [33mfalse[39m, isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m}, { projection: { __v: [33m0[39m } })
+[[04:25:12.884]] [LOG]    From mongo isn't seated booked already! {
+  _id: 5e7a923d2952d91f786f1a8e,
+  seatNumber: [32m'9'[39m,
+  status: [33mfalse[39m,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: [32m'2020-03-24 23:05:32'[39m,
+  updatedOn: [32m'2020-03-25 02:52:26'[39m,
+  updatedBy: 5e657d7500c28d427c171899,
+  isActivated: [33mtrue[39m,
+  isDeleted: [33mfalse[39m
+}
+[[04:25:12.928]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ _id: ObjectId("5e7a923d2952d91f786f1a8e"), isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { updatedOn: [32m'2020-03-25 04:25:12'[39m, status: [33mtrue[39m } }, { upsert: [33mtrue[39m })
+[[04:25:12.934]] [INFO]   [0;36mMongoose:[0m bookings.insertOne({ _id: ObjectId("5e7add28e34fb43db41ba151"), seatId: ObjectId("5e7a923d2952d91f786f1a8e"), bookedByName: [32m'Dagason Hackason'[39m, ticketCode: [32m'6b98abba'[39m, bookedOn: [32m'2020-03-25 04:25:12'[39m, isTicketCodeUsed: [33mfalse[39m, ticketCodeUsedOn: [32m''[39m}, { session: [1mnull[22m })
+[[04:25:12.938]] [LOG]    updated seatId 5e7a923d2952d91f786f1a8e status to booked BOOKED by Dagason Hackason { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+[[04:25:12.980]] [LOG]    for create insert booking {
+  _id: 5e7add28e34fb43db41ba151,
+  seatId: 5e7a923d2952d91f786f1a8e,
+  bookedByName: [32m'Dagason Hackason'[39m,
+  ticketCode: [32m'6b98abba'[39m,
+  bookedOn: [32m'2020-03-25 04:25:12'[39m,
+  isTicketCodeUsed: [33mfalse[39m,
+  ticketCodeUsedOn: [32m''[39m
+}
+25/Mar/2020:04:25:12 +0000 "POST /api/bookings/create"
+[[04:25:12.983]] [LOG]    Finishing
+[[04:25:12.983]] [LOG]    No sessionId used
+[[04:25:12.990]] [LOG]    App usage logged! - 2020-03-25 04:25:12 {
+  req_route: [32m'/api/bookings/create'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      [32m'content-length'[39m: [32m'71'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'sec-fetch-dest'[39m: [32m'empty'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=UTF-8'[39m,
+      origin: [32m'http://159.69.36.51:3000'[39m,
+      [32m'sec-fetch-site'[39m: [32m'cross-site'[39m,
+      [32m'sec-fetch-mode'[39m: [32m'cors'[39m,
+      referer: [32m'http://159.69.36.51:3000/confirm/5e7a923d2952d91f786f1a8e'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate, br'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.9'[39m
+    },
+    params: {},
+    body: { bookedByName: [32m'Dagason Hackason'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 310\r\n'[39m +
+      [32m'ETag: W/"136-sYegwINJCi4UWJc/sctb4b2AZ+E"\r\n'[39m +
+      [32m'Date: Wed, 25 Mar 2020 04:25:12 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-25T04:25:12.984Z[39m
+}
+25/Mar/2020:04:25:38 +0000 "OPTIONS /api/bookings/create"
+[[04:25:38.021]] [LOG]    Calling app logger
+[[04:25:38.023]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[04:25:38.023]] [LOG]    No middleware needed for this route /api/bookings/create
+[[04:25:38.024]] [LOG]    New Incoming create booking Request {
+  seatId: [32m'5e7a923d2952d91f786f1a8e'[39m,
+  bookedByName: [32m'Dagason Hackason'[39m
+}
+[[04:25:38.025]] [LOG]    selecting seatID from seats 5e7a923d2952d91f786f1a8e
+[[04:25:38.043]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e7a923d2952d91f786f1a8e"), status: [33mfalse[39m, isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m}, { projection: { __v: [33m0[39m } })
+25/Mar/2020:04:25:38 +0000 "POST /api/bookings/create"
+[[04:25:38.050]] [LOG]    Finishing
+[[04:25:38.051]] [LOG]    No sessionId used
+[[04:25:38.066]] [LOG]    App usage logged! - 2020-03-25 04:25:38 {
+  req_route: [32m'/api/bookings/create'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      [32m'content-length'[39m: [32m'71'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'sec-fetch-dest'[39m: [32m'empty'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=UTF-8'[39m,
+      origin: [32m'http://159.69.36.51:3000'[39m,
+      [32m'sec-fetch-site'[39m: [32m'cross-site'[39m,
+      [32m'sec-fetch-mode'[39m: [32m'cors'[39m,
+      referer: [32m'http://159.69.36.51:3000/confirm/5e7a923d2952d91f786f1a8e'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate, br'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.9'[39m
+    },
+    params: {},
+    body: {
+      seatId: [32m'5e7a923d2952d91f786f1a8e'[39m,
+      bookedByName: [32m'Dagason Hackason'[39m
+    },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 114\r\n'[39m +
+      [32m'ETag: W/"72-x5CHjXLt4iaf8AxErTe6aVDnJfc"\r\n'[39m +
+      [32m'Date: Wed, 25 Mar 2020 04:25:38 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-25T04:25:38.051Z[39m
+}
+[[04:25:50.438]] [LOG]    Calling app logger
+[[04:25:50.438]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[04:25:50.438]] [LOG]    No middleware needed for this route /api/seats
+[[04:25:50.438]] [LOG]    new get all seats request {}
+[[04:25:50.453]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m }, { projection: {} })
+[[04:25:50.470]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e7a923d2952d91f786f1a7e,
+    seatNumber: [32m'1'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a80,
+    seatNumber: [32m'2'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a82,
+    seatNumber: [32m'3'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a84,
+    seatNumber: [32m'4'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a86,
+    seatNumber: [32m'5'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a88,
+    seatNumber: [32m'6'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a8a,
+    seatNumber: [32m'7'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a8c,
+    seatNumber: [32m'8'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a8e,
+    seatNumber: [32m'9'[39m,
+    status: [33mtrue[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 04:25:12'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a90,
+    seatNumber: [32m'10'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a92,
+    seatNumber: [32m'11'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a94,
+    seatNumber: [32m'12'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a96,
+    seatNumber: [32m'13'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a98,
+    seatNumber: [32m'14'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a9a,
+    seatNumber: [32m'15'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a9c,
+    seatNumber: [32m'16'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1a9e,
+    seatNumber: [32m'17'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa0,
+    seatNumber: [32m'18'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa2,
+    seatNumber: [32m'19'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa4,
+    seatNumber: [32m'20'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa6,
+    seatNumber: [32m'21'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aa8,
+    seatNumber: [32m'22'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:52:26'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aaa,
+    seatNumber: [32m'23'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aac,
+    seatNumber: [32m'24'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1aae,
+    seatNumber: [32m'25'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1ab0,
+    seatNumber: [32m'26'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7a923d2952d91f786f1ab2,
+    seatNumber: [32m'27'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-24 23:05:32'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6449521e343fca44df0,
+    seatNumber: [32m'28'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:47:31'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6449521e343fca44df2,
+    seatNumber: [32m'29'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:47:31'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6449521e343fca44df4,
+    seatNumber: [32m'30'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:47:31'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6fc6bb04a25fc90adc2,
+    seatNumber: [32m'31'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:50:36'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6fc6bb04a25fc90adc4,
+    seatNumber: [32m'32'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:50:36'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac6fc6bb04a25fc90adc6,
+    seatNumber: [32m'33'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:50:36'[39m,
+    updatedOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac7348b1fd23fd4eccdb1,
+    seatNumber: [32m'34'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e7ac7348b1fd23fd4eccdb3,
+    seatNumber: [32m'35'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-25 02:51:32'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  }
+]
+25/Mar/2020:04:25:50 +0000 "GET /api/seats"
+[[04:25:50.484]] [LOG]    Finishing
+[[04:25:50.485]] [LOG]    No sessionId used
+[[04:25:50.489]] [LOG]    App usage logged! - 2020-03-25 04:25:50 {
+  req_route: [32m'/api/seats'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'sec-fetch-dest'[39m: [32m'empty'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'[39m,
+      origin: [32m'http://159.69.36.51:3000'[39m,
+      [32m'sec-fetch-site'[39m: [32m'cross-site'[39m,
+      [32m'sec-fetch-mode'[39m: [32m'cors'[39m,
+      referer: [32m'http://159.69.36.51:3000/'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate, br'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.9'[39m,
+      [32m'if-none-match'[39m: [32m'W/"225f-x8LlZjxILiHxjSrYVUwalYo/89Y"'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 8798\r\n'[39m +
+      [32m'ETag: W/"225e-bTJGtOpfc0oh2nYjl5ED9FtW+Ew"\r\n'[39m +
+      [32m'Date: Wed, 25 Mar 2020 04:25:50 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-25T04:25:50.486Z[39m
+}
+25/Mar/2020:04:26:01 +0000 "OPTIONS /api/bookings/create"
+[[04:26:01.114]] [LOG]    Calling app logger
+[[04:26:01.114]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[04:26:01.114]] [LOG]    No middleware needed for this route /api/bookings/create
+[[04:26:01.114]] [LOG]    New Incoming create booking Request { seatId: [32m'5e7a923d2952d91f786f1a92'[39m, bookedByName: [32m'Hamzah Bawah'[39m }
+[[04:26:01.116]] [LOG]    selecting seatID from seats 5e7a923d2952d91f786f1a92
+[[04:26:01.128]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e7a923d2952d91f786f1a92"), status: [33mfalse[39m, isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m}, { projection: { __v: [33m0[39m } })
+[[04:26:01.132]] [LOG]    From mongo isn't seated booked already! {
+  _id: 5e7a923d2952d91f786f1a92,
+  seatNumber: [32m'11'[39m,
+  status: [33mfalse[39m,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: [32m'2020-03-24 23:05:32'[39m,
+  updatedOn: [32m'2020-03-25 02:52:26'[39m,
+  updatedBy: 5e657d7500c28d427c171899,
+  isActivated: [33mtrue[39m,
+  isDeleted: [33mfalse[39m
+}
+[[04:26:01.136]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ _id: ObjectId("5e7a923d2952d91f786f1a92"), isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { updatedOn: [32m'2020-03-25 04:26:01'[39m, status: [33mtrue[39m } }, { upsert: [33mtrue[39m })
+[[04:26:01.139]] [INFO]   [0;36mMongoose:[0m bookings.insertOne({ _id: ObjectId("5e7add59e34fb43db41ba153"), seatId: ObjectId("5e7a923d2952d91f786f1a92"), bookedByName: [32m'Hamzah Bawah'[39m, ticketCode: [32m'5ae9cba9'[39m, bookedOn: [32m'2020-03-25 04:26:01'[39m, isTicketCodeUsed: [33mfalse[39m, ticketCodeUsedOn: [32m''[39m}, { session: [1mnull[22m })
+[[04:26:01.141]] [LOG]    updated seatId 5e7a923d2952d91f786f1a92 status to booked BOOKED by Hamzah Bawah { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+[[04:26:01.150]] [LOG]    for create insert booking {
+  _id: 5e7add59e34fb43db41ba153,
+  seatId: 5e7a923d2952d91f786f1a92,
+  bookedByName: [32m'Hamzah Bawah'[39m,
+  ticketCode: [32m'5ae9cba9'[39m,
+  bookedOn: [32m'2020-03-25 04:26:01'[39m,
+  isTicketCodeUsed: [33mfalse[39m,
+  ticketCodeUsedOn: [32m''[39m
+}
+25/Mar/2020:04:26:01 +0000 "POST /api/bookings/create"
+[[04:26:01.152]] [LOG]    Finishing
+[[04:26:01.153]] [LOG]    No sessionId used
+[[04:26:01.159]] [LOG]    App usage logged! - 2020-03-25 04:26:01 {
+  req_route: [32m'/api/bookings/create'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      [32m'content-length'[39m: [32m'67'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'sec-fetch-dest'[39m: [32m'empty'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=UTF-8'[39m,
+      origin: [32m'http://159.69.36.51:3000'[39m,
+      [32m'sec-fetch-site'[39m: [32m'cross-site'[39m,
+      [32m'sec-fetch-mode'[39m: [32m'cors'[39m,
+      referer: [32m'http://159.69.36.51:3000/confirm/5e7a923d2952d91f786f1a92'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate, br'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.9'[39m
+    },
+    params: {},
+    body: { bookedByName: [32m'Hamzah Bawah'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 306\r\n'[39m +
+      [32m'ETag: W/"132-gZjlyNfC6x9UKu5D8Av6sqJ3h2o"\r\n'[39m +
+      [32m'Date: Wed, 25 Mar 2020 04:26:01 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-25T04:26:01.153Z[39m
+}
+[[04:27:38.980]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[04:27:38.991]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ seatNumber: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[04:27:38.992]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCode: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[04:27:38.994]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ sessionId: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[04:27:38.995]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ secretCode: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
