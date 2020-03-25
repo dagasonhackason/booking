@@ -2,12 +2,18 @@ const mg = require('mongoose');
 const Schema = mg.Schema, ObjectId = Schema.ObjectId;
 
 const usersSchema = new Schema({
-    username: String, 
+    username: {
+        type: String,
+        unique: true
+    }, 
     password: String, 
     passwordSalt: String, 
     createdOn: String, 
     updatedOn: String, 
-    updatedBy: ObjectId, 
+    updatedBy: {
+        type: ObjectId,
+        ref: 'Users'
+    }, 
     lastLoginOn: String, 
     isDeleted: Boolean
 });

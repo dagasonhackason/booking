@@ -7343,7 +7343,7 @@
 17/Feb/2020:13:38:15 +0000 "GET /javascripts/moment.js"
 17/Feb/2020:13:38:15 +0000 "GET /stylesheets/custom.css"
 17/Feb/2020:13:38:15 +0000 "GET /stylesheets/bootstrap.min.css"
-17/Feb/2020:13:38:16 +0000 "GET /stylesheets/fontawesome.css"
+17/Feb/2020:13:38:16 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
 17/Feb/2020:13:38:16 +0000 "GET /webfonts/fa-solid-900.woff2"
 [[13:41:52.510]] [LOG]    hitting index view route with {}
 17/Feb/2020:13:41:52 +0000 "GET /"

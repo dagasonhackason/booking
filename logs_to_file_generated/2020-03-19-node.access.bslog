@@ -1,0 +1,1501 @@
+[[01:24:25.528]] [LOG]    Calling app logger
+[[01:24:25.530]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/bulkcreate
+[[01:24:25.532]] [LOG]    current username extracted dagasonhackason
+[[01:24:25.532]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[01:24:25.536]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[01:24:25.536]] [LOG]    userData.username_extract dagasonhackason
+[[01:24:25.536]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1583711244[39m, exp: [33m1584920844[39m }
+[[01:24:25.547]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[01:24:25.581]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:26.208]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-16 12:18:08'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:24:26.211]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[01:24:26.288]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-08 23:47:20'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-03-22 23:47:24'[39m
+}
+[[01:24:26.290]] [LOG]    New Incoming create bulk seat Request { totalSeatNumbers: [32m'21'[39m }
+[[01:24:26.292]] [LOG]    current seat number in bulk create seat 1
+[[01:24:26.294]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:26.298]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:26.377]] [LOG]    current seat number in bulk create seat 2
+[[01:24:26.378]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:26.381]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:26.384]] [LOG]    Seat 1 Bulk Already exist... Error! [1mnull[22m
+[[01:24:26.390]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:26.396]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:26.399]] [LOG]    Seat 2 Bulk Already exist... Error! [1mnull[22m
+[[01:24:26.402]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:26.404]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:26.411]] [LOG]    current seat number in bulk create seat 3
+[[01:24:26.413]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:26.417]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:26.438]] [LOG]    Seat 3 Bulk Already exist... Error! [1mnull[22m
+[[01:24:26.439]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:26.441]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.041]] [LOG]    current seat number in bulk create seat 4
+[[01:24:27.042]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.045]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.048]] [LOG]    Seat 4 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.050]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.053]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.056]] [LOG]    current seat number in bulk create seat 5
+[[01:24:27.058]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.061]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.065]] [LOG]    Seat 5 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.067]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.070]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.072]] [LOG]    current seat number in bulk create seat 6
+[[01:24:27.073]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.076]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.078]] [LOG]    Seat 6 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.080]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.083]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.086]] [LOG]    current seat number in bulk create seat 7
+[[01:24:27.087]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.089]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.093]] [LOG]    Seat 7 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.095]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.098]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.101]] [LOG]    current seat number in bulk create seat 8
+[[01:24:27.102]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.104]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.106]] [LOG]    Seat 8 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.108]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.111]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.115]] [LOG]    current seat number in bulk create seat 9
+[[01:24:27.117]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.119]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.123]] [LOG]    Seat 9 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.124]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.128]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.131]] [LOG]    current seat number in bulk create seat 10
+[[01:24:27.132]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.134]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.137]] [LOG]    Seat 10 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.138]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.140]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.144]] [LOG]    current seat number in bulk create seat 11
+[[01:24:27.145]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.147]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.150]] [LOG]    Seat 11 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.152]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.155]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.157]] [LOG]    current seat number in bulk create seat 12
+[[01:24:27.158]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.161]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.165]] [LOG]    Seat 12 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.167]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.171]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.173]] [LOG]    current seat number in bulk create seat 13
+[[01:24:27.174]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.176]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.179]] [LOG]    Seat 13 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.180]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.182]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.184]] [LOG]    current seat number in bulk create seat 14
+[[01:24:27.184]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.186]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.188]] [LOG]    Seat 14 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.188]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.191]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.193]] [LOG]    current seat number in bulk create seat 15
+[[01:24:27.194]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.196]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.200]] [LOG]    Seat 15 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.201]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.203]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.205]] [LOG]    current seat number in bulk create seat 16
+[[01:24:27.205]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.206]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.209]] [LOG]    Seat 16 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.210]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.213]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.216]] [LOG]    current seat number in bulk create seat 17
+[[01:24:27.217]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.217]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.219]] [LOG]    Seat 17 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.221]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.222]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.224]] [LOG]    current seat number in bulk create seat 18
+[[01:24:27.225]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.227]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.230]] [LOG]    Seat 18 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.231]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.233]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.235]] [LOG]    current seat number in bulk create seat 19
+[[01:24:27.235]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.236]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.238]] [LOG]    Seat 19 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.240]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.244]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.246]] [LOG]    current seat number in bulk create seat 20
+[[01:24:27.247]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.249]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.252]] [LOG]    Seat 20 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.253]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.255]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.256]] [LOG]    current seat number in bulk create seat 21
+[[01:24:27.257]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.259]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:24:27.262]] [LOG]    Seat 21 Bulk Already exist... Error! [1mnull[22m
+[[01:24:27.263]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.266]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-19 01:24:26'[39m }}, { upsert: [33mtrue[39m })
+[[01:24:27.267]] [LOG]    mongo bulk insert seat completed [
+  {
+    message: [32m'Seat 3 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 2 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 1 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 4 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 5 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 6 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 7 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 8 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 9 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 10 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 11 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 12 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 13 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 14 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 15 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 16 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 17 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 18 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 19 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 20 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  }
+]
+19/Mar/2020:01:24:27 +0000 "POST /api/seats/bulkcreate"
+[[01:24:27.276]] [LOG]    Finishing
+[[01:24:27.276]] [LOG]    Valid sessionId, logging
+[[01:24:27.289]] [LOG]    App usage logged! - 2020-03-19 01:24:27 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-08 23:47:20'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-03-22 23:47:24'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-16 12:18:08'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/seats/bulkcreate'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      [32m'content-type'[39m: [32m'application/json'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'user-agent'[39m: [32m'PostmanRuntime/7.23.0'[39m,
+      accept: [32m'*/*'[39m,
+      [32m'cache-control'[39m: [32m'no-cache'[39m,
+      [32m'postman-token'[39m: [32m'27528399-2560-49c2-a121-f59acf6ffde2'[39m,
+      host: [32m'localhost:3000'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate, br'[39m,
+      [32m'content-length'[39m: [32m'29'[39m,
+      connection: [32m'keep-alive'[39m
+    },
+    params: {},
+    body: { totalSeatNumbers: [32m'21'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 2518\r\n'[39m +
+      [32m'ETag: W/"9d6-BOYhoH8iNqCh7aeMa46EMlUTXv4"\r\n'[39m +
+      [32m'Date: Thu, 19 Mar 2020 01:24:27 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-19T01:24:27.276Z[39m
+}
+[[01:26:07.173]] [LOG]    hitting dash view route with {}
+19/Mar/2020:01:26:07 +0000 "GET /dash"
+19/Mar/2020:01:26:08 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:01:26:08 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:01:26:08 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:01:26:08 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:01:26:08 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+19/Mar/2020:01:26:08 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:01:26:08 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:01:26:08 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:01:26:08 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:01:26:08 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:01:26:08 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:01:26:08 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:01:26:08 +0000 "GET /webfonts/fa-solid-900.woff2"
+19/Mar/2020:01:26:10 +0000 "GET /images/tis.png"
+19/Mar/2020:01:26:10 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:01:26:10 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:01:26:11 +0000 "GET /favicon.ico"
+[[01:28:57.155]] [LOG]    hitting login view route with {}
+19/Mar/2020:01:28:57 +0000 "GET /login"
+19/Mar/2020:01:28:57 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:01:28:57 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:01:28:57 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:01:28:57 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:01:28:57 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:01:28:57 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+19/Mar/2020:01:28:57 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:01:28:57 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:01:28:57 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:01:28:57 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:01:28:57 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:01:28:57 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:01:28:57 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:01:28:57 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:01:28:57 +0000 "GET /images/tis.png"
+[[01:29:05.535]] [LOG]    Calling app logger
+[[01:29:05.536]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[01:29:05.536]] [LOG]    No middleware needed for this route /api/users/login
+[[01:29:05.537]] [LOG]    new login user request { username: [32m'dagasonhackason'[39m, password: [32m'cGFzc3dvcmQxMjM0'[39m }
+[[01:29:05.569]] [INFO]   [0;36mMongoose:[0m users.find({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:29:05.653]] [LOG]    from mongo login user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-16 12:18:08'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:29:05.655]] [LOG]    salt  -  fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7  -  hashedPassword  -  76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5
+[[01:29:07.821]] [INFO]   [0;36mMongoose:[0m loginsessions.insertOne({ _id: ObjectId("5e72cae35eccb150f0ce4ddb"), userId: ObjectId("5e657d7500c28d427c171899"), loggedInOn: [32m'2020-03-19 01:29:05'[39m, loggedOutOn: [32m''[39m, loggedOutBy: [1mnull[22m, sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDU4MTM0NywiZXhwIjoxNTg1NzkwOTQ3fQ.MESVWkujo6_fpArlebQvCjbRt4b-IjU9lBQWxBs7gNI'[39m, isExpired: [33mfalse[39m, expiresOn: [32m'2020-04-02 02:29:07'[39m}, { session: [1mnull[22m })
+[[01:29:07.979]] [INFO]   [0;36mMongoose:[0m users.updateOne({ _id: ObjectId("5e657d7500c28d427c171899"), isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { lastLoginOn: [32m'2020-03-19 01:29:05'[39m } }, { upsert: [33mtrue[39m })
+[[01:29:08.261]] [LOG]    from mongo login user {
+  _id: 5e72cae35eccb150f0ce4ddb,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-19 01:29:05'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDU4MTM0NywiZXhwIjoxNTg1NzkwOTQ3fQ.MESVWkujo6_fpArlebQvCjbRt4b-IjU9lBQWxBs7gNI'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-02 02:29:07'[39m
+}
+19/Mar/2020:01:29:08 +0000 "POST /api/users/login"
+[[01:29:08.275]] [LOG]    Finishing
+[[01:29:08.275]] [LOG]    No sessionId used
+[[01:29:08.302]] [LOG]    App usage logged! - 2020-03-19 01:29:08 {
+  req_route: [32m'/api/users/login'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      [32m'content-length'[39m: [32m'60'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/login'[39m,
+      cookie: [32m'JSESSIONID=50AC22728DEB53DB500941BAF7801136'[39m
+    },
+    params: {},
+    body: { username: [32m'dagasonhackason'[39m, password: [32m'cGFzc3dvcmQxMjM0'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 620\r\n'[39m +
+      [32m'ETag: W/"26c-jjg3/GK55WiYoTLYNTMF+amoYeA"\r\n'[39m +
+      [32m'Date: Thu, 19 Mar 2020 01:29:08 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-19T01:29:08.276Z[39m
+}
+19/Mar/2020:01:29:08 +0000 "GET /images/check.png"
+[[01:54:15.497]] [LOG]    hitting dash view route with {}
+19/Mar/2020:01:54:15 +0000 "GET /dash"
+19/Mar/2020:01:54:15 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:01:54:15 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:01:54:15 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:01:54:15 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:01:54:15 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+19/Mar/2020:01:54:16 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:01:54:16 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:01:54:16 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:01:54:16 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:01:54:16 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:01:54:16 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:01:54:16 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:01:54:16 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:01:54:16 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:01:54:16 +0000 "GET /images/tis.png"
+[[01:56:37.167]] [LOG]    hitting dash view route with {}
+19/Mar/2020:01:56:37 +0000 "GET /dash"
+19/Mar/2020:01:56:37 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:01:56:37 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+19/Mar/2020:01:56:37 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:01:56:37 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:01:56:37 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:01:56:37 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:01:56:37 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:01:56:37 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:01:56:37 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:01:56:37 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:01:56:37 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:01:56:37 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:01:56:37 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:01:56:37 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:01:56:37 +0000 "GET /images/tis.png"
+[[01:57:59.729]] [LOG]    hitting dash view route with {}
+19/Mar/2020:01:57:59 +0000 "GET /dash"
+19/Mar/2020:01:57:59 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+19/Mar/2020:01:57:59 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:01:57:59 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:01:57:59 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:01:58:00 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:01:58:00 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:01:58:00 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:01:58:00 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:01:58:00 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:01:58:00 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:01:58:00 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:01:58:00 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:01:58:00 +0000 "GET /images/tis.png"
+19/Mar/2020:01:58:00 +0000 "GET /webfonts/fa-solid-900.woff2"
+19/Mar/2020:01:58:00 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:01:58:00 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:01:58:00 +0000 "GET /favicon.ico"
+[[01:58:51.522]] [LOG]    hitting dash view route with {}
+19/Mar/2020:01:58:51 +0000 "GET /dash"
+19/Mar/2020:01:58:51 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:01:58:51 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+19/Mar/2020:01:58:51 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:01:58:51 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:01:58:51 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:01:58:51 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:01:58:51 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:01:58:51 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:01:58:51 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:01:58:51 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:01:58:51 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:01:58:51 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:01:58:51 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:01:58:51 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:01:58:51 +0000 "GET /images/tis.png"
+19/Mar/2020:01:58:51 +0000 "GET /webfonts/fa-solid-900.woff2"
+19/Mar/2020:01:58:52 +0000 "GET /favicon.ico"
+[[01:58:54.677]] [LOG]    hitting dash view route with {}
+19/Mar/2020:01:58:54 +0000 "GET /dash"
+19/Mar/2020:01:58:54 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+19/Mar/2020:01:58:54 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:01:58:54 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:01:58:54 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:01:58:54 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:01:58:54 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:01:58:54 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:01:58:54 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:01:58:54 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:01:58:54 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:01:58:54 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:01:58:54 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:01:58:54 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:01:58:54 +0000 "GET /webfonts/fa-solid-900.woff2"
+19/Mar/2020:01:58:54 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:01:58:54 +0000 "GET /images/tis.png"
+19/Mar/2020:01:58:55 +0000 "GET /favicon.ico"
+[[01:59:40.146]] [LOG]    hitting dash view route with {}
+19/Mar/2020:01:59:40 +0000 "GET /dash"
+19/Mar/2020:01:59:40 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:01:59:40 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:01:59:40 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:01:59:40 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:01:59:40 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+19/Mar/2020:01:59:40 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:01:59:40 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:01:59:40 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:01:59:40 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:01:59:40 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:01:59:40 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:01:59:40 +0000 "GET /webfonts/fa-solid-900.woff2"
+19/Mar/2020:01:59:40 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:01:59:40 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:01:59:40 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:01:59:40 +0000 "GET /images/tis.png"
+19/Mar/2020:01:59:40 +0000 "GET /favicon.ico"
+[[02:00:07.809]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:00:07 +0000 "GET /dash"
+19/Mar/2020:02:00:07 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+19/Mar/2020:02:00:07 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:00:07 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:00:07 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:00:07 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:00:07 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:00:07 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:00:08 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:00:08 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:00:08 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:00:08 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:00:08 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:00:08 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:00:08 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:00:08 +0000 "GET /images/tis.png"
+19/Mar/2020:02:00:08 +0000 "GET /webfonts/fa-solid-900.woff2"
+19/Mar/2020:02:00:08 +0000 "GET /favicon.ico"
+19/Mar/2020:02:00:12 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:00:12 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:00:12 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:00:17 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+19/Mar/2020:02:00:42 +0000 "GET /webfonts/fa-regular-400.woff2"
+19/Mar/2020:02:02:19 +0000 "GET /webfonts/fa-solid-900.woff2"
+19/Mar/2020:02:02:43 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:02:43 +0000 "GET /stylesheets/fallr.css"
+[[02:05:52.105]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:05:52 +0000 "GET /dash"
+19/Mar/2020:02:05:52 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:05:52 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:05:52 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:05:52 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:05:52 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:05:52 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:05:52 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:05:52 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:05:52 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:05:52 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:05:52 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:05:52 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:05:52 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:05:53 +0000 "GET /images/tis.png"
+19/Mar/2020:02:05:53 +0000 "GET /favicon.ico"
+[[02:06:43.714]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:06:43 +0000 "GET /dash"
+19/Mar/2020:02:06:43 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:06:43 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:06:43 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:06:43 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:06:43 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:06:43 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:06:43 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:06:43 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:06:44 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:06:44 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:06:44 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:06:44 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:06:44 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:06:44 +0000 "GET /images/tis.png"
+19/Mar/2020:02:06:44 +0000 "GET /favicon.ico"
+[[02:07:43.875]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:07:43 +0000 "GET /dash"
+19/Mar/2020:02:07:43 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:07:43 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:07:43 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:07:44 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:07:44 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:07:44 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:07:44 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:07:44 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:07:44 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:07:44 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:07:44 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:07:44 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:07:44 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:07:44 +0000 "GET /images/tis.png"
+19/Mar/2020:02:07:44 +0000 "GET /favicon.ico"
+[[02:09:43.781]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:09:43 +0000 "GET /dash"
+19/Mar/2020:02:09:43 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:09:43 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:09:43 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:09:43 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:09:43 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:09:43 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:09:43 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:09:43 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:09:43 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:09:43 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:09:43 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:09:44 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:09:44 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:09:44 +0000 "GET /images/tis.png"
+19/Mar/2020:02:09:44 +0000 "GET /favicon.ico"
+[[02:10:12.734]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:10:12 +0000 "GET /dash"
+19/Mar/2020:02:10:12 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:10:12 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:10:12 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:10:12 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:10:12 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:10:12 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:10:12 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:10:12 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:10:12 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:10:12 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:10:12 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:10:12 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:10:12 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:10:13 +0000 "GET /images/tis.png"
+[[02:10:56.074]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:10:56 +0000 "GET /dash"
+19/Mar/2020:02:10:56 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:10:56 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:10:56 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:10:56 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:10:56 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:10:56 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:10:56 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:10:56 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:10:56 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:10:56 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:10:56 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:10:56 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:10:56 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:10:56 +0000 "GET /images/tis.png"
+[[02:11:42.122]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:11:42 +0000 "GET /dash"
+19/Mar/2020:02:11:42 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:11:42 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:11:42 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:11:42 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:11:42 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:11:42 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:11:42 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:11:42 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:11:42 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:11:42 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:11:42 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:11:42 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:11:42 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:11:42 +0000 "GET /images/tis.png"
+[[02:13:16.304]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:13:16 +0000 "GET /dash"
+19/Mar/2020:02:13:16 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:13:16 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:13:16 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:13:16 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:13:16 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:13:16 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:13:16 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:13:16 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:13:16 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:13:16 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:13:16 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:13:16 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:13:16 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:13:16 +0000 "GET /images/tis.png"
+[[02:14:34.142]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:14:34 +0000 "GET /dash"
+19/Mar/2020:02:14:34 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:14:34 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:14:34 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:14:34 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:14:34 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:14:34 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:14:34 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:14:34 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:14:34 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:14:34 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:14:34 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:14:34 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:14:34 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:14:34 +0000 "GET /images/tis.png"
+19/Mar/2020:02:14:35 +0000 "GET /favicon.ico"
+[[02:14:52.969]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:14:52 +0000 "GET /dash"
+19/Mar/2020:02:14:53 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:14:53 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:14:53 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:14:53 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:14:53 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:14:53 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:14:53 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:14:53 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:14:53 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:14:53 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:14:53 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:14:53 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:14:53 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:14:53 +0000 "GET /images/tis.png"
+19/Mar/2020:02:14:54 +0000 "GET /favicon.ico"
+[[02:18:05.353]] [LOG]    hitting dash view route with {}
+19/Mar/2020:02:18:05 +0000 "GET /dash"
+19/Mar/2020:02:18:05 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:02:18:05 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:02:18:05 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:02:18:05 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:02:18:05 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:02:18:05 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:02:18:05 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:02:18:05 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:02:18:05 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:02:18:05 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:02:18:05 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:02:18:05 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:02:18:05 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:02:18:06 +0000 "GET /images/tis.png"
+19/Mar/2020:02:18:06 +0000 "GET /favicon.ico"
+[[10:18:18.184]] [LOG]    hitting login view route with {}
+19/Mar/2020:10:18:18 +0000 "GET /login"
+19/Mar/2020:10:18:19 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:10:18:19 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:10:18:19 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:10:18:19 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:10:18:19 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:10:18:19 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:10:18:19 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:10:18:19 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:10:18:19 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:10:18:19 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:10:18:19 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:10:18:19 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:10:18:19 +0000 "GET /images/tis.png"
+19/Mar/2020:10:18:19 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:10:18:19 +0000 "GET /favicon.ico"
+[[10:55:06.816]] [LOG]    hitting login view route with {}
+19/Mar/2020:10:55:06 +0000 "GET /login"
+19/Mar/2020:10:55:07 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:10:55:07 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:10:55:07 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:10:55:07 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:10:55:07 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:10:55:07 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:10:55:07 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:10:55:07 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:10:55:07 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:10:55:07 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:10:55:07 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:10:55:07 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:10:55:07 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:10:55:07 +0000 "GET /images/tis.png"
+19/Mar/2020:10:55:07 +0000 "GET /favicon.ico"
+19/Mar/2020:10:55:11 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:10:55:12 +0000 "GET /stylesheets/bootstrap.min.css"
+[[10:55:34.369]] [LOG]    Calling app logger
+[[10:55:34.370]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[10:55:34.370]] [LOG]    No middleware needed for this route /api/users/login
+[[10:55:34.371]] [LOG]    new login user request { username: [32m'gabriel.dagadu'[39m, password: [32m'KklXIS1GK0JXfV9JcG9zdGE3'[39m }
+[[10:55:34.658]] [INFO]   [0;36mMongoose:[0m users.find({ username: [32m'gabriel.dagadu'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+19/Mar/2020:10:55:35 +0000 "POST /api/users/login"
+[[10:55:35.305]] [LOG]    Finishing
+[[10:55:35.306]] [LOG]    No sessionId used
+19/Mar/2020:10:55:35 +0000 "GET /images/error.png"
+[[10:55:35.400]] [LOG]    App usage logged! - 2020-03-19 10:55:35 {
+  req_route: [32m'/api/users/login'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      [32m'content-length'[39m: [32m'67'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/login'[39m
+    },
+    params: {},
+    body: {
+      username: [32m'gabriel.dagadu'[39m,
+      password: [32m'KklXIS1GK0JXfV9JcG9zdGE3'[39m
+    },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 104\r\n'[39m +
+      [32m'ETag: W/"68-gSvYxm2bgADPHMbDdo0AbOccgmw"\r\n'[39m +
+      [32m'Date: Thu, 19 Mar 2020 10:55:35 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-19T10:55:35.306Z[39m
+}
+[[10:55:46.728]] [LOG]    Calling app logger
+[[10:55:46.729]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[10:55:46.729]] [LOG]    No middleware needed for this route /api/users/login
+[[10:55:46.729]] [LOG]    new login user request { username: [32m'dagasonhackason'[39m, password: [32m'cGFzc3dvcmQxMjM0'[39m }
+[[10:55:46.759]] [INFO]   [0;36mMongoose:[0m users.find({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[10:55:46.811]] [LOG]    from mongo login user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 01:29:05'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[10:55:46.812]] [LOG]    salt  -  fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7  -  hashedPassword  -  76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5
+[[10:55:48.597]] [INFO]   [0;36mMongoose:[0m loginsessions.insertOne({ _id: ObjectId("5e734fb4d0d9622cc061d78f"), userId: ObjectId("5e657d7500c28d427c171899"), loggedInOn: [32m'2020-03-19 10:55:46'[39m, loggedOutOn: [32m''[39m, loggedOutBy: [1mnull[22m, sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m, isExpired: [33mfalse[39m, expiresOn: [32m'2020-04-02 11:55:48'[39m}, { session: [1mnull[22m })
+[[10:55:48.888]] [INFO]   [0;36mMongoose:[0m users.updateOne({ _id: ObjectId("5e657d7500c28d427c171899"), isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { lastLoginOn: [32m'2020-03-19 10:55:46'[39m } }, { upsert: [33mtrue[39m })
+[[10:55:49.237]] [LOG]    from mongo login user {
+  _id: 5e734fb4d0d9622cc061d78f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-02 11:55:48'[39m
+}
+19/Mar/2020:10:55:49 +0000 "POST /api/users/login"
+[[10:55:49.282]] [LOG]    Finishing
+[[10:55:49.282]] [LOG]    No sessionId used
+[[10:55:49.291]] [LOG]    App usage logged! - 2020-03-19 10:55:49 {
+  req_route: [32m'/api/users/login'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      [32m'content-length'[39m: [32m'60'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/login'[39m
+    },
+    params: {},
+    body: { username: [32m'dagasonhackason'[39m, password: [32m'cGFzc3dvcmQxMjM0'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 620\r\n'[39m +
+      [32m'ETag: W/"26c-STsn6UyT30kjPwfvJmOZMUxd4vc"\r\n'[39m +
+      [32m'Date: Thu, 19 Mar 2020 10:55:49 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-19T10:55:49.283Z[39m
+}
+19/Mar/2020:10:55:49 +0000 "GET /images/check.png"
+[[10:55:55.249]] [LOG]    hitting dash view route with {}
+19/Mar/2020:10:55:55 +0000 "GET /dash"
+19/Mar/2020:10:55:55 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:10:55:55 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:10:55:55 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:10:55:55 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:10:55:55 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:10:55:55 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:10:55:55 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:10:55:55 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:10:55:55 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:10:55:55 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:10:55:55 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:10:55:55 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:10:55:55 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:10:55:55 +0000 "GET /images/tis.png"
+[[12:56:54.621]] [LOG]    hitting dash view route with {}
+19/Mar/2020:12:56:54 +0000 "GET /dash"
+19/Mar/2020:12:56:55 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:12:56:55 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:12:56:55 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:12:56:55 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:12:56:55 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:12:56:55 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:12:56:55 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:12:56:55 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:12:56:55 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:12:56:55 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:12:56:55 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:12:56:55 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:12:56:55 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:12:56:55 +0000 "GET /images/tis.png"
+19/Mar/2020:12:56:55 +0000 "GET /favicon.ico"
+[[12:57:54.861]] [LOG]    hitting dash view route with {}
+19/Mar/2020:12:57:54 +0000 "GET /dash"
+19/Mar/2020:12:57:54 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:12:57:54 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:12:57:54 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:12:57:54 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:12:57:54 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:12:57:54 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:12:57:54 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:12:57:54 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:12:57:54 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:12:57:54 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:12:57:54 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:12:57:54 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:12:57:54 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:12:57:55 +0000 "GET /images/tis.png"
+[[12:58:34.489]] [LOG]    hitting dash view route with {}
+19/Mar/2020:12:58:34 +0000 "GET /dash"
+19/Mar/2020:12:58:34 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:12:58:34 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:12:58:34 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:12:58:34 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:12:58:34 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:12:58:34 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:12:58:34 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:12:58:34 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:12:58:34 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:12:58:34 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:12:58:34 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:12:58:34 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:12:58:34 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:12:58:34 +0000 "GET /images/tis.png"
+19/Mar/2020:12:58:35 +0000 "GET /favicon.ico"
+[[13:00:03.192]] [LOG]    hitting dash view route with {}
+19/Mar/2020:13:00:03 +0000 "GET /dash"
+19/Mar/2020:13:00:03 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:13:00:03 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:13:00:03 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:13:00:03 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:13:00:03 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:13:00:03 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:13:00:03 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:13:00:03 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:13:00:03 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:13:00:03 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:13:00:03 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:13:00:03 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:13:00:03 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:13:00:03 +0000 "GET /images/tis.png"
+19/Mar/2020:13:00:03 +0000 "GET /favicon.ico"
+[[13:01:06.675]] [LOG]    hitting dash view route with {}
+19/Mar/2020:13:01:06 +0000 "GET /dash"
+19/Mar/2020:13:01:06 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:13:01:06 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:13:01:06 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:13:01:06 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:13:01:06 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:13:01:06 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:13:01:06 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:13:01:06 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:13:01:06 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:13:01:06 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:13:01:06 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:13:01:06 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:13:01:06 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:13:01:07 +0000 "GET /images/tis.png"
+19/Mar/2020:13:01:07 +0000 "GET /favicon.ico"
+[[13:01:40.360]] [LOG]    hitting dash view route with {}
+19/Mar/2020:13:01:40 +0000 "GET /dash"
+19/Mar/2020:13:01:40 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:13:01:40 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:13:01:40 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:13:01:40 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:13:01:40 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:13:01:40 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:13:01:40 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:13:01:40 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:13:01:40 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:13:01:40 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:13:01:40 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:13:01:40 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:13:01:40 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:13:01:40 +0000 "GET /images/tis.png"
+19/Mar/2020:13:01:41 +0000 "GET /favicon.ico"
+[[13:02:00.202]] [LOG]    hitting dash view route with {}
+19/Mar/2020:13:02:00 +0000 "GET /dash"
+19/Mar/2020:13:02:00 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:13:02:00 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:13:02:00 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:13:02:00 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:13:02:00 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:13:02:00 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:13:02:00 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:13:02:00 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:13:02:00 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:13:02:00 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:13:02:00 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:13:02:00 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:13:02:00 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:13:02:00 +0000 "GET /images/tis.png"
+19/Mar/2020:13:02:01 +0000 "GET /favicon.ico"
+[[13:02:51.108]] [LOG]    hitting dash view route with {}
+19/Mar/2020:13:02:51 +0000 "GET /dash"
+19/Mar/2020:13:02:51 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:13:02:51 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:13:02:51 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:13:02:51 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:13:02:51 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:13:02:51 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:13:02:51 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:13:02:51 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:13:02:51 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:13:02:51 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:13:02:51 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:13:02:51 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:13:02:51 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:13:02:51 +0000 "GET /images/tis.png"
+19/Mar/2020:13:02:51 +0000 "GET /favicon.ico"
+[[13:04:20.613]] [LOG]    hitting dash view route with {}
+19/Mar/2020:13:04:20 +0000 "GET /dash"
+19/Mar/2020:13:04:20 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:13:04:20 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:13:04:20 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:13:04:20 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:13:04:20 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:13:04:20 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:13:04:20 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:13:04:20 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:13:04:20 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:13:04:20 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:13:04:20 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:13:04:20 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:13:04:20 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:13:04:21 +0000 "GET /images/tis.png"
+19/Mar/2020:13:04:21 +0000 "GET /favicon.ico"
+[[18:24:36.940]] [LOG]    hitting dash view route with {}
+19/Mar/2020:18:24:37 +0000 "GET /dash"
+19/Mar/2020:18:24:37 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:18:24:37 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:18:24:37 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:18:24:37 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:18:24:37 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:18:24:37 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:18:24:37 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:18:24:37 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:18:24:37 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:18:24:37 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:18:24:37 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:18:24:37 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:18:24:37 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:18:24:37 +0000 "GET /images/tis.png"
+19/Mar/2020:18:24:38 +0000 "GET /favicon.ico"
+[[18:29:54.709]] [LOG]    hitting dash view route with {}
+19/Mar/2020:18:29:54 +0000 "GET /dash"
+19/Mar/2020:18:29:54 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:18:29:54 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:18:29:54 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:18:29:54 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:18:29:54 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:18:29:54 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:18:29:54 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:18:29:55 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:18:29:55 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:18:29:55 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:18:29:55 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:18:29:55 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:18:29:55 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:18:29:55 +0000 "GET /images/tis.png"
+19/Mar/2020:18:29:56 +0000 "GET /favicon.ico"
+[[22:34:48.030]] [LOG]    hitting dash view route with {}
+[[22:34:48.069]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:34:48.080]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:34:48.464]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:34:48.467]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:34:48.723]] [INFO]   [0;36mMongoose:[0m bookings.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:34:48.725]] [INFO]   [0;36mMongoose:[0m bookings.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:34:48.814]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m0[39m }
+19/Mar/2020:22:34:49 +0000 "GET /dash"
+19/Mar/2020:22:34:49 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:22:34:49 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:22:34:49 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:22:34:49 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:22:34:49 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:22:34:49 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:22:34:49 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:22:34:49 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:22:34:49 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:22:34:49 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:22:34:49 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:22:34:49 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:22:34:49 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:22:34:51 +0000 "GET /images/tis.png"
+19/Mar/2020:22:34:51 +0000 "GET /favicon.ico"
+[[22:36:30.780]] [LOG]    hitting dash view route with {}
+[[22:36:30.791]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:36:30.793]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:36:30.809]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:36:30.811]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:36:30.834]] [INFO]   [0;36mMongoose:[0m bookings.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:36:30.837]] [INFO]   [0;36mMongoose:[0m bookings.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:36:30.840]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m0[39m }
+19/Mar/2020:22:36:30 +0000 "GET /dash"
+19/Mar/2020:22:36:30 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:22:36:30 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:22:36:30 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:22:36:30 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:22:36:31 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:22:36:31 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:22:36:31 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:22:36:31 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:22:36:31 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:22:36:31 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:22:36:31 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:22:36:31 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:22:36:31 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:22:36:32 +0000 "GET /images/tis.png"
+19/Mar/2020:22:36:32 +0000 "GET /favicon.ico"
+[[22:38:59.593]] [LOG]    hitting dash view route with {}
+[[22:38:59.622]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:38:59.633]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:38:59.693]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:38:59.696]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:38:59.726]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[22:38:59.729]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[22:38:59.753]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m }
+19/Mar/2020:22:38:59 +0000 "GET /dash"
+19/Mar/2020:22:38:59 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:22:38:59 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:22:38:59 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:22:38:59 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:22:38:59 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:22:38:59 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:22:39:00 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:22:39:00 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:22:39:00 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:22:39:00 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:22:39:00 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:22:39:00 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:22:39:00 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:22:39:03 +0000 "GET /images/tis.png"
+[[22:42:56.506]] [LOG]    hitting dash view route with {}
+[[22:42:56.545]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:42:56.552]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:42:56.596]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:42:56.599]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:42:56.624]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[22:42:56.629]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[22:42:56.635]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+19/Mar/2020:22:42:56 +0000 "GET /dash"
+19/Mar/2020:22:42:56 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:22:42:56 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:22:42:56 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:22:42:56 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:22:42:56 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:22:42:56 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:22:42:56 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:22:42:56 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:22:42:56 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:22:42:56 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:22:42:56 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:22:42:57 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:22:42:57 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:22:43:19 +0000 "GET /favicon.ico"
+19/Mar/2020:22:43:19 +0000 "GET /images/tis.png"
+[[22:46:00.183]] [LOG]    hitting dash view route with {}
+[[22:46:00.210]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:46:00.216]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:46:00.255]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:46:00.258]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:46:00.277]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[22:46:00.279]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[22:46:00.283]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+19/Mar/2020:22:46:00 +0000 "GET /dash"
+19/Mar/2020:22:46:00 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:22:46:00 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:22:46:00 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:22:46:00 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:22:46:00 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:22:46:00 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:22:46:00 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:22:46:00 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:22:46:00 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:22:46:00 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:22:46:00 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:22:46:00 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:22:46:00 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:22:46:23 +0000 "GET /images/tis.png"
+[[22:48:16.245]] [LOG]    hitting dash view route with {}
+[[22:48:16.254]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:48:16.256]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:48:16.269]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:48:16.271]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[22:48:16.288]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[22:48:16.291]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[22:48:16.297]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+19/Mar/2020:22:48:16 +0000 "GET /dash"
+19/Mar/2020:22:48:16 +0000 "GET /stylesheets/bootstrap.min.css"
+19/Mar/2020:22:48:16 +0000 "GET /javascripts/jquery-ui.js"
+19/Mar/2020:22:48:16 +0000 "GET /javascripts/jquery.js"
+19/Mar/2020:22:48:16 +0000 "GET /stylesheets/fallr.css"
+19/Mar/2020:22:48:16 +0000 "GET /stylesheets/jquery-ui.css"
+19/Mar/2020:22:48:16 +0000 "GET /stylesheets/custom.css"
+19/Mar/2020:22:48:16 +0000 "GET /javascripts/bootstrap.min.js"
+19/Mar/2020:22:48:16 +0000 "GET /javascripts/jquery-easing.js"
+19/Mar/2020:22:48:16 +0000 "GET /javascripts/axios.js"
+19/Mar/2020:22:48:16 +0000 "GET /javascripts/moment.js"
+19/Mar/2020:22:48:16 +0000 "GET /javascripts/functions.js"
+19/Mar/2020:22:48:16 +0000 "GET /javascripts/clientJS.js"
+19/Mar/2020:22:48:16 +0000 "GET /javascripts/fallr.js"
+19/Mar/2020:22:48:30 +0000 "GET /images/tis.png"
+[[00:08:03.622]] [LOG]    Calling app logger
+20/Mar/2020:00:08:03 +0000 "GET /learn.campus-today"
+[[00:08:03.758]] [LOG]    Finishing
+[[00:08:03.758]] [LOG]    No sessionId used
+[[00:08:03.872]] [LOG]    App usage logged! - 2020-03-20 00:08:03 {
+  req_route: [32m'/learn.campus-today'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      connection: [32m'keep-alive'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-19 10:55:46; isDeleted=false; loggedInOn=2020-03-19 10:55:46; loggedOutOn=; loggedOutBy=null; _id=5e734fb4d0d9622cc061d78f; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU; isExpired=false; expiresOn=2020-04-02 11:55:48'[39m,
+      [32m'upgrade-insecure-requests'[39m: [32m'1'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m404[39m,
+  res_status_message: [32m'Not Found'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 404 Not Found\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: text/html; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 1660\r\n'[39m +
+      [32m'ETag: W/"67c-5c/YzRQmxWsjbQ2jXbfse4Jr4Ac"\r\n'[39m +
+      [32m'Date: Fri, 20 Mar 2020 00:08:03 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-20T00:08:03.759Z[39m
+}
+20/Mar/2020:00:08:05 +0000 "GET /favicon.ico"
+[[00:50:06.619]] [LOG]    hitting dash view route with {}
+[[00:50:07.271]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:50:07.333]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:50:07.735]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:50:07.737]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:50:07.746]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:50:07.748]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:50:07.772]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m }
+20/Mar/2020:00:50:08 +0000 "GET /dash"
+20/Mar/2020:00:50:08 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:50:08 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:50:08 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:50:08 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:50:08 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:50:08 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:50:08 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:50:08 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:50:08 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:50:08 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:50:08 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:50:08 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:50:08 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:50:12 +0000 "GET /favicon.ico"
+20/Mar/2020:00:50:12 +0000 "GET /images/tis.png"
+[[00:51:37.643]] [LOG]    hitting dash view route with {}
+[[00:51:37.679]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:37.686]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:37.701]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:37.703]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:37.717]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:51:37.718]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:51:37.725]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:00:51:37 +0000 "GET /dash"
+20/Mar/2020:00:51:37 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:51:37 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:51:37 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:51:37 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:51:37 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:51:37 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:51:37 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:51:37 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:51:37 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:51:37 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:51:38 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:51:38 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:51:38 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:51:38 +0000 "GET /images/tis.png"
+20/Mar/2020:00:51:38 +0000 "GET /favicon.ico"
+[[00:51:40.454]] [LOG]    hitting configureUsers view route with {}
+20/Mar/2020:00:51:40 +0000 "GET /configureUsers"
+20/Mar/2020:00:51:40 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:51:40 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:51:40 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:51:40 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:51:40 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:51:40 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:51:40 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:51:40 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:51:40 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:51:40 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:51:40 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:51:40 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:51:40 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:51:40 +0000 "GET /images/tis.png"
+[[00:51:41.740]] [LOG]    hitting login view route with {}
+20/Mar/2020:00:51:41 +0000 "GET /login"
+20/Mar/2020:00:51:41 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:51:41 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:51:41 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:51:41 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:51:41 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:51:41 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:51:41 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:51:41 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:51:41 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:51:41 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:51:41 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:51:41 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:51:42 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:51:42 +0000 "GET /images/tis.png"
+[[00:51:42.426]] [LOG]    hitting dash view route with {}
+[[00:51:42.444]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:42.448]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:42.463]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:42.465]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:42.482]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:51:42.495]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:51:42.503]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:00:51:42 +0000 "GET /dash"
+20/Mar/2020:00:51:42 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:51:42 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:51:42 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:51:42 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:51:42 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:51:42 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:51:42 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:51:42 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:51:42 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:51:42 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:51:42 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:51:42 +0000 "GET /images/tis.png"
+20/Mar/2020:00:51:42 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:51:42 +0000 "GET /javascripts/clientJS.js"
+[[00:51:47.679]] [LOG]    hitting configureSeats view route with {}
+20/Mar/2020:00:51:47 +0000 "GET /configureSeats"
+20/Mar/2020:00:51:47 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:51:47 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:51:47 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:51:47 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:51:47 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:51:47 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:51:47 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:51:47 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:51:47 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:51:47 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:51:47 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:51:47 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:51:47 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:51:47 +0000 "GET /images/tis.png"
+[[00:51:48.042]] [LOG]    hitting login view route with {}
+20/Mar/2020:00:51:48 +0000 "GET /login"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:51:48 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:51:48 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:51:48 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:51:48 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:51:48 +0000 "GET /images/tis.png"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/fallr.js"
+[[00:51:48.420]] [LOG]    hitting dash view route with {}
+[[00:51:48.453]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:48.456]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:48.467]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:48.469]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:48.499]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:51:48.501]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:51:48.507]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:00:51:48 +0000 "GET /dash"
+20/Mar/2020:00:51:48 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:51:48 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:51:48 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:51:48 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:51:48 +0000 "GET /images/tis.png"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:51:48 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:51:48 +0000 "GET /favicon.ico"
+[[00:51:50.731]] [LOG]    hitting configureSecretCodes view route with {}
+20/Mar/2020:00:51:50 +0000 "GET /configureSecretCodes"
+20/Mar/2020:00:51:50 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:51:50 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:51:50 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:51:50 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:51:50 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:51:50 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:51:50 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:51:50 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:51:50 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:51:50 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:51:50 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:51:50 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:51:50 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:51:50 +0000 "GET /images/tis.png"
+[[00:51:51.098]] [LOG]    hitting login view route with {}
+20/Mar/2020:00:51:51 +0000 "GET /login"
+20/Mar/2020:00:51:51 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:51:51 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:51:51 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:51:51 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:51:51 +0000 "GET /images/tis.png"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/bootstrap.min.js"
+[[00:51:51.498]] [LOG]    hitting dash view route with {}
+[[00:51:51.509]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:51.510]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:51.525]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:51.527]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:51:51.539]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:51:51.541]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:51:51.544]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:00:51:51 +0000 "GET /dash"
+20/Mar/2020:00:51:51 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:51:51 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:51:51 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:51:51 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:51:51 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:51:51 +0000 "GET /images/tis.png"
+[[00:52:02.453]] [LOG]    hitting dash view route with {}
+[[00:52:02.463]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:52:02.476]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:52:02.488]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:52:02.490]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[00:52:02.500]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:52:02.503]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[00:52:02.507]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:00:52:02 +0000 "GET /dash"
+20/Mar/2020:00:52:02 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:00:52:02 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:00:52:02 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:00:52:02 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:00:52:02 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:00:52:02 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:00:52:02 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:00:52:02 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:00:52:02 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:00:52:02 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:00:52:02 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:00:52:02 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:00:52:02 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:00:52:03 +0000 "GET /images/tis.png"

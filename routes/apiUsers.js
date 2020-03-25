@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const express = require("express");
 const router = express.Router();
 const mg = require("mongoose");
@@ -8,6 +8,7 @@ const moment = require("moment");
 const APIUsersRequestValidator = require('../validators/APIUsersRequestValidator');
 const validate = require('../middlewares/validateMiddleware');
 const auth = require('../middlewares/authMiddleware');
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 const Users = require('../models/users');
 const SecretCodes = require('../models/secretCodes');
@@ -28,9 +29,9 @@ const { respondWithSuccess, respondWithError } = require('../utilities/responder
 
 router.use(auth);
 
-router.post("/create", (req, res, next)=>{
+router.post("/create", (req, res, next)=> { 
     console.log("New Incoming create user Request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     if(req.body.username && req.body.password && req.body.secretCode) {
@@ -154,7 +155,7 @@ router.get("/read/:id", (req,res,next)=>{
     var id = req.params.id;
 
     console.log("new get one user request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     Users.find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, function(getError,dataGot) {
         if (!getError && dataGot) {
@@ -187,7 +188,7 @@ router.get("/read/:id", (req,res,next)=>{
 
 router.get("/", (req,res,next)=>{
     console.log("new get all users request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     Users.find({isDeleted: false}, (getError,dataGot) => {
         if (!getError && dataGot) {
@@ -218,11 +219,44 @@ router.get("/", (req,res,next)=>{
     }).select('-password').select('-passwordSalt');
 });
 
+router.get("/populate", (req,res,next)=>{
+    console.log("new get all users populate request", req.body);
+    mg.connect(MONGODB_CONNECTION_STRING);
+
+    Users.find({isDeleted: false}).populate('Users', 'username -_id').select('-password').select('-passwordSalt').exec((getError, dataGot) => {
+        if (!getError && dataGot) {
+            console.log("from mongo get all populate users", dataGot);
+                        
+            res.status(200).json({
+                status: "success",
+                responseCode: "201",
+                responseMessage: "All User Data Acquired Successful!",
+                data: dataGot
+            });
+            
+            mg.disconnect();
+
+            return;
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error acquiring data!",
+                data: getError
+            });
+
+            mg.disconnect();
+
+            return;
+        }
+    })
+});
+
 router.post("/update/:id", (req,res,next)=>{
     var id = req.params.id;
     
     console.log("New user update request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
     
     if(req.body.id) {
@@ -321,7 +355,7 @@ router.post("/update/:id", (req,res,next)=>{
 
 router.post("/findcustomized", (req,res,next)=>{
     console.log("New user find customized request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
     
     if(req.body.id) {
@@ -371,7 +405,7 @@ router.post("/findcustomized", (req,res,next)=>{
 
 router.post("/delete", (req,res,next)=> {
     console.log("Delete user request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
@@ -438,7 +472,7 @@ router.post("/delete", (req,res,next)=> {
 
 router.post("/restore", (req,res,next)=> {
     console.log("Restore user request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
@@ -505,7 +539,7 @@ router.post("/restore", (req,res,next)=> {
 
 router.post("/login", (req,res,next)=>{
     console.log("new login user request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
         
     if(req.body.username && req.body.password) {
@@ -649,19 +683,92 @@ router.post("/login", (req,res,next)=>{
 });
 
 router.post("/logout", (req,res,next)=>{
-    console.log("New Incoming logout user Request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    console.log("new logout user request", req.body);
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
+        
+    if(req.userData.users) {
+        Users.findOne({username: ("" + req.userData.users.username).toLocaleLowerCase(), isDeleted: false}, function(getError,dataGot) {
+            if (!getError && dataGot) {
+                console.log("from mongo logout user", dataGot);
+                loggedOutOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+                dataGot = JSON.parse(JSON.stringify(dataGot));
+    
+                if(dataGot.password) {
+                    delete dataGot.password;
+                } 
+                
+                if(dataGot.passwordSalt) {
+                    delete dataGot.passwordSalt;
+                }
 
-    req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
-    req.body.updatedBy = req.userData.users._id;
+                sessionId = req.userData.loginSessions.sessionId;
+                username = ("" + dataGot.username).toLocaleLowerCase();
+ 
+                LoginSessions.updateOne({sessionId: sessionId, isExpired: false}, {$set: {isExpired: true, loggedOutOn: loggedOutOn, loggedOutBy: mg.Types.ObjectId(req.userData.users._id)}}, {upsert: true}, function(updateError, updated) {
+                    if (updateError || !updated) {
+                        console.log("user logout failed at session nullifying", updateError);
 
-    res.status(200).json({
-        status: "success",
-        responseCode: "",
-        responseMessage: "",
-        data: null
-    });
+                        res.status(200).json({
+                            status: "error",
+                            responseCode: "202",
+                            responseMessage: "User Logout Failed with an Unknown Error!",
+                            data: updateError
+                        });
+
+                        mg.disconnect();
+            
+                        return;
+                    } else {
+                        logoutesponse = JSON.parse(JSON.stringify(req.userData.loginSessions));
+                        logoutesponse.isExpired = true;
+                        logoutesponse.loggedOutOn = loggedOutOn;
+                        logoutesponse.loggedOutBy = mg.Types.ObjectId(req.userData.users._id);
+                        
+                        let responseData = {
+                            ...dataGot,
+                            ...logoutesponse
+                        };
+
+                        console.log("from mongo logout user logoutesponse", logoutesponse);
+
+                        res.status(200).json({
+                            status: "success",
+                            responseCode: "201",
+                            responseMessage: "User logout was successful!",
+                            data: responseData
+                        });
+                            
+                        mg.disconnect();
+            
+                        return;
+                    }
+                });
+            } else {
+                res.status(200).json({
+                    status: "error",
+                    responseCode: "206",
+                    responseMessage: "Unknown error occured during logout!",
+                    data: getError
+                });
+    
+                mg.disconnect();
+    
+                return;
+            }
+        });
+    } else {
+        res.status(200).json({
+            status: "error",
+            responseCode: "206",
+            responseMessage: "Logout Failed... Please Supply your authentication details!",
+            data: null
+        });
+
+        mg.disconnect();
+
+        return;
+    }
 });
 
 module.exports = router;

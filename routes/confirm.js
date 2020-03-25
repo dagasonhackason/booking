@@ -1,8 +1,10 @@
+require('dotenv').config();
 const express = require("express");
 const router = express.Router();
 const mg = require("mongoose");
 const Schema = mg.Schema, ObjectId = Schema.ObjectId;
 const Seats = require('../models/seats');
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 
 const dbStringSanitizer = function dbStringSanitizer(arg) {
@@ -12,13 +14,14 @@ const dbStringSanitizer = function dbStringSanitizer(arg) {
             .replace(/"/g, "\\\"");
 };
 
+/* GET confirm View. */
 router.get("/:id", (req,res,next)=>{
     var id = req.params.id;
     let dataPassed = {};
 
     console.log("hitting confirm view route with", req.params);
 
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     Seats.findOne({_id: dbStringSanitizer(id), isDeleted: false, isActivated: true}, function(getError,dataGot) {
         if (!getError && dataGot) {

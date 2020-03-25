@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const router = express.Router();
 const mg = require("mongoose");
@@ -10,6 +11,7 @@ const auth = require('../middlewares/authMiddleware');
 
 const { dbStringSanitizer } = require('../utilities/supportFunctions');
 const { respondWithSuccess, respondWithError } = require('../utilities/responder');
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 const SecretCodes = require('../models/secretCodes');
 
@@ -121,6 +123,41 @@ router.get("/", (req,res,next)=>{
     SecretCodes.find({isDeleted: false}, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("From mongo get all secretCodes", dataGot);
+            
+            dataGot.sort((a, b) => (parseInt(a.secretCode) > parseInt(b.secretCode)) ? 1 : -1);
+
+            res.status(200).json({
+                status: "success",
+                responseCode: "201",
+                responseMessage: "All secretCode Data Acquired Successful!",
+                data: dataGot
+            });
+            
+            mg.disconnect();
+
+            return;
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error acquiring data!",
+                data: getError
+            });
+
+            mg.disconnect();
+
+            return;
+        }
+    });
+});
+
+router.get("/populate", (req,res,next)=>{
+    console.log("new get all secretCodes populate request", req.body);
+    mg.connect("mongodb://127.0.0.1:27017/secretCodebooking");
+
+    SecretCodes.find({isDeleted: false}).populate('Users', 'username -_id').exec((getError, dataGot) => {
+        if (!getError && dataGot) {
+            console.log("From mongo get all populate secretCodes", dataGot);
             
             dataGot.sort((a, b) => (parseInt(a.secretCode) > parseInt(b.secretCode)) ? 1 : -1);
 

@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 require('console-stamp')(console, '[HH:MM:ss.l]');
 const createError = require('http-errors');
 const express = require('express');
@@ -11,15 +11,17 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const validator = require('express-validator');
 const moment = require("moment");
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var configureUsersRouter = require('./routes/configureUsers');
 let loginRouter = require("./routes/login");
 let registerRouter = require("./routes/register");
 let confirmRouter = require("./routes/confirm");
 let dashRouter = require("./routes/dash");
-let configureRouter = require("./routes/configure");
-let bookingsRouter = require("./routes/bookings");
+let configureSeatsRouter = require("./routes/configureSeats");
+let configureSecretCodesRouter = require("./routes/configureSecretCodes");
+let configureBookingsRouter = require("./routes/configureBookings");
 let showTicketRouter = require("./routes/showticket");
 
 ///////// API ROUTES /////////
@@ -71,20 +73,21 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //database connection
-mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+mg.connect(MONGODB_CONNECTION_STRING);
 mg.set('debug', true);
 // mg.set('debug', function (coll, method, query, doc [, options]) {
 //   //TODO :
 // });
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use("/login", loginRouter);
 app.use("/register", registerRouter);
 app.use("/confirm", confirmRouter);
 app.use("/dash", dashRouter);
-app.use("/configure", configureRouter);
-app.use("/bookings", bookingsRouter);
+app.use("/configureSeats", configureSeatsRouter);
+app.use("/configureSecretCodes", configureSecretCodesRouter);
+app.use('/configureUsers', configureUsersRouter);
+app.use("/configureBookings", configureBookingsRouter);
 app.use("/showticket", showTicketRouter);
 
 ///////// API LOGGING /////////

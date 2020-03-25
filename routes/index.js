@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET index View. */
 router.get('/', function(req, res, next) {
   console.log("hitting index view route with", req.params);
   res.render('index.ejs', { title: 'test' });

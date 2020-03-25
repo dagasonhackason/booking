@@ -9,10 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin Dashboard</title>
+    <title>Admin Configure Bookings</title>
 
     <!--Font Awesome-->
-    <link href="/stylesheets/all.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css" rel="stylesheet">
+
     <!-- Bootstrap Core CSS -->
     <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
 
@@ -22,6 +23,8 @@
 
     <!-- Custom CSS -->
     <link href="/stylesheets/custom.css" rel="stylesheet" />
+
+    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,9 +36,6 @@
 </head>
 
 <body>
-
-    
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top navbar" role="navigation">
         <div class="container">
@@ -59,21 +59,16 @@
         <!-- /.container -->
     </nav>
 
-
-
-    <div class="d-flex justify-content-center" align="center">
-            <p>
-                <h3>Booking Status</h3>
-            </p>
+    <div class="d-flex justify-content-center" align="left">
+        <p>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configure Bookings</h3>
+        </p>
+    </div><br /><br />
+    
+    <div class="d-flex justify-content-center col-md-12" align="center" style="width:100%;">
+        <table id="DataTblElement" class="display" style="width:100%;"></table>
+    </div>
             
-                                       
-    
-            </div>
-            
-    
-       
-    
-
     <!-- jQuery -->
     <script src="/javascripts/jquery.js"></script>
 
@@ -92,12 +87,18 @@
 
 	<script src="/javascripts/moment.js"></script>
 
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
     <script type="text/javascript">
         if (typeof isBookingsPage == "undefined") {
             var isBookingsPage = function (){
                 return true;
             };
         }
+
+        $(document).ready(() => {
+            populateBookingsConfigTable();
+        });
     </script>
 
 	<script src="/javascripts/functions.js"></script>

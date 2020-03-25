@@ -1,9 +1,10 @@
+require('dotenv').config();
 const express = require("express");
 const router = express.Router();
 const mg = require("mongoose");
 const Schema = mg.Schema, ObjectId = Schema.ObjectId;
 const Bookings = require('../models/bookings');
-
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 const dbStringSanitizer = function dbStringSanitizer(arg) {
     return arg.replace(/\\/g, "\\\\")
@@ -12,13 +13,13 @@ const dbStringSanitizer = function dbStringSanitizer(arg) {
             .replace(/"/g, "\\\"");
 };
 
+/* GET showticket View. */
 router.get("/:id", (req,res,next) => {
     var id = req.params.id;
-    let dataGot = {};
-
+    
     console.log("hitting showticket view route with", req.params);
 
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     Bookings.findOne({_id: dbStringSanitizer(id)}, function(getError,dataGot) {
         if (!getError && dataGot) {

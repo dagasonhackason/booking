@@ -475,3 +475,20 @@
 [[06:17:49.179]] [ERROR]  (node:8816) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
 [[06:17:49.183]] [ERROR]  (node:8816) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
 [[06:19:31.048]] [ERROR]  (node:8816) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[17:55:09.558]] [ERROR]  TypeError: Cannot read property 'select' of undefined
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiUsers.js:101:27
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4827:16
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:4390:12
+    at model.Query.Query._completeOne (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:2074:12)
+    at Immediate.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:2136:10)
+    at Immediate.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\mquery\lib\utils.js:116:16)
+    at processImmediate (internal/timers.js:456:21)
+[[17:55:09.564]] [ERROR]  TypeError: Cannot read property 'select' of undefined
+    at C:\xampp\htdocs\bookingsystem-master\routes\apiUsers.js:101:27
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\model.js:4827:16
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:4390:12
+    at model.Query.Query._completeOne (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:2074:12)
+    at Immediate.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\mongoose\lib\query.js:2136:10)
+    at Immediate.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\mquery\lib\utils.js:116:16)
+    at processImmediate (internal/timers.js:456:21)
+[[17:59:31.727]] [ERROR]  Please Fill all required fields and try again... Try again!

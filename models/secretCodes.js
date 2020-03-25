@@ -2,10 +2,19 @@ const mg = require('mongoose');
 const Schema = mg.Schema, ObjectId = Schema.ObjectId;
 
 const secretCodesSchema = new Schema({
-    secretCode: String, 
-    createdBy: ObjectId, 
+    secretCode: {
+        type: String,
+        unique: true
+    }, 
+    createdBy: {
+        type: ObjectId,
+        ref: 'Users'
+    }, 
     createdOn: String, 
-    updatedBy: ObjectId, 
+    updatedBy: {
+        type: ObjectId,
+        ref: 'Users'
+    }, 
     updatedOn: String, 
     isDeleted: Boolean
 });

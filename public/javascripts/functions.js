@@ -2,15 +2,152 @@ const API_BASE_URL = "http://localhost:3000/";
 const clientJS = new ClientJS();
 const isCookie = clientJS.isCookie();
 
+if (typeof populateSeatsConfigTable == "undefined") {
+    var populateSeatsConfigTable = () => {
+        console.log("populateSeatsConfigTable() request data", {});
+        console.log("populateSeatsConfigTable() username and session request headers", window.userData.username, window.userData.sessionId);
+
+        axios.get(API_BASE_URL + "api/seats/populate", {
+            headers : {
+                'Accept' : 'application/json',
+                'Content-Type' : 'application/json; charset=utf-8',
+                'sessionId' : window.userData.sessionId,
+                'username' : window.userData.username
+            }
+        }).then((response) => {
+                console.log("populateSeatsConfigTable() response data", response.data);
+                if(response.data.status == "success") {
+                    var dataArray = response.data.data;
+                    window.LoadCurrentTableReport(dataArray);
+                } else if(response.data.status == "error"){
+                    window.callErrorPopup(response.data.responseMessage, (() => {
+                        //DO NOTHING YET
+                    }));
+                } else if(response.data.status == "warning"){
+                    window.callInfoPopup(response.data.responseMessage);
+                } else if(response.data.status == "information"){
+                    window.callWarnPopup(response.data.responseMessage);
+                }
+            }).catch((error) => {
+                console.log(error);
+            }).finally(() => {
+                // always executed
+            });
+    }
+}
+
+if (typeof populateSecretCodesConfigTable == "undefined") {
+    var populateSecretCodesConfigTable = () => {
+        console.log("populateSecretCodesConfigTable() request data", {});
+        console.log("populateSecretCodesConfigTable() username and session request headers", window.userData.username, window.userData.sessionId);
+
+        axios.get(API_BASE_URL + "api/secretcodes/populate", {
+            headers : {
+                'Accept' : 'application/json',
+                'Content-Type' : 'application/json; charset=utf-8',
+                'sessionId' : window.userData.sessionId,
+                'username' : window.userData.username
+            }
+        }).then((response) => {
+                console.log("populateSecretCodesConfigTable() response data", response.data);
+                if(response.data.status == "success") {
+                    var dataArray = response.data.data;
+                    window.LoadCurrentTableReport(dataArray);
+                } else if(response.data.status == "error"){
+                    window.callErrorPopup(response.data.responseMessage, (() => {
+                        //DO NOTHING YET
+                    }));
+                } else if(response.data.status == "warning"){
+                    window.callInfoPopup(response.data.responseMessage);
+                } else if(response.data.status == "information"){
+                    window.callWarnPopup(response.data.responseMessage);
+                }
+            }).catch((error) => {
+                console.log(error);
+            }).finally(() => {
+                // always executed
+            });
+    }
+}
+
+if (typeof populateBookingsConfigTable == "undefined") {
+    var populateBookingsConfigTable = () => {
+        console.log("populateBookingsConfigTable() request data", {});
+        console.log("populateBookingsConfigTable() username and session request headers", window.userData.username, window.userData.sessionId);
+
+        axios.get(API_BASE_URL + "api/bookings/populate", {
+            headers : {
+                'Accept' : 'application/json',
+                'Content-Type' : 'application/json; charset=utf-8',
+                'sessionId' : window.userData.sessionId,
+                'username' : window.userData.username
+            }
+        }).then((response) => {
+                console.log("populateBookingsConfigTable() response data", response.data);
+                if(response.data.status == "success") {
+                    var dataArray = response.data.data;
+                    window.LoadCurrentTableReport(dataArray);
+                } else if(response.data.status == "error"){
+                    window.callErrorPopup(response.data.responseMessage, (() => {
+                        //DO NOTHING YET
+                    }));
+                } else if(response.data.status == "warning"){
+                    window.callInfoPopup(response.data.responseMessage);
+                } else if(response.data.status == "information"){
+                    window.callWarnPopup(response.data.responseMessage);
+                }
+            }).catch((error) => {
+                console.log(error);
+            }).finally(() => {
+                // always executed
+            });
+    }
+}
+
+if (typeof populateUsersConfigTable == "undefined") {
+    var populateUsersConfigTable = () => {
+        console.log("populateUsersConfigTable() request data", {});
+        console.log("populateUsersConfigTable() username and session request headers", window.userData.username, window.userData.sessionId);
+
+        axios.get(API_BASE_URL + "api/users/populate", {
+            headers : {
+                'Accept' : 'application/json',
+                'Content-Type' : 'application/json; charset=utf-8',
+                'sessionId' : window.userData.sessionId,
+                'username' : window.userData.username
+            }
+        }).then((response) => {
+                console.log("populateUsersConfigTable() response data", response.data);
+                if(response.data.status == "success") {
+                    var dataArray = response.data.data;
+                    window.LoadCurrentTableReport(dataArray);
+                } else if(response.data.status == "error"){
+                    window.callErrorPopup(response.data.responseMessage, (() => {
+                        //DO NOTHING YET
+                    }));
+                } else if(response.data.status == "warning"){
+                    window.callInfoPopup(response.data.responseMessage);
+                } else if(response.data.status == "information"){
+                    window.callWarnPopup(response.data.responseMessage);
+                }
+            }).catch((error) => {
+                console.log(error);
+            }).finally(() => {
+                // always executed
+            });
+    }
+}
+
 if (typeof populateSeatsBookingView == "undefined") {
     var populateSeatsBookingView = () => {
+        console.log("populateSeatsBookingView() request data", {});
         axios.get(API_BASE_URL + "api/seats", {
-                param :  null,
-                config : { headers: {
-                    'Accept' : 'application/json',
-                    'Content-Type' : 'application/json; charset=utf-8'
-                }}
-            }).then((response) => {
+            headers : {
+                'Accept' : 'application/json',
+                'Content-Type' : 'application/json; charset=utf-8'
+            }
+        }).then((response) => {
+                console.log("populateSeatsBookingView() response data", response.data);
                 if(response.data.status == "success"){
                     var dataArray = response.data.data;
                     var jsonStrippedData= {};
@@ -44,7 +181,7 @@ if (typeof populateSeatsBookingView == "undefined") {
                     console.log("jsonStrippedData", jsonStrippedData);
                     jsonToSeatsBookingView(jsonStrippedData.dataArray);
                 } else if(response.data.status == "error"){
-                    window.callErrorPopup(response.data.responseMessage + "... Click Ok to continue!", (() => {
+                    window.callErrorPopup(response.data.responseMessage, (() => {
                         //DO NOTHING YET
                     }));
                 } else if(response.data.status == "warning"){
@@ -62,12 +199,14 @@ if (typeof populateSeatsBookingView == "undefined") {
 
 if (typeof loginAndSetSessionDetails == "undefined") {
     var loginAndSetSessionDetails = (arg) => {
+        console.log("loginAndSetSessionDetails() request data", arg);
         axios.post(API_BASE_URL + "api/users/login", arg, {
             headers : {
                 'Accept' : 'application/json',
                 'Content-Type' : 'application/json; charset=utf-8'
             }
         }).then((response) => {
+            console.log("loginAndSetSessionDetails() response data", response.data);
             if(response.data.status == "success"){
                 if(isCookie) {
                     setCookie( "userId", response.data.data.userId,  ((new Date(Date.now() + 12096e5))) );
@@ -92,7 +231,7 @@ if (typeof loginAndSetSessionDetails == "undefined") {
                     window.callWarnPopup("There was a problem... Your Cookie functionality has been turned off... Please Turn it back on!");
                 }
             } else if(response.data.status == "error"){
-                window.callErrorPopup("Login Failed... " + response.data.responseMessage + "... Click Ok to continue!", (() => {
+                window.callErrorPopup("Login Failed... " + response.data.responseMessage, (() => {
                     //DO NOTHING YET
                 }));
             } else if(response.data.status == "warning"){
@@ -109,13 +248,19 @@ if (typeof loginAndSetSessionDetails == "undefined") {
 }
 
 if (typeof logoutAndKillSession == "undefined") {
-    var logoutAndKillSession = (arg) => {
-        axios.post(API_BASE_URL + "api/users/logout", arg, {
+    var logoutAndKillSession = () => {
+        console.log("logoutAndKillSession() request data", {});
+        console.log("logging out from this username and session", window.userData.username, window.userData.sessionId);
+
+        axios.post(API_BASE_URL + "api/users/logout", {}, {
             headers : {
                 'Accept' : 'application/json',
-                'Content-Type' : 'application/json; charset=utf-8'
+                'Content-Type' : 'application/json; charset=utf-8',
+                'sessionId' : window.userData.sessionId,
+                'username' : window.userData.username
             }
         }).then((response) => {
+            console.log("logoutAndKillSession() response data", response.data);
             if(response.data.status == "success"){
                 if(isCookie) {
                     setCookie( "userId", "EXPIRED",  ((new Date().getTime()) - 1209600) );
@@ -141,7 +286,7 @@ if (typeof logoutAndKillSession == "undefined") {
                     window.callWarnPopup("There was a problem... Your Cookie functionality has been turned off... Please Turn it back on!");
                 }
             } else if(response.data.status == "error"){
-                window.callErrorPopup("Logout Failed... " + response.data.responseMessage + "... Click Ok to continue!", (() => {
+                window.callErrorPopup("Logout Failed... " + response.data.responseMessage, (() => {
                     //DO NOTHING YET
                 }));
             } else if(response.data.status == "warning"){
@@ -158,27 +303,54 @@ if (typeof logoutAndKillSession == "undefined") {
 }
 
 if (typeof extractAllLoginSessionData == "undefined") {
-    window.extractAllLoginSessionData = () => {
+    window.extractAllLoginSessionData = (isToNavigateAfter, whereToNaviagte) => {
         if(isCookie) {
             if((!(/true/i).test(("" + getCookie("isExpired")).toLocaleLowerCase()) && getCookie("isExpired") != '') && (!(/EXPIRED/i).test(("" + getCookie("sessionId")).toLocaleUpperCase()) && getCookie("sessionId") != '')) {
-                return ({
-                    userId: getCookie("userId"),
-                    username: getCookie("username"),
-                    createdOn: getCookie("createdOn"),
-                    updatedOn: getCookie("updatedOn"),
-                    updatedBy: getCookie("updatedBy"),
-                    lastLoginOn: getCookie("lastLoginOn"),
-                    isDeleted: getCookie("isDeleted"),
-                    loggedInOn: getCookie("loggedInOn"),
-                    loggedOutOn: getCookie("loggedOutOn"),
-                    loggedOutBy: getCookie("loggedOutBy"),
-                    _id: getCookie("_id"),
-                    sessionId: getCookie("sessionId"),
-                    isExpired: getCookie("isExpired"),
-                    expiresOn: getCookie("expiresOn")
-                });
+                if(isToNavigateAfter) {
+                    window.location.href = "/" + whereToNaviagte;
+                } else {
+                    window.userData = {
+                        userId: getCookie("userId"),
+                        username: getCookie("username"),
+                        createdOn: getCookie("createdOn"),
+                        updatedOn: getCookie("updatedOn"),
+                        updatedBy: getCookie("updatedBy"),
+                        lastLoginOn: getCookie("lastLoginOn"),
+                        isDeleted: getCookie("isDeleted"),
+                        loggedInOn: getCookie("loggedInOn"),
+                        loggedOutOn: getCookie("loggedOutOn"),
+                        loggedOutBy: getCookie("loggedOutBy"),
+                        _id: getCookie("_id"),
+                        sessionId: getCookie("sessionId"),
+                        isExpired: getCookie("isExpired"),
+                        expiresOn: getCookie("expiresOn")
+                    };
+
+                    console.log("Geting window.userData from cookie store", window.userData);
+                    return (window.userData);
+                }
             } else {
-                return (null);
+                if(!isToNavigateAfter) {
+                    window.location.href = "/" + whereToNaviagte;
+                } else {
+                    console.log("No correct login window.userData from cookie store... may be logged out?", {
+                        userId: getCookie("userId"),
+                        username: getCookie("username"),
+                        createdOn: getCookie("createdOn"),
+                        updatedOn: getCookie("updatedOn"),
+                        updatedBy: getCookie("updatedBy"),
+                        lastLoginOn: getCookie("lastLoginOn"),
+                        isDeleted: getCookie("isDeleted"),
+                        loggedInOn: getCookie("loggedInOn"),
+                        loggedOutOn: getCookie("loggedOutOn"),
+                        loggedOutBy: getCookie("loggedOutBy"),
+                        _id: getCookie("_id"),
+                        sessionId: getCookie("sessionId"),
+                        isExpired: getCookie("isExpired"),
+                        expiresOn: getCookie("expiresOn")
+                    });
+                    return (null);
+                }
             } 
         } else {
             window.callWarnPopup("There was a problem... Your Cookie functionality has been turned off... Please Turn it back on!");
@@ -189,18 +361,20 @@ if (typeof extractAllLoginSessionData == "undefined") {
 
 if (typeof createNewUser == "undefined") {
     var createNewUser = (arg) => {
+        console.log("createNewUser() request data", arg);
         axios.post(API_BASE_URL + "api/users/create", arg, {
             headers : {
                 'Accept' : 'application/json',
                 'Content-Type' : 'application/json; charset=utf-8'
             }
         }).then((response) => {
+            console.log("createNewUser() response data", response.data);
             if(response.data.status == "success") {
                 window.callSuccessPopup("The user account was created successfully!", (() => {
                     
                 }));
             } else if(response.data.status == "error"){
-                window.callErrorPopup(response.data.responseMessage + "... Click Ok to continue!", (() => {
+                window.callErrorPopup(response.data.responseMessage, (() => {
                     //DO NOTHING YET
                 }));
             } else if(response.data.status == "warning"){
@@ -218,18 +392,55 @@ if (typeof createNewUser == "undefined") {
 
 if (typeof createNewBooking == "undefined") {
     var createNewBooking = (arg) => {
+        console.log("createNewBooking() request data", arg);
         axios.post(API_BASE_URL + "api/bookings/create", arg, {
             headers : {
                 'Accept' : 'application/json',
                 'Content-Type' : 'application/json; charset=utf-8'
             }
         }).then((response) => {
+            console.log("createNewBooking() response data", response.data);
             if(response.data.status == "success") {
                 window.callSuccessPopup("The booking was created successfully... Click Ok to continue!", (() => {
                     window.location.href = "/showticket/" + response.data.data._id;
                 }));
             } else if(response.data.status == "error"){
-                window.callErrorPopup(response.data.responseMessage + "... Click Ok to continue!", (() => {
+                window.callErrorPopup(response.data.responseMessage, (() => {
+                    //DO NOTHING YET
+                }));
+            } else if(response.data.status == "warning"){
+                window.callInfoPopup(response.data.responseMessage);
+            } else if(response.data.status == "information"){
+                window.callWarnPopup(response.data.responseMessage);
+            }
+        }).catch((error) => {
+            console.log(error);
+        }).finally(() => {
+            // always executed
+        });  
+    }
+}
+
+if (typeof createBulkSeats == "undefined") {
+    var createBulkSeats = (arg) => {
+        console.log("createBulkSeats() request data", arg);
+        console.log("createBulkSeats() username and session", window.userData.username, window.userData.sessionId);
+
+        axios.post(API_BASE_URL + "api/seats/bulkcreate", arg, {
+            headers : {
+                'Accept' : 'application/json',
+                'Content-Type' : 'application/json; charset=utf-8',
+                'sessionId' : window.userData.sessionId,
+                'username' : window.userData.username
+            }
+        }).then((response) => {
+            console.log("createBulkSeats() response data", response.data);
+            if(response.data.status == "success") {
+                window.callSuccessPopup(response.data.responseMessage + "... Click Ok to refresh table data!", (() => {
+                    populateSeatsConfigTable();
+                }));
+            } else if(response.data.status == "error"){
+                window.callErrorPopup(response.data.responseMessage, (() => {
                     //DO NOTHING YET
                 }));
             } else if(response.data.status == "warning"){
@@ -313,6 +524,154 @@ if (typeof getCookie == "undefined") {
 }
 
 $(document).ready(() => {
+    window.LoadCurrentTableReport = (oDataArray) => {
+        var jsonString = JSON.parse(JSON.stringify(oDataArray)); 
+        var tblColumns = new Array();
+        var oDataTbl = $("#DataTblElement");
+
+        if(Array.isArray(jsonString) && jsonString.length > 0) {
+            var tblColumnKeys = Object.keys(jsonString[0]);
+            tblColumnKeys.map(x => {
+                switch(x) {
+                    case "_id":
+                        tblColumns.push({"data": "_id", "sTitle": "<center>_id</center>", "visible": false, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "seatId":
+                        tblColumns.push({"data": "seatId", "sTitle": "<center>Seat</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "secretCode":
+                        tblColumns.push({"data": "secretCode", "sTitle": "<center>Secret Code</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "username":
+                        tblColumns.push({"data": "username", "sTitle": "<center>Username</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+
+                    case "seatNumber":
+                        tblColumns.push({"data": "seatNumber", "sTitle": "<center>Seat Number</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "ticketCode":
+                        tblColumns.push({"data": "ticketCode", "sTitle": "<center>Ticket Code</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "bookedByName":
+                        tblColumns.push({"data": "bookedByName", "sTitle": "<center>Booked By</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "status":
+                        tblColumns.push({"data": "status", "sTitle": "<center>Booking Status?</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center><img src='/images/booked.png' style='height: 32px;' /></center>" : "<center><img src='/images/not-booked.png' style='height: 32px;' /></center>";
+                        }});
+                    break;
+                    
+                    case "createdBy":
+                        tblColumns.push({"data": "createdBy", "sTitle": "<center>Created By</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "createdOn":
+                        tblColumns.push({"data": "createdOn", "sTitle": "<center>Created On</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "updatedBy":
+                        tblColumns.push({"data": "updatedBy", "sTitle": "<center>Updated By</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "updatedOn":
+                        tblColumns.push({"data": "updatedOn", "sTitle": "<center>Updated On</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "lastLoginOn":
+                        tblColumns.push({"data": "lastLoginOn", "sTitle": "<center>Last Login On</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "ticketCodeUsedOn":
+                        tblColumns.push({"data": "ticketCodeUsedOn", "sTitle": "<center>Ticket Code Used On</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "bookedOn":
+                        tblColumns.push({"data": "bookedOn", "sTitle": "<center>Booked On</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center>" + data + "</center>" : "<center>" + data + "</center>";
+                        }});
+                    break;
+                    
+                    case "isActivated":
+                        tblColumns.push({"data": "isActivated", "sTitle": "<center>Activated?</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center><img src='/images/check-green.png' /></center>" : "<center><img src='/images/error-red.png' /><center>";
+                        }});
+                    break;
+                    
+                    case "isDeleted":
+                        tblColumns.push({"data": "isDeleted", "sTitle": "<center>Deleted?</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center><img src='/images/check-green.png' /></center>" : "<center><img src='/images/error-red.png' /></center>";
+                        }});
+                    break;
+
+                    case "isTicketCodeUsed":
+                        tblColumns.push({"data": "isTicketCodeUsed", "sTitle": "<center>Ticket Code Used?</center>", "visible": true, mRender: function ( data, type, row ) {
+                            return data ? "<center><img src='/images/check-green.png' /><center>" : "<center><img src='/images/error-red.png' /></center>";
+                        }});
+                    break;
+
+                    default: 
+                        tblColumns.push({"data": x, sTitle: x});
+                    break;
+                }
+            });
+
+            console.log("generated table columns", tblColumns);
+            
+            oDataTbl.DataTable({
+                "destroy": true,
+                "data" : jsonString,
+                "columns" : tblColumns
+            });
+    
+            // oDataTbl.DataTable({
+            //     "data" : jsonString,
+            //     // "columns" : [
+                //     { "data" : "_id" },
+                //     { "data" : "seatNumber" },
+                //     { "data" : "status" },
+                //     { "data" : "createdBy" },
+                //     { "data" : "createdOn" },
+                //     { "data" : "updatedOn" },
+                //     { "data" : "updatedBy" ,},
+                //     { "data" : "isActivated" },
+                //     { "data" : "isDeleted" }
+                // ]
+            // });
+        }
+    };
+
     if (typeof methods == "undefined") {
         var methods 	= {
             delete  : (id) => {
@@ -335,7 +694,10 @@ $(document).ready(() => {
             $.fallr.show({
                 closeOverlay      : true,
                 buttons           : {
-                                        button1 : {text: 'OK', onclick: () => {callback()}},
+                                        button1 : {text: 'OK', onclick: () => {
+                                            callback();
+                                            $.fallr.hide();
+                                        }},
                 },
                 icon              : 'error',
                 content           : '<h4>Error Message</h4><p>' + message +'.</p>'
@@ -346,7 +708,10 @@ $(document).ready(() => {
             $.fallr.show({
                 closeOverlay      : false,
                 buttons           : {
-                                        button1 : {text: 'OK', onclick: () => {callback()}},
+                                        button1 : {text: 'OK', onclick: () => {
+                                            callback();
+                                            $.fallr.hide();
+                                        }},
                 },
                 icon              : 'check',
                 content           : '<h4>Success Message</h4><p>' + message +'.</p>'
@@ -403,34 +768,20 @@ $(document).ready(() => {
 });
 
 // Calling startup functions
-if(isIndexPage()) {
+if(typeof isIndexPage != "undefined") {
     populateSeatsBookingView();
-} 
-
-if(isBookingsPage()) {
+} else if(typeof isBookingsPage != "undefined") {
+    window.userData = window.extractAllLoginSessionData(false, "dash");
+} else if(typeof isLoginPage != "undefined") {
+    window.userData = window.extractAllLoginSessionData(true, "dash");
+} else if(typeof isDashPage != "undefined") {
+    window.userData = window.extractAllLoginSessionData(false, "login");
+} else if(typeof isRegisterPage != "undefined") {
+    window.userData = window.extractAllLoginSessionData(true, "dash");
+} else if(typeof isShowTicketPage != "undefined") {
     // DO NOTHING YET
-} 
-
-if(isLoginPage()) {
-    // DO NOTHING YET
-} 
-
-if(isDashPage()) {
-    // DO NOTHING YET
-} 
-
-if(isRegisterPage()) {
-    // DO NOTHING YET
-} 
-
-if(isShowTicketPage()) {
-    // DO NOTHING YET
-} 
-
-if(isConfirmPage()) {
+} else if(typeof isConfirmPage != "undefined") {
     disableConfirmButton();
-} 
-
-if(isConfigurePage()) {
-    // DO NOTHING YET
+} else if(typeof isConfigurePage != "undefined") {
+    window.userData = window.extractAllLoginSessionData(false, "login");
 }

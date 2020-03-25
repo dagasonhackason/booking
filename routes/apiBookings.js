@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const router = express.Router();
 const mg = require("mongoose");
@@ -11,6 +12,7 @@ const auth = require('../middlewares/authMiddleware');
 
 const { dbStringSanitizer, generateTicket, updateSeatsCollection } = require('../utilities/supportFunctions');
 const { respondWithSuccess, respondWithError } = require('../utilities/responder');
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 const Seats = require('../models/seats');
 const Bookings = require('../models/bookings');
@@ -19,7 +21,7 @@ router.use(auth);
 
 router.post("/create", (req, res, next)=>{
     console.log("New Incoming create booking Request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     var dateTime = new Date();
     let ticketCode = generateTicket();
@@ -134,7 +136,7 @@ router.get("/read/:id", (req,res,next)=>{
     var id = req.params.id;
 
     console.log("New get one booking request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     Bookings.find({_id: mg.Types.ObjectId(dbStringSanitizer(id))}, function(getError,dataGot) {
         if (!getError && dataGot) {
@@ -169,11 +171,44 @@ router.get("/read/:id", (req,res,next)=>{
 
 router.get("/", (req,res,next)=>{
     console.log("new get all bookings request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
-    Bookings.find((getError,dataGot) => {
+    Bookings.find({}, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("From mongo get all bookings", dataGot);
+                        
+            res.status(200).json({
+                status: "success",
+                responseCode: "201",
+                responseMessage: "All booking Data Acquired Successful!",
+                data: dataGot
+            });
+            
+            mg.disconnect();
+
+            return;
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error acquiring data!",
+                data: getError
+            });
+
+            mg.disconnect();
+
+            return;
+        }
+    });
+});
+
+router.get("/populate", (req,res,next)=>{
+    console.log("new get all bookings populate request", req.body);
+    mg.connect(MONGODB_CONNECTION_STRING);
+
+    Bookings.find({}).populate('Users', 'username -_id').exec((getError, dataGot) => {
+        if (!getError && dataGot) {
+            console.log("From mongo get all populate bookings", dataGot);
                         
             res.status(200).json({
                 status: "success",
@@ -205,7 +240,7 @@ router.post("/useticket/:ticketCode/:id", (req,res,next)=>{
     var id = req.params.id;
 
     console.log("New booking update request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
     
     if(req.body.id) {
@@ -278,7 +313,7 @@ router.post("/useticket/:ticketCode/:id", (req,res,next)=>{
 
 router.post("/findcustomized", (req,res,next)=>{
     console.log("New bookings find customized request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     Bookings.find(req.body, (getError,dataGot) => {

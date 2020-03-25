@@ -1,0 +1,692 @@
+[[10:19:17.798]] [LOG]    hitting index view route with {}
+13/Mar/2020:10:19:17 +0000 "GET /"
+[[10:19:18.054]] [LOG]    Calling app logger
+13/Mar/2020:10:19:18 +0000 "GET /stylesheets/all.css"
+[[10:19:18.065]] [LOG]    Finishing
+[[10:19:18.066]] [LOG]    No sessionId used
+[[10:19:18.113]] [LOG]    App usage logged! - 2020-03-13 10:19:18 {
+  req_route: [32m'/stylesheets/all.css'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'text/css,*/*;q=0.1'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m404[39m,
+  res_status_message: [32m'Not Found'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 404 Not Found\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: text/html; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 1660\r\n'[39m +
+      [32m'ETag: W/"67c-HeEGelQdluJ6RBrq5CZ6NHZcDZQ"\r\n'[39m +
+      [32m'Date: Fri, 13 Mar 2020 10:19:18 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-13T10:19:18.066Z[39m
+}
+13/Mar/2020:10:19:18 +0000 "GET /stylesheets/custom.css"
+13/Mar/2020:10:19:18 +0000 "GET /stylesheets/fallr.css"
+13/Mar/2020:10:19:18 +0000 "GET /stylesheets/jquery-ui.css"
+13/Mar/2020:10:19:18 +0000 "GET /stylesheets/bootstrap.min.css"
+13/Mar/2020:10:19:18 +0000 "GET /images/tis.png"
+13/Mar/2020:10:19:18 +0000 "GET /javascripts/jquery.js"
+13/Mar/2020:10:19:18 +0000 "GET /javascripts/jquery-ui.js"
+13/Mar/2020:10:19:18 +0000 "GET /javascripts/jquery-easing.js"
+13/Mar/2020:10:19:18 +0000 "GET /javascripts/bootstrap.min.js"
+13/Mar/2020:10:19:18 +0000 "GET /javascripts/axios.js"
+13/Mar/2020:10:19:18 +0000 "GET /javascripts/fallr.js"
+13/Mar/2020:10:19:18 +0000 "GET /javascripts/clientJS.js"
+13/Mar/2020:10:19:18 +0000 "GET /javascripts/moment.js"
+13/Mar/2020:10:19:18 +0000 "GET /javascripts/functions.js"
+[[10:19:19.100]] [LOG]    Calling app logger
+[[10:19:19.101]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[10:19:19.102]] [LOG]    No middleware needed for this route /api/seats
+[[10:19:19.103]] [LOG]    new get all seats request {}
+[[10:19:19.149]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m }, { projection: {} })
+13/Mar/2020:10:19:19 +0000 "GET /favicon.ico"
+[[10:19:19.720]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e65872a5ff18c381c9f11c0,
+    seatNumber: [32m'1'[39m,
+    status: [33mtrue[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:00:42'[39m,
+    updatedOn: [32m'2020-03-09 02:16:37'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587395ff18c381c9f11c2,
+    seatNumber: [32m'2'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:00:57'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587455ff18c381c9f11c4,
+    seatNumber: [32m'3'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:09'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587495ff18c381c9f11c6,
+    seatNumber: [32m'4'[39m,
+    status: [33mtrue[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:13'[39m,
+    updatedOn: [32m'2020-03-09 03:58:12'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65874e5ff18c381c9f11c8,
+    seatNumber: [32m'5'[39m,
+    status: [33mtrue[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:18'[39m,
+    updatedOn: [32m'2020-03-09 03:24:56'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587555ff18c381c9f11ca,
+    seatNumber: [32m'6'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:25'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587595ff18c381c9f11cc,
+    seatNumber: [32m'7'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:29'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65875f5ff18c381c9f11ce,
+    seatNumber: [32m'8'[39m,
+    status: [33mtrue[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:35'[39m,
+    updatedOn: [32m'2020-03-09 04:45:21'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587645ff18c381c9f11d0,
+    seatNumber: [32m'9'[39m,
+    status: [33mtrue[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:40'[39m,
+    updatedOn: [32m'2020-03-09 17:56:37'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65876a5ff18c381c9f11d2,
+    seatNumber: [32m'10'[39m,
+    status: [33mtrue[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:46'[39m,
+    updatedOn: [32m'2020-03-09 04:54:40'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65876f5ff18c381c9f11d4,
+    seatNumber: [32m'11'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:51'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587745ff18c381c9f11d6,
+    seatNumber: [32m'12'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:56'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65877a5ff18c381c9f11d8,
+    seatNumber: [32m'13'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587865ff18c381c9f11da,
+    seatNumber: [32m'14'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:14'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65878c5ff18c381c9f11dc,
+    seatNumber: [32m'15'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:20'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587915ff18c381c9f11de,
+    seatNumber: [32m'16'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:25'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587995ff18c381c9f11e0,
+    seatNumber: [32m'17'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:33'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587a15ff18c381c9f11e2,
+    seatNumber: [32m'18'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:40'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587a75ff18c381c9f11e4,
+    seatNumber: [32m'19'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:47'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65a07f4e92743818aed67e,
+    seatNumber: [32m'20'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 01:48:47'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a84,
+    seatNumber: [32m'21'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a86,
+    seatNumber: [32m'22'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a88,
+    seatNumber: [32m'23'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a8a,
+    seatNumber: [32m'24'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a8c,
+    seatNumber: [32m'25'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a8e,
+    seatNumber: [32m'26'[39m,
+    status: [33mtrue[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m'2020-03-09 17:59:50'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  }
+]
+13/Mar/2020:10:19:19 +0000 "GET /api/seats"
+[[10:19:19.730]] [LOG]    Finishing
+[[10:19:19.731]] [LOG]    No sessionId used
+[[10:19:19.737]] [LOG]    App usage logged! - 2020-03-13 10:19:19 {
+  req_route: [32m'/api/seats'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json, text/plain, */*'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 5682\r\n'[39m +
+      [32m'ETag: W/"1632-4Mvt5s/Z/NIL4UWYX/3At8+gslE"\r\n'[39m +
+      [32m'Date: Fri, 13 Mar 2020 10:19:19 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-13T10:19:19.731Z[39m
+}
+13/Mar/2020:10:19:19 +0000 "GET /images/csd.png"
+[[10:20:10.415]] [LOG]    hitting confirm view route with { id: [32m'5e6683ab7ea3f82270583a8a'[39m }
+[[10:20:10.442]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e6683ab7ea3f82270583a8a"), isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m}, { projection: {} })
+[[10:20:10.566]] [LOG]    From mongo get one booking using confirm view {
+  _id: 5e6683ab7ea3f82270583a8a,
+  seatNumber: [32m'24'[39m,
+  status: [33mfalse[39m,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: [32m'2020-03-09 17:58:02'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  isActivated: [33mtrue[39m,
+  isDeleted: [33mfalse[39m
+}
+13/Mar/2020:10:20:10 +0000 "GET /confirm/5e6683ab7ea3f82270583a8a"
+[[10:20:10.699]] [LOG]    Calling app logger
+13/Mar/2020:10:20:10 +0000 "GET /stylesheets/all.css"
+[[10:20:10.705]] [LOG]    Finishing
+[[10:20:10.705]] [LOG]    No sessionId used
+13/Mar/2020:10:20:10 +0000 "GET /stylesheets/custom.css"
+13/Mar/2020:10:20:10 +0000 "GET /stylesheets/jquery-ui.css"
+13/Mar/2020:10:20:10 +0000 "GET /stylesheets/fallr.css"
+13/Mar/2020:10:20:10 +0000 "GET /javascripts/jquery-easing.js"
+13/Mar/2020:10:20:10 +0000 "GET /javascripts/jquery-ui.js"
+13/Mar/2020:10:20:10 +0000 "GET /javascripts/axios.js"
+13/Mar/2020:10:20:10 +0000 "GET /javascripts/bootstrap.min.js"
+13/Mar/2020:10:20:10 +0000 "GET /javascripts/jquery.js"
+13/Mar/2020:10:20:10 +0000 "GET /javascripts/moment.js"
+13/Mar/2020:10:20:10 +0000 "GET /javascripts/functions.js"
+13/Mar/2020:10:20:10 +0000 "GET /javascripts/clientJS.js"
+13/Mar/2020:10:20:10 +0000 "GET /javascripts/fallr.js"
+[[10:20:10.782]] [LOG]    App usage logged! - 2020-03-13 10:20:10 {
+  req_route: [32m'/stylesheets/all.css'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'text/css,*/*;q=0.1'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/confirm/5e6683ab7ea3f82270583a8a'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m404[39m,
+  res_status_message: [32m'Not Found'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 404 Not Found\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: text/html; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 1660\r\n'[39m +
+      [32m'ETag: W/"67c-HeEGelQdluJ6RBrq5CZ6NHZcDZQ"\r\n'[39m +
+      [32m'Date: Fri, 13 Mar 2020 10:20:10 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-13T10:20:10.705Z[39m
+}
+13/Mar/2020:10:20:10 +0000 "GET /stylesheets/bootstrap.min.css"
+13/Mar/2020:10:20:10 +0000 "GET /images/tis.png"
+13/Mar/2020:10:20:10 +0000 "GET /favicon.ico"
+[[10:22:18.566]] [LOG]    Calling app logger
+[[10:22:18.566]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
+[[10:22:18.566]] [LOG]    No middleware needed for this route /api/bookings/create
+[[10:22:18.567]] [LOG]    New Incoming create booking Request { seatId: [32m'5e6683ab7ea3f82270583a8a'[39m, bookedByName: [32m'Gabriel Dagadu'[39m }
+[[10:22:18.569]] [LOG]    selecting seatID from seats 5e6683ab7ea3f82270583a8a
+[[10:22:18.578]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e6683ab7ea3f82270583a8a"), status: [33mfalse[39m, isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m}, { projection: { __v: [33m0[39m } })
+[[10:22:18.613]] [LOG]    From mongo isn't seated booked already! {
+  _id: 5e6683ab7ea3f82270583a8a,
+  seatNumber: [32m'24'[39m,
+  status: [33mfalse[39m,
+  createdBy: 5e657d7500c28d427c171899,
+  createdOn: [32m'2020-03-09 17:58:02'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  isActivated: [33mtrue[39m,
+  isDeleted: [33mfalse[39m
+}
+[[10:22:18.651]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ _id: ObjectId("5e6683ab7ea3f82270583a8a"), isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { updatedOn: [32m'2020-03-13 10:22:18'[39m, status: [33mtrue[39m } }, { upsert: [33mtrue[39m })
+[[10:22:18.660]] [INFO]   [0;36mMongoose:[0m bookings.insertOne({ _id: ObjectId("5e6b5edaec317d2ce4a5f721"), seatId: ObjectId("5e6683ab7ea3f82270583a8a"), bookedByName: [32m'Gabriel Dagadu'[39m, ticketCode: [32m'1898d8bb'[39m, bookedOn: [32m'2020-03-13 10:22:18'[39m, isTicketCodeUsed: [33mfalse[39m, ticketCodeUsedOn: [32m''[39m}, { session: [1mnull[22m })
+[[10:22:18.841]] [LOG]    updated seatId 5e6683ab7ea3f82270583a8a status to booked BOOKED by Gabriel Dagadu { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+[[10:22:18.990]] [LOG]    for create insert booking {
+  _id: 5e6b5edaec317d2ce4a5f721,
+  seatId: 5e6683ab7ea3f82270583a8a,
+  bookedByName: [32m'Gabriel Dagadu'[39m,
+  ticketCode: [32m'1898d8bb'[39m,
+  bookedOn: [32m'2020-03-13 10:22:18'[39m,
+  isTicketCodeUsed: [33mfalse[39m,
+  ticketCodeUsedOn: [32m''[39m
+}
+13/Mar/2020:10:22:18 +0000 "POST /api/bookings/create"
+[[10:22:18.993]] [LOG]    Finishing
+[[10:22:18.993]] [LOG]    No sessionId used
+[[10:22:19.002]] [LOG]    App usage logged! - 2020-03-13 10:22:19 {
+  req_route: [32m'/api/bookings/create'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      [32m'content-length'[39m: [32m'69'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/confirm/5e6683ab7ea3f82270583a8a'[39m
+    },
+    params: {},
+    body: { bookedByName: [32m'Gabriel Dagadu'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 308\r\n'[39m +
+      [32m'ETag: W/"134-zlL1YK1ZePblVlSDXrUjPiWyrNA"\r\n'[39m +
+      [32m'Date: Fri, 13 Mar 2020 10:22:18 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-13T10:22:18.993Z[39m
+}
+13/Mar/2020:10:22:19 +0000 "GET /images/check.png"
+[[10:22:21.036]] [LOG]    hitting showticket view route with { id: [32m'5e6b5edaec317d2ce4a5f721'[39m }
+[[10:22:21.048]] [INFO]   [0;36mMongoose:[0m bookings.findOne({ _id: ObjectId("5e6b5edaec317d2ce4a5f721") }, { projection: {} })
+[[10:22:21.052]] [LOG]    From mongo get one booking using showticket view {
+  _id: 5e6b5edaec317d2ce4a5f721,
+  seatId: 5e6683ab7ea3f82270583a8a,
+  bookedByName: [32m'Gabriel Dagadu'[39m,
+  ticketCode: [32m'1898d8bb'[39m,
+  bookedOn: [32m'2020-03-13 10:22:18'[39m,
+  isTicketCodeUsed: [33mfalse[39m,
+  ticketCodeUsedOn: [32m''[39m
+}
+13/Mar/2020:10:22:21 +0000 "GET /showticket/5e6b5edaec317d2ce4a5f721"
+13/Mar/2020:10:22:21 +0000 "GET /stylesheets/custom.css"
+[[10:22:21.210]] [LOG]    Calling app logger
+13/Mar/2020:10:22:21 +0000 "GET /stylesheets/all.css"
+[[10:22:21.213]] [LOG]    Finishing
+[[10:22:21.213]] [LOG]    No sessionId used
+13/Mar/2020:10:22:21 +0000 "GET /stylesheets/bootstrap.min.css"
+13/Mar/2020:10:22:21 +0000 "GET /stylesheets/fallr.css"
+13/Mar/2020:10:22:21 +0000 "GET /stylesheets/jquery-ui.css"
+13/Mar/2020:10:22:21 +0000 "GET /javascripts/jquery.js"
+13/Mar/2020:10:22:21 +0000 "GET /javascripts/axios.js"
+[[10:22:21.228]] [LOG]    App usage logged! - 2020-03-13 10:22:21 {
+  req_route: [32m'/stylesheets/all.css'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'text/css,*/*;q=0.1'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/showticket/5e6b5edaec317d2ce4a5f721'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m404[39m,
+  res_status_message: [32m'Not Found'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 404 Not Found\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: text/html; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 1660\r\n'[39m +
+      [32m'ETag: W/"67c-HeEGelQdluJ6RBrq5CZ6NHZcDZQ"\r\n'[39m +
+      [32m'Date: Fri, 13 Mar 2020 10:22:21 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-13T10:22:21.213Z[39m
+}
+13/Mar/2020:10:22:21 +0000 "GET /javascripts/jquery-easing.js"
+13/Mar/2020:10:22:21 +0000 "GET /javascripts/bootstrap.min.js"
+13/Mar/2020:10:22:21 +0000 "GET /javascripts/moment.js"
+13/Mar/2020:10:22:21 +0000 "GET /javascripts/fallr.js"
+13/Mar/2020:10:22:21 +0000 "GET /images/tis.png"
+13/Mar/2020:10:22:21 +0000 "GET /javascripts/jquery-ui.js"
+13/Mar/2020:10:22:21 +0000 "GET /javascripts/functions.js"
+13/Mar/2020:10:22:21 +0000 "GET /javascripts/clientJS.js"
+13/Mar/2020:10:22:21 +0000 "GET /favicon.ico"
+[[11:05:53.069]] [LOG]    hitting login view route with {}
+13/Mar/2020:11:05:53 +0000 "GET /login"
+[[11:05:53.240]] [LOG]    Calling app logger
+13/Mar/2020:11:05:53 +0000 "GET /stylesheets/all.css"
+[[11:05:53.245]] [LOG]    Finishing
+[[11:05:53.245]] [LOG]    No sessionId used
+13/Mar/2020:11:05:53 +0000 "GET /stylesheets/custom.css"
+13/Mar/2020:11:05:53 +0000 "GET /javascripts/jquery.js"
+[[11:05:53.261]] [LOG]    App usage logged! - 2020-03-13 11:05:53 {
+  req_route: [32m'/stylesheets/all.css'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'text/css,*/*;q=0.1'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/login'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m404[39m,
+  res_status_message: [32m'Not Found'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 404 Not Found\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: text/html; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 1660\r\n'[39m +
+      [32m'ETag: W/"67c-HeEGelQdluJ6RBrq5CZ6NHZcDZQ"\r\n'[39m +
+      [32m'Date: Fri, 13 Mar 2020 11:05:53 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-13T11:05:53.245Z[39m
+}
+13/Mar/2020:11:05:53 +0000 "GET /javascripts/jquery-ui.js"
+13/Mar/2020:11:05:53 +0000 "GET /stylesheets/fallr.css"
+13/Mar/2020:11:05:53 +0000 "GET /stylesheets/bootstrap.min.css"
+13/Mar/2020:11:05:53 +0000 "GET /stylesheets/jquery-ui.css"
+13/Mar/2020:11:05:53 +0000 "GET /javascripts/moment.js"
+13/Mar/2020:11:05:53 +0000 "GET /javascripts/clientJS.js"
+13/Mar/2020:11:05:53 +0000 "GET /javascripts/fallr.js"
+13/Mar/2020:11:05:53 +0000 "GET /javascripts/jquery-easing.js"
+13/Mar/2020:11:05:53 +0000 "GET /javascripts/bootstrap.min.js"
+13/Mar/2020:11:05:53 +0000 "GET /javascripts/axios.js"
+13/Mar/2020:11:05:53 +0000 "GET /javascripts/functions.js"
+13/Mar/2020:11:05:53 +0000 "GET /images/tis.png"
+13/Mar/2020:11:05:53 +0000 "GET /favicon.ico"
+[[11:12:09.853]] [LOG]    hitting login view route with {}
+13/Mar/2020:11:12:09 +0000 "GET /login"
+[[11:12:10.032]] [LOG]    Calling app logger
+13/Mar/2020:11:12:10 +0000 "GET /stylesheets/all.css"
+[[11:12:10.037]] [LOG]    Finishing
+[[11:12:10.038]] [LOG]    No sessionId used
+13/Mar/2020:11:12:10 +0000 "GET /stylesheets/bootstrap.min.css"
+[[11:12:10.050]] [LOG]    App usage logged! - 2020-03-13 11:12:10 {
+  req_route: [32m'/stylesheets/all.css'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'text/css,*/*;q=0.1'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/login'[39m,
+      [32m'cache-control'[39m: [32m'max-age=0'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m404[39m,
+  res_status_message: [32m'Not Found'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 404 Not Found\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: text/html; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 1660\r\n'[39m +
+      [32m'ETag: W/"67c-HeEGelQdluJ6RBrq5CZ6NHZcDZQ"\r\n'[39m +
+      [32m'Date: Fri, 13 Mar 2020 11:12:10 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-13T11:12:10.038Z[39m
+}
+13/Mar/2020:11:12:10 +0000 "GET /stylesheets/custom.css"
+13/Mar/2020:11:12:10 +0000 "GET /stylesheets/jquery-ui.css"
+13/Mar/2020:11:12:10 +0000 "GET /stylesheets/fallr.css"
+13/Mar/2020:11:12:10 +0000 "GET /javascripts/bootstrap.min.js"
+13/Mar/2020:11:12:10 +0000 "GET /javascripts/jquery-easing.js"
+13/Mar/2020:11:12:10 +0000 "GET /javascripts/jquery.js"
+13/Mar/2020:11:12:10 +0000 "GET /javascripts/fallr.js"
+13/Mar/2020:11:12:10 +0000 "GET /javascripts/axios.js"
+13/Mar/2020:11:12:10 +0000 "GET /javascripts/jquery-ui.js"
+13/Mar/2020:11:12:10 +0000 "GET /javascripts/clientJS.js"
+13/Mar/2020:11:12:10 +0000 "GET /javascripts/functions.js"
+13/Mar/2020:11:12:10 +0000 "GET /images/tis.png"
+13/Mar/2020:11:12:10 +0000 "GET /javascripts/moment.js"
+13/Mar/2020:11:12:10 +0000 "GET /favicon.ico"

@@ -1,9 +1,11 @@
+require('dotenv').config();
 const mg = require("mongoose");
 const Schema = mg.Schema, ObjectId = Schema.ObjectId;
 const moment = require("moment");
 
 const { respondWithError, responderException } = require('../utilities/responder');
 const { dbStringSanitizer, jwtVerifyToken } = require('../utilities/supportFunctions');
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 const Users = require('../models/users');
 const LoginSessions = require('../models/loginSessions');
@@ -30,10 +32,10 @@ module.exports = (req, res, next) => {
     };
 
     if(dontUseMiddleWare) {
-        mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+        mg.connect(MONGODB_CONNECTION_STRING);
 
         const sessionId_extract = req.get("sessionId") || req.body.sessionId || req.query.sessionId;
-        const username_extract = req.get("username") || req.query.username;
+        const username_extract = ("" + req.get("username")).toLocaleLowerCase() || ("" + req.query.username).toLocaleLowerCase();
 
         if(!sessionId_extract && !username_extract) {
             return respondWithError(res, "You must provide a sessionId!", null, "209");
@@ -46,10 +48,10 @@ module.exports = (req, res, next) => {
 
         let userData = {};
         userData.sessionId_extract = sessionId_extract;
-        userData.username_extract = username_extract;
+        userData.username_extract = ("" + username_extract).toLocaleLowerCase();
 
         console.log("userData.sessionId_extract", userData.sessionId_extract);
-        console.log("userData.username_extract", userData.username_extract);
+        console.log("userData.username_extract", ("" + userData.username_extract).toLocaleLowerCase());
 
         if(wasJWTVerified !== null) {
             console.log("wasJWTVerified! decoded token " + sessionId_extract + " to ::: ", wasJWTVerified);
@@ -58,7 +60,7 @@ module.exports = (req, res, next) => {
 
             if(moment(moment.unix(wasJWTVerified.exp).utc().format("YYYY-MM-DD HH:mm:ss")).isAfter()) {
                 try {
-                    Users.findOne({ username: dbStringSanitizer(userData.username_extract), isDeleted: false }, function(errUser, existingUser) {
+                    Users.findOne({ username: dbStringSanitizer(("" + userData.username_extract).toLocaleLowerCase()), isDeleted: false }, function(errUser, existingUser) {
                         console.log("middleware data on user existence check", existingUser);
     
                         if (!errUser && existingUser) {

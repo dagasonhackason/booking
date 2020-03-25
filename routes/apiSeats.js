@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const router = express.Router();
 const mg = require("mongoose");
@@ -10,14 +11,16 @@ const auth = require('../middlewares/authMiddleware');
 
 const { dbStringSanitizer } = require('../utilities/supportFunctions');
 const { respondWithSuccess, respondWithError } = require('../utilities/responder');
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
+const Users = require('../models/users');
 const Seats = require('../models/seats');
 
 router.use(auth);
 
-router.post("/create", (req, res, next)=>{
+router.post("/create", (req, res, next)=> {
     console.log("New Incoming create seat Request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     if(req.body.seatNumber) {
@@ -79,9 +82,9 @@ router.post("/create", (req, res, next)=>{
     }
 });
 
-router.post("/bulkcreate", (req, res, next)=>{
+router.post("/bulkcreate", (req, res, next)=> {
     console.log("New Incoming create bulk seat Request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     if(req.body.totalSeatNumbers) {
@@ -130,9 +133,18 @@ router.post("/bulkcreate", (req, res, next)=>{
                                     } else {
                                         console.log("Seat " + seatNumber + " Bulk Already exist... Error!", err);
 
-                                        totalSeatsCreatedArray.push({
-                                            message: "Seat " + seatNumber + " Already exist... Error!",
-                                            data: err
+                                        await Seats.updateOne({seatNumber: seatNumber, isDeleted: false}, {$set: {status: false, updatedBy: mg.Types.ObjectId(req.userData.users._id), updatedOn: moment(dateTime).format("YYYY-MM-DD HH:mm:ss")}}, {upsert: true}, function(updateError, updated) {
+                                            if (updateError || !updated) {
+                                                totalSeatsCreatedArray.push({
+                                                    message: "Seat " + seatNumber + " Already exist... but Seat reset failed!",
+                                                    data: updateError
+                                                });
+                                            } else {
+                                                totalSeatsCreatedArray.push({
+                                                    message: "Seat " + seatNumber + " Already exist... Seat was reseted to not booked successfully!",
+                                                    data: updated
+                                                });
+                                            }
                                         });
                                     }
                                 }); 
@@ -153,7 +165,7 @@ router.post("/bulkcreate", (req, res, next)=>{
                         res.status(200).json({
                             status: "success",
                             responseCode: "201",
-                            responseMessage: "Bulk Seat Creation completed with the following results!",
+                            responseMessage: totalSeatNumbers + " Bulk Seat Creations completed with the following results!",
                             data: totalSeatsCreatedArray
                         });
                             
@@ -215,11 +227,11 @@ router.post("/bulkcreate", (req, res, next)=>{
     }
 });
 
-router.get("/read/:id", (req,res,next)=>{
+router.get("/read/:id", (req,res,next)=> {
     var id = req.params.id;
 
     console.log("New get one seat request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     Seats.find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false, isActivated: true}, function(getError,dataGot) {
         if (!getError && dataGot) {
@@ -250,9 +262,9 @@ router.get("/read/:id", (req,res,next)=>{
     });
 });
 
-router.get("/", (req,res,next)=>{
+router.get("/", (req,res,next)=> {
     console.log("new get all seats request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     Seats.find({isDeleted: false, isActivated: true}, (getError,dataGot) => {
         if (!getError && dataGot) {
@@ -285,11 +297,46 @@ router.get("/", (req,res,next)=>{
     });
 });
 
+router.get("/populate", (req,res,next)=> {
+    console.log("new get all seats and populate request", req.body);
+    mg.connect(MONGODB_CONNECTION_STRING);
+
+    Seats.find({isDeleted: false, isActivated: true}).populate('Users', 'username -_id').exec((getError, dataGot) => {
+        if (!getError && dataGot) {
+            console.log("From mongo get all seats and populate", dataGot);
+            
+            dataGot.sort((a, b) => (parseInt(a.seatNumber) > parseInt(b.seatNumber)) ? 1 : -1);
+
+            res.status(200).json({
+                status: "success",
+                responseCode: "201",
+                responseMessage: "All Seat Data Acquired Successful!",
+                data: dataGot
+            });
+            
+            mg.disconnect();
+
+            return;
+        } else {
+            res.status(200).json({
+                status: "error",
+                responseCode: "207",
+                responseMessage: "Unknown error acquiring data!",
+                data: getError
+            });
+
+            mg.disconnect();
+
+            return;
+        }
+    });
+});
+
 router.post("/update/:id", (req,res,next)=>{
     var id = req.params.id;
 
     console.log("New seat update request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
     
     if(req.body.id) {
@@ -371,7 +418,7 @@ router.post("/update/:id", (req,res,next)=>{
 
 router.post("/findcustomized", (req,res,next)=>{
     console.log("New seats find customized request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     Seats.find(req.body, (getError,dataGot) => {
@@ -406,7 +453,7 @@ router.post("/findcustomized", (req,res,next)=>{
 
 router.post("/delete", (req,res,next)=> {
     console.log("Delete seat request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
     
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
@@ -473,7 +520,7 @@ router.post("/delete", (req,res,next)=> {
 
 router.post("/restore", (req,res,next)=> {
     console.log("Restore seat request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
@@ -540,7 +587,7 @@ router.post("/restore", (req,res,next)=> {
 
 router.post("/activate", (req,res,next)=> {
     console.log("Activate seat request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
     
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
@@ -607,7 +654,7 @@ router.post("/activate", (req,res,next)=> {
 
 router.post("/deactivate", (req,res,next)=> {
     console.log("Deactivate seat request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/seatbooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
     
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");

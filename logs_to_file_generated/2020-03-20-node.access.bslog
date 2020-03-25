@@ -1,0 +1,1411 @@
+[[01:20:34.397]] [LOG]    hitting dash view route with {}
+[[01:20:34.425]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:20:34.432]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:20:34.468]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:20:34.470]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:20:34.487]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:20:34.491]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:20:34.497]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:01:20:35 +0000 "GET /dash"
+20/Mar/2020:01:20:35 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:20:35 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:20:35 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:20:35 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:20:35 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:20:35 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:20:35 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:20:35 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:20:35 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:20:35 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:20:35 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:20:35 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:20:35 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:20:38 +0000 "GET /images/tis.png"
+[[01:32:03.121]] [LOG]    hitting dash view route with {}
+[[01:32:03.155]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:32:03.162]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:32:03.207]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:32:03.209]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:32:03.239]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:32:03.242]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:32:03.251]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:01:32:03 +0000 "GET /dash"
+20/Mar/2020:01:32:03 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:32:03 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:32:03 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:32:03 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:32:03 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:32:03 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:32:03 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:32:03 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:32:03 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:32:03 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:32:03 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:32:03 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:32:03 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:32:10 +0000 "GET /images/tis.png"
+20/Mar/2020:01:32:10 +0000 "GET /favicon.ico"
+[[01:32:50.047]] [LOG]    Calling app logger
+[[01:32:50.049]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/logout
+[[01:32:50.051]] [LOG]    current username extracted dagasonhackason
+[[01:32:50.051]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:32:50.054]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:32:50.054]] [LOG]    userData.username_extract dagasonhackason
+[[01:32:50.054]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1584615348[39m, exp: [33m1585824948[39m }
+[[01:32:50.058]] [LOG]    getting jwt token passed false expirey time 2020-04-02 10:55:48
+[[01:32:50.066]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:32:50.071]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:32:50.074]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[01:32:50.077]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e734fb4d0d9622cc061d78f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-02 11:55:48'[39m
+}
+[[01:32:50.080]] [LOG]    new logout user request {}
+[[01:32:50.083]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:32:50.087]] [LOG]    from mongo logout user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:32:50.091]] [LOG]    user logout failed at session nullifying MongooseError [StrictModeError]: Path "isDeleted" is not in schema, strict mode is `true`, and upsert is `true`.
+    at new StrictModeError (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\error\strict.js:25:11)
+    at cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\cast.js:246:17)
+    at model.Query.Query.cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:4684:12)
+    at model.Query.Query._castConditions (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:1862:10)
+    at model.Query._updateThunk (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3682:8)
+    at model.Query.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3803:23)
+    at model.Query._wrappedThunk [as _updateOne] (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\[4mkareem[24m\index.js:369:33
+[90m    at processTicksAndRejections (internal/process/task_queues.js:79:11)[39m {
+  message: [32m'Path "isDeleted" is not in schema, strict mode is `true`, and upsert is `true`.'[39m,
+  name: [32m'StrictModeError'[39m,
+  isImmutableError: [33mfalse[39m,
+  path: [32m'isDeleted'[39m
+}
+20/Mar/2020:01:32:50 +0000 "POST /api/users/logout"
+[[01:32:50.094]] [LOG]    Finishing
+[[01:32:50.095]] [LOG]    Valid sessionId, logging
+[[01:32:50.112]] [LOG]    App usage logged! - 2020-03-20 01:32:50 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e734fb4d0d9622cc061d78f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-02 11:55:48'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/users/logout'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'content-length'[39m: [32m'2'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/dash'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-19 10:55:46; isDeleted=false; loggedInOn=2020-03-19 10:55:46; loggedOutOn=; loggedOutBy=null; _id=5e734fb4d0d9622cc061d78f; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU; isExpired=false; expiresOn=2020-04-02 11:55:48'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 273\r\n'[39m +
+      [32m'ETag: W/"111-svyB0D8TzhdCOpRrgjZqWk1tJDY"\r\n'[39m +
+      [32m'Date: Fri, 20 Mar 2020 01:32:50 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-20T01:32:50.095Z[39m
+}
+20/Mar/2020:01:32:50 +0000 "GET /images/error.png"
+[[01:33:02.697]] [LOG]    Calling app logger
+[[01:33:02.697]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/logout
+[[01:33:02.698]] [LOG]    current username extracted dagasonhackason
+[[01:33:02.698]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:33:02.699]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:33:02.699]] [LOG]    userData.username_extract dagasonhackason
+[[01:33:02.699]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1584615348[39m, exp: [33m1585824948[39m }
+[[01:33:02.700]] [LOG]    getting jwt token passed false expirey time 2020-04-02 10:55:48
+[[01:33:02.707]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:33:02.710]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:33:02.711]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[01:33:02.713]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e734fb4d0d9622cc061d78f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-02 11:55:48'[39m
+}
+[[01:33:02.714]] [LOG]    new logout user request {}
+[[01:33:02.716]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:33:02.719]] [LOG]    from mongo logout user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:33:02.721]] [LOG]    user logout failed at session nullifying MongooseError [StrictModeError]: Path "isDeleted" is not in schema, strict mode is `true`, and upsert is `true`.
+    at new StrictModeError (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\error\strict.js:25:11)
+    at cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\cast.js:246:17)
+    at model.Query.Query.cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:4684:12)
+    at model.Query.Query._castConditions (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:1862:10)
+    at model.Query._updateThunk (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3682:8)
+    at model.Query.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3803:23)
+    at model.Query._wrappedThunk [as _updateOne] (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\[4mkareem[24m\index.js:369:33
+[90m    at processTicksAndRejections (internal/process/task_queues.js:79:11)[39m {
+  message: [32m'Path "isDeleted" is not in schema, strict mode is `true`, and upsert is `true`.'[39m,
+  name: [32m'StrictModeError'[39m,
+  isImmutableError: [33mfalse[39m,
+  path: [32m'isDeleted'[39m
+}
+20/Mar/2020:01:33:02 +0000 "POST /api/users/logout"
+[[01:33:02.726]] [LOG]    Finishing
+[[01:33:02.727]] [LOG]    Valid sessionId, logging
+[[01:33:02.734]] [LOG]    App usage logged! - 2020-03-20 01:33:02 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e734fb4d0d9622cc061d78f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-02 11:55:48'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/users/logout'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'content-length'[39m: [32m'2'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/dash'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-19 10:55:46; isDeleted=false; loggedInOn=2020-03-19 10:55:46; loggedOutOn=; loggedOutBy=null; _id=5e734fb4d0d9622cc061d78f; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU; isExpired=false; expiresOn=2020-04-02 11:55:48'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 273\r\n'[39m +
+      [32m'ETag: W/"111-svyB0D8TzhdCOpRrgjZqWk1tJDY"\r\n'[39m +
+      [32m'Date: Fri, 20 Mar 2020 01:33:02 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-20T01:33:02.727Z[39m
+}
+[[01:34:29.833]] [LOG]    Calling app logger
+[[01:34:29.833]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/logout
+[[01:34:29.835]] [LOG]    current username extracted dagasonhackason
+[[01:34:29.835]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:34:29.835]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:34:29.836]] [LOG]    userData.username_extract dagasonhackason
+[[01:34:29.836]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1584615348[39m, exp: [33m1585824948[39m }
+[[01:34:29.838]] [LOG]    getting jwt token passed false expirey time 2020-04-02 10:55:48
+[[01:34:29.847]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:34:29.851]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:34:29.852]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[01:34:29.854]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e734fb4d0d9622cc061d78f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-02 11:55:48'[39m
+}
+[[01:34:29.855]] [LOG]    new logout user request {}
+[[01:34:29.857]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:34:29.859]] [LOG]    from mongo logout user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:34:29.860]] [LOG]    user logout failed at session nullifying MongooseError [StrictModeError]: Path "isDeleted" is not in schema, strict mode is `true`, and upsert is `true`.
+    at new StrictModeError (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\error\strict.js:25:11)
+    at cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\cast.js:246:17)
+    at model.Query.Query.cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:4684:12)
+    at model.Query.Query._castConditions (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:1862:10)
+    at model.Query._updateThunk (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3682:8)
+    at model.Query.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3803:23)
+    at model.Query._wrappedThunk [as _updateOne] (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\[4mkareem[24m\index.js:369:33
+[90m    at processTicksAndRejections (internal/process/task_queues.js:79:11)[39m {
+  message: [32m'Path "isDeleted" is not in schema, strict mode is `true`, and upsert is `true`.'[39m,
+  name: [32m'StrictModeError'[39m,
+  isImmutableError: [33mfalse[39m,
+  path: [32m'isDeleted'[39m
+}
+20/Mar/2020:01:34:29 +0000 "POST /api/users/logout"
+[[01:34:29.861]] [LOG]    Finishing
+[[01:34:29.861]] [LOG]    Valid sessionId, logging
+[[01:34:29.882]] [LOG]    App usage logged! - 2020-03-20 01:34:29 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e734fb4d0d9622cc061d78f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-02 11:55:48'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/users/logout'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'content-length'[39m: [32m'2'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/dash'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-19 10:55:46; isDeleted=false; loggedInOn=2020-03-19 10:55:46; loggedOutOn=; loggedOutBy=null; _id=5e734fb4d0d9622cc061d78f; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU; isExpired=false; expiresOn=2020-04-02 11:55:48'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 273\r\n'[39m +
+      [32m'ETag: W/"111-svyB0D8TzhdCOpRrgjZqWk1tJDY"\r\n'[39m +
+      [32m'Date: Fri, 20 Mar 2020 01:34:29 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-20T01:34:29.862Z[39m
+}
+20/Mar/2020:01:36:33 +0000 "GET /stylesheets/jquery-ui.css"
+[[01:38:23.689]] [LOG]    hitting dash view route with {}
+[[01:38:23.718]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:38:23.733]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:38:23.784]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:38:23.788]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:38:23.810]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:38:23.812]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:38:23.818]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:01:38:23 +0000 "GET /dash"
+20/Mar/2020:01:38:24 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:38:24 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:38:24 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:38:24 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:38:24 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:38:24 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:38:24 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:38:24 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:38:24 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:38:24 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:38:24 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:38:24 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:38:24 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:38:24 +0000 "GET /images/tis.png"
+20/Mar/2020:01:38:24 +0000 "GET /favicon.ico"
+[[01:38:29.572]] [LOG]    Calling app logger
+[[01:38:29.573]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/logout
+[[01:38:29.576]] [LOG]    current username extracted dagasonhackason
+[[01:38:29.576]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:38:29.580]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:38:29.580]] [LOG]    userData.username_extract dagasonhackason
+[[01:38:29.580]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1584615348[39m, exp: [33m1585824948[39m }
+[[01:38:29.587]] [LOG]    getting jwt token passed false expirey time 2020-04-02 10:55:48
+[[01:38:29.597]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:38:29.605]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:38:29.609]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[01:38:29.613]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e734fb4d0d9622cc061d78f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-02 11:55:48'[39m
+}
+[[01:38:29.616]] [LOG]    new logout user request {}
+[[01:38:29.621]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:38:29.626]] [LOG]    from mongo logout user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:38:29.631]] [LOG]    user logout failed at session nullifying MongooseError [StrictModeError]: Path "isDeleted" is not in schema, strict mode is `true`, and upsert is `true`.
+    at new StrictModeError (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\error\strict.js:25:11)
+    at cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\cast.js:246:17)
+    at model.Query.Query.cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:4684:12)
+    at model.Query.Query._castConditions (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:1862:10)
+    at model.Query._updateThunk (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3682:8)
+    at model.Query.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3803:23)
+    at model.Query._wrappedThunk [as _updateOne] (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\[4mkareem[24m\index.js:369:33
+[90m    at processTicksAndRejections (internal/process/task_queues.js:79:11)[39m {
+  message: [32m'Path "isDeleted" is not in schema, strict mode is `true`, and upsert is `true`.'[39m,
+  name: [32m'StrictModeError'[39m,
+  isImmutableError: [33mfalse[39m,
+  path: [32m'isDeleted'[39m
+}
+20/Mar/2020:01:38:29 +0000 "POST /api/users/logout"
+[[01:38:29.636]] [LOG]    Finishing
+[[01:38:29.636]] [LOG]    Valid sessionId, logging
+[[01:38:29.647]] [LOG]    App usage logged! - 2020-03-20 01:38:29 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e734fb4d0d9622cc061d78f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-02 11:55:48'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/users/logout'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'content-length'[39m: [32m'2'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/dash'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-19 10:55:46; isDeleted=false; loggedInOn=2020-03-19 10:55:46; loggedOutOn=; loggedOutBy=null; _id=5e734fb4d0d9622cc061d78f; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU; isExpired=false; expiresOn=2020-04-02 11:55:48'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 273\r\n'[39m +
+      [32m'ETag: W/"111-svyB0D8TzhdCOpRrgjZqWk1tJDY"\r\n'[39m +
+      [32m'Date: Fri, 20 Mar 2020 01:38:29 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-20T01:38:29.636Z[39m
+}
+20/Mar/2020:01:38:29 +0000 "GET /images/error.png"
+[[01:39:40.620]] [LOG]    Calling app logger
+[[01:39:40.621]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/logout
+[[01:39:40.623]] [LOG]    current username extracted dagasonhackason
+[[01:39:40.623]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:39:40.624]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:39:40.625]] [LOG]    userData.username_extract dagasonhackason
+[[01:39:40.625]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1584615348[39m, exp: [33m1585824948[39m }
+[[01:39:40.627]] [LOG]    getting jwt token passed false expirey time 2020-04-02 10:55:48
+[[01:39:40.639]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:39:40.642]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:39:40.646]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[01:39:40.654]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e734fb4d0d9622cc061d78f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-02 11:55:48'[39m
+}
+[[01:39:40.656]] [LOG]    new logout user request {}
+[[01:39:40.662]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:39:40.666]] [LOG]    from mongo logout user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:39:40.669]] [LOG]    user logout failed at session nullifying MongooseError [StrictModeError]: Path "isDeleted" is not in schema, strict mode is `true`, and upsert is `true`.
+    at new StrictModeError (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\error\strict.js:25:11)
+    at cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\cast.js:246:17)
+    at model.Query.Query.cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:4684:12)
+    at model.Query.Query._castConditions (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:1862:10)
+    at model.Query._updateThunk (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3682:8)
+    at model.Query.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3803:23)
+    at model.Query._wrappedThunk [as _updateOne] (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\[4mkareem[24m\index.js:369:33
+[90m    at processTicksAndRejections (internal/process/task_queues.js:79:11)[39m {
+  message: [32m'Path "isDeleted" is not in schema, strict mode is `true`, and upsert is `true`.'[39m,
+  name: [32m'StrictModeError'[39m,
+  isImmutableError: [33mfalse[39m,
+  path: [32m'isDeleted'[39m
+}
+20/Mar/2020:01:39:40 +0000 "POST /api/users/logout"
+[[01:39:40.672]] [LOG]    Finishing
+[[01:39:40.672]] [LOG]    Valid sessionId, logging
+[[01:39:40.688]] [LOG]    App usage logged! - 2020-03-20 01:39:40 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e734fb4d0d9622cc061d78f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-02 11:55:48'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/users/logout'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'content-length'[39m: [32m'2'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/dash'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-19 10:55:46; isDeleted=false; loggedInOn=2020-03-19 10:55:46; loggedOutOn=; loggedOutBy=null; _id=5e734fb4d0d9622cc061d78f; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU; isExpired=false; expiresOn=2020-04-02 11:55:48'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 273\r\n'[39m +
+      [32m'ETag: W/"111-svyB0D8TzhdCOpRrgjZqWk1tJDY"\r\n'[39m +
+      [32m'Date: Fri, 20 Mar 2020 01:39:40 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-20T01:39:40.672Z[39m
+}
+[[01:43:59.440]] [LOG]    Calling app logger
+[[01:43:59.441]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/logout
+[[01:43:59.443]] [LOG]    current username extracted dagasonhackason
+[[01:43:59.443]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:43:59.447]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:43:59.447]] [LOG]    userData.username_extract dagasonhackason
+[[01:43:59.447]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1584615348[39m, exp: [33m1585824948[39m }
+[[01:43:59.455]] [LOG]    getting jwt token passed false expirey time 2020-04-02 10:55:48
+[[01:43:59.481]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:43:59.514]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:43:59.517]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[01:43:59.523]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e734fb4d0d9622cc061d78f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-02 11:55:48'[39m
+}
+[[01:43:59.525]] [LOG]    new logout user request {}
+[[01:43:59.530]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:43:59.534]] [LOG]    from mongo logout user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:43:59.537]] [LOG]    user logout failed at session nullifying MongooseError [StrictModeError]: Path "username" is not in schema, strict mode is `true`, and upsert is `true`.
+    at new StrictModeError (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\error\strict.js:25:11)
+    at cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\cast.js:246:17)
+    at model.Query.Query.cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:4684:12)
+    at model.Query.Query._castConditions (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:1862:10)
+    at model.Query._updateThunk (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3682:8)
+    at model.Query.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3803:23)
+    at model.Query._wrappedThunk [as _updateOne] (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\[4mkareem[24m\index.js:369:33
+[90m    at processTicksAndRejections (internal/process/task_queues.js:79:11)[39m {
+  message: [32m'Path "username" is not in schema, strict mode is `true`, and upsert is `true`.'[39m,
+  name: [32m'StrictModeError'[39m,
+  isImmutableError: [33mfalse[39m,
+  path: [32m'username'[39m
+}
+20/Mar/2020:01:43:59 +0000 "POST /api/users/logout"
+[[01:43:59.542]] [LOG]    Finishing
+[[01:43:59.543]] [LOG]    Valid sessionId, logging
+[[01:43:59.572]] [LOG]    App usage logged! - 2020-03-20 01:43:59 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e734fb4d0d9622cc061d78f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-02 11:55:48'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/users/logout'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'content-length'[39m: [32m'2'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/dash'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-19 10:55:46; isDeleted=false; loggedInOn=2020-03-19 10:55:46; loggedOutOn=; loggedOutBy=null; _id=5e734fb4d0d9622cc061d78f; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU; isExpired=false; expiresOn=2020-04-02 11:55:48'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 271\r\n'[39m +
+      [32m'ETag: W/"10f-gh4y91mydTprdvmRVwJMcS4YHik"\r\n'[39m +
+      [32m'Date: Fri, 20 Mar 2020 01:43:59 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-20T01:43:59.543Z[39m
+}
+[[01:49:41.633]] [LOG]    hitting dash view route with {}
+[[01:49:41.664]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:49:41.671]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:49:41.714]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:49:41.717]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:49:41.739]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:49:41.741]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:49:41.750]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:01:49:41 +0000 "GET /dash"
+20/Mar/2020:01:49:42 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:49:42 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:49:42 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:49:42 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:49:42 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:49:42 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:49:42 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:49:42 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:49:42 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:49:42 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:49:42 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:49:42 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:49:42 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:49:42 +0000 "GET /images/tis.png"
+[[01:49:45.923]] [LOG]    Calling app logger
+[[01:49:45.925]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/logout
+[[01:49:45.927]] [LOG]    current username extracted dagasonhackason
+[[01:49:45.927]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:49:45.929]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:49:45.930]] [LOG]    userData.username_extract dagasonhackason
+[[01:49:45.930]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1584615348[39m, exp: [33m1585824948[39m }
+[[01:49:45.934]] [LOG]    getting jwt token passed false expirey time 2020-04-02 10:55:48
+[[01:49:45.943]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:49:45.949]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:49:45.952]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[01:49:45.955]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e734fb4d0d9622cc061d78f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-02 11:55:48'[39m
+}
+[[01:49:45.957]] [LOG]    new logout user request {}
+[[01:49:45.961]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:49:45.964]] [LOG]    from mongo logout user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:49:45.968]] [LOG]    user logout failed at session nullifying MongooseError [StrictModeError]: Path "username" is not in schema, strict mode is `true`, and upsert is `true`.
+    at new StrictModeError (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\error\strict.js:25:11)
+    at cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\cast.js:246:17)
+    at model.Query.Query.cast (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:4684:12)
+    at model.Query.Query._castConditions (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:1862:10)
+    at model.Query._updateThunk (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3682:8)
+    at model.Query.<anonymous> (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\query.js:3803:23)
+    at model.Query._wrappedThunk [as _updateOne] (C:\xampp\htdocs\bookingsystem-master\node_modules\[4mmongoose[24m\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\xampp\htdocs\bookingsystem-master\node_modules\[4mkareem[24m\index.js:369:33
+[90m    at processTicksAndRejections (internal/process/task_queues.js:79:11)[39m {
+  message: [32m'Path "username" is not in schema, strict mode is `true`, and upsert is `true`.'[39m,
+  name: [32m'StrictModeError'[39m,
+  isImmutableError: [33mfalse[39m,
+  path: [32m'username'[39m
+}
+20/Mar/2020:01:49:45 +0000 "POST /api/users/logout"
+[[01:49:45.972]] [LOG]    Finishing
+[[01:49:45.973]] [LOG]    Valid sessionId, logging
+[[01:49:45.984]] [LOG]    App usage logged! - 2020-03-20 01:49:45 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e734fb4d0d9622cc061d78f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-02 11:55:48'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/users/logout'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'content-length'[39m: [32m'2'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/dash'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-19 10:55:46; isDeleted=false; loggedInOn=2020-03-19 10:55:46; loggedOutOn=; loggedOutBy=null; _id=5e734fb4d0d9622cc061d78f; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU; isExpired=false; expiresOn=2020-04-02 11:55:48'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 271\r\n'[39m +
+      [32m'ETag: W/"10f-gh4y91mydTprdvmRVwJMcS4YHik"\r\n'[39m +
+      [32m'Date: Fri, 20 Mar 2020 01:49:45 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-20T01:49:45.973Z[39m
+}
+20/Mar/2020:01:49:46 +0000 "GET /images/error.png"
+[[01:56:32.438]] [LOG]    Calling app logger
+[[01:56:32.439]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/logout
+[[01:56:32.442]] [LOG]    current username extracted dagasonhackason
+[[01:56:32.442]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:56:32.447]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU
+[[01:56:32.447]] [LOG]    userData.username_extract dagasonhackason
+[[01:56:32.447]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1584615348[39m, exp: [33m1585824948[39m }
+[[01:56:32.454]] [LOG]    getting jwt token passed false expirey time 2020-04-02 10:55:48
+[[01:56:32.482]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:56:32.530]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:56:32.533]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[01:56:32.538]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e734fb4d0d9622cc061d78f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-02 11:55:48'[39m
+}
+[[01:56:32.540]] [LOG]    new logout user request {}
+[[01:56:32.544]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:56:32.550]] [LOG]    from mongo logout user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:56:32.556]] [INFO]   [0;36mMongoose:[0m loginsessions.updateOne({ sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m, isExpired: [33mfalse[39m}, { [32m'$set'[39m: { isExpired: [33mtrue[39m, loggedOutOn: [32m'2020-03-20 01:56:32'[39m, loggedOutBy: ObjectId("5e657d7500c28d427c171899") }}, { upsert: [33mtrue[39m })
+[[01:56:32.591]] [LOG]    from mongo logout user logoutesponse {
+  _id: [32m'5e734fb4d0d9622cc061d78f'[39m,
+  userId: [32m'5e657d7500c28d427c171899'[39m,
+  loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+  loggedOutOn: [32m'2020-03-20 01:56:32'[39m,
+  loggedOutBy: 5e657d7500c28d427c171899,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  isExpired: [33mtrue[39m,
+  expiresOn: [32m'2020-04-02 11:55:48'[39m
+}
+20/Mar/2020:01:56:32 +0000 "POST /api/users/logout"
+[[01:56:32.598]] [LOG]    Finishing
+[[01:56:32.599]] [LOG]    Valid sessionId, logging
+[[01:56:32.608]] [LOG]    App usage logged! - 2020-03-20 01:56:32 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e734fb4d0d9622cc061d78f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-19 10:55:46'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-02 11:55:48'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/users/logout'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'content-length'[39m: [32m'2'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/dash'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-19 10:55:46; isDeleted=false; loggedInOn=2020-03-19 10:55:46; loggedOutOn=; loggedOutBy=null; _id=5e734fb4d0d9622cc061d78f; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDYxNTM0OCwiZXhwIjoxNTg1ODI0OTQ4fQ.D3ozo4RrDrZgT0SCa-clAQadNXIyyCTyYnFUlg3NGuU; isExpired=false; expiresOn=2020-04-02 11:55:48'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 661\r\n'[39m +
+      [32m'ETag: W/"295-Ar5CySGkqjcesiJ/GqU+MeS50yQ"\r\n'[39m +
+      [32m'Date: Fri, 20 Mar 2020 01:56:32 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-20T01:56:32.599Z[39m
+}
+20/Mar/2020:01:56:32 +0000 "GET /images/check.png"
+[[01:56:35.186]] [LOG]    hitting login view route with {}
+20/Mar/2020:01:56:35 +0000 "GET /login"
+20/Mar/2020:01:56:35 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:56:35 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:56:35 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:56:35 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:56:35 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:56:35 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:56:35 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:56:35 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:56:35 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:56:35 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:56:35 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:56:35 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:56:35 +0000 "GET /images/tis.png"
+20/Mar/2020:01:56:35 +0000 "GET /javascripts/functions.js"
+[[01:56:50.368]] [LOG]    hitting login view route with {}
+20/Mar/2020:01:56:50 +0000 "GET /login"
+20/Mar/2020:01:56:50 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:56:50 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:56:50 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:56:50 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:56:50 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:56:50 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:56:50 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:56:50 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:56:50 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:56:50 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:56:50 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:56:50 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:56:50 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:56:51 +0000 "GET /images/tis.png"
+[[01:58:19.936]] [LOG]    hitting login view route with {}
+20/Mar/2020:01:58:19 +0000 "GET /login"
+20/Mar/2020:01:58:20 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:58:20 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:58:20 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:58:20 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:58:20 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:58:20 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:58:20 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:58:20 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:58:20 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:58:20 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:58:20 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:58:20 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:58:20 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:58:20 +0000 "GET /images/tis.png"
+20/Mar/2020:01:58:21 +0000 "GET /favicon.ico"
+[[01:58:25.324]] [LOG]    Calling app logger
+[[01:58:25.325]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[01:58:25.325]] [LOG]    No middleware needed for this route /api/users/login
+[[01:58:25.326]] [LOG]    new login user request { username: [32m'dagasonhackason'[39m, password: [32m'cGFzc3dvcmQxMjM0'[39m }
+[[01:58:25.381]] [INFO]   [0;36mMongoose:[0m users.find({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:58:25.389]] [LOG]    from mongo login user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-19 10:55:46'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[01:58:25.390]] [LOG]    salt  -  fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7  -  hashedPassword  -  76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5
+[[01:58:29.555]] [INFO]   [0;36mMongoose:[0m loginsessions.insertOne({ _id: ObjectId("5e7423451df1b035bcdd5f10"), userId: ObjectId("5e657d7500c28d427c171899"), loggedInOn: [32m'2020-03-20 01:58:25'[39m, loggedOutOn: [32m''[39m, loggedOutBy: [1mnull[22m, sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDY2OTUwOSwiZXhwIjoxNTg1ODc5MTA5fQ.sT6h7bnF1BnglQ2T6cq6P2Xcl1v9fjDxSVSdZeo-uXI'[39m, isExpired: [33mfalse[39m, expiresOn: [32m'2020-04-03 02:58:29'[39m}, { session: [1mnull[22m })
+[[01:58:29.648]] [INFO]   [0;36mMongoose:[0m users.updateOne({ _id: ObjectId("5e657d7500c28d427c171899"), isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { lastLoginOn: [32m'2020-03-20 01:58:25'[39m } }, { upsert: [33mtrue[39m })
+[[01:58:29.753]] [LOG]    from mongo login user {
+  _id: 5e7423451df1b035bcdd5f10,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-20 01:58:25'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDY2OTUwOSwiZXhwIjoxNTg1ODc5MTA5fQ.sT6h7bnF1BnglQ2T6cq6P2Xcl1v9fjDxSVSdZeo-uXI'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-03 02:58:29'[39m
+}
+20/Mar/2020:01:58:29 +0000 "POST /api/users/login"
+[[01:58:29.768]] [LOG]    Finishing
+[[01:58:29.768]] [LOG]    No sessionId used
+[[01:58:29.782]] [LOG]    App usage logged! - 2020-03-20 01:58:29 {
+  req_route: [32m'/api/users/login'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      [32m'content-length'[39m: [32m'60'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/login'[39m,
+      cookie: [32m'userId=EXPIRED; username=EXPIRED; createdOn=EXPIRED; updatedOn=EXPIRED; updatedBy=EXPIRED; lastLoginOn=EXPIRED; isDeleted=EXPIRED; loggedInOn=2020-03-19 10:55:46; loggedOutOn=2020-03-20 01:56:32; loggedOutBy=5e657d7500c28d427c171899; _id=EXPIRED; sessionId=EXPIRED; isExpired=EXPIRED; expiresOn=EXPIRED'[39m
+    },
+    params: {},
+    body: { username: [32m'dagasonhackason'[39m, password: [32m'cGFzc3dvcmQxMjM0'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 620\r\n'[39m +
+      [32m'ETag: W/"26c-8wsJU4hyhaORcXu7gss965PPy/E"\r\n'[39m +
+      [32m'Date: Fri, 20 Mar 2020 01:58:29 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-20T01:58:29.769Z[39m
+}
+20/Mar/2020:01:58:29 +0000 "GET /images/check.png"
+[[01:58:37.356]] [LOG]    hitting dash view route with {}
+[[01:58:37.392]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:58:37.403]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:58:37.429]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:58:37.434]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:58:37.462]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:58:37.466]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:58:37.476]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:01:58:37 +0000 "GET /dash"
+20/Mar/2020:01:58:37 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:58:37 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:58:37 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:58:37 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:58:37 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:58:37 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:58:37 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:58:37 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:58:37 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:58:37 +0000 "GET /images/tis.png"
+20/Mar/2020:01:58:37 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:58:37 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:58:37 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:58:37 +0000 "GET /javascripts/fallr.js"
+[[01:59:48.203]] [LOG]    hitting configureUsers view route with {}
+20/Mar/2020:01:59:48 +0000 "GET /configureUsers"
+20/Mar/2020:01:59:48 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:59:48 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:59:48 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:59:48 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:59:48 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:59:48 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:59:48 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:59:48 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:59:48 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:59:48 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:59:48 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:59:48 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:59:48 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:59:48 +0000 "GET /images/tis.png"
+[[01:59:48.953]] [LOG]    hitting login view route with {}
+20/Mar/2020:01:59:48 +0000 "GET /login"
+20/Mar/2020:01:59:49 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:59:49 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:59:49 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:59:49 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:59:49 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:59:49 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:59:49 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:59:49 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:59:49 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:59:49 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:59:49 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:59:49 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:59:49 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:59:49 +0000 "GET /images/tis.png"
+[[01:59:50.103]] [LOG]    hitting dash view route with {}
+[[01:59:50.116]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:59:50.118]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:59:50.148]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:59:50.150]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:59:50.178]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:59:50.180]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:59:50.187]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:01:59:50 +0000 "GET /dash"
+20/Mar/2020:01:59:51 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:59:51 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:59:51 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:59:51 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:59:51 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:59:51 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:59:51 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:59:51 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:59:51 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:59:51 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:59:51 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:59:51 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:59:51 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:59:51 +0000 "GET /images/tis.png"
+20/Mar/2020:01:59:51 +0000 "GET /favicon.ico"
+[[01:59:54.524]] [LOG]    hitting configureSeats view route with {}
+20/Mar/2020:01:59:54 +0000 "GET /configureSeats"
+20/Mar/2020:01:59:54 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:59:54 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:59:54 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:59:54 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:59:54 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:59:54 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:59:54 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:59:54 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:59:54 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:59:54 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:59:54 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:59:54 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:59:54 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:59:54 +0000 "GET /images/tis.png"
+[[01:59:55.276]] [LOG]    hitting login view route with {}
+20/Mar/2020:01:59:55 +0000 "GET /login"
+20/Mar/2020:01:59:55 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:59:55 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:59:55 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:59:55 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:59:55 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:59:55 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:59:55 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:59:55 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:59:55 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:59:55 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:59:55 +0000 "GET /images/tis.png"
+20/Mar/2020:01:59:55 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:59:55 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:59:55 +0000 "GET /javascripts/functions.js"
+[[01:59:56.526]] [LOG]    hitting dash view route with {}
+[[01:59:56.537]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:59:56.538]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:59:56.551]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:59:56.553]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[01:59:56.568]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:59:56.572]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[01:59:56.582]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:01:59:56 +0000 "GET /dash"
+20/Mar/2020:01:59:57 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:01:59:57 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:01:59:57 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:01:59:58 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:01:59:58 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:01:59:58 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:01:59:58 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:01:59:58 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:01:59:58 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:01:59:58 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:01:59:58 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:01:59:58 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:01:59:58 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:01:59:58 +0000 "GET /images/tis.png"
+[[02:00:01.345]] [LOG]    hitting configureSecretCodes view route with {}
+20/Mar/2020:02:00:01 +0000 "GET /configureSecretCodes"
+20/Mar/2020:02:00:01 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:02:00:01 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:02:00:01 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:02:00:01 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:02:00:01 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:02:00:01 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:02:00:01 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:02:00:01 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:02:00:01 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:02:00:01 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:02:00:01 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:02:00:01 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:02:00:01 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:02:00:01 +0000 "GET /images/tis.png"
+[[02:00:02.147]] [LOG]    hitting login view route with {}
+20/Mar/2020:02:00:02 +0000 "GET /login"
+20/Mar/2020:02:00:02 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:02:00:02 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:02:00:02 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:02:00:02 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:02:00:02 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:02:00:02 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:02:00:02 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:02:00:02 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:02:00:02 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:02:00:02 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:02:00:02 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:02:00:02 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:02:00:02 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:02:00:02 +0000 "GET /images/tis.png"
+[[02:00:03.246]] [LOG]    hitting dash view route with {}
+[[02:00:03.260]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[02:00:03.261]] [INFO]   [0;36mMongoose:[0m users.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[02:00:03.280]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[02:00:03.283]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m }, { projection: {} })
+[[02:00:03.297]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[02:00:03.298]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[02:00:03.304]] [LOG]    From mongo get one booking using dash view totals { totalUsers: [33m6[39m, totalSeats: [33m26[39m, totalBookings: [33m8[39m }
+20/Mar/2020:02:00:03 +0000 "GET /dash"
+20/Mar/2020:02:00:04 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:02:00:04 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:02:00:04 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:02:00:04 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:02:00:04 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:02:00:04 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:02:00:04 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:02:00:04 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:02:00:04 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:02:00:04 +0000 "GET /javascripts/axios.js"
+20/Mar/2020:02:00:04 +0000 "GET /images/tis.png"
+20/Mar/2020:02:00:04 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:02:00:04 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:02:00:04 +0000 "GET /javascripts/clientJS.js"
+[[02:00:07.598]] [LOG]    hitting configureBookings view route with {}
+20/Mar/2020:02:00:07 +0000 "GET /configureBookings"
+20/Mar/2020:02:00:07 +0000 "GET /stylesheets/jquery-ui.css"
+20/Mar/2020:02:00:07 +0000 "GET /stylesheets/fallr.css"
+20/Mar/2020:02:00:07 +0000 "GET /stylesheets/bootstrap.min.css"
+20/Mar/2020:02:00:07 +0000 "GET /stylesheets/custom.css"
+20/Mar/2020:02:00:07 +0000 "GET /javascripts/jquery-easing.js"
+20/Mar/2020:02:00:07 +0000 "GET /javascripts/jquery-ui.js"
+20/Mar/2020:02:00:07 +0000 "GET /javascripts/jquery.js"
+20/Mar/2020:02:00:07 +0000 "GET /javascripts/bootstrap.min.js"
+20/Mar/2020:02:00:08 +0000 "GET /javascripts/clientJS.js"
+20/Mar/2020:02:00:08 +0000 "GET /javascripts/functions.js"
+20/Mar/2020:02:00:08 +0000 "GET /javascripts/moment.js"
+20/Mar/2020:02:00:08 +0000 "GET /images/tis.png"
+20/Mar/2020:02:00:08 +0000 "GET /javascripts/fallr.js"
+20/Mar/2020:02:00:08 +0000 "GET /javascripts/axios.js"

@@ -1,0 +1,1420 @@
+[[12:18:08.684]] [LOG]    Calling app logger
+[[12:18:08.685]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/users/login
+[[12:18:08.685]] [LOG]    No middleware needed for this route /api/users/login
+[[12:18:08.687]] [LOG]    new login user request { username: [32m'dagasonhackason'[39m, password: [32m'cGFzc3dvcmQxMjM0'[39m }
+[[12:18:08.722]] [INFO]   [0;36mMongoose:[0m users.find({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[12:18:09.327]] [LOG]    from mongo login user {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-09 06:20:27'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[12:18:09.329]] [LOG]    salt  -  fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7  -  hashedPassword  -  76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5
+[[12:18:12.117]] [INFO]   [0;36mMongoose:[0m loginsessions.insertOne({ _id: ObjectId("5e6f6e843d589c2e1853f647"), userId: ObjectId("5e657d7500c28d427c171899"), loggedInOn: [32m'2020-03-16 12:18:08'[39m, loggedOutOn: [32m''[39m, loggedOutBy: [1mnull[22m, sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDM2MTA5MiwiZXhwIjoxNTg1NTcwNjkyfQ.uLa-JVBeFQ39DFyc-0qixqHVnEwhKQ3JYgphOcOa-UY'[39m, isExpired: [33mfalse[39m, expiresOn: [32m'2020-03-30 13:18:12'[39m}, { session: [1mnull[22m })
+[[12:18:12.455]] [INFO]   [0;36mMongoose:[0m users.updateOne({ _id: ObjectId("5e657d7500c28d427c171899"), isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { lastLoginOn: [32m'2020-03-16 12:18:08'[39m } }, { upsert: [33mtrue[39m })
+[[12:18:12.707]] [LOG]    from mongo login user {
+  _id: 5e6f6e843d589c2e1853f647,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-16 12:18:08'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDM2MTA5MiwiZXhwIjoxNTg1NTcwNjkyfQ.uLa-JVBeFQ39DFyc-0qixqHVnEwhKQ3JYgphOcOa-UY'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-03-30 13:18:12'[39m
+}
+16/Mar/2020:12:18:12 +0000 "POST /api/users/login"
+[[12:18:12.720]] [LOG]    Finishing
+[[12:18:12.720]] [LOG]    No sessionId used
+[[12:18:12.802]] [LOG]    App usage logged! - 2020-03-16 12:18:12 {
+  req_route: [32m'/api/users/login'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      [32m'content-length'[39m: [32m'60'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/login'[39m
+    },
+    params: {},
+    body: { username: [32m'dagasonhackason'[39m, password: [32m'cGFzc3dvcmQxMjM0'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 620\r\n'[39m +
+      [32m'ETag: W/"26c-iB2coeT+Zq0OqQUK2EGZrGr+sKc"\r\n'[39m +
+      [32m'Date: Mon, 16 Mar 2020 12:18:12 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-16T12:18:12.721Z[39m
+}
+16/Mar/2020:12:18:13 +0000 "GET /images/check.png"
+[[12:18:14.932]] [LOG]    hitting dash view route with {}
+16/Mar/2020:12:18:15 +0000 "GET /dash"
+[[12:18:15.326]] [LOG]    Calling app logger
+16/Mar/2020:12:18:15 +0000 "GET /stylesheets/all.css"
+[[12:18:15.333]] [LOG]    Finishing
+[[12:18:15.333]] [LOG]    No sessionId used
+16/Mar/2020:12:18:15 +0000 "GET /stylesheets/fallr.css"
+16/Mar/2020:12:18:15 +0000 "GET /javascripts/functions.js"
+[[12:18:15.346]] [LOG]    App usage logged! - 2020-03-16 12:18:15 {
+  req_route: [32m'/stylesheets/all.css'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'text/css,*/*;q=0.1'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/dash'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-16 12:18:08; isDeleted=false; loggedInOn=2020-03-16 12:18:08; loggedOutOn=; loggedOutBy=null; _id=5e6f6e843d589c2e1853f647; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDM2MTA5MiwiZXhwIjoxNTg1NTcwNjkyfQ.uLa-JVBeFQ39DFyc-0qixqHVnEwhKQ3JYgphOcOa-UY; isExpired=false; expiresOn=2020-03-30 13:18:12'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m404[39m,
+  res_status_message: [32m'Not Found'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 404 Not Found\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: text/html; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 1660\r\n'[39m +
+      [32m'ETag: W/"67c-HeEGelQdluJ6RBrq5CZ6NHZcDZQ"\r\n'[39m +
+      [32m'Date: Mon, 16 Mar 2020 12:18:15 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-16T12:18:15.334Z[39m
+}
+16/Mar/2020:12:18:15 +0000 "GET /stylesheets/jquery-ui.css"
+16/Mar/2020:12:18:15 +0000 "GET /stylesheets/custom.css"
+16/Mar/2020:12:18:15 +0000 "GET /stylesheets/bootstrap.min.css"
+16/Mar/2020:12:18:15 +0000 "GET /javascripts/jquery.js"
+16/Mar/2020:12:18:15 +0000 "GET /javascripts/jquery-ui.js"
+16/Mar/2020:12:18:15 +0000 "GET /javascripts/bootstrap.min.js"
+16/Mar/2020:12:18:15 +0000 "GET /javascripts/jquery-easing.js"
+16/Mar/2020:12:18:15 +0000 "GET /javascripts/axios.js"
+16/Mar/2020:12:18:15 +0000 "GET /javascripts/fallr.js"
+16/Mar/2020:12:18:15 +0000 "GET /javascripts/clientJS.js"
+16/Mar/2020:12:18:15 +0000 "GET /javascripts/moment.js"
+16/Mar/2020:12:18:15 +0000 "GET /images/tis.png"
+16/Mar/2020:12:18:16 +0000 "GET /favicon.ico"
+[[12:22:27.892]] [LOG]    hitting dash view route with {}
+16/Mar/2020:12:22:27 +0000 "GET /dash"
+16/Mar/2020:12:22:28 +0000 "GET /stylesheets/jquery-ui.css"
+16/Mar/2020:12:22:28 +0000 "GET /stylesheets/custom.css"
+16/Mar/2020:12:22:28 +0000 "GET /stylesheets/bootstrap.min.css"
+16/Mar/2020:12:22:28 +0000 "GET /javascripts/bootstrap.min.js"
+16/Mar/2020:12:22:28 +0000 "GET /stylesheets/fallr.css"
+16/Mar/2020:12:22:28 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+16/Mar/2020:12:22:28 +0000 "GET /javascripts/jquery-easing.js"
+16/Mar/2020:12:22:28 +0000 "GET /javascripts/axios.js"
+16/Mar/2020:12:22:28 +0000 "GET /javascripts/clientJS.js"
+16/Mar/2020:12:22:28 +0000 "GET /javascripts/moment.js"
+16/Mar/2020:12:22:28 +0000 "GET /javascripts/fallr.js"
+16/Mar/2020:12:22:28 +0000 "GET /javascripts/functions.js"
+16/Mar/2020:12:22:28 +0000 "GET /javascripts/jquery-ui.js"
+16/Mar/2020:12:22:28 +0000 "GET /webfonts/fa-solid-900.woff2"
+16/Mar/2020:12:22:28 +0000 "GET /images/tis.png"
+16/Mar/2020:12:22:28 +0000 "GET /javascripts/jquery.js"
+16/Mar/2020:12:22:28 +0000 "GET /favicon.ico"
+[[13:52:06.339]] [LOG]    Calling app logger
+[[13:52:06.341]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/bulkcreate
+[[13:52:06.345]] [LOG]    current username extracted dagasonhackason
+[[13:52:06.345]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[13:52:06.350]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[13:52:06.350]] [LOG]    userData.username_extract dagasonhackason
+[[13:52:06.350]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1583711244[39m, exp: [33m1584920844[39m }
+[[13:52:06.358]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[13:52:06.389]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:06.463]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-16 12:18:08'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[13:52:06.467]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[13:52:06.484]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-08 23:47:20'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-03-22 23:47:24'[39m
+}
+[[13:52:06.486]] [LOG]    New Incoming create bulk seat Request { totalSeatNumbers: [32m'21'[39m }
+[[13:52:06.488]] [LOG]    current seat number in bulk create seat 1
+[[13:52:06.490]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:06.495]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:06.501]] [LOG]    Seat 1 Bulk Already exist... Error! [1mnull[22m
+[[13:52:06.506]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:06.509]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:06.517]] [LOG]    current seat number in bulk create seat 2
+[[13:52:06.518]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:06.521]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:06.528]] [LOG]    Seat 2 Bulk Already exist... Error! [1mnull[22m
+[[13:52:06.531]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:06.533]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:06.541]] [LOG]    current seat number in bulk create seat 3
+[[13:52:06.542]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:06.547]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:06.553]] [LOG]    Seat 3 Bulk Already exist... Error! [1mnull[22m
+[[13:52:06.554]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:06.557]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:06.559]] [LOG]    current seat number in bulk create seat 4
+[[13:52:06.560]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:06.565]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:06.569]] [LOG]    Seat 4 Bulk Already exist... Error! [1mnull[22m
+[[13:52:06.570]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:06.572]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.374]] [LOG]    current seat number in bulk create seat 5
+[[13:52:07.375]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.377]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.436]] [LOG]    Seat 5 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.437]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.440]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.443]] [LOG]    current seat number in bulk create seat 6
+[[13:52:07.444]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.446]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.449]] [LOG]    Seat 6 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.450]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.452]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.454]] [LOG]    current seat number in bulk create seat 7
+[[13:52:07.456]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.458]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.461]] [LOG]    Seat 7 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.462]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.465]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.467]] [LOG]    current seat number in bulk create seat 8
+[[13:52:07.469]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.472]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.476]] [LOG]    Seat 8 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.478]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.482]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.484]] [LOG]    current seat number in bulk create seat 9
+[[13:52:07.485]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.487]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.490]] [LOG]    Seat 9 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.492]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.496]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.498]] [LOG]    current seat number in bulk create seat 10
+[[13:52:07.500]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.502]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.505]] [LOG]    Seat 10 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.506]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.508]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.512]] [LOG]    current seat number in bulk create seat 11
+[[13:52:07.513]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.514]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.518]] [LOG]    Seat 11 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.519]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.522]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.523]] [LOG]    current seat number in bulk create seat 12
+[[13:52:07.524]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.527]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.530]] [LOG]    Seat 12 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.531]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.534]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.537]] [LOG]    current seat number in bulk create seat 13
+[[13:52:07.537]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.539]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.542]] [LOG]    Seat 13 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.544]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.547]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.548]] [LOG]    current seat number in bulk create seat 14
+[[13:52:07.549]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.552]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.555]] [LOG]    Seat 14 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.556]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.558]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.562]] [LOG]    current seat number in bulk create seat 15
+[[13:52:07.563]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.565]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.569]] [LOG]    Seat 15 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.570]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.572]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.574]] [LOG]    current seat number in bulk create seat 16
+[[13:52:07.575]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.577]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.579]] [LOG]    Seat 16 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.580]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.582]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.585]] [LOG]    current seat number in bulk create seat 17
+[[13:52:07.586]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.587]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.591]] [LOG]    Seat 17 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.592]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.594]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.596]] [LOG]    current seat number in bulk create seat 18
+[[13:52:07.597]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.599]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.602]] [LOG]    Seat 18 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.603]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.605]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.609]] [LOG]    current seat number in bulk create seat 19
+[[13:52:07.610]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.612]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.615]] [LOG]    Seat 19 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.617]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.619]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.621]] [LOG]    current seat number in bulk create seat 20
+[[13:52:07.622]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.624]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.629]] [LOG]    Seat 20 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.630]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.632]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.635]] [LOG]    current seat number in bulk create seat 21
+[[13:52:07.636]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.638]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:52:07.641]] [LOG]    Seat 21 Bulk Already exist... Error! [1mnull[22m
+[[13:52:07.642]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.645]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m } }, { upsert: [33mtrue[39m })
+[[13:52:07.646]] [LOG]    mongo bulk insert seat completed [
+  {
+    message: [32m'Seat 1 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 2 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 3 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 4 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 5 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 6 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 7 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 8 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 9 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 10 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 11 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 12 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 13 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 14 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 15 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 16 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 17 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 18 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 19 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 20 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  }
+]
+16/Mar/2020:13:52:07 +0000 "POST /api/seats/bulkcreate"
+[[13:52:07.657]] [LOG]    Finishing
+[[13:52:07.657]] [LOG]    Valid sessionId, logging
+[[13:52:07.670]] [LOG]    App usage logged! - 2020-03-16 13:52:07 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-08 23:47:20'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-03-22 23:47:24'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-16 12:18:08'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/seats/bulkcreate'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      [32m'content-type'[39m: [32m'application/json'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'user-agent'[39m: [32m'PostmanRuntime/7.23.0'[39m,
+      accept: [32m'*/*'[39m,
+      [32m'cache-control'[39m: [32m'no-cache'[39m,
+      [32m'postman-token'[39m: [32m'ada46484-8adb-40bb-8bdf-39be43dd332f'[39m,
+      host: [32m'localhost:3000'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate, br'[39m,
+      [32m'content-length'[39m: [32m'29'[39m,
+      connection: [32m'keep-alive'[39m
+    },
+    params: {},
+    body: { totalSeatNumbers: [32m'21'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 2518\r\n'[39m +
+      [32m'ETag: W/"9d6-YMX141M6twqTRBjfJv4GrEI7mOw"\r\n'[39m +
+      [32m'Date: Mon, 16 Mar 2020 13:52:07 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-16T13:52:07.657Z[39m
+}
+[[13:52:55.855]] [LOG]    hitting index view route with {}
+16/Mar/2020:13:52:56 +0000 "GET /"
+16/Mar/2020:13:52:56 +0000 "GET /stylesheets/jquery-ui.css"
+16/Mar/2020:13:52:56 +0000 "GET /stylesheets/custom.css"
+16/Mar/2020:13:52:56 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+16/Mar/2020:13:52:56 +0000 "GET /stylesheets/bootstrap.min.css"
+16/Mar/2020:13:52:56 +0000 "GET /javascripts/bootstrap.min.js"
+16/Mar/2020:13:52:56 +0000 "GET /javascripts/axios.js"
+16/Mar/2020:13:52:56 +0000 "GET /stylesheets/fallr.css"
+16/Mar/2020:13:52:56 +0000 "GET /javascripts/jquery-easing.js"
+16/Mar/2020:13:52:56 +0000 "GET /javascripts/clientJS.js"
+16/Mar/2020:13:52:56 +0000 "GET /javascripts/functions.js"
+16/Mar/2020:13:52:56 +0000 "GET /javascripts/fallr.js"
+16/Mar/2020:13:52:56 +0000 "GET /javascripts/moment.js"
+16/Mar/2020:13:52:56 +0000 "GET /javascripts/jquery.js"
+16/Mar/2020:13:52:56 +0000 "GET /images/tis.png"
+16/Mar/2020:13:52:56 +0000 "GET /javascripts/jquery-ui.js"
+[[13:52:57.116]] [LOG]    Calling app logger
+[[13:52:57.117]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats
+[[13:52:57.117]] [LOG]    No middleware needed for this route /api/seats
+[[13:52:57.117]] [LOG]    new get all seats request {}
+[[13:52:57.138]] [INFO]   [0;36mMongoose:[0m seats.find({ isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m }, { projection: {} })
+[[13:52:57.162]] [LOG]    From mongo get all seats [
+  {
+    _id: 5e65872a5ff18c381c9f11c0,
+    seatNumber: [32m'1'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:00:42'[39m,
+    updatedOn: [32m'2020-03-09 02:16:37'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587395ff18c381c9f11c2,
+    seatNumber: [32m'2'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:00:57'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587455ff18c381c9f11c4,
+    seatNumber: [32m'3'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:09'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587495ff18c381c9f11c6,
+    seatNumber: [32m'4'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:13'[39m,
+    updatedOn: [32m'2020-03-09 03:58:12'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65874e5ff18c381c9f11c8,
+    seatNumber: [32m'5'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:18'[39m,
+    updatedOn: [32m'2020-03-09 03:24:56'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587555ff18c381c9f11ca,
+    seatNumber: [32m'6'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:25'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587595ff18c381c9f11cc,
+    seatNumber: [32m'7'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:29'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65875f5ff18c381c9f11ce,
+    seatNumber: [32m'8'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:35'[39m,
+    updatedOn: [32m'2020-03-09 04:45:21'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587645ff18c381c9f11d0,
+    seatNumber: [32m'9'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:40'[39m,
+    updatedOn: [32m'2020-03-09 17:56:37'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65876a5ff18c381c9f11d2,
+    seatNumber: [32m'10'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:46'[39m,
+    updatedOn: [32m'2020-03-09 04:54:40'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65876f5ff18c381c9f11d4,
+    seatNumber: [32m'11'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:51'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587745ff18c381c9f11d6,
+    seatNumber: [32m'12'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:01:56'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65877a5ff18c381c9f11d8,
+    seatNumber: [32m'13'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587865ff18c381c9f11da,
+    seatNumber: [32m'14'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:14'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65878c5ff18c381c9f11dc,
+    seatNumber: [32m'15'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:20'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587915ff18c381c9f11de,
+    seatNumber: [32m'16'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:25'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587995ff18c381c9f11e0,
+    seatNumber: [32m'17'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:33'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587a15ff18c381c9f11e2,
+    seatNumber: [32m'18'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:40'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6587a75ff18c381c9f11e4,
+    seatNumber: [32m'19'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 00:02:47'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e65a07f4e92743818aed67e,
+    seatNumber: [32m'20'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 01:48:47'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a84,
+    seatNumber: [32m'21'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a86,
+    seatNumber: [32m'22'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a88,
+    seatNumber: [32m'23'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a8a,
+    seatNumber: [32m'24'[39m,
+    status: [33mtrue[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m'2020-03-13 10:22:18'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a8c,
+    seatNumber: [32m'25'[39m,
+    status: [33mfalse[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6683ab7ea3f82270583a8e,
+    seatNumber: [32m'26'[39m,
+    status: [33mtrue[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:58:02'[39m,
+    updatedOn: [32m'2020-03-09 17:59:50'[39m,
+    updatedBy: [1mnull[22m,
+    isActivated: [33mtrue[39m,
+    isDeleted: [33mfalse[39m
+  }
+]
+16/Mar/2020:13:52:57 +0000 "GET /api/seats"
+[[13:52:57.176]] [LOG]    Finishing
+[[13:52:57.177]] [LOG]    No sessionId used
+[[13:52:57.188]] [LOG]    App usage logged! - 2020-03-16 13:52:57 {
+  req_route: [32m'/api/seats'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json, text/plain, */*'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/'[39m,
+      cookie: [32m'userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-16 12:18:08; isDeleted=false; loggedInOn=2020-03-16 12:18:08; loggedOutOn=; loggedOutBy=null; _id=5e6f6e843d589c2e1853f647; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NDM2MTA5MiwiZXhwIjoxNTg1NTcwNjkyfQ.uLa-JVBeFQ39DFyc-0qixqHVnEwhKQ3JYgphOcOa-UY; isExpired=false; expiresOn=2020-03-30 13:18:12'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 5706\r\n'[39m +
+      [32m'ETag: W/"164a-TNJQ4XpVGTIQ/PSyOX2OFC6uXQA"\r\n'[39m +
+      [32m'Date: Mon, 16 Mar 2020 13:52:57 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-16T13:52:57.177Z[39m
+}
+16/Mar/2020:13:52:57 +0000 "GET /favicon.ico"
+16/Mar/2020:13:52:57 +0000 "GET /images/csd.png"
+[[13:56:30.201]] [LOG]    Calling app logger
+[[13:56:30.203]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/bulkcreate
+[[13:56:30.205]] [LOG]    current username extracted dagasonhackason
+[[13:56:30.205]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[13:56:30.207]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[13:56:30.208]] [LOG]    userData.username_extract dagasonhackason
+[[13:56:30.208]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1583711244[39m, exp: [33m1584920844[39m }
+[[13:56:30.218]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[13:56:30.250]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.283]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-16 12:18:08'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[13:56:30.286]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[13:56:30.305]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-08 23:47:20'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-03-22 23:47:24'[39m
+}
+[[13:56:30.307]] [LOG]    New Incoming create bulk seat Request { totalSeatNumbers: [32m'21'[39m }
+[[13:56:30.309]] [LOG]    current seat number in bulk create seat 1
+[[13:56:30.311]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.316]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.322]] [LOG]    Seat 1 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.327]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.330]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.338]] [LOG]    current seat number in bulk create seat 2
+[[13:56:30.339]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.342]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.347]] [LOG]    Seat 2 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.349]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.351]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.357]] [LOG]    current seat number in bulk create seat 3
+[[13:56:30.358]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.360]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.368]] [LOG]    Seat 3 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.370]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.373]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.375]] [LOG]    current seat number in bulk create seat 4
+[[13:56:30.376]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.378]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.384]] [LOG]    Seat 4 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.386]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.387]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.393]] [LOG]    current seat number in bulk create seat 5
+[[13:56:30.394]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.399]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.401]] [LOG]    Seat 5 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.402]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.405]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.407]] [LOG]    current seat number in bulk create seat 6
+[[13:56:30.407]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.410]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.416]] [LOG]    Seat 6 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.417]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.420]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.422]] [LOG]    current seat number in bulk create seat 7
+[[13:56:30.423]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.425]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.428]] [LOG]    Seat 7 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.431]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.434]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.436]] [LOG]    current seat number in bulk create seat 8
+[[13:56:30.437]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.439]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.442]] [LOG]    Seat 8 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.443]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.447]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.450]] [LOG]    current seat number in bulk create seat 9
+[[13:56:30.450]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.453]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.456]] [LOG]    Seat 9 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.457]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.459]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.461]] [LOG]    current seat number in bulk create seat 10
+[[13:56:30.462]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.466]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.469]] [LOG]    Seat 10 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.471]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.472]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.473]] [LOG]    current seat number in bulk create seat 11
+[[13:56:30.474]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.475]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.477]] [LOG]    Seat 11 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.478]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.482]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.483]] [LOG]    current seat number in bulk create seat 12
+[[13:56:30.484]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.486]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.488]] [LOG]    Seat 12 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.488]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.490]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.491]] [LOG]    current seat number in bulk create seat 13
+[[13:56:30.492]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.493]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.495]] [LOG]    Seat 13 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.497]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.500]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.502]] [LOG]    current seat number in bulk create seat 14
+[[13:56:30.503]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.504]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.506]] [LOG]    Seat 14 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.506]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.508]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.509]] [LOG]    current seat number in bulk create seat 15
+[[13:56:30.509]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.511]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.515]] [LOG]    Seat 15 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.516]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.519]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.521]] [LOG]    current seat number in bulk create seat 16
+[[13:56:30.521]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.523]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.525]] [LOG]    Seat 16 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.525]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.527]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.530]] [LOG]    current seat number in bulk create seat 17
+[[13:56:30.531]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.533]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.534]] [LOG]    Seat 17 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.536]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.538]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.540]] [LOG]    current seat number in bulk create seat 18
+[[13:56:30.540]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.542]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.544]] [LOG]    Seat 18 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.545]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.549]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.550]] [LOG]    current seat number in bulk create seat 19
+[[13:56:30.551]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.554]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.555]] [LOG]    Seat 19 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.557]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.560]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.564]] [LOG]    current seat number in bulk create seat 20
+[[13:56:30.565]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.566]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.570]] [LOG]    Seat 20 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.571]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.573]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.575]] [LOG]    current seat number in bulk create seat 21
+[[13:56:30.576]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.578]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[13:56:30.582]] [LOG]    Seat 21 Bulk Already exist... Error! [1mnull[22m
+[[13:56:30.584]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.587]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-16 13:56:30'[39m }}, { upsert: [33mtrue[39m })
+[[13:56:30.589]] [LOG]    mongo bulk insert seat completed [
+  {
+    message: [32m'Seat 1 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 2 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 3 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 4 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 5 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 6 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 7 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 8 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 9 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 10 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 11 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 12 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 13 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 14 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 15 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 16 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 17 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 18 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 19 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 20 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  }
+]
+16/Mar/2020:13:56:30 +0000 "POST /api/seats/bulkcreate"
+[[13:56:30.598]] [LOG]    Finishing
+[[13:56:30.599]] [LOG]    Valid sessionId, logging
+[[13:56:30.640]] [LOG]    App usage logged! - 2020-03-16 13:56:30 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-08 23:47:20'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-03-22 23:47:24'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-16 12:18:08'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/seats/bulkcreate'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      [32m'content-type'[39m: [32m'application/json'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'user-agent'[39m: [32m'PostmanRuntime/7.23.0'[39m,
+      accept: [32m'*/*'[39m,
+      [32m'cache-control'[39m: [32m'no-cache'[39m,
+      [32m'postman-token'[39m: [32m'c0aed1d3-4198-495a-bf61-3e16e154cfe0'[39m,
+      host: [32m'localhost:3000'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate, br'[39m,
+      [32m'content-length'[39m: [32m'29'[39m,
+      connection: [32m'keep-alive'[39m
+    },
+    params: {},
+    body: { totalSeatNumbers: [32m'21'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 2518\r\n'[39m +
+      [32m'ETag: W/"9d6-prqKwTXdG+l2kWFJvm7ncVTKsy8"\r\n'[39m +
+      [32m'Date: Mon, 16 Mar 2020 13:56:30 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-16T13:56:30.599Z[39m
+}
+[[08:46:48.047]] [LOG]    hitting dash view route with {}
+17/Mar/2020:08:46:48 +0000 "GET /dash"
+17/Mar/2020:08:46:51 +0000 "GET /stylesheets/fallr.css"
+17/Mar/2020:08:46:51 +0000 "GET https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+17/Mar/2020:08:46:51 +0000 "GET /stylesheets/bootstrap.min.css"
+17/Mar/2020:08:46:51 +0000 "GET /stylesheets/custom.css"
+17/Mar/2020:08:46:51 +0000 "GET /stylesheets/jquery-ui.css"
+17/Mar/2020:08:46:51 +0000 "GET /javascripts/jquery-easing.js"
+17/Mar/2020:08:46:51 +0000 "GET /javascripts/bootstrap.min.js"
+17/Mar/2020:08:46:51 +0000 "GET /javascripts/axios.js"
+17/Mar/2020:08:46:51 +0000 "GET /javascripts/jquery.js"
+17/Mar/2020:08:46:52 +0000 "GET /javascripts/fallr.js"
+17/Mar/2020:08:46:52 +0000 "GET /javascripts/jquery-ui.js"
+17/Mar/2020:08:46:52 +0000 "GET /javascripts/clientJS.js"
+17/Mar/2020:08:46:52 +0000 "GET /javascripts/moment.js"
+17/Mar/2020:08:46:52 +0000 "GET /javascripts/functions.js"
+17/Mar/2020:08:46:53 +0000 "GET /images/tis.png"
+17/Mar/2020:08:46:57 +0000 "GET /webfonts/fa-solid-900.woff2"
+17/Mar/2020:08:46:57 +0000 "GET /favicon.ico"
+[[08:47:37.089]] [LOG]    Calling app logger
+[[08:47:37.104]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/bulkcreate
+[[08:47:37.569]] [LOG]    current username extracted dagasonhackason
+[[08:47:37.569]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[08:47:37.828]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc
+[[08:47:37.828]] [LOG]    userData.username_extract dagasonhackason
+[[08:47:37.828]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1583711244[39m, exp: [33m1584920844[39m }
+[[08:47:37.944]] [LOG]    getting jwt token passed false expirey time 2020-03-22 23:47:24
+[[08:47:38.558]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:40.463]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-03-16 12:18:08'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[08:47:40.470]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[08:47:40.505]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e65840c61643546c4b8ad5f,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-03-08 23:47:20'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-03-22 23:47:24'[39m
+}
+[[08:47:40.508]] [LOG]    New Incoming create bulk seat Request { totalSeatNumbers: [32m'21'[39m }
+[[08:47:40.511]] [LOG]    current seat number in bulk create seat 1
+[[08:47:40.519]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:40.524]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:40.558]] [LOG]    Seat 1 Bulk Already exist... Error! [1mnull[22m
+[[08:47:40.568]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:40.574]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'1'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:40.585]] [LOG]    current seat number in bulk create seat 2
+[[08:47:40.587]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:40.589]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:40.645]] [LOG]    Seat 2 Bulk Already exist... Error! [1mnull[22m
+[[08:47:40.647]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:40.650]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'2'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:40.661]] [LOG]    current seat number in bulk create seat 3
+[[08:47:40.663]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:40.664]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:40.674]] [LOG]    Seat 3 Bulk Already exist... Error! [1mnull[22m
+[[08:47:40.675]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:40.679]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'3'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:41.397]] [LOG]    current seat number in bulk create seat 4
+[[08:47:41.398]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:41.402]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:41.405]] [LOG]    Seat 4 Bulk Already exist... Error! [1mnull[22m
+[[08:47:41.407]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:41.410]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'4'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:42.971]] [LOG]    current seat number in bulk create seat 5
+[[08:47:42.972]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:42.974]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:42.976]] [LOG]    Seat 5 Bulk Already exist... Error! [1mnull[22m
+[[08:47:42.980]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:42.983]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'5'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:42.987]] [LOG]    current seat number in bulk create seat 6
+[[08:47:42.988]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:42.991]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:42.994]] [LOG]    Seat 6 Bulk Already exist... Error! [1mnull[22m
+[[08:47:42.995]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:42.998]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'6'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.003]] [LOG]    current seat number in bulk create seat 7
+[[08:47:43.004]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.006]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.009]] [LOG]    Seat 7 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.010]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.012]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'7'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.015]] [LOG]    current seat number in bulk create seat 8
+[[08:47:43.016]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.018]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.021]] [LOG]    Seat 8 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.024]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.027]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'8'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.029]] [LOG]    current seat number in bulk create seat 9
+[[08:47:43.030]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.032]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.037]] [LOG]    Seat 9 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.040]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.043]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'9'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.044]] [LOG]    current seat number in bulk create seat 10
+[[08:47:43.045]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.046]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.048]] [LOG]    Seat 10 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.049]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.052]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'10'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.056]] [LOG]    current seat number in bulk create seat 11
+[[08:47:43.057]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.058]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.060]] [LOG]    Seat 11 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.061]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.064]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'11'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.069]] [LOG]    current seat number in bulk create seat 12
+[[08:47:43.070]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.072]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.075]] [LOG]    Seat 12 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.077]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.080]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'12'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.082]] [LOG]    current seat number in bulk create seat 13
+[[08:47:43.083]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.087]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.090]] [LOG]    Seat 13 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.092]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.097]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'13'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.099]] [LOG]    current seat number in bulk create seat 14
+[[08:47:43.103]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.105]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.108]] [LOG]    Seat 14 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.112]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.116]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'14'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.120]] [LOG]    current seat number in bulk create seat 15
+[[08:47:43.121]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.122]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.125]] [LOG]    Seat 15 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.127]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.132]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'15'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.187]] [LOG]    current seat number in bulk create seat 16
+[[08:47:43.188]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.190]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.192]] [LOG]    Seat 16 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.194]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.196]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'16'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.199]] [LOG]    current seat number in bulk create seat 17
+[[08:47:43.200]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.203]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.206]] [LOG]    Seat 17 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.208]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.211]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'17'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.213]] [LOG]    current seat number in bulk create seat 18
+[[08:47:43.214]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.216]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.220]] [LOG]    Seat 18 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.221]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.254]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'18'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.257]] [LOG]    current seat number in bulk create seat 19
+[[08:47:43.257]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.260]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.262]] [LOG]    Seat 19 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.368]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.371]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'19'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.373]] [LOG]    current seat number in bulk create seat 20
+[[08:47:43.375]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.376]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.379]] [LOG]    Seat 20 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.380]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.383]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'20'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.387]] [LOG]    current seat number in bulk create seat 21
+[[08:47:43.388]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.390]] [INFO]   [0;36mMongoose:[0m seats.findOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[08:47:43.392]] [LOG]    Seat 21 Bulk Already exist... Error! [1mnull[22m
+[[08:47:43.394]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.396]] [INFO]   [0;36mMongoose:[0m seats.updateOne({ seatNumber: [32m'21'[39m, isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { status: [33mfalse[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-03-17 08:47:40'[39m }}, { upsert: [33mtrue[39m })
+[[08:47:43.398]] [LOG]    mongo bulk insert seat completed [
+  {
+    message: [32m'Seat 4 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 3 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 2 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 1 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m0[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 5 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 6 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 7 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 8 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 9 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 10 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 11 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 12 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 15 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 14 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 13 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 16 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 17 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 18 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 19 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  },
+  {
+    message: [32m'Seat 20 Already exist... Seat was reseted to not booked successfully!'[39m,
+    data: { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+  }
+]
+17/Mar/2020:08:47:44 +0000 "POST /api/seats/bulkcreate"
+[[08:47:44.162]] [LOG]    Finishing
+[[08:47:44.162]] [LOG]    Valid sessionId, logging
+[[08:47:44.257]] [LOG]    App usage logged! - 2020-03-17 08:47:44 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e65840c61643546c4b8ad5f,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-03-08 23:47:20'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-03-22 23:47:24'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-03-16 12:18:08'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/seats/bulkcreate'[39m,
+  req_ip_address: [32m'::1'[39m,
+  request_payload: {
+    headers: {
+      [32m'content-type'[39m: [32m'application/json'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4MzcxMTI0NCwiZXhwIjoxNTg0OTIwODQ0fQ.SpAc0Hm9Xnabz4Jti_SsS_e03K36FR1OnAJbUeeqQlc'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'user-agent'[39m: [32m'PostmanRuntime/7.23.0'[39m,
+      accept: [32m'*/*'[39m,
+      [32m'cache-control'[39m: [32m'no-cache'[39m,
+      [32m'postman-token'[39m: [32m'7bbec321-d904-4762-8849-94729805fb7e'[39m,
+      host: [32m'localhost:3000'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate, br'[39m,
+      [32m'content-length'[39m: [32m'29'[39m,
+      connection: [32m'keep-alive'[39m
+    },
+    params: {},
+    body: { totalSeatNumbers: [32m'21'[39m },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 2518\r\n'[39m +
+      [32m'ETag: W/"9d6-WSEXLPMdzQNkQgbDenPD3qqlNkQ"\r\n'[39m +
+      [32m'Date: Tue, 17 Mar 2020 08:47:43 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-03-17T08:47:44.162Z[39m
+}

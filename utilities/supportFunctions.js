@@ -8,10 +8,10 @@ const DEFAULT_HASH_ITERATIONS = 4000;
 const SALT_SIZE = 192/8;
 const KEY_SIZE = 768/32;
 const SECRET_KEY = process.env.JWT_SECRET;
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 const updateSeatsCollection = async (filterQuery, updatePayload) => {
-    
-    let dbMonogram = await connect('mongodb://localhost:27017/seatbooking');
+    let dbMonogram = await connect(MONGODB_CONNECTION_STRING);
     let seatsCollection = dbMonogram.collection('seats');
 
     // console.log("new db connection monogram", dbMonogram);
