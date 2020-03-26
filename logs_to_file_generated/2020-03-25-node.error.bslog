@@ -254,3 +254,7 @@
 [[04:29:05.540]] [ERROR]  (node:17732) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
 [[04:29:05.874]] [ERROR]  (node:17732) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 [[08:14:15.970]] [ERROR]  Please Fill all required fields and try again... Try again!
+[[08:27:47.235]] [ERROR]  (node:17732) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+[[23:29:30.153]] [ERROR]  (node:12892) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+[[23:29:30.158]] [ERROR]  (node:12892) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[[23:29:31.872]] [ERROR]  (node:12892) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.

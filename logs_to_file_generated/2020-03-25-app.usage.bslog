@@ -1,19 +1,19 @@
 
-:::::2020-03-25 02:52:30 :: NEW APP USAGE 
+:::::2020-03-25 19:13:22 :: NEW APP USAGE 
 ___________________________________________________
 
 {
-    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTA5OTUwNywiZXhwIjoxNTg2MzA5MTA3fQ.oQjE_gBvyylnwU4q2kAqCdXjwIx-cpqxsWauKCZbyAU",
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTEyNDg2OSwiZXhwIjoxNTg2MzM0NDY5fQ.DobTikMso8Bo63PMOMbpmouQGjgRFUtd6B0lCVjuwTk",
     "req_username_extract": "dagasonhackason",
     "req_loginSession": {
-        "_id": "5e7ab2f37a3fb025fced216c",
+        "_id": "5e7b1605d5e175454420e40a",
         "userId": "5e657d7500c28d427c171899",
-        "loggedInOn": "2020-03-25 01:25:06",
+        "loggedInOn": "2020-03-25 08:27:46",
         "loggedOutOn": "",
         "loggedOutBy": null,
-        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTA5OTUwNywiZXhwIjoxNTg2MzA5MTA3fQ.oQjE_gBvyylnwU4q2kAqCdXjwIx-cpqxsWauKCZbyAU",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTEyNDg2OSwiZXhwIjoxNTg2MzM0NDY5fQ.DobTikMso8Bo63PMOMbpmouQGjgRFUtd6B0lCVjuwTk",
         "isExpired": false,
-        "expiresOn": "2020-04-08 02:25:07"
+        "expiresOn": "2020-04-08 09:27:49"
     },
     "req_user": {
         "_id": "5e657d7500c28d427c171899",
@@ -23,96 +23,26 @@ ___________________________________________________
         "createdOn": "2020-03-08 23:19:10",
         "updatedOn": "",
         "updatedBy": null,
-        "lastLoginOn": "2020-03-25 01:25:06",
+        "lastLoginOn": "2020-03-25 08:27:46",
         "isDeleted": false
     },
-    "req_route": "/api/seats/populate",
+    "req_route": "/api/users/logout",
     "req_ip_address": "::1",
     "request_payload": {
         "headers": {
             "host": "localhost:3000",
             "connection": "keep-alive",
+            "content-length": "2",
             "accept": "application/json",
             "username": "dagasonhackason",
             "sec-fetch-dest": "empty",
-            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTA5OTUwNywiZXhwIjoxNTg2MzA5MTA3fQ.oQjE_gBvyylnwU4q2kAqCdXjwIx-cpqxsWauKCZbyAU",
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTEyNDg2OSwiZXhwIjoxNTg2MzM0NDY5fQ.DobTikMso8Bo63PMOMbpmouQGjgRFUtd6B0lCVjuwTk",
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "sec-fetch-site": "same-origin",
-            "sec-fetch-mode": "cors",
-            "referer": "http://localhost:3000/configureSeats",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9",
-            "cookie": "userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-25 01:25:06; isDeleted=false; loggedInOn=2020-03-25 01:25:06; loggedOutOn=; loggedOutBy=null; _id=5e7ab2f37a3fb025fced216c; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTA5OTUwNywiZXhwIjoxNTg2MzA5MTA3fQ.oQjE_gBvyylnwU4q2kAqCdXjwIx-cpqxsWauKCZbyAU; isExpired=false; expiresOn=2020-04-08 02:25:07",
-            "if-none-match": "W/\"225f-tl80u4HEuZl41vO/YvVI3qkY+n0\""
-        },
-        "params": {},
-        "body": {},
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 8799\r\nETag: W/\"225f-0NA1WLoZbIUyB/M2FtskgJc+GE4\"\r\nDate: Wed, 25 Mar 2020 02:52:30 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T02:52:30.623Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 03:52:01 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/seats",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+            "content-type": "application/json; charset=UTF-8",
             "origin": "http://159.69.36.51:3000",
             "sec-fetch-site": "cross-site",
             "sec-fetch-mode": "cors",
-            "referer": "http://159.69.36.51:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9",
-            "if-none-match": "W/\"1ad8-LYFtdnaEf++9PsshL27NxlLOqD4\""
-        },
-        "params": {},
-        "body": {},
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 8799\r\nETag: W/\"225f-x8LlZjxILiHxjSrYVUwalYo/89Y\"\r\nDate: Wed, 25 Mar 2020 03:52:01 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T03:52:01.608Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 04:24:51 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/seats",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "pragma": "no-cache",
-            "cache-control": "no-cache",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "origin": "http://159.69.36.51:3000",
-            "sec-fetch-site": "cross-site",
-            "sec-fetch-mode": "cors",
-            "referer": "http://159.69.36.51:3000/",
+            "referer": "http://159.69.36.51:3000/dash",
             "accept-encoding": "gzip, deflate, br",
             "accept-language": "en-US,en;q=0.9"
         },
@@ -123,24 +53,24 @@ ___________________________________________________
     "res_status_code": 200,
     "res_status_message": "OK",
     "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 8799\r\nETag: W/\"225f-x8LlZjxILiHxjSrYVUwalYo/89Y\"\r\nDate: Wed, 25 Mar 2020 04:24:51 GMT\r\nConnection: keep-alive\r\n\r\n"
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 661\r\nETag: W/\"295-9FlgQu0k4hY4Jv7X0EYU89EXMHo\"\r\nDate: Wed, 25 Mar 2020 19:13:22 GMT\r\nConnection: keep-alive\r\n\r\n"
     },
-    "created_at": "2020-03-25T04:24:51.916Z"
+    "created_at": "2020-03-25T19:13:22.284Z"
 }
 
 ___________________________________________________
 
-:::::2020-03-25 04:25:12 :: NEW APP USAGE 
+:::::2020-03-25 19:13:47 :: NEW APP USAGE 
 ___________________________________________________
 
 {
-    "req_route": "/api/bookings/create",
+    "req_route": "/api/users/login",
     "req_ip_address": "::1",
     "request_payload": {
         "headers": {
             "host": "localhost:3000",
             "connection": "keep-alive",
-            "content-length": "71",
+            "content-length": "60",
             "accept": "application/json",
             "sec-fetch-dest": "empty",
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
@@ -148,66 +78,28 @@ ___________________________________________________
             "origin": "http://159.69.36.51:3000",
             "sec-fetch-site": "cross-site",
             "sec-fetch-mode": "cors",
-            "referer": "http://159.69.36.51:3000/confirm/5e7a923d2952d91f786f1a8e",
+            "referer": "http://159.69.36.51:3000/login",
             "accept-encoding": "gzip, deflate, br",
             "accept-language": "en-US,en;q=0.9"
         },
         "params": {},
         "body": {
-            "bookedByName": "Dagason Hackason"
+            "username": "DagasonHackason",
+            "password": "cGFzc3dvcmQxMjM0"
         },
         "query": {}
     },
     "res_status_code": 200,
     "res_status_message": "OK",
     "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 310\r\nETag: W/\"136-sYegwINJCi4UWJc/sctb4b2AZ+E\"\r\nDate: Wed, 25 Mar 2020 04:25:12 GMT\r\nConnection: keep-alive\r\n\r\n"
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 620\r\nETag: W/\"26c-l82vx/jqn0nXL0962R/gb0rrOPM\"\r\nDate: Wed, 25 Mar 2020 19:13:47 GMT\r\nConnection: keep-alive\r\n\r\n"
     },
-    "created_at": "2020-03-25T04:25:12.984Z"
+    "created_at": "2020-03-25T19:13:47.707Z"
 }
 
 ___________________________________________________
 
-:::::2020-03-25 04:25:38 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/bookings/create",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "content-length": "71",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "content-type": "application/json; charset=UTF-8",
-            "origin": "http://159.69.36.51:3000",
-            "sec-fetch-site": "cross-site",
-            "sec-fetch-mode": "cors",
-            "referer": "http://159.69.36.51:3000/confirm/5e7a923d2952d91f786f1a8e",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9"
-        },
-        "params": {},
-        "body": {
-            "seatId": "5e7a923d2952d91f786f1a8e",
-            "bookedByName": "Dagason Hackason"
-        },
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 114\r\nETag: W/\"72-x5CHjXLt4iaf8AxErTe6aVDnJfc\"\r\nDate: Wed, 25 Mar 2020 04:25:38 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T04:25:38.051Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 04:25:50 :: NEW APP USAGE 
+:::::2020-03-25 19:15:29 :: NEW APP USAGE 
 ___________________________________________________
 
 {
@@ -226,263 +118,7 @@ ___________________________________________________
             "referer": "http://159.69.36.51:3000/",
             "accept-encoding": "gzip, deflate, br",
             "accept-language": "en-US,en;q=0.9",
-            "if-none-match": "W/\"225f-x8LlZjxILiHxjSrYVUwalYo/89Y\""
-        },
-        "params": {},
-        "body": {},
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 8798\r\nETag: W/\"225e-bTJGtOpfc0oh2nYjl5ED9FtW+Ew\"\r\nDate: Wed, 25 Mar 2020 04:25:50 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T04:25:50.486Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 04:26:01 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/bookings/create",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "content-length": "67",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "content-type": "application/json; charset=UTF-8",
-            "origin": "http://159.69.36.51:3000",
-            "sec-fetch-site": "cross-site",
-            "sec-fetch-mode": "cors",
-            "referer": "http://159.69.36.51:3000/confirm/5e7a923d2952d91f786f1a92",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9"
-        },
-        "params": {},
-        "body": {
-            "bookedByName": "Hamzah Bawah"
-        },
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 306\r\nETag: W/\"132-gZjlyNfC6x9UKu5D8Av6sqJ3h2o\"\r\nDate: Wed, 25 Mar 2020 04:26:01 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T04:26:01.153Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 04:33:53 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/seats",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "origin": "http://159.69.36.51:3000",
-            "sec-fetch-site": "cross-site",
-            "sec-fetch-mode": "cors",
-            "referer": "http://159.69.36.51:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9",
-            "if-none-match": "W/\"225e-bTJGtOpfc0oh2nYjl5ED9FtW+Ew\""
-        },
-        "params": {},
-        "body": {},
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 8797\r\nETag: W/\"225d-c9VMM0UrDaXTVrBrOO0+0EddgAE\"\r\nDate: Wed, 25 Mar 2020 04:33:53 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T04:33:53.359Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 04:34:08 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/bookings/create",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "content-length": "70",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "content-type": "application/json; charset=UTF-8",
-            "origin": "http://159.69.36.51:3000",
-            "sec-fetch-site": "cross-site",
-            "sec-fetch-mode": "cors",
-            "referer": "http://159.69.36.51:3000/confirm/5e7a923d2952d91f786f1a80",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9"
-        },
-        "params": {},
-        "body": {
-            "bookedByName": "Dagason Hackson"
-        },
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 309\r\nETag: W/\"135-kHYuJrMAt/up99M8RSrJk2XdgHM\"\r\nDate: Wed, 25 Mar 2020 04:34:08 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T04:34:08.514Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 04:34:39 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/seats",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "sec-fetch-site": "same-origin",
-            "sec-fetch-mode": "cors",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9",
-            "cookie": "userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-25 01:25:06; isDeleted=false; loggedInOn=2020-03-25 01:25:06; loggedOutOn=; loggedOutBy=null; _id=5e7ab2f37a3fb025fced216c; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTA5OTUwNywiZXhwIjoxNTg2MzA5MTA3fQ.oQjE_gBvyylnwU4q2kAqCdXjwIx-cpqxsWauKCZbyAU; isExpired=false; expiresOn=2020-04-08 02:25:07",
-            "if-none-match": "W/\"225d-c9VMM0UrDaXTVrBrOO0+0EddgAE\""
-        },
-        "params": {},
-        "body": {},
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 8796\r\nETag: W/\"225c-VxSOB8KD4iZ3OVIbuUhsjkZtXuw\"\r\nDate: Wed, 25 Mar 2020 04:34:39 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T04:34:39.861Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 04:34:50 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/bookings/create",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "content-length": "67",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "content-type": "application/json; charset=UTF-8",
-            "origin": "http://localhost:3000",
-            "sec-fetch-site": "same-origin",
-            "sec-fetch-mode": "cors",
-            "referer": "http://localhost:3000/confirm/5e7a923d2952d91f786f1a84",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9",
-            "cookie": "userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-03-25 01:25:06; isDeleted=false; loggedInOn=2020-03-25 01:25:06; loggedOutOn=; loggedOutBy=null; _id=5e7ab2f37a3fb025fced216c; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTA5OTUwNywiZXhwIjoxNTg2MzA5MTA3fQ.oQjE_gBvyylnwU4q2kAqCdXjwIx-cpqxsWauKCZbyAU; isExpired=false; expiresOn=2020-04-08 02:25:07"
-        },
-        "params": {},
-        "body": {
-            "bookedByName": "Hamzah Bawah"
-        },
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 306\r\nETag: W/\"132-/LL+6DaaaQXz40TwDmFmjfhmaWs\"\r\nDate: Wed, 25 Mar 2020 04:34:50 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T04:34:50.274Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 08:13:56 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/seats",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "pragma": "no-cache",
-            "cache-control": "no-cache",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "origin": "http://159.69.36.51:3000",
-            "sec-fetch-site": "cross-site",
-            "sec-fetch-mode": "cors",
-            "referer": "http://159.69.36.51:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9"
-        },
-        "params": {},
-        "body": {},
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 8795\r\nETag: W/\"225b-6uSHAQggshxnkaqycZ0uf4UwSHQ\"\r\nDate: Wed, 25 Mar 2020 08:13:55 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T08:13:55.849Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 08:14:02 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/seats",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "origin": "http://159.69.36.51:3000",
-            "sec-fetch-site": "cross-site",
-            "sec-fetch-mode": "cors",
-            "referer": "http://159.69.36.51:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9",
-            "if-none-match": "W/\"225b-6uSHAQggshxnkaqycZ0uf4UwSHQ\""
+            "if-none-match": "W/\"225a-2iSm+bLYM/Zx5T82lFF8PNdXoGA\""
         },
         "params": {},
         "body": {},
@@ -491,48 +127,9 @@ ___________________________________________________
     "res_status_code": 304,
     "res_status_message": "Not Modified",
     "response_payload": {
-        "headers": "HTTP/1.1 304 Not Modified\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"225b-6uSHAQggshxnkaqycZ0uf4UwSHQ\"\r\nDate: Wed, 25 Mar 2020 08:14:02 GMT\r\nConnection: keep-alive\r\n\r\n"
+        "headers": "HTTP/1.1 304 Not Modified\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nETag: W/\"225a-2iSm+bLYM/Zx5T82lFF8PNdXoGA\"\r\nDate: Wed, 25 Mar 2020 19:15:29 GMT\r\nConnection: keep-alive\r\n\r\n"
     },
-    "created_at": "2020-03-25T08:14:02.277Z"
-}
-
-___________________________________________________
-
-:::::2020-03-25 08:14:15 :: NEW APP USAGE 
-___________________________________________________
-
-{
-    "req_route": "/api/bookings/create",
-    "req_ip_address": "::1",
-    "request_payload": {
-        "headers": {
-            "host": "localhost:3000",
-            "connection": "keep-alive",
-            "content-length": "55",
-            "accept": "application/json",
-            "sec-fetch-dest": "empty",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
-            "content-type": "application/json; charset=UTF-8",
-            "origin": "http://159.69.36.51:3000",
-            "sec-fetch-site": "cross-site",
-            "sec-fetch-mode": "cors",
-            "referer": "http://159.69.36.51:3000/confirm/5e7a923d2952d91f786f1a82",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US,en;q=0.9"
-        },
-        "params": {},
-        "body": {
-            "seatId": "5e7a923d2952d91f786f1a82",
-            "bookedByName": ""
-        },
-        "query": {}
-    },
-    "res_status_code": 200,
-    "res_status_message": "OK",
-    "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 131\r\nETag: W/\"83-69I+T2wf/KJmV26ZfBmtCZVy7Dk\"\r\nDate: Wed, 25 Mar 2020 08:14:15 GMT\r\nConnection: keep-alive\r\n\r\n"
-    },
-    "created_at": "2020-03-25T08:14:15.971Z"
+    "created_at": "2020-03-25T19:15:29.380Z"
 }
 
 ___________________________________________________
