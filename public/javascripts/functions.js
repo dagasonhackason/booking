@@ -485,7 +485,7 @@ if (typeof jsonToSeatsBookingView == "undefined") {
                 });
             });
 
-            populator += '<div class="col-md-2 col-sm-4 hero-feature"><div class="thumbnail"><img class="chair" src="/images/csd.png" alt=""><div class="caption"><h3 class="seatNumber">' + ((seatNumber[i] <10) ? '0' + seatNumber[i] : seatNumber[i] ) + '</h3>' + ((status[i] == true) ? '<p class="unavailable">Unavailable</p>' : '<p class="available">Available</p>') + '<p><a href="#" onclick="' + ((status[i] == true) ? 'callWarnPopup(\'Sorry... This Seat has been booked already!\');' : 'let number=$(this).parent().parent().children(\':first\').text(); console.log(\'seat number \' + number); window.location.href = \'/confirm/' + _id[i] + '\';') + '" class="btn btn-primary" ' + ((status[i] == true) ? 'disabled' : '') + '>Book!</a></p></div></div></div>';
+            populator += '<div class="col-md-2 col-sm-4 hero-feature"><div class="thumbnail"><img class="chair" src="/images/ch.png" alt=""><div class="caption"><h3 class="seatNumber">' + ((seatNumber[i] <10) ? '0' + seatNumber[i] : seatNumber[i] ) + '</h3>' + ((status[i] == true) ? '<p class="unavailable">Unavailable</p>' : '<p class="available">Available</p>') + '<p><a href="#" onclick="' + ((status[i] == true) ? 'callWarnPopup(\'Sorry... This Seat has been booked already!\');' : 'let number=$(this).parent().parent().children(\':first\').text(); console.log(\'seat number \' + number); window.location.href = \'/confirm/' + _id[i] + '\';') + '" class="btn btn-primary" ' + ((status[i] == true) ? 'disabled' : '') + '>Book!</a></p></div></div></div>';
             
             if((((i+1)%6) == 0)) {
                 populator += '<div class="row text-center">';

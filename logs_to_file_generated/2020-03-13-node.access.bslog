@@ -381,7 +381,7 @@
   },
   created_at: [35m2020-03-13T10:19:19.731Z[39m
 }
-13/Mar/2020:10:19:19 +0000 "GET /images/csd.png"
+13/Mar/2020:10:19:19 +0000 "GET /images/ch.png"
 [[10:20:10.415]] [LOG]    hitting confirm view route with { id: [32m'5e6683ab7ea3f82270583a8a'[39m }
 [[10:20:10.442]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e6683ab7ea3f82270583a8a"), isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m}, { projection: {} })
 [[10:20:10.566]] [LOG]    From mongo get one booking using confirm view {

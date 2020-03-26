@@ -9523,7 +9523,7 @@
   },
   created_at: [35m2020-03-25T01:50:38.061Z[39m
 }
-25/Mar/2020:01:50:38 +0000 "GET /images/csd.png"
+25/Mar/2020:01:50:38 +0000 "GET /images/ch.png"
 [[01:50:42.156]] [LOG]    hitting confirm view route with { id: [32m'5e7a923d2952d91f786f1a82'[39m }
 [[01:50:42.175]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e7a923d2952d91f786f1a82"), isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m}, { projection: {} })
 [[01:50:42.181]] [LOG]    From mongo get one booking using confirm view {
@@ -9651,7 +9651,7 @@
 25/Mar/2020:01:50:52 +0000 "GET /javascripts/axios.js"
 25/Mar/2020:01:50:52 +0000 "GET /javascripts/functions.js"
 25/Mar/2020:01:50:52 +0000 "GET /javascripts/moment.js"
-25/Mar/2020:01:50:58 +0000 "GET /images/csd.png"
+25/Mar/2020:01:50:58 +0000 "GET /images/ch.png"
 [[01:51:01.152]] [LOG]    hitting index view route with {}
 25/Mar/2020:01:51:01 +0000 "GET /"
 25/Mar/2020:01:51:01 +0000 "GET /stylesheets/bootstrap.min.css"
@@ -10015,7 +10015,7 @@
   },
   created_at: [35m2020-03-25T01:51:01.962Z[39m
 }
-25/Mar/2020:01:51:02 +0000 "GET /images/csd.png"
+25/Mar/2020:01:51:02 +0000 "GET /images/ch.png"
 [[01:51:05.838]] [LOG]    hitting confirm view route with { id: [32m'5e7a923d2952d91f786f1a90'[39m }
 [[01:51:05.851]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e7a923d2952d91f786f1a90"), isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m}, { projection: {} })
 [[01:51:05.853]] [LOG]    From mongo get one booking using confirm view {
@@ -10146,7 +10146,7 @@
 25/Mar/2020:01:51:15 +0000 "GET /javascripts/fallr.js"
 25/Mar/2020:01:51:15 +0000 "GET /javascripts/functions.js"
 25/Mar/2020:01:51:15 +0000 "GET /javascripts/moment.js"
-25/Mar/2020:01:51:19 +0000 "GET /images/csd.png"
+25/Mar/2020:01:51:19 +0000 "GET /images/ch.png"
 [[01:51:21.072]] [LOG]    hitting confirm view route with { id: [32m'5e7a923d2952d91f786f1a7e'[39m }
 [[01:51:21.093]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e7a923d2952d91f786f1a7e"), isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m}, { projection: {} })
 [[01:51:21.096]] [LOG]    From mongo get one booking using confirm view {
@@ -25688,7 +25688,7 @@
   },
   created_at: [35m2020-03-25T04:34:39.861Z[39m
 }
-25/Mar/2020:04:34:39 +0000 "GET /images/csd.png"
+25/Mar/2020:04:34:39 +0000 "GET /images/ch.png"
 [[04:34:42.707]] [LOG]    hitting confirm view route with { id: [32m'5e7a923d2952d91f786f1a84'[39m }
 [[04:34:42.720]] [INFO]   [0;36mMongoose:[0m seats.findOne({ _id: ObjectId("5e7a923d2952d91f786f1a84"), isDeleted: [33mfalse[39m, isActivated: [33mtrue[39m}, { projection: {} })
 [[04:34:42.732]] [LOG]    From mongo get one booking using confirm view {

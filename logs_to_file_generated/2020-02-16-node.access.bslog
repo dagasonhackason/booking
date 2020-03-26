@@ -375,7 +375,7 @@
   },
   created_at: 2020-02-16T13:43:25.577Z
 }
-16/Feb/2020:13:43:25 +0000 "GET /images/csd.png"
+16/Feb/2020:13:43:25 +0000 "GET /images/ch.png"
 [[00:14:10.453]] [LOG]    Calling app logger
 [[00:14:10.590]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/create
 [[00:14:10.613]] [LOG]    No middleware needed for this route /api/bookings/create

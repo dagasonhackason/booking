@@ -5442,7 +5442,7 @@
   },
   created_at: 2020-02-17T13:31:28.762Z
 }
-17/Feb/2020:13:31:28 +0000 "GET /images/csd.png"
+17/Feb/2020:13:31:28 +0000 "GET /images/ch.png"
 [[13:31:33.582]] [LOG]    hitting confirm view route with { id: '5e49e74ec76d415b3cab5a00' }
 [[13:31:33.589]] [INFO]   [0;36mMongoose:[0m seats.find({ _id: ObjectId("5e49e74ec76d415b3cab5a00") }, { projection: {} })
 [[13:31:33.591]] [LOG]    From mongo get one booking using confirm view []
@@ -5968,7 +5968,7 @@
   },
   created_at: 2020-02-17T13:36:43.921Z
 }
-17/Feb/2020:13:36:43 +0000 "GET /images/csd.png"
+17/Feb/2020:13:36:43 +0000 "GET /images/ch.png"
 [[13:36:45.751]] [LOG]    hitting confirm view route with { id: '5e3c2a8f8033aa3aa02f2329' }
 [[13:36:45.764]] [INFO]   [0;36mMongoose:[0m seats.find({ _id: ObjectId("5e3c2a8f8033aa3aa02f2329") }, { projection: {} })
 [[13:36:45.766]] [LOG]    From mongo get one booking using confirm view []
@@ -6814,7 +6814,7 @@
   },
   created_at: 2020-02-17T13:37:17.771Z
 }
-17/Feb/2020:13:37:17 +0000 "GET /images/csd.png"
+17/Feb/2020:13:37:17 +0000 "GET /images/ch.png"
 [[13:37:31.139]] [LOG]    hitting register view route with {}
 17/Feb/2020:13:37:31 +0000 "GET /register"
 [[13:37:31.326]] [LOG]    Calling app logger
@@ -7330,7 +7330,7 @@
   },
   created_at: 2020-02-17T13:38:11.012Z
 }
-17/Feb/2020:13:38:11 +0000 "GET /images/csd.png"
+17/Feb/2020:13:38:11 +0000 "GET /images/ch.png"
 [[13:38:15.762]] [LOG]    hitting dash view route with {}
 17/Feb/2020:13:38:15 +0000 "GET /dash"
 17/Feb/2020:13:38:15 +0000 "GET /images/tis.png"
@@ -7706,7 +7706,7 @@
   },
   created_at: 2020-02-17T13:41:52.814Z
 }
-17/Feb/2020:13:41:52 +0000 "GET /images/csd.png"
+17/Feb/2020:13:41:52 +0000 "GET /images/ch.png"
 [[13:42:09.595]] [LOG]    hitting index view route with {}
 17/Feb/2020:13:42:09 +0000 "GET /"
 [[13:42:09.658]] [LOG]    Calling app logger
@@ -8067,7 +8067,7 @@
   },
   created_at: 2020-02-17T13:42:09.922Z
 }
-17/Feb/2020:13:42:09 +0000 "GET /images/csd.png"
+17/Feb/2020:13:42:09 +0000 "GET /images/ch.png"
 [[13:44:58.433]] [LOG]    hitting index view route with {}
 17/Feb/2020:13:44:58 +0000 "GET /"
 17/Feb/2020:13:44:58 +0000 "GET /stylesheets/bootstrap.min.css"
@@ -8441,7 +8441,7 @@
   },
   created_at: 2020-02-17T13:44:58.722Z
 }
-17/Feb/2020:13:44:58 +0000 "GET /images/csd.png"
+17/Feb/2020:13:44:58 +0000 "GET /images/ch.png"
 [[16:55:38.808]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
 [[16:55:38.814]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })
 [[16:55:38.814]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ _id: [33m1[39m }, { background: [33mtrue[39m })

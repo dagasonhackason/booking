@@ -792,7 +792,7 @@
   created_at: [35m2020-03-16T13:52:57.177Z[39m
 }
 16/Mar/2020:13:52:57 +0000 "GET /favicon.ico"
-16/Mar/2020:13:52:57 +0000 "GET /images/csd.png"
+16/Mar/2020:13:52:57 +0000 "GET /images/ch.png"
 [[13:56:30.201]] [LOG]    Calling app logger
 [[13:56:30.203]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/seats/bulkcreate
 [[13:56:30.205]] [LOG]    current username extracted dagasonhackason
