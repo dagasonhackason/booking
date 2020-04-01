@@ -1,111 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-<head>
+        <title>Admin Dashboard</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <!--Font Awesome-->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <title>Admin Dashboard</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
 
-    <!--Font Awesome-->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/stylesheets/jquery-ui.css" rel="stylesheet" />
 
-    <!-- Bootstrap Core CSS -->
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" media="screen,projection" href="/stylesheets/fallr.css" />
 
-	<link href="/stylesheets/jquery-ui.css" rel="stylesheet" />
+        <!-- Custom CSS -->
+        <link href="/stylesheets/custom.css" rel="stylesheet" />
 
-	<link rel="stylesheet" type="text/css" media="screen,projection" href="/stylesheets/fallr.css" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
 
-    <!-- Custom CSS -->
-    <link href="/stylesheets/custom.css" rel="stylesheet" />
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button> 
+                    <a class="navbar-brand" href="/">
+                    <img src="/images/tis.png" width="35" height="36" class="d-inline-block align-top" alt="">
+                    
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button> 
-                <a class="navbar-brand" href="/">
-                <img src="/images/tis.png" width="35" height="36" class="d-inline-block align-top" alt="">
-                
-                </a>
+                <!-- /.navbar-collapse -->
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- /.container -->
+        </nav>
 
-            <!-- /.navbar-collapse -->
+        <div class="container" style="margin-top: 5%">
+            <div class="col-sm-12">
+                <div class="col-sm-3" align="center"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  AVAIL USERS </b></h3><br /> <h1><%= totalUsers %></h1></div>
+                <div class="col-sm-3" align="center" style="border-right: 3px solid #000000; border-left: 3px solid #000000;"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  AVAIL SEATS </b></h3><br /> <h1><%= totalSeats %></h1></div>
+                <div class="col-sm-3" align="center" style="border-right: 3px solid #000000;"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  AVAIL BOOKNS </b></h3><br /> <h1><%= totalBookings %></h1></div>
+                <div class="col-sm-3" align="center"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  AVAIL CODES </b></h3><br /> <h1><%= totalSecretCodes %></h1></div>
+            </div>
+            <div class="col-sm-12" style="margin-top: 4%">
+                <div class="col-sm-6" align="center"><h1><a href="configureUsers" style="text-decoration: none; color: #000000;"><i class="fa fa-users" aria-hidden="true"></i>  Configure Users </a></h1></div>
+                <div class="col-sm-6" align="center"><h1><a href="configureSeats" style="text-decoration: none; color: #000000;"><i class="fa fa-circle" aria-hidden="true"></i> Configure Seats   </a></h1></div>
+            </div>
+            <div class="col-sm-12">
+                <div class="col-sm-6" align="center"><h1><a href="configureSecretCodes" style="text-decoration: none; color: #000000;"><i class="fa fa-code" aria-hidden="true"></i> Configure Secret Codes </a></h1></div>
+                <div class="col-sm-6" align="center"><h1><a href="configureBookings" style="text-decoration: none; color: #000000;"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Configure Bookings </a></h1></div>
+            </div>
+            <div class="col-sm-12">
+                <div class="col-sm-12" align="center"><h1><a href="#" style="text-decoration: none; color: #000000;" onClick="javascript: logoutAndKillSession();"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out </a></h1></div>
+            </div>
+            <br/><br/>
+            
+            <hr>
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Powered by <a href="http://www.hermesinnovative.com">Hermes Innovative</a> and <a href="https://www.dagasonhackason.com">Dagas Systems Inc.</a></p>
+                        
+                    </div>
+                </div>
+            </footer>
         </div>
-        <!-- /.container -->
-    </nav>
 
-    <div class="container" style="margin-top: 5%">
-        <div class="col-sm-12">
-            <div class="col-sm-3" align="center"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL USERS </b></h3><br /> <h1><%= totalUsers %></h1></div>
-            <div class="col-sm-3" align="center" style="border-right: 3px solid #000000; border-left: 3px solid #000000;"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL SEATS </b></h3><br /> <h1><%= totalSeats %></h1></div>
-            <div class="col-sm-3" align="center" style="border-right: 3px solid #000000;"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL BOOKNS </b></h3><br /> <h1><%= totalBookings %></h1></div>
-            <div class="col-sm-3" align="center"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL CODES </b></h3><br /> <h1><%= totalSecretCodes %></h1></div>
-        </div>
-        <div class="col-sm-12" style="margin-top: 4%">
-            <div class="col-sm-6" align="center"><h1><a href="configureUsers" style="text-decoration: none; color: #000000;"><i class="fa fa-users" aria-hidden="true"></i>  Configure Users </a></h1></div>
-            <div class="col-sm-6" align="center"><h1><a href="configureSeats" style="text-decoration: none; color: #000000;"><i class="fa fa-circle" aria-hidden="true"></i> Configure Seats   </a></h1></div>
-        </div>
-        <div class="col-sm-12">
-            <div class="col-sm-6" align="center"><h1><a href="configureSecretCodes" style="text-decoration: none; color: #000000;"><i class="fa fa-code" aria-hidden="true"></i> Configure Secret Codes </a></h1></div>
-            <div class="col-sm-6" align="center"><h1><a href="configureBookings" style="text-decoration: none; color: #000000;"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Configure Bookings </a></h1></div>
-        </div>
-        <div class="col-sm-12">
-            <div class="col-sm-12" align="center"><h1><a href="#" style="text-decoration: none; color: #000000;" onClick="javascript: logoutAndKillSession();"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out </a></h1></div>
-        </div>
-        <br/><br/>
-    </div>
+        <!-- jQuery -->
+        <script src="/javascripts/jquery.js"></script>
 
-    <!-- jQuery -->
-    <script src="/javascripts/jquery.js"></script>
+        <script src="/javascripts/jquery-ui.js" crossorigin="anonymous"></script>
 
-    <script src="/javascripts/jquery-ui.js" crossorigin="anonymous"></script>
+        <script src="/javascripts/jquery-easing.js" crossorigin="anonymous"></script>
 
-    <script src="/javascripts/jquery-easing.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/javascripts/bootstrap.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/javascripts/bootstrap.min.js"></script>
+        <script src="/javascripts/axios.js"></script>
 
-    <script src="/javascripts/axios.js"></script>
+        <script src="/javascripts/fallr.js"></script>
 
-	<script src="/javascripts/fallr.js"></script>
+        <script src="/javascripts/clientJS.js"></script>
 
-	<script src="/javascripts/clientJS.js"></script>
+        <script src="/javascripts/moment.js"></script>
 
-	<script src="/javascripts/moment.js"></script>
+        <!-- Custom JavaScript -->
+        <script type="text/javascript">
+            if (typeof isDashPage == "undefined") {
+                var isDashPage = function (){
+                    return true;
+                };
+            }
+        </script>
 
-    <!-- Custom JavaScript -->
-    <script type="text/javascript">
-        if (typeof isDashPage == "undefined") {
-            var isDashPage = function (){
-                return true;
-            };
-        }
-    </script>
-
-	<script src="/javascripts/functions.js"></script>
-
-</body>
-
+        <script src="/javascripts/functions.js"></script>
+    </body>
 </html>

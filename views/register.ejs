@@ -1,110 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
 
-<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <title>Login</title>
 
-    <title>Login</title>
-
-    <!--Font Awesome-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap Core CSS -->
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
-
-	<link href="/stylesheets/jquery-ui.css" rel="stylesheet" />
-
-	<link rel="stylesheet" type="text/css" media="screen,projection" href="/stylesheets/fallr.css" />
-
-    <!-- Custom CSS -->
-    <link href="/stylesheets/custom.css" rel="stylesheet" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button> 
-                <a class="navbar-brand" href="/">
-                <img src="/images/tis.png" width="35" height="36" class="d-inline-block align-top" alt="">
-                
-                </a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <div class="text-center" style="display:block; margin-left:auto;margin-right:auto; margin-top:2%; width:60%;">
-
-<!-- Default form login -->
-<form class="text-center border border-light p-5" action="#!">
-
-    <p class="h4 mb-4">Administrator Registration</p>
-
-    <!-- Email -->
-    <input style="margin-bottom: 2%;" type="email" id="defaultLoginFormUsername" class="form-control mb-4" placeholder="Username">
-
-    <!-- Password -->
-    <input style="margin-bottom: 2%;" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-
-    <input style="margin-bottom: 2%;" type="password" id="defaultLoginFormSecretCode" class="form-control mb-4" placeholder="Secret Code">
-
-    <div class="d-flex justify-content-around">
+        <!--Font Awesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css" rel="stylesheet">
         
-    </div>
+        <!-- Bootstrap Core CSS -->
+        <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Sign in button -->
-    <a id="registerBtn" href="#" class="btn btn-info btn-block my-4" onClick="event.preventDefault(); let defaultLoginFormUsernameValue = $('#defaultLoginFormUsername').val(); let defaultLoginFormPasswordValue = $('#defaultLoginFormPassword').val(); let defaultLoginFormSecretCodeValue = $('#defaultLoginFormSecretCode').val(); let argData = {username: defaultLoginFormUsernameValue, password: btoa(defaultLoginFormPasswordValue), secretCode: defaultLoginFormSecretCodeValue}; createNewUser(argData);" style="margin-top:3%;">Register</a>
-    <!-- Register -->
-    <p>
-        <a href="/login">Login</a>
-    </p>
+        <link href="/stylesheets/jquery-ui.css" rel="stylesheet" />
 
-    
-</form>
-<!-- Default form login -->
-    </div>
+        <link rel="stylesheet" type="text/css" media="screen,projection" href="/stylesheets/fallr.css" />
+
+        <!-- Custom CSS -->
+        <link href="/stylesheets/custom.css" rel="stylesheet" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button> 
+                    <a class="navbar-brand" href="/">
+                    <img src="/images/tis.png" width="35" height="36" class="d-inline-block align-top" alt="">
+                    
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <div class="container text-center" style="display:block; margin-left:auto;margin-right:auto; margin-top:2%; width:60%;">
+            <!-- Default form login -->
+            <form class="text-center border border-light p-5" action="#!">
+                <p class="h4 mb-4">Administrator Registration</p>
+
+                <!-- Email -->
+                <input style="margin-bottom: 2%;" type="email" id="defaultLoginFormUsername" class="form-control mb-4" placeholder="Username">
+
+                <!-- Password -->
+                <input style="margin-bottom: 2%;" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+                <input style="margin-bottom: 2%;" type="password" id="defaultLoginFormSecretCode" class="form-control mb-4" placeholder="Secret Code">
+
+                <div class="d-flex justify-content-around">
+                    
+                </div>
+
+                <!-- Sign in button -->
+                <a id="registerBtn" href="#" class="btn btn-info btn-block my-4" onClick="event.preventDefault(); let defaultLoginFormUsernameValue = $('#defaultLoginFormUsername').val(); let defaultLoginFormPasswordValue = $('#defaultLoginFormPassword').val(); let defaultLoginFormSecretCodeValue = $('#defaultLoginFormSecretCode').val(); let argData = {username: defaultLoginFormUsernameValue, password: btoa(defaultLoginFormPasswordValue), secretCode: defaultLoginFormSecretCodeValue}; createNewUser(argData);" style="margin-top:3%;">Register</a>
+                <!-- Register -->
+                <p>
+                    <a href="/login">Login</a>
+                </p>
+            </form>
+            <!-- Default form login -->
+
+            <hr>
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Powered by <a href="http://www.hermesinnovative.com">Hermes Innovative</a> and <a href="https://www.dagasonhackason.com">Dagas Systems Inc.</a></p>
+                        
+                    </div>
+                </div>
+            </footer>
+        </div>
+
         <!-- jQuery -->
         <script src="/javascripts/jquery.js"></script>
 
         <script src="/javascripts/jquery-ui.js" crossorigin="anonymous"></script>
-    
+
         <script src="/javascripts/jquery-easing.js" crossorigin="anonymous"></script>
 
         <!-- Bootstrap Core JavaScript -->
         <script src="/javascripts/bootstrap.min.js"></script>
 
         <script src="/javascripts/axios.js"></script>
-    
+
         <script src="/javascripts/fallr.js"></script>
-    
+
         <script src="/javascripts/clientJS.js"></script>
 
         <script src="/javascripts/moment.js"></script>
-    
+
         <!-- Custom JavaScript -->
         <script type="text/javascript">
             if (typeof isRegisterPage == "undefined") {
@@ -113,9 +120,8 @@
                 };
             }
         </script>
-    
+
         <script src="/javascripts/functions.js"></script>
-    
+
     </body>
-    
-    </html>
+</html>

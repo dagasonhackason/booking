@@ -54,46 +54,49 @@
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-
             <!-- /.navbar-collapse -->
+
         </div>
         <!-- /.container -->
     </nav>
 
+    <!-- Page Content -->
+    <div class="container">
+        <div class="d-flex justify-content-center" align="center">
+            <p>
+                <h3>:: YOUR TICKET NUMBER ::</h3>
+            </p>
+            <div class="text-center" style="display:block; margin-left:auto;margin-right:auto; margin-top:2%; width:60%;">
+                <h1 style="color: green;">
+                    <%= ticketCode %>
+                </h1><br />
+                <h5><p>
+                    BOOKED BY: <%= bookedByName %><br /><br />
 
-
-    <div class="d-flex justify-content-center" align="center">
-        <p>
-            <h3>:: YOUR TICKET NUMBER ::</h3>
-        </p>
-        <div class="text-center" style="display:block; margin-left:auto;margin-right:auto; margin-top:2%; width:60%;">
-            <h1 style="color: green;">
-                <%= ticketCode %>
-            </h1><br />
-            <h5><p>
-                BOOKED BY: <%= bookedByName %><br /><br />
-
-                BOOKED ON: <%= bookedOn %><br /><br />
-                
-                TICKET STATUS: <%= isTicketCodeUsed %><br /><br />
-                
-                TICKET WAS USED ON: <%= ticketCodeUsedOn %><br /><br />
-            </p></h5>
+                    BOOKED ON: <%= bookedOn %><br /><br />
+                    
+                    TICKET STATUS: <%= isTicketCodeUsed %><br /><br />
+                    
+                    TICKET WAS USED ON: <%= ticketCodeUsedOn %><br /><br />
+                </p></h5>
+            </div>
         </div>
-    </div>
 
-    
-
-    <div class="d-flex justify-content-center col-md-4" align="center">
-
-                                   
-
-        </div>
+        <div class="d-flex justify-content-center col-md-4" align="center">
         
+        </div>
 
-   
-
-    
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Powered by <a href="http://www.hermesinnovative.com">Hermes Innovative</a> and <a href="https://www.dagasonhackason.com">Dagas Systems Inc.</a></p>
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <!-- jQuery -->
     <script src="/javascripts/jquery.js"></script>

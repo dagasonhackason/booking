@@ -1,144 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-<head>
+        <title>Online Seat Booking</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <!--Font Awesome-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css" rel="stylesheet">
+        
+        <!-- Bootstrap Core CSS -->
+        <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
 
-    <title>Online Seat Booking</title>
+        <link href="/stylesheets/jquery-ui.css" rel="stylesheet" /> 
 
-    <!--Font Awesome-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap Core CSS -->
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" media="screen,projection" href="/stylesheets/fallr.css" />
 
-	<link href="/stylesheets/jquery-ui.css" rel="stylesheet" /> 
+        <!-- Custom CSS -->
+        <link href="/stylesheets/custom.css" rel="stylesheet" />
 
-	<link rel="stylesheet" type="text/css" media="screen,projection" href="/stylesheets/fallr.css" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-    <!-- Custom CSS -->
-    <link href="/stylesheets/custom.css" rel="stylesheet" />
+    </head>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <body>
+        <!-- <a href="#fallr-id" style="display: none;" ></a> -->
 
-</head>
-
-<body>
-    <!-- <a href="#fallr-id" style="display: none;" ></a> -->
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button> 
-                <a class="navbar-brand" href="/">
-                <img src="/images/tis.png" width="35" height="36" class="d-inline-block align-top" alt="">
-                
-                </a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <div class="d-flex justify-content-center" align="center">
-        <p>
-            <h3>Please provide your name below to confirm booking</h3>
-        </p>
-        <div class="text-center" style="display:block; margin-left:auto;margin-right:auto; margin-top:2%; width:60%;">
-            <h4 style="color: green;">
-                Seat Number
-            </h4>
-            <h1 style="color:red;" id="confirmSeatNumber">
-                <%= seatNumber %>
-            </h1>
-        </div>
-        <div class="text-center" style="display:block; margin-left:auto;margin-right:auto; margin-top:3%; width:40%;">
-            <form>
-                <div class="form-group">
-                    <label for="bookedByNameField">Name</label>
-                    <input type="text" class="form-control" id="bookedByNameField" aria-describedby="TextHelp" placeholder="Please Enter Your Full name">
-                    <small id="TextHelp" class="form-text text-muted">Bookers name.</small>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button> 
+                    <a class="navbar-brand" href="/">
+                    <img src="/images/tis.png" width="35" height="36" class="d-inline-block align-top" alt="">
+                    
+                    </a>
                 </div>
-                
-                <a id="bookingConfirmBtn" href="#" class="btn btn-primary" onClick="event.preventDefault(); let bookedByNameFieldValue = $('#bookedByNameField').val(); let argData = {seatId: '<%= _id %>', bookedByName: bookedByNameFieldValue}; createNewBooking(argData);" style="margin-top:3%;">Confirm</a>
-            </form>
-        </div>
-    </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
 
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        
+        <div class="container" style="margin-top: 5%">
+            <div class="d-flex justify-content-center" align="center">
+                <p>
+                    <h3>Please provide your name below to confirm booking</h3>
+                </p>
+                <div class="text-center" style="display:block; margin-left:auto;margin-right:auto; margin-top:2%; width:60%;">
+                    <h4 style="color: green;">
+                        Seat Number
+                    </h4>
+                    <h1 style="color:red;" id="confirmSeatNumber">
+                        <%= seatNumber %>
+                    </h1>
+                </div>
+                <div class="text-center" style="display:block; margin-left:auto;margin-right:auto; margin-top:3%; width:40%;">
+                    <form>
+                        <div class="form-group">
+                            <label for="bookedByNameField">Name</label>
+                            <input type="text" class="form-control" id="bookedByNameField" aria-describedby="TextHelp" placeholder="Please Enter Your Full name">
+                            <small id="TextHelp" class="form-text text-muted">Bookers name.</small>
+                        </div>
+                        
+                        <a id="bookingConfirmBtn" href="#" class="btn btn-primary" onClick="event.preventDefault(); let bookedByNameFieldValue = $('#bookedByNameField').val(); let argData = {seatId: '<%= _id %>', bookedByName: bookedByNameFieldValue}; createNewBooking(argData);" style="margin-top:3%;">Confirm</a>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-center col-md-4" align="center">
+
+            </div>
     
-
-    <div class="d-flex justify-content-center col-md-4" align="center">
-
-                                   
-
+            <hr>
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Powered by <a href="http://www.hermesinnovative.com">Hermes Innovative</a> and <a href="https://www.dagasonhackason.com">Dagas Systems Inc.</a></p>
+                        
+                    </div>
+                </div>
+            </footer>
         </div>
+
         
 
-   
+        <!-- jQuery -->
+        <script src="/javascripts/jquery.js"></script>
 
-    
+        <script src="/javascripts/jquery-ui.js" crossorigin="anonymous"></script>
 
-    <!-- jQuery -->
-    <script src="/javascripts/jquery.js"></script>
+        <script src="/javascripts/jquery-easing.js" crossorigin="anonymous"></script>
 
-    <script src="/javascripts/jquery-ui.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/javascripts/bootstrap.min.js"></script>
 
-    <script src="/javascripts/jquery-easing.js" crossorigin="anonymous"></script>
+        <script src="/javascripts/axios.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/javascripts/bootstrap.min.js"></script>
+        <script src="/javascripts/fallr.js"></script>
 
-    <script src="/javascripts/axios.js"></script>
+        <script src="/javascripts/clientJS.js"></script>
 
-	<script src="/javascripts/fallr.js"></script>
+        <script src="/javascripts/moment.js"></script>
 
-	<script src="/javascripts/clientJS.js"></script>
+        <!-- Custom JavaScript -->
+        <script type="text/javascript">
+            if (typeof isConfirmPage == "undefined") {
+                var isConfirmPage = function (){
+                    return true;
+                };
+            }
 
-	<script src="/javascripts/moment.js"></script>
+            if (typeof disableConfirmButton == "undefined") {
+                var disableConfirmButton = function () {
+                    let shouldConfirmButtonDisable = '<%= status %>';
 
-    <!-- Custom JavaScript -->
-    <script type="text/javascript">
-        if (typeof isConfirmPage == "undefined") {
-            var isConfirmPage = function (){
-                return true;
-            };
-        }
+                    if((/true/i).test(shouldConfirmButtonDisable.toLocaleLowerCase())) {
+                        $(document).ready(function() {
+                            $('#bookingConfirmBtn').attr("disabled", true);
+                        });
+                    }   
+                };
+                disableConfirmButton();
+            }
+        </script>
 
-        if (typeof disableConfirmButton == "undefined") {
-            var disableConfirmButton = function () {
-                let shouldConfirmButtonDisable = '<%= status %>';
-
-                if((/true/i).test(shouldConfirmButtonDisable.toLocaleLowerCase())) {
-                    $(document).ready(function() {
-                        $('#bookingConfirmBtn').attr("disabled", true);
-                    });
-                }   
-            };
-            disableConfirmButton();
-        }
-    </script>
-
-	<script src="/javascripts/functions.js"></script>
-
-</body>
-
+        <script src="/javascripts/functions.js"></script>
+    </body>
 </html>
