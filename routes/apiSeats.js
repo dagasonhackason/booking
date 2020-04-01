@@ -266,7 +266,7 @@ router.get("/", (req,res,next)=> {
     console.log("new get all seats request", req.body);
     mg.connect(MONGODB_CONNECTION_STRING);
 
-    Seats.find({}, (getError,dataGot) => {
+    Seats.find({isDeleted: false, isActivated: true}, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("From mongo get all seats", dataGot);
             
