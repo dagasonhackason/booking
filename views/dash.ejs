@@ -58,9 +58,10 @@
 
     <div class="container" style="margin-top: 5%">
         <div class="col-sm-12">
-            <div class="col-sm-4" align="center"><h1><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL USERS </b></h1><br /> <h2><%= totalUsers %></h2></div>
-            <div class="col-sm-4" align="center" style="border-right: 3px solid #000000; border-left: 3px solid #000000;"><h1><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL SEATS </b></h1><br /> <h2><%= totalSeats %></h2></div>
-            <div class="col-sm-4" align="center"><h1><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL BOOKNS </b></h1><br /> <h2><%= totalBookings %></h2></div>
+            <div class="col-sm-3" align="center"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL USERS </b></h3><br /> <h1><%= totalUsers %></h1></div>
+            <div class="col-sm-3" align="center" style="border-right: 3px solid #000000; border-left: 3px solid #000000;"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL SEATS </b></h3><br /> <h1><%= totalSeats %></h1></div>
+            <div class="col-sm-3" align="center" style="border-right: 3px solid #000000;"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL BOOKNS </b></h3><br /> <h1><%= totalBookings %></h1></div>
+            <div class="col-sm-3" align="center"><h3><b><i class="fa fa-bar-chart" aria-hidden="true"></i>  TOTAL CODES </b></h3><br /> <h1><%= totalSecretCodes %></h1></div>
         </div>
         <div class="col-sm-12" style="margin-top: 4%">
             <div class="col-sm-6" align="center"><h1><a href="configureUsers" style="text-decoration: none; color: #000000;"><i class="fa fa-users" aria-hidden="true"></i>  Configure Users </a></h1></div>
@@ -94,6 +95,7 @@
 
 	<script src="/javascripts/moment.js"></script>
 
+    <!-- Custom JavaScript -->
     <script type="text/javascript">
         if (typeof isDashPage == "undefined") {
             var isDashPage = function (){

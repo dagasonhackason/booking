@@ -10,8 +10,9 @@
     <meta name="author" content="">
 
     <title>Admin Configure Seats</title>
+    
     <!--Font Awesome-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     
     <!-- Bootstrap Core CSS -->
     <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
@@ -23,7 +24,10 @@
     <!-- Custom CSS -->
     <link href="/stylesheets/custom.css" rel="stylesheet" />
 
+    <!-- Datables and DatatablesButtons CSS -->
     <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <link href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,16 +77,15 @@
                 <div class="form-group">
                     <label for="totalSeatNumberField">Number</label>
                     <input type="number" class="form-control" id="totalSeatNumberField" aria-describedby="seatHelp" placeholder="Enter Total Number of Seats to Provision">
-                    <small id="seatHelp" class="form-text text-muted">Number of seats</small>
                 </div>
                 
-                <a href="#" class="btn btn-primary" style="margin-top:3%;" onClick="let totalSeatNumberFieldValue = $('#totalSeatNumberField').val(); let argData = {totalSeatNumbers: totalSeatNumberFieldValue}; createBulkSeats(argData);">Confirm</a>
+                <a href="#" class="btn btn-primary" style="margin-top:3%;" onClick="let totalSeatNumberFieldValue = $('#totalSeatNumberField').val(); let argData = {totalSeatNumbers: totalSeatNumberFieldValue}; createBulkSeats(argData);">Bulk Create</a>
             </form>
         </div>
     </div><br /><br />
     
     <div class="d-flex justify-content-center col-md-12" align="center" style="width:100%;">
-        <table id="DataTblElement" class="display" style="width:100%;"></table>
+        <table id="DataTblElement" class="display nowrap" style="width:100%;"></table>
     </div>
           
     <!-- jQuery -->
@@ -103,8 +106,26 @@
 
 	<script src="/javascripts/moment.js"></script>
 
+    <!-- Datatables and DatatalesButtons JavaScript -->
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.flash.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+    
+    <script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
+
+    <script src="https://cdn.datatables.net/plug-ins/1.10.20/api/fnPagingInfo.js"></script>
+
+    <!-- Custom JavaScript -->
     <script type="text/javascript">
         if (typeof isConfigurePage == "undefined") {
             var isConfigurePage = function (){

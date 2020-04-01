@@ -79,7 +79,7 @@
                     <small id="TextHelp" class="form-text text-muted">Bookers name.</small>
                 </div>
                 
-                <a id="bookingConfirmBtn" href="#" class="btn btn-primary" onClick="let bookedByNameFieldValue = $('#bookedByNameField').val(); let argData = {seatId: '<%= _id %>', bookedByName: bookedByNameFieldValue}; createNewBooking(argData);" style="margin-top:3%;">Confirm</a>
+                <a id="bookingConfirmBtn" href="#" class="btn btn-primary" onClick="event.preventDefault(); let bookedByNameFieldValue = $('#bookedByNameField').val(); let argData = {seatId: '<%= _id %>', bookedByName: bookedByNameFieldValue}; createNewBooking(argData);" style="margin-top:3%;">Confirm</a>
             </form>
         </div>
     </div>
@@ -115,6 +115,7 @@
 
 	<script src="/javascripts/moment.js"></script>
 
+    <!-- Custom JavaScript -->
     <script type="text/javascript">
         if (typeof isConfirmPage == "undefined") {
             var isConfirmPage = function (){

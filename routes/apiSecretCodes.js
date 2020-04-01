@@ -120,7 +120,7 @@ router.get("/", (req,res,next)=>{
     console.log("new get all secretCodes request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/secretCodebooking");
 
-    SecretCodes.find({isDeleted: false}, (getError,dataGot) => {
+    SecretCodes.find({}, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("From mongo get all secretCodes", dataGot);
             
@@ -155,7 +155,7 @@ router.get("/populate", (req,res,next)=>{
     console.log("new get all secretCodes populate request", req.body);
     mg.connect("mongodb://127.0.0.1:27017/secretCodebooking");
 
-    SecretCodes.find({isDeleted: false}).populate('Users', 'username -_id').exec((getError, dataGot) => {
+    SecretCodes.find({}).populate('Users', 'username -_id').exec((getError, dataGot) => {
         if (!getError && dataGot) {
             console.log("From mongo get all populate secretCodes", dataGot);
             

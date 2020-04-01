@@ -266,7 +266,7 @@ router.get("/", (req,res,next)=> {
     console.log("new get all seats request", req.body);
     mg.connect(MONGODB_CONNECTION_STRING);
 
-    Seats.find({isDeleted: false, isActivated: true}, (getError,dataGot) => {
+    Seats.find({}, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("From mongo get all seats", dataGot);
             
@@ -301,7 +301,7 @@ router.get("/populate", (req,res,next)=> {
     console.log("new get all seats and populate request", req.body);
     mg.connect(MONGODB_CONNECTION_STRING);
 
-    Seats.find({isDeleted: false, isActivated: true}).populate('Users', 'username -_id').exec((getError, dataGot) => {
+    Seats.find({}).populate('Users', 'username -_id').exec((getError, dataGot) => {
         if (!getError && dataGot) {
             console.log("From mongo get all seats and populate", dataGot);
             

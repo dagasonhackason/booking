@@ -6,6 +6,7 @@ const Schema = mg.Schema, ObjectId = Schema.ObjectId;
 const Users = require('../models/users');
 const Bookings = require('../models/bookings');
 const Seats = require('../models/seats');
+const SecretCodes = require('../models/secretCodes');
 const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 /* GET dash View. */
@@ -20,21 +21,27 @@ router.get("/", (req,res,next)=>{
         try {
             await (async () => {
                 try {
-                    await Users.find({ isDeleted: false }, async (err,existingUsers) => {
+                    await Users.find({ isDeleted: false }, async (err, existingUsers) => {
                         if (!err && existingUsers) {
                             dataGot.totalUsers = existingUsers.length;
                         } 
                     }); 
 
-                    await Seats.find({ isDeleted: false }, async (err,existingSeats) => {
+                    await Seats.find({ isDeleted: false }, async (err, existingSeats) => {
                         if (!err && existingSeats) {
                             dataGot.totalSeats = existingSeats.length;
                         } 
                     });
 
-                    await Bookings.find({}, async (err,existingBookings) => {
+                    await Bookings.find({}, async (err, existingBookings) => {
                         if (!err && existingBookings) {
                             dataGot.totalBookings = existingBookings.length;
+                        } 
+                    });
+
+                    await SecretCodes.find({ isDeleted: false }, async (err, existingSecretCodes) => {
+                        if (!err && existingSecretCodes) {
+                            dataGot.totalSecretCodes = existingSecretCodes.length;
                         } 
                     });
 
@@ -45,7 +52,8 @@ router.get("/", (req,res,next)=>{
                     res.render("dash.ejs", {
                         totalUsers: ((dataGot.totalUsers) ? dataGot.totalUsers : 0), 
                         totalSeats: ((dataGot.totalSeats) ? dataGot.totalSeats : 0), 
-                        totalBookings: ((dataGot.totalBookings) ? dataGot.totalBookings : 0)
+                        totalBookings: ((dataGot.totalBookings) ? dataGot.totalBookings : 0),
+                        totalSecretCodes: ((dataGot.totalSecretCodes) ? dataGot.totalSecretCodes : 0)
                     });
                 } catch(excptn) {
                     console.error("Unknown error show acquiring dash view data!", excptn);

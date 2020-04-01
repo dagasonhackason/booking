@@ -190,7 +190,7 @@ router.get("/", (req,res,next)=>{
     console.log("new get all users request", req.body);
     mg.connect(MONGODB_CONNECTION_STRING);
 
-    Users.find({isDeleted: false}, (getError,dataGot) => {
+    Users.find({}, (getError,dataGot) => {
         if (!getError && dataGot) {
             console.log("from mongo get all users", dataGot);
                         
@@ -223,7 +223,7 @@ router.get("/populate", (req,res,next)=>{
     console.log("new get all users populate request", req.body);
     mg.connect(MONGODB_CONNECTION_STRING);
 
-    Users.find({isDeleted: false}).populate('Users', 'username -_id').select('-password').select('-passwordSalt').exec((getError, dataGot) => {
+    Users.find({}).populate('Users', 'username -_id').select('-password').select('-passwordSalt').exec((getError, dataGot) => {
         if (!getError && dataGot) {
             console.log("from mongo get all populate users", dataGot);
                         

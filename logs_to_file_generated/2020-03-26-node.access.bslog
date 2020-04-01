@@ -1,0 +1,5 @@
+[[01:32:07.560]] [INFO]   [0;36mMongoose:[0m users.ensureIndex({ username: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[01:32:07.588]] [INFO]   [0;36mMongoose:[0m seats.ensureIndex({ seatNumber: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[01:32:07.589]] [INFO]   [0;36mMongoose:[0m bookings.ensureIndex({ ticketCode: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[01:32:07.591]] [INFO]   [0;36mMongoose:[0m loginsessions.ensureIndex({ sessionId: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+[[01:32:07.592]] [INFO]   [0;36mMongoose:[0m secretcodes.ensureIndex({ secretCode: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })

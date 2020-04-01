@@ -78,7 +78,7 @@
     </div>
 
     <!-- Sign in button -->
-    <a id="loginBtn" href="#" class="btn btn-info btn-block my-4" onClick="let defaultLoginFormUsernameValue = $('#defaultLoginFormUsername').val(); let defaultLoginFormPasswordValue = $('#defaultLoginFormPassword').val(); let argData = {username: defaultLoginFormUsernameValue, password: btoa(defaultLoginFormPasswordValue)}; loginAndSetSessionDetails(argData);" style="margin-top:3%;">Sign in</a>
+    <a id="loginBtn" href="#" class="btn btn-info btn-block my-4" onClick="event.preventDefault(); let defaultLoginFormUsernameValue = $('#defaultLoginFormUsername').val(); let defaultLoginFormPasswordValue = $('#defaultLoginFormPassword').val(); let argData = {username: defaultLoginFormUsernameValue, password: btoa(defaultLoginFormPasswordValue)}; loginAndSetSessionDetails(argData);" style="margin-top:3%;">Sign in</a>
     <!-- Register -->
     <p>No account?
         <a href="/register">Register</a>
@@ -106,6 +106,7 @@
 
         <script src="/javascripts/moment.js"></script>
     
+        <!-- Custom JavaScript -->
         <script type="text/javascript">
             if (typeof isLoginPage == "undefined") {
                 var isLoginPage = function (){
