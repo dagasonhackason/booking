@@ -1,19 +1,19 @@
 
-:::::2020-04-01 10:30:55 :: NEW APP USAGE 
+:::::2020-04-01 20:03:00 :: NEW APP USAGE 
 ___________________________________________________
 
 {
-    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc",
+    "req_sessionId_extract": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTc2NzcyNSwiZXhwIjoxNTg2OTc3MzI1fQ.4Tn3ZFzWWKF_XmfrXBVlw1vfhchEABec-r6DkfSon4g",
     "req_username_extract": "dagasonhackason",
     "req_loginSession": {
-        "_id": "5e840b55e63bf73bac46ad3b",
+        "_id": "5e84e52d11295d29b49b1a9b",
         "userId": "5e657d7500c28d427c171899",
-        "loggedInOn": "2020-04-01 04:32:36",
+        "loggedInOn": "2020-04-01 20:02:01",
         "loggedOutOn": "",
         "loggedOutBy": null,
-        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc",
+        "sessionId": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTc2NzcyNSwiZXhwIjoxNTg2OTc3MzI1fQ.4Tn3ZFzWWKF_XmfrXBVlw1vfhchEABec-r6DkfSon4g",
         "isExpired": false,
-        "expiresOn": "2020-04-15 04:32:37"
+        "expiresOn": "2020-04-15 20:02:05"
     },
     "req_user": {
         "_id": "5e657d7500c28d427c171899",
@@ -23,10 +23,10 @@ ___________________________________________________
         "createdOn": "2020-03-08 23:19:10",
         "updatedOn": "",
         "updatedBy": null,
-        "lastLoginOn": "2020-04-01 07:24:41",
+        "lastLoginOn": "2020-04-01 20:02:01",
         "isDeleted": false
     },
-    "req_route": "/api/secretcodes/populate",
+    "req_route": "/api/bookings/populate",
     "req_ip_address": "::ffff:127.0.0.1",
     "request_payload": {
         "headers": {
@@ -35,11 +35,12 @@ ___________________________________________________
             "accept": "application/json",
             "accept-language": "en-US,en;q=0.5",
             "accept-encoding": "gzip, deflate",
-            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc",
+            "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTc2NzcyNSwiZXhwIjoxNTg2OTc3MzI1fQ.4Tn3ZFzWWKF_XmfrXBVlw1vfhchEABec-r6DkfSon4g",
             "username": "dagasonhackason",
             "connection": "keep-alive",
-            "referer": "http://localhost:3000/configureSecretCodes",
-            "cookie": "JSESSIONID=18f5fe46bcf27b649b6645db17af; treeForm_tree-hi=treeForm:tree:applications; userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 04:32:36; isDeleted=false; loggedInOn=2020-04-01 04:32:36; loggedOutOn=; loggedOutBy=null; _id=5e840b55e63bf73bac46ad3b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc; isExpired=false; expiresOn=2020-04-15 04:32:37"
+            "referer": "http://localhost:3000/configureBookings",
+            "cookie": "userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 20:02:01; isDeleted=false; loggedInOn=2020-04-01 20:02:01; loggedOutOn=; loggedOutBy=null; _id=5e84e52d11295d29b49b1a9b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTc2NzcyNSwiZXhwIjoxNTg2OTc3MzI1fQ.4Tn3ZFzWWKF_XmfrXBVlw1vfhchEABec-r6DkfSon4g; isExpired=false; expiresOn=2020-04-15 20:02:05",
+            "if-none-match": "W/\"7fb-UB8HuN2XuBVJaCG4kWjEGRi8G5Y\""
         },
         "params": {},
         "body": {},
@@ -48,9 +49,107 @@ ___________________________________________________
     "res_status_code": 200,
     "res_status_message": "OK",
     "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 1367\r\nETag: W/\"557-nJsTHBatv4IFOTFPL6QpUU3v5Io\"\r\nDate: Wed, 01 Apr 2020 09:30:55 GMT\r\nConnection: keep-alive\r\n\r\n"
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 2061\r\nETag: W/\"80d-PE/PqFF0ligiWP4IUNH5ZeIXL6M\"\r\nDate: Wed, 01 Apr 2020 19:03:00 GMT\r\nConnection: keep-alive\r\n\r\n"
     },
-    "created_at": "2020-04-01T09:30:55.671Z"
+    "created_at": "2020-04-01T19:03:00.319Z"
+}
+
+___________________________________________________
+
+:::::2020-04-01 20:09:04 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::ffff:127.0.0.1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0",
+            "accept": "application/json",
+            "accept-language": "en-US,en;q=0.5",
+            "accept-encoding": "gzip, deflate",
+            "connection": "keep-alive",
+            "referer": "http://localhost:3000/",
+            "cookie": "userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 20:02:01; isDeleted=false; loggedInOn=2020-04-01 20:02:01; loggedOutOn=; loggedOutBy=null; _id=5e84e52d11295d29b49b1a9b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTc2NzcyNSwiZXhwIjoxNTg2OTc3MzI1fQ.4Tn3ZFzWWKF_XmfrXBVlw1vfhchEABec-r6DkfSon4g; isExpired=false; expiresOn=2020-04-15 20:02:05",
+            "if-none-match": "W/\"2286-1dy35mo49BWPbWKhee5d9zEOYSk\""
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 8837\r\nETag: W/\"2285-CmxMTW1yS43XJq6r4difcd36Fys\"\r\nDate: Wed, 01 Apr 2020 19:09:04 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-04-01T19:09:04.061Z"
+}
+
+___________________________________________________
+
+:::::2020-04-01 20:09:45 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::ffff:127.0.0.1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0",
+            "accept": "application/json",
+            "accept-language": "en-US,en;q=0.5",
+            "accept-encoding": "gzip, deflate",
+            "connection": "keep-alive",
+            "referer": "http://localhost:3000/",
+            "cookie": "userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 20:02:01; isDeleted=false; loggedInOn=2020-04-01 20:02:01; loggedOutOn=; loggedOutBy=null; _id=5e84e52d11295d29b49b1a9b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTc2NzcyNSwiZXhwIjoxNTg2OTc3MzI1fQ.4Tn3ZFzWWKF_XmfrXBVlw1vfhchEABec-r6DkfSon4g; isExpired=false; expiresOn=2020-04-15 20:02:05",
+            "pragma": "no-cache",
+            "cache-control": "no-cache"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 8837\r\nETag: W/\"2285-CmxMTW1yS43XJq6r4difcd36Fys\"\r\nDate: Wed, 01 Apr 2020 19:09:45 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-04-01T19:09:45.580Z"
+}
+
+___________________________________________________
+
+:::::2020-04-01 20:11:11 :: NEW APP USAGE 
+___________________________________________________
+
+{
+    "req_route": "/api/seats",
+    "req_ip_address": "::ffff:127.0.0.1",
+    "request_payload": {
+        "headers": {
+            "host": "localhost:3000",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0",
+            "accept": "application/json",
+            "accept-language": "en-US,en;q=0.5",
+            "accept-encoding": "gzip, deflate",
+            "connection": "keep-alive",
+            "referer": "http://localhost:3000/",
+            "cookie": "userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 20:02:01; isDeleted=false; loggedInOn=2020-04-01 20:02:01; loggedOutOn=; loggedOutBy=null; _id=5e84e52d11295d29b49b1a9b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTc2NzcyNSwiZXhwIjoxNTg2OTc3MzI1fQ.4Tn3ZFzWWKF_XmfrXBVlw1vfhchEABec-r6DkfSon4g; isExpired=false; expiresOn=2020-04-15 20:02:05",
+            "pragma": "no-cache",
+            "cache-control": "no-cache"
+        },
+        "params": {},
+        "body": {},
+        "query": {}
+    },
+    "res_status_code": 200,
+    "res_status_message": "OK",
+    "response_payload": {
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 8837\r\nETag: W/\"2285-CmxMTW1yS43XJq6r4difcd36Fys\"\r\nDate: Wed, 01 Apr 2020 19:11:11 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "created_at": "2020-04-01T19:11:11.863Z"
 }
 
 ___________________________________________________

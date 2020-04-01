@@ -1,5 +1,5 @@
 // const API_BASE_URL = "http://159.69.36.51:3000/";
-const API_BASE_URL = "http://localhost:3000/";
+const API_BASE_URL = "https://tisbooking.herokuapp.com/";
 const clientJS = new ClientJS();
 const isCookie = clientJS.isCookie();
 window.currentTablePageNumber = new Array();
