@@ -19,7 +19,7 @@ router.use(auth);
 
 router.post("/create", (req, res, next)=>{
     console.log("New Incoming create secretCode Request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/secretCodebooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     if(req.body.secretCode) {
@@ -85,7 +85,7 @@ router.get("/read/:id", (req,res,next)=>{
     var id = req.params.id;
 
     console.log("New get one secretCode request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/secretCodebooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     SecretCodes.find({_id: mg.Types.ObjectId(dbStringSanitizer(id)), isDeleted: false}, function(getError,dataGot) {
         if (!getError && dataGot) {
@@ -118,7 +118,7 @@ router.get("/read/:id", (req,res,next)=>{
 
 router.get("/", (req,res,next)=>{
     console.log("new get all secretCodes request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/secretCodebooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     SecretCodes.find({}, (getError,dataGot) => {
         if (!getError && dataGot) {
@@ -153,7 +153,7 @@ router.get("/", (req,res,next)=>{
 
 router.get("/populate", (req,res,next)=>{
     console.log("new get all secretCodes populate request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/secretCodebooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
 
     SecretCodes.find({}).populate('Users', 'username -_id').exec((getError, dataGot) => {
         if (!getError && dataGot) {
@@ -272,7 +272,7 @@ router.post("/update/:id", (req,res,next)=>{
 
 router.post("/findcustomized", (req,res,next)=>{
     console.log("New secretCodes find customized request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/secretCodebooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     SecretCodes.find(req.body, (getError,dataGot) => {
@@ -307,7 +307,7 @@ router.post("/findcustomized", (req,res,next)=>{
 
 router.post("/delete", (req,res,next)=> {
     console.log("Delete secretCode request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/secretCodebooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
     
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
@@ -371,10 +371,10 @@ router.post("/delete", (req,res,next)=> {
         }
     });
 });
-
+ 
 router.post("/restore", (req,res,next)=> {
     console.log("Restore secretCode request", req.body);
-    mg.connect("mongodb://127.0.0.1:27017/secretCodebooking");
+    mg.connect(MONGODB_CONNECTION_STRING);
     var dateTime = new Date();
 
     req.body.updatedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");

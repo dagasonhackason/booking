@@ -257,7 +257,7 @@ router.post("/useticket/:ticketCode/:id", (req,res,next)=>{
             ticketCodeUsedOn = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
             
             if(exist.id == id && !exist.isTicketCodeUsed && exist.ticketCode == ticketCode) {
-                Bookings.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id))}, {isTicketCodeUsed: isTicketCodeUsed},function(updateError,updated){
+                Bookings.updateOne({_id: mg.Types.ObjectId(dbStringSanitizer(id))}, {$set: {isTicketCodeUsed: isTicketCodeUsed, ticketCodeUsedOn: ticketCodeUsedOn}}, {upsert: true}, function(updateError,updated){
                     if (updateError || !updated){
                         res.status(200).json({
                             status: "error",
