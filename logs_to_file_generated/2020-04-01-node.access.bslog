@@ -74077,3 +74077,700 @@
   },
   created_at: [35m2020-04-01T09:19:00.496Z[39m
 }
+[[10:29:44.705]] [LOG]    Calling app logger
+[[10:29:44.723]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/useticket/5ae9cba9/5e7add59e34fb43db41ba153
+[[10:29:44.756]] [LOG]    current username extracted dagasonhackason
+[[10:29:44.757]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc
+[[10:29:44.763]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc
+[[10:29:44.763]] [LOG]    userData.username_extract dagasonhackason
+[[10:29:44.764]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1585711957[39m, exp: [33m1586921557[39m }
+[[10:29:44.773]] [LOG]    getting jwt token passed false expirey time 2020-04-15 03:32:37
+[[10:29:44.795]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[10:29:44.807]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-04-01 07:24:41'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[10:29:44.809]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[10:29:44.820]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e840b55e63bf73bac46ad3b,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-04-01 04:32:36'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-15 04:32:37'[39m
+}
+[[10:29:44.823]] [LOG]    New booking update request {}
+[[10:29:44.826]] [INFO]   [0;36mMongoose:[0m bookings.findOne({ _id: ObjectId("5e7add59e34fb43db41ba153") }, { projection: {} })
+[[10:29:44.833]] [INFO]   [0;36mMongoose:[0m bookings.updateOne({ _id: ObjectId("5e7add59e34fb43db41ba153") }, { [32m'$set'[39m: { isTicketCodeUsed: [33mtrue[39m, ticketCodeUsedOn: [32m'2020-04-01 10:29:44'[39m }}, { upsert: [33mtrue[39m })
+[[10:29:44.842]] [LOG]    Setting booking ticket to used { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+01/Apr/2020:09:29:44 +0000 "POST /api/bookings/useticket/5ae9cba9/5e7add59e34fb43db41ba153"
+[[10:29:44.844]] [LOG]    Finishing
+[[10:29:44.844]] [LOG]    Valid sessionId, logging
+[[10:29:44.866]] [LOG]    App usage logged! - 2020-04-01 10:29:44 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e840b55e63bf73bac46ad3b,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-04-01 04:32:36'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-15 04:32:37'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-04-01 07:24:41'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/bookings/useticket/5ae9cba9/5e7add59e34fb43db41ba153'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+      username: [32m'dagasonhackason'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/configureBookings'[39m,
+      cookie: [32m'JSESSIONID=18f5fe46bcf27b649b6645db17af; treeForm_tree-hi=treeForm:tree:applications; userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 04:32:36; isDeleted=false; loggedInOn=2020-04-01 04:32:36; loggedOutOn=; loggedOutBy=null; _id=5e840b55e63bf73bac46ad3b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc; isExpired=false; expiresOn=2020-04-15 04:32:37'[39m,
+      [32m'content-length'[39m: [32m'0'[39m
+    },
+    params: { ticketCode: [32m'5ae9cba9'[39m, id: [32m'5e7add59e34fb43db41ba153'[39m },
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 140\r\n'[39m +
+      [32m'ETag: W/"8c-SQVxw1OCWxlWNAXXPzZSyvOjrxU"\r\n'[39m +
+      [32m'Date: Wed, 01 Apr 2020 09:29:44 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-04-01T09:29:44.845Z[39m
+}
+[[10:29:46.943]] [LOG]    Calling app logger
+[[10:29:46.944]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/bookings/populate
+[[10:29:46.945]] [LOG]    current username extracted dagasonhackason
+[[10:29:46.945]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc
+[[10:29:46.945]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc
+[[10:29:46.946]] [LOG]    userData.username_extract dagasonhackason
+[[10:29:46.946]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1585711957[39m, exp: [33m1586921557[39m }
+[[10:29:46.947]] [LOG]    getting jwt token passed false expirey time 2020-04-15 03:32:37
+[[10:29:46.955]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[10:29:46.958]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-04-01 07:24:41'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[10:29:46.960]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[10:29:46.963]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e840b55e63bf73bac46ad3b,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-04-01 04:32:36'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-15 04:32:37'[39m
+}
+[[10:29:46.965]] [LOG]    new get all bookings populate request {}
+[[10:29:46.967]] [INFO]   [0;36mMongoose:[0m bookings.find({}, { projection: {} })
+[[10:29:46.973]] [LOG]    From mongo get all populate bookings [
+  {
+    _id: 5e7ab8fa8b94272e54420e9f,
+    seatId: 5e7a923d2952d91f786f1a82,
+    bookedByName: [32m'Hamzah Bawah'[39m,
+    ticketCode: [32m'9b599a29'[39m,
+    bookedOn: [32m'2020-03-25 01:50:50'[39m,
+    isTicketCodeUsed: [33mtrue[39m,
+    ticketCodeUsedOn: [32m'2020-04-01 10:18:48'[39m
+  },
+  {
+    _id: 5e7ab9118b94272e54420ea1,
+    seatId: 5e7a923d2952d91f786f1a90,
+    bookedByName: [32m'Dagason Hackason'[39m,
+    ticketCode: [32m'aa192b09'[39m,
+    bookedOn: [32m'2020-03-25 01:51:13'[39m,
+    isTicketCodeUsed: [33mfalse[39m,
+    ticketCodeUsedOn: [32m''[39m
+  },
+  {
+    _id: 5e7ab9218b94272e54420ea3,
+    seatId: 5e7a923d2952d91f786f1a7e,
+    bookedByName: [32m'Andrew Ababio'[39m,
+    ticketCode: [32m'4aea7bc9'[39m,
+    bookedOn: [32m'2020-03-25 01:51:29'[39m,
+    isTicketCodeUsed: [33mfalse[39m,
+    ticketCodeUsedOn: [32m''[39m
+  },
+  {
+    _id: 5e7add28e34fb43db41ba151,
+    seatId: 5e7a923d2952d91f786f1a8e,
+    bookedByName: [32m'Dagason Hackason'[39m,
+    ticketCode: [32m'6b98abba'[39m,
+    bookedOn: [32m'2020-03-25 04:25:12'[39m,
+    isTicketCodeUsed: [33mtrue[39m,
+    ticketCodeUsedOn: [32m'2020-04-01 10:18:55'[39m
+  },
+  {
+    _id: 5e7add59e34fb43db41ba153,
+    seatId: 5e7a923d2952d91f786f1a92,
+    bookedByName: [32m'Hamzah Bawah'[39m,
+    ticketCode: [32m'5ae9cba9'[39m,
+    bookedOn: [32m'2020-03-25 04:26:01'[39m,
+    isTicketCodeUsed: [33mtrue[39m,
+    ticketCodeUsedOn: [32m'2020-04-01 10:29:44'[39m
+  },
+  {
+    _id: 5e7adf40d5e175454420e404,
+    seatId: 5e7a923d2952d91f786f1a80,
+    bookedByName: [32m'Dagason Hackson'[39m,
+    ticketCode: [32m'6a68b97b'[39m,
+    bookedOn: [32m'2020-03-25 04:34:08'[39m,
+    isTicketCodeUsed: [33mfalse[39m,
+    ticketCodeUsedOn: [32m''[39m
+  },
+  {
+    _id: 5e7adf6ad5e175454420e406,
+    seatId: 5e7a923d2952d91f786f1a84,
+    bookedByName: [32m'Hamzah Bawah'[39m,
+    ticketCode: [32m'daca58ab'[39m,
+    bookedOn: [32m'2020-03-25 04:34:50'[39m,
+    isTicketCodeUsed: [33mtrue[39m,
+    ticketCodeUsedOn: [32m'2020-04-01 10:18:58'[39m
+  },
+  {
+    _id: 5e7b159bd5e175454420e408,
+    seatId: 5e7a923d2952d91f786f1a94,
+    bookedByName: [32m'Gabriel Dagadu'[39m,
+    ticketCode: [32m'8bcb3b4b'[39m,
+    bookedOn: [32m'2020-03-25 08:26:03'[39m,
+    isTicketCodeUsed: [33mfalse[39m,
+    ticketCodeUsedOn: [32m''[39m
+  }
+]
+01/Apr/2020:09:29:46 +0000 "GET /api/bookings/populate"
+[[10:29:46.976]] [LOG]    Finishing
+[[10:29:46.977]] [LOG]    Valid sessionId, logging
+[[10:29:46.983]] [LOG]    App usage logged! - 2020-04-01 10:29:46 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e840b55e63bf73bac46ad3b,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-04-01 04:32:36'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-15 04:32:37'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-04-01 07:24:41'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/bookings/populate'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+      username: [32m'dagasonhackason'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/configureBookings'[39m,
+      cookie: [32m'JSESSIONID=18f5fe46bcf27b649b6645db17af; treeForm_tree-hi=treeForm:tree:applications; userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 04:32:36; isDeleted=false; loggedInOn=2020-04-01 04:32:36; loggedOutOn=; loggedOutBy=null; _id=5e840b55e63bf73bac46ad3b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc; isExpired=false; expiresOn=2020-04-15 04:32:37'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 1834\r\n'[39m +
+      [32m'ETag: W/"72a-oMQACQXm/oLbTWuNt3jTUUxMOEY"\r\n'[39m +
+      [32m'Date: Wed, 01 Apr 2020 09:29:46 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-04-01T09:29:46.977Z[39m
+}
+01/Apr/2020:09:30:24 +0000 "GET /favicon.ico"
+[[10:30:26.133]] [LOG]    hitting configureSecretCodes view route with {}
+01/Apr/2020:09:30:26 +0000 "GET /configureSecretCodes"
+01/Apr/2020:09:30:27 +0000 "GET /javascripts/bootstrap.min.js"
+01/Apr/2020:09:30:27 +0000 "GET /stylesheets/custom.css"
+01/Apr/2020:09:30:27 +0000 "GET /stylesheets/bootstrap.min.css"
+01/Apr/2020:09:30:27 +0000 "GET /stylesheets/jquery-ui.css"
+01/Apr/2020:09:30:27 +0000 "GET /javascripts/axios.js"
+01/Apr/2020:09:30:27 +0000 "GET /javascripts/clientJS.js"
+01/Apr/2020:09:30:27 +0000 "GET /stylesheets/fallr.css"
+01/Apr/2020:09:30:27 +0000 "GET /javascripts/jquery-easing.js"
+01/Apr/2020:09:30:27 +0000 "GET /javascripts/functions.js"
+01/Apr/2020:09:30:27 +0000 "GET /javascripts/fallr.js"
+01/Apr/2020:09:30:27 +0000 "GET /javascripts/moment.js"
+01/Apr/2020:09:30:29 +0000 "GET /javascripts/jquery.js"
+01/Apr/2020:09:30:29 +0000 "GET /javascripts/jquery-ui.js"
+01/Apr/2020:09:30:31 +0000 "GET /favicon.ico"
+01/Apr/2020:09:30:35 +0000 "GET /images/tis.png"
+[[10:30:37.188]] [LOG]    Calling app logger
+[[10:30:37.189]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/secretcodes/populate
+[[10:30:37.190]] [LOG]    current username extracted dagasonhackason
+[[10:30:37.190]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc
+[[10:30:37.190]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc
+[[10:30:37.190]] [LOG]    userData.username_extract dagasonhackason
+[[10:30:37.191]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1585711957[39m, exp: [33m1586921557[39m }
+[[10:30:37.191]] [LOG]    getting jwt token passed false expirey time 2020-04-15 03:32:37
+[[10:30:37.199]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[10:30:37.201]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-04-01 07:24:41'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[10:30:37.202]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[10:30:37.204]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e840b55e63bf73bac46ad3b,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-04-01 04:32:36'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-15 04:32:37'[39m
+}
+[[10:30:37.205]] [LOG]    new get all secretCodes populate request {}
+[[10:30:37.206]] [INFO]   [0;36mMongoose:[0m secretcodes.find({}, { projection: {} })
+[[10:30:37.211]] [LOG]    From mongo get all populate secretCodes [
+  {
+    _id: 5e6584a261643546c4b8ad61,
+    secretCode: [32m'67890abc'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-08 23:49:54'[39m,
+    updatedOn: [32m'2020-04-01 08:18:24'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6584de61643546c4b8ad63,
+    secretCode: [32m'12345def'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-08 23:50:54'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6682c87ea3f82270583a7a,
+    secretCode: [32m'1134cdsi'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:54:16'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e843bd268da0a261cc2c30c,
+    secretCode: [32m'12345dez'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-04-01 07:59:30'[39m,
+    updatedOn: [32m'2020-04-01 08:18:29'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isDeleted: [33mtrue[39m
+  },
+  {
+    _id: 5e843c1468da0a261cc2c30e,
+    secretCode: [32m'12345dezo'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-04-01 08:00:36'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e843c3e68da0a261cc2c310,
+    secretCode: [32m'an2x45d6cj'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-04-01 08:01:18'[39m,
+    updatedOn: [32m'2020-04-01 08:18:35'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isDeleted: [33mtrue[39m
+  }
+]
+01/Apr/2020:09:30:37 +0000 "GET /api/secretcodes/populate"
+[[10:30:37.215]] [LOG]    Finishing
+[[10:30:37.216]] [LOG]    Valid sessionId, logging
+[[10:30:37.224]] [LOG]    App usage logged! - 2020-04-01 10:30:37 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e840b55e63bf73bac46ad3b,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-04-01 04:32:36'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-15 04:32:37'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-04-01 07:24:41'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/secretcodes/populate'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+      username: [32m'dagasonhackason'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/configureSecretCodes'[39m,
+      cookie: [32m'JSESSIONID=18f5fe46bcf27b649b6645db17af; treeForm_tree-hi=treeForm:tree:applications; userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 04:32:36; isDeleted=false; loggedInOn=2020-04-01 04:32:36; loggedOutOn=; loggedOutBy=null; _id=5e840b55e63bf73bac46ad3b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc; isExpired=false; expiresOn=2020-04-15 04:32:37'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 1327\r\n'[39m +
+      [32m'ETag: W/"52f-bO8wOBtv0iEdEq3pZblR6NJjRQI"\r\n'[39m +
+      [32m'Date: Wed, 01 Apr 2020 09:30:37 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-04-01T09:30:37.216Z[39m
+}
+01/Apr/2020:09:30:37 +0000 "GET /images/check-green.png"
+01/Apr/2020:09:30:37 +0000 "GET /images/error-red.png"
+01/Apr/2020:09:30:37 +0000 "GET /images/not-yet.png"
+[[10:30:52.495]] [LOG]    Calling app logger
+[[10:30:52.496]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/secretcodes/delete
+[[10:30:52.496]] [LOG]    current username extracted dagasonhackason
+[[10:30:52.497]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc
+[[10:30:52.497]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc
+[[10:30:52.497]] [LOG]    userData.username_extract dagasonhackason
+[[10:30:52.497]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1585711957[39m, exp: [33m1586921557[39m }
+[[10:30:52.497]] [LOG]    getting jwt token passed false expirey time 2020-04-15 03:32:37
+[[10:30:52.504]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[10:30:52.507]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-04-01 07:24:41'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[10:30:52.507]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[10:30:52.514]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e840b55e63bf73bac46ad3b,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-04-01 04:32:36'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-15 04:32:37'[39m
+}
+[[10:30:52.686]] [LOG]    Delete secretCode request { _id: [32m'5e6682c87ea3f82270583a7a'[39m }
+[[10:30:52.688]] [INFO]   [0;36mMongoose:[0m secretcodes.find({ _id: ObjectId("5e6682c87ea3f82270583a7a"), isDeleted: [33mfalse[39m }, { projection: {} })
+[[10:30:52.729]] [INFO]   [0;36mMongoose:[0m secretcodes.updateOne({ _id: ObjectId("5e6682c87ea3f82270583a7a"), isDeleted: [33mfalse[39m }, { [32m'$set'[39m: { isDeleted: [33mtrue[39m, updatedBy: ObjectId("5e657d7500c28d427c171899"), updatedOn: [32m'2020-04-01 10:30:52'[39m }}, { upsert: [33mtrue[39m })
+[[10:30:52.731]] [LOG]    secretCode Deleted { n: [33m1[39m, nModified: [33m1[39m, ok: [33m1[39m }
+01/Apr/2020:09:30:52 +0000 "POST /api/secretcodes/delete"
+[[10:30:52.733]] [LOG]    Finishing
+[[10:30:52.733]] [LOG]    Valid sessionId, logging
+[[10:30:52.739]] [LOG]    App usage logged! - 2020-04-01 10:30:52 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e840b55e63bf73bac46ad3b,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-04-01 04:32:36'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-15 04:32:37'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-04-01 07:24:41'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/secretcodes/delete'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+      username: [32m'dagasonhackason'[39m,
+      [32m'content-length'[39m: [32m'34'[39m,
+      origin: [32m'http://localhost:3000'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/configureSecretCodes'[39m,
+      cookie: [32m'JSESSIONID=18f5fe46bcf27b649b6645db17af; treeForm_tree-hi=treeForm:tree:applications; userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 04:32:36; isDeleted=false; loggedInOn=2020-04-01 04:32:36; loggedOutOn=; loggedOutBy=null; _id=5e840b55e63bf73bac46ad3b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc; isExpired=false; expiresOn=2020-04-15 04:32:37'[39m
+    },
+    params: {},
+    body: {
+      _id: [32m'5e6682c87ea3f82270583a7a'[39m,
+      updatedOn: [32m'2020-04-01 10:30:52'[39m,
+      updatedBy: 5e657d7500c28d427c171899
+    },
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 133\r\n'[39m +
+      [32m'ETag: W/"85-QQIldhAsgJvCKTuOU6orKxz3vXQ"\r\n'[39m +
+      [32m'Date: Wed, 01 Apr 2020 09:30:52 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-04-01T09:30:52.734Z[39m
+}
+01/Apr/2020:09:30:52 +0000 "GET /images/check.png"
+[[10:30:55.638]] [LOG]    Calling app logger
+[[10:30:55.638]] [LOG]    current authMiddleware route hitting req.originalUrl  /api/secretcodes/populate
+[[10:30:55.640]] [LOG]    current username extracted dagasonhackason
+[[10:30:55.640]] [LOG]    current sessionId extracted eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc
+[[10:30:55.640]] [LOG]    userData.sessionId_extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc
+[[10:30:55.641]] [LOG]    userData.username_extract dagasonhackason
+[[10:30:55.641]] [LOG]    wasJWTVerified! decoded token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc to :::  { username: [32m'dagasonhackason'[39m, iat: [33m1585711957[39m, exp: [33m1586921557[39m }
+[[10:30:55.642]] [LOG]    getting jwt token passed false expirey time 2020-04-15 03:32:37
+[[10:30:55.652]] [INFO]   [0;36mMongoose:[0m users.findOne({ username: [32m'dagasonhackason'[39m, isDeleted: [33mfalse[39m }, { projection: {} })
+[[10:30:55.655]] [LOG]    middleware data on user existence check {
+  _id: 5e657d7500c28d427c171899,
+  username: [32m'dagasonhackason'[39m,
+  password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+  passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+  createdOn: [32m'2020-03-08 23:19:10'[39m,
+  updatedOn: [32m''[39m,
+  updatedBy: [1mnull[22m,
+  lastLoginOn: [32m'2020-04-01 07:24:41'[39m,
+  isDeleted: [33mfalse[39m
+}
+[[10:30:55.656]] [INFO]   [0;36mMongoose:[0m loginsessions.findOne({ userId: ObjectId("5e657d7500c28d427c171899"), sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m, isExpired: [33mfalse[39m}, { projection: {} })
+[[10:30:55.658]] [LOG]    middleware data on sessionId existence check {
+  _id: 5e840b55e63bf73bac46ad3b,
+  userId: 5e657d7500c28d427c171899,
+  loggedInOn: [32m'2020-04-01 04:32:36'[39m,
+  loggedOutOn: [32m''[39m,
+  loggedOutBy: [1mnull[22m,
+  sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+  isExpired: [33mfalse[39m,
+  expiresOn: [32m'2020-04-15 04:32:37'[39m
+}
+[[10:30:55.659]] [LOG]    new get all secretCodes populate request {}
+[[10:30:55.660]] [INFO]   [0;36mMongoose:[0m secretcodes.find({}, { projection: {} })
+[[10:30:55.668]] [LOG]    From mongo get all populate secretCodes [
+  {
+    _id: 5e6584a261643546c4b8ad61,
+    secretCode: [32m'67890abc'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-08 23:49:54'[39m,
+    updatedOn: [32m'2020-04-01 08:18:24'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6584de61643546c4b8ad63,
+    secretCode: [32m'12345def'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-08 23:50:54'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e6682c87ea3f82270583a7a,
+    secretCode: [32m'1134cdsi'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-03-09 17:54:16'[39m,
+    updatedOn: [32m'2020-04-01 10:30:52'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isDeleted: [33mtrue[39m
+  },
+  {
+    _id: 5e843bd268da0a261cc2c30c,
+    secretCode: [32m'12345dez'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-04-01 07:59:30'[39m,
+    updatedOn: [32m'2020-04-01 08:18:29'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isDeleted: [33mtrue[39m
+  },
+  {
+    _id: 5e843c1468da0a261cc2c30e,
+    secretCode: [32m'12345dezo'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-04-01 08:00:36'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    isDeleted: [33mfalse[39m
+  },
+  {
+    _id: 5e843c3e68da0a261cc2c310,
+    secretCode: [32m'an2x45d6cj'[39m,
+    createdBy: 5e657d7500c28d427c171899,
+    createdOn: [32m'2020-04-01 08:01:18'[39m,
+    updatedOn: [32m'2020-04-01 08:18:35'[39m,
+    updatedBy: 5e657d7500c28d427c171899,
+    isDeleted: [33mtrue[39m
+  }
+]
+01/Apr/2020:09:30:55 +0000 "GET /api/secretcodes/populate"
+[[10:30:55.671]] [LOG]    Finishing
+[[10:30:55.671]] [LOG]    Valid sessionId, logging
+[[10:30:55.687]] [LOG]    App usage logged! - 2020-04-01 10:30:55 {
+  req_sessionId_extract: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+  req_username_extract: [32m'dagasonhackason'[39m,
+  req_loginSession: {
+    _id: 5e840b55e63bf73bac46ad3b,
+    userId: 5e657d7500c28d427c171899,
+    loggedInOn: [32m'2020-04-01 04:32:36'[39m,
+    loggedOutOn: [32m''[39m,
+    loggedOutBy: [1mnull[22m,
+    sessionId: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+    isExpired: [33mfalse[39m,
+    expiresOn: [32m'2020-04-15 04:32:37'[39m
+  },
+  req_user: {
+    _id: 5e657d7500c28d427c171899,
+    username: [32m'dagasonhackason'[39m,
+    password: [32m'76ba93007483734d7b458594e5f09e3266ad9e127afb32d3c760bda375f9aa404e77b826fd40982b382e1776f2f601fc11322ad616a942fbe1decc55408b750c7d223dd61be2ece5bec9805f7154a32bd395d7b57f5ce55e2c380e7312876ec5'[39m,
+    passwordSalt: [32m'fa0.cae2c1bad7859c141edb9e070bb55d85bad1d95f62acdda7'[39m,
+    createdOn: [32m'2020-03-08 23:19:10'[39m,
+    updatedOn: [32m''[39m,
+    updatedBy: [1mnull[22m,
+    lastLoginOn: [32m'2020-04-01 07:24:41'[39m,
+    isDeleted: [33mfalse[39m
+  },
+  req_route: [32m'/api/secretcodes/populate'[39m,
+  req_ip_address: [32m'::ffff:127.0.0.1'[39m,
+  request_payload: {
+    headers: {
+      host: [32m'localhost:3000'[39m,
+      [32m'user-agent'[39m: [32m'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0'[39m,
+      accept: [32m'application/json'[39m,
+      [32m'accept-language'[39m: [32m'en-US,en;q=0.5'[39m,
+      [32m'accept-encoding'[39m: [32m'gzip, deflate'[39m,
+      sessionid: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc'[39m,
+      username: [32m'dagasonhackason'[39m,
+      connection: [32m'keep-alive'[39m,
+      referer: [32m'http://localhost:3000/configureSecretCodes'[39m,
+      cookie: [32m'JSESSIONID=18f5fe46bcf27b649b6645db17af; treeForm_tree-hi=treeForm:tree:applications; userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 04:32:36; isDeleted=false; loggedInOn=2020-04-01 04:32:36; loggedOutOn=; loggedOutBy=null; _id=5e840b55e63bf73bac46ad3b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc; isExpired=false; expiresOn=2020-04-15 04:32:37'[39m
+    },
+    params: {},
+    body: {},
+    query: {}
+  },
+  res_status_code: [33m200[39m,
+  res_status_message: [32m'OK'[39m,
+  response_payload: {
+    headers: [32m'HTTP/1.1 200 OK\r\n'[39m +
+      [32m'X-Powered-By: Express\r\n'[39m +
+      [32m'Access-Control-Allow-Origin: *\r\n'[39m +
+      [32m'Content-Type: application/json; charset=utf-8\r\n'[39m +
+      [32m'Content-Length: 1367\r\n'[39m +
+      [32m'ETag: W/"557-nJsTHBatv4IFOTFPL6QpUU3v5Io"\r\n'[39m +
+      [32m'Date: Wed, 01 Apr 2020 09:30:55 GMT\r\n'[39m +
+      [32m'Connection: keep-alive\r\n'[39m +
+      [32m'\r\n'[39m,
+    body: [90mundefined[39m
+  },
+  created_at: [35m2020-04-01T09:30:55.671Z[39m
+}

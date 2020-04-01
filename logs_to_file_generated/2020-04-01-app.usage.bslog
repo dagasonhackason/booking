@@ -1,5 +1,5 @@
 
-:::::2020-04-01 10:19:00 :: NEW APP USAGE 
+:::::2020-04-01 10:30:55 :: NEW APP USAGE 
 ___________________________________________________
 
 {
@@ -26,7 +26,7 @@ ___________________________________________________
         "lastLoginOn": "2020-04-01 07:24:41",
         "isDeleted": false
     },
-    "req_route": "/api/bookings/populate",
+    "req_route": "/api/secretcodes/populate",
     "req_ip_address": "::ffff:127.0.0.1",
     "request_payload": {
         "headers": {
@@ -38,7 +38,7 @@ ___________________________________________________
             "sessionid": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc",
             "username": "dagasonhackason",
             "connection": "keep-alive",
-            "referer": "http://localhost:3000/configureBookings",
+            "referer": "http://localhost:3000/configureSecretCodes",
             "cookie": "JSESSIONID=18f5fe46bcf27b649b6645db17af; treeForm_tree-hi=treeForm:tree:applications; userId=5e657d7500c28d427c171899; username=dagasonhackason; createdOn=2020-03-08 23:19:10; updatedOn=; updatedBy=null; lastLoginOn=2020-04-01 04:32:36; isDeleted=false; loggedInOn=2020-04-01 04:32:36; loggedOutOn=; loggedOutBy=null; _id=5e840b55e63bf73bac46ad3b; sessionId=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhZ2Fzb25oYWNrYXNvbiIsImlhdCI6MTU4NTcxMTk1NywiZXhwIjoxNTg2OTIxNTU3fQ.yIJ3rweIGzoHrUELglos8TMYfj9Xn0IyP6wsNs_Gzuc; isExpired=false; expiresOn=2020-04-15 04:32:37"
         },
         "params": {},
@@ -48,9 +48,9 @@ ___________________________________________________
     "res_status_code": 200,
     "res_status_message": "OK",
     "response_payload": {
-        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 1816\r\nETag: W/\"718-GefwSwWFcjNpi3D8uXZhWO4uE2g\"\r\nDate: Wed, 01 Apr 2020 09:19:00 GMT\r\nConnection: keep-alive\r\n\r\n"
+        "headers": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 1367\r\nETag: W/\"557-nJsTHBatv4IFOTFPL6QpUU3v5Io\"\r\nDate: Wed, 01 Apr 2020 09:30:55 GMT\r\nConnection: keep-alive\r\n\r\n"
     },
-    "created_at": "2020-04-01T09:19:00.496Z"
+    "created_at": "2020-04-01T09:30:55.671Z"
 }
 
 ___________________________________________________
