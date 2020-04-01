@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "devStart": "nodemon ./bin/www"
+    "start": "node ./bin/www",
+    "devStart": "node ./bin/www"
   },
   "author": "Gabriel Dagadu (DagasonHackason), Bawah Hamzah (Skywalker427)",
   "license": "ISC",
