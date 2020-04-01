@@ -1,5 +1,5 @@
 require('dotenv').config();
-const CryptoJS = require("crypto-PBKDF2"); 
+const CryptoJS = require("crypto-pbkdf2"); 
 const jwt = require("jsonwebtoken");
 const uuid = require("uuid");
 const { connect } = require('monogram');
